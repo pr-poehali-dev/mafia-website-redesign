@@ -52,176 +52,113 @@ const MonitoringSection = () => {
     { time: '10:20', event: 'Профилактика сервера #3', type: 'maintenance' }
   ];
 
-  const getStatusBadge = (status: string) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case 'online':
       case 'operational':
-        return <Badge className="bg-white text-black border-2 border-black font-display font-black uppercase">Работает</Badge>;
+        return 'bg-black';
       case 'maintenance':
       case 'degraded':
-        return <Badge className="bg-white text-black border-2 border-black font-display font-black uppercase">Тех. работы</Badge>;
-      case 'offline':
-        return <Badge className="bg-red-600 text-white border-2 border-black font-display font-black uppercase">Оффлайн</Badge>;
+        return 'bg-white';
       default:
-        return <Badge className="bg-white text-black border-2 border-black font-display font-black uppercase">Неизвестно</Badge>;
-    }
-  };
-
-  const getEventIcon = (type: string) => {
-    switch (type) {
-      case 'success':
-        return { icon: 'CheckCircle2', symbol: '✓' };
-      case 'warning':
-        return { icon: 'AlertTriangle', symbol: '⚠' };
-      case 'maintenance':
-        return { icon: 'Settings', symbol: '⚙' };
-      default:
-        return { icon: 'Info', symbol: 'ℹ' };
+        return 'bg-red-600';
     }
   };
 
   return (
-    <section className="min-h-screen pt-32 pb-16 bg-white">
+    <section className="min-h-screen pt-[240px] pb-16">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Telegraph/News Wire Header - 1920s Style */}
-          <div className="border-8 border-black bg-white p-8 mb-12 relative">
-            {/* Corner decorations */}
-            <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-black"></div>
-            <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-black"></div>
-            <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-black"></div>
-            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-black"></div>
-            
-            <div className="text-center">
-              <div className="text-sm font-display font-black uppercase tracking-widest mb-2">
-                Телеграфная служба мониторинга
-              </div>
-              <div className="border-y-4 border-black py-4">
-                <h2 className="text-7xl font-headline font-black text-black uppercase tracking-tighter">
-                  МОНИТОРИНГ
-                </h2>
-              </div>
-              <div className="mt-4 text-sm font-body text-black uppercase tracking-widest">
-                Состояние серверов • Актуально сейчас
-              </div>
+          <div className="border-t-4 border-b-4 border-black py-3 mb-8 bg-white text-center">
+            <h2 className="text-5xl font-headline uppercase tracking-wider">
+              Мониторинг серверов
+            </h2>
+            <div className="text-xs uppercase tracking-widest mt-1">
+              Состояние систем • Обновляется в реальном времени
             </div>
           </div>
 
-          {/* Telegraph News Photos */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-[#f8f5ec] border-2 border-black p-4">
-              <img 
-                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/2322ea7f-61b6-4c91-901b-60cade2be720.jpg"
-                alt="Server operations"
-                className="w-full old-photo border-2 border-black mb-3"
-              />
-              <p className="text-center text-black font-body text-sm italic">
-                Fig. 13 — Daily operations and server maintenance, 1925
-              </p>
-            </div>
-            <div className="bg-[#f8f5ec] border-2 border-black p-4">
-              <img 
-                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/b25aa8e1-c16f-459e-aa83-6ae8f06a762d.jpg"
-                alt="Night watch"
-                className="w-full old-photo border-2 border-black mb-3"
-              />
-              <p className="text-center text-black font-body text-sm italic">
-                Fig. 14 — 24-hour monitoring and surveillance team, 1925
-              </p>
-            </div>
-            <div className="bg-[#f8f5ec] border-2 border-black p-4">
-              <img 
-                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/68ecaba2-4e61-434a-a1b1-ff1755ea6f08.jpg"
-                alt="Emergency response"
-                className="w-full old-photo border-2 border-black mb-3"
-              />
-              <p className="text-center text-black font-body text-sm italic">
-                Fig. 15 — Rapid response team in action, 1925
-              </p>
-            </div>
+          <div className="space-y-4 mb-8">
+            {servers.map((server) => (
+              <div 
+                key={server.id}
+                className="border-4 border-black bg-white p-4"
+              >
+                <div className="flex items-center justify-between mb-3 pb-3 border-b-2 border-black">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-4 h-4 border-2 border-black ${getStatusColor(server.status)}`} />
+                    <div>
+                      <h4 className="font-headline uppercase text-lg">{server.name}</h4>
+                      <div className="text-xs font-body">
+                        Версия {server.version} • Карта: {server.map}
+                      </div>
+                    </div>
+                  </div>
+                  <Badge className="bg-white text-black border-2 border-black font-headline uppercase text-xs">
+                    {server.status === 'online' ? 'Работает' : 'Тех. работы'}
+                  </Badge>
+                </div>
+                
+                <div className="grid grid-cols-3 gap-3 text-xs">
+                  <div className="border-2 border-black p-2 text-center">
+                    <div className="font-body mb-1">Игроки</div>
+                    <div className="font-headline font-bold">{server.players}</div>
+                  </div>
+                  <div className="border-2 border-black p-2 text-center">
+                    <div className="font-body mb-1">Пинг</div>
+                    <div className="font-headline font-bold">{server.ping}</div>
+                  </div>
+                  <div className="border-2 border-black p-2 text-center">
+                    <div className="font-body mb-1">Аптайм</div>
+                    <div className="font-headline font-bold">{server.uptime}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* Server Status - Telegraph Report Style */}
-          <div className="bg-white border-8 border-black mb-8">
-            <div className="border-b-4 border-black bg-white p-6">
-              <div className="flex items-center justify-center gap-3">
-                <Icon name="Server" className="text-black" size={40} />
-                <h3 className="text-3xl font-headline font-black text-black uppercase tracking-tighter">
-                  Игровые серверы
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="border-4 border-black bg-white">
+              <div className="border-b-2 border-black p-4 text-center">
+                <h3 className="text-xl font-headline uppercase">
+                  Состояние систем
                 </h3>
               </div>
-              <p className="text-center font-body text-black text-sm uppercase tracking-wider mt-2">
-                Текущее состояние всех серверов
-              </p>
-            </div>
-            
-            <div className="p-6">
-              <div className="space-y-4">
-                {servers.map((server) => (
+              
+              <div className="p-4 space-y-2">
+                {systemStatus.map((item, index) => (
                   <div 
-                    key={server.id}
-                    className="bg-white border-4 border-black p-6"
+                    key={index} 
+                    className="flex items-center justify-between border-b border-black pb-2 last:border-0"
                   >
-                    {/* Server header */}
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-4 border-b-4 border-black">
-                      <div className="flex items-center gap-4">
-                        {/* Status indicator - telegraph style */}
-                        <div className="flex flex-col items-center gap-1">
-                          <div className={`w-6 h-6 border-4 border-black ${
-                            server.status === 'online' ? 'bg-black' : 
-                            server.status === 'maintenance' ? 'bg-white' : 'bg-white'
-                          }`} />
-                          <div className="text-xs font-display font-black uppercase">
-                            {server.status === 'online' ? 'ON' : 'OFF'}
-                          </div>
-                        </div>
-                        
-                        <div>
-                          <h4 className="text-2xl font-display font-black text-black uppercase mb-1">
-                            {server.name}
-                          </h4>
-                          <div className="text-sm font-body text-black uppercase tracking-wider">
-                            Версия {server.version} • Карта: {server.map}
-                          </div>
-                        </div>
-                      </div>
-                      
-                      {getStatusBadge(server.status)}
+                    <div className="flex items-center gap-2">
+                      <div className={`w-3 h-3 border-2 border-black ${getStatusColor(item.status)}`} />
+                      <span className="font-body text-sm">{item.service}</span>
                     </div>
-                    
-                    {/* Server stats grid - telegraph table */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                      <div className="border-2 border-black p-3 text-center">
-                        <div className="flex items-center justify-center gap-2 mb-2">
-                          <Icon name="Users" size={16} className="text-black" />
-                          <span className="text-xs font-body uppercase tracking-wider">Игроки</span>
-                        </div>
-                        <div className="font-display font-black text-xl text-black">{server.players}</div>
-                      </div>
-                      
-                      <div className="border-2 border-black p-3 text-center">
-                        <div className="flex items-center justify-center gap-2 mb-2">
-                          <Icon name="Wifi" size={16} className="text-black" />
-                          <span className="text-xs font-body uppercase tracking-wider">Пинг</span>
-                        </div>
-                        <div className="font-display font-black text-xl text-black">{server.ping}</div>
-                      </div>
-                      
-                      <div className="border-2 border-black p-3 text-center">
-                        <div className="flex items-center justify-center gap-2 mb-2">
-                          <Icon name="Clock" size={16} className="text-black" />
-                          <span className="text-xs font-body uppercase tracking-wider">Аптайм</span>
-                        </div>
-                        <div className="font-display font-black text-xl text-black">{server.uptime}</div>
-                      </div>
-                      
-                      <div className="border-2 border-black p-3 text-center">
-                        <div className="flex items-center justify-center gap-2 mb-2">
-                          <Icon name="Map" size={16} className="text-black" />
-                          <span className="text-xs font-body uppercase tracking-wider">Локация</span>
-                        </div>
-                        <div className="font-display font-black text-base text-black">{server.map}</div>
-                      </div>
+                    <span className="font-headline text-xs">{item.response}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="border-4 border-black bg-white">
+              <div className="border-b-2 border-black p-4 text-center">
+                <h3 className="text-xl font-headline uppercase">
+                  Последние события
+                </h3>
+              </div>
+              
+              <div className="p-4 space-y-2">
+                {recentEvents.map((event, index) => (
+                  <div 
+                    key={index}
+                    className="border-b border-black pb-2 last:border-0"
+                  >
+                    <div className="flex items-start gap-2">
+                      <span className="font-headline text-xs border border-black px-2 py-0.5">
+                        {event.time}
+                      </span>
+                      <span className="font-body text-xs flex-1">{event.event}</span>
                     </div>
                   </div>
                 ))}
@@ -229,91 +166,9 @@ const MonitoringSection = () => {
             </div>
           </div>
 
-          {/* Two column layout */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* System Services - Service List */}
-            <div className="bg-white border-8 border-black">
-              <div className="border-b-4 border-black bg-white p-6">
-                <div className="flex items-center justify-center gap-3">
-                  <Icon name="Cpu" className="text-black" size={36} />
-                  <h3 className="text-2xl font-headline font-black text-black uppercase tracking-tighter">
-                    Сервисы
-                  </h3>
-                </div>
-              </div>
-              
-              <div className="p-4">
-                <div className="space-y-3">
-                  {systemStatus.map((item, index) => (
-                    <div 
-                      key={index}
-                      className="bg-white border-2 border-black p-4"
-                    >
-                      <div className="flex items-center justify-between gap-3 mb-2">
-                        <span className="font-body text-black font-bold">{item.service}</span>
-                        {getStatusBadge(item.status)}
-                      </div>
-                      <div className="flex items-center gap-2 text-sm font-body text-black">
-                        <Icon name="Zap" size={14} />
-                        <span className="uppercase tracking-wider">Отклик: {item.response}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Recent Events - Telegraph Reports */}
-            <div className="bg-white border-8 border-black">
-              <div className="border-b-4 border-black bg-white p-6">
-                <div className="flex items-center justify-center gap-3">
-                  <Icon name="Radio" className="text-black" size={36} />
-                  <h3 className="text-2xl font-headline font-black text-black uppercase tracking-tighter">
-                    События
-                  </h3>
-                </div>
-              </div>
-              
-              <div className="p-4">
-                <div className="space-y-3">
-                  {recentEvents.map((event, index) => {
-                    const eventData = getEventIcon(event.type);
-                    return (
-                      <div 
-                        key={index}
-                        className="bg-white border-2 border-black p-4"
-                      >
-                        <div className="flex items-start gap-3">
-                          {/* Time stamp - telegraph style */}
-                          <div className="border-2 border-black px-3 py-1 flex-shrink-0">
-                            <span className="font-display font-black text-sm text-black">{event.time}</span>
-                          </div>
-                          
-                          {/* Symbol */}
-                          <div className="w-8 h-8 border-2 border-black flex items-center justify-center flex-shrink-0">
-                            <span className="text-xl">{eventData.symbol}</span>
-                          </div>
-                          
-                          {/* Event text */}
-                          <span className="font-body text-black flex-1">{event.event}</span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer - Telegraph Office */}
-          <div className="mt-8 border-4 border-black p-6 text-center bg-white">
-            <div className="border-y-2 border-black py-3">
-              <p className="font-body text-black text-sm uppercase tracking-widest">
-                Телеграфная служба мониторинга • Mafia House Telegraph Office
-              </p>
-              <p className="font-body text-black text-xs uppercase tracking-widest mt-2">
-                Обновляется в режиме реального времени • Est. 1925
-              </p>
+          <div className="mt-6 border-t-2 border-b-2 border-black py-1 bg-white text-center">
+            <div className="text-xs font-body uppercase tracking-widest">
+              Автоматическое обновление каждые 30 секунд • Все системы под контролем
             </div>
           </div>
         </div>

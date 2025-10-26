@@ -42,150 +42,105 @@ const RulesSection = () => {
   ];
 
   return (
-    <section className="min-h-screen pt-32 pb-16 bg-white">
+    <section className="min-h-screen pt-[240px] pb-16">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Wanted Poster Style Header */}
-          <div className="border-8 border-black bg-white p-8 mb-12 relative">
-            {/* Corner decorations */}
-            <div className="absolute top-2 left-2 w-12 h-12 border-t-4 border-l-4 border-black"></div>
-            <div className="absolute top-2 right-2 w-12 h-12 border-t-4 border-r-4 border-black"></div>
-            <div className="absolute bottom-2 left-2 w-12 h-12 border-b-4 border-l-4 border-black"></div>
-            <div className="absolute bottom-2 right-2 w-12 h-12 border-b-4 border-r-4 border-black"></div>
-            
-            <div className="text-center border-4 border-black p-6">
-              <div className="text-sm font-display font-black uppercase tracking-widest mb-2">
-                Официальный документ
-              </div>
-              <h2 className="text-7xl font-headline font-black text-black uppercase tracking-tighter mb-2">
-                ПРАВИЛА
-              </h2>
-              <div className="h-1 bg-black my-4"></div>
-              <div className="text-sm font-body uppercase tracking-widest">
-                Кодекс чести • Est. 1925
-              </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="border-t-4 border-b-4 border-black py-3 mb-8 bg-white text-center">
+            <h2 className="text-5xl font-headline uppercase tracking-wider">
+              Правила сервера
+            </h2>
+            <div className="text-xs uppercase tracking-widest mt-1">
+              Официальный кодекс чести • Обязательно к прочтению
             </div>
           </div>
 
-          {/* Wanted Poster Style Photos */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-[#f8f5ec] border-2 border-black p-4">
-              <img 
-                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/fa40f034-dcd1-4569-a3b1-ee4b25251f3c.jpg"
-                alt="Gang members"
-                className="w-full old-photo border-2 border-black mb-3"
-              />
-              <p className="text-center text-black font-body text-sm italic">
-                Fig. 1 — Known associates of criminal organization, 1925
-              </p>
+          <div className="grid lg:grid-cols-3 gap-6 mb-8">
+            <div className="lg:col-span-2 space-y-4">
+              {rules.map((rule, index) => (
+                <Accordion key={rule.id} type="single" collapsible>
+                  <AccordionItem value={rule.id} className="border-4 border-black bg-white">
+                    <AccordionTrigger className="px-4 py-3 hover:bg-black hover:text-white transition-colors hover:no-underline">
+                      <div className="flex items-center gap-3 w-full">
+                        <div className="w-10 h-10 border-2 border-current flex items-center justify-center flex-shrink-0">
+                          <span className="text-lg font-headline font-bold">
+                            {index + 1}
+                          </span>
+                        </div>
+                        <span className="text-lg font-headline uppercase text-left">
+                          {rule.title}
+                        </span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="border-t-2 border-black px-4 py-4 bg-white">
+                      <p className="font-body text-sm leading-relaxed text-justify">
+                        {rule.content}
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              ))}
             </div>
-            <div className="bg-[#f8f5ec] border-2 border-black p-4">
-              <img 
-                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/2322ea7f-61b6-4c91-901b-60cade2be720.jpg"
-                alt="Cowboys in town"
-                className="w-full old-photo border-2 border-black mb-3"
-              />
-              <p className="text-center text-black font-body text-sm italic">
-                Fig. 2 — Street scene, lawless territory, 1925
-              </p>
-            </div>
-          </div>
 
-          {/* Warning Notice - Wanted Poster Style */}
-          <div className="bg-red-600 border-8 border-black mb-8 relative">
-            <div className="bg-white border-4 border-black m-2 p-6">
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <Icon name="AlertTriangle" className="text-black" size={48} />
-                <h3 className="text-4xl font-headline font-black text-black tracking-tighter uppercase">
-                  ВАЖНО!
-                </h3>
-                <Icon name="AlertTriangle" className="text-black" size={48} />
-              </div>
-              <div className="border-y-4 border-black py-4">
-                <p className="text-black font-body text-lg leading-relaxed text-center">
-                  Незнание правил не освобождает от ответственности. Перед началом игры обязательно ознакомьтесь со всеми правилами сервера. Нарушение может привести к бану аккаунта.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Rules Accordion - Legal Document Style */}
-          <Accordion type="single" collapsible className="space-y-6">
-            {rules.map((rule, index) => (
-              <AccordionItem 
-                key={rule.id} 
-                value={rule.id}
-                className="border-4 border-black bg-white"
-              >
-                <AccordionTrigger className="px-6 py-6 hover:bg-black hover:text-white transition-colors hover:no-underline group">
-                  <div className="flex items-center gap-4 w-full">
-                    {/* Article number - vintage style */}
-                    <div className="w-16 h-16 border-4 border-black bg-white group-hover:bg-black group-hover:text-white group-hover:border-white flex items-center justify-center flex-shrink-0 transition-colors">
-                      <span className="text-2xl font-headline font-black">
-                        {index + 1}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-3 flex-1">
-                      <Icon name={rule.icon as any} className="group-hover:text-white" size={24} />
-                      <span className="text-xl font-display font-black uppercase text-left tracking-wider">
-                        {rule.title}
-                      </span>
-                    </div>
+            <div className="space-y-6">
+              <div className="border-4 border-black bg-red-700 text-white p-4">
+                <div className="border-2 border-white p-3 text-center">
+                  <Icon name="AlertTriangle" size={32} className="mx-auto mb-2" />
+                  <div className="text-sm font-headline uppercase mb-2">
+                    Внимание!
                   </div>
-                </AccordionTrigger>
-                <AccordionContent className="border-t-4 border-black">
-                  <div className="px-6 py-6 bg-white">
-                    {/* Decorative opener */}
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="w-8 h-1 bg-black"></div>
-                      <div className="w-4 h-1 bg-black"></div>
-                    </div>
-                    
-                    <p className="text-black font-body text-lg leading-relaxed ml-0 pl-20">
-                      {rule.content}
-                    </p>
-                    
-                    {/* Decorative closer */}
-                    <div className="flex items-center gap-2 mt-4 justify-end">
-                      <div className="w-4 h-1 bg-black"></div>
-                      <div className="w-8 h-1 bg-black"></div>
-                    </div>
+                  <div className="text-xs font-body leading-relaxed">
+                    Незнание правил не освобождает от ответственности
                   </div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-
-          {/* Full Rules Notice - Official Document Style */}
-          <div className="mt-12 bg-white border-8 border-black p-8">
-            <div className="border-4 border-black p-6">
-              <div className="flex items-center gap-4 mb-6 pb-4 border-b-4 border-black">
-                <Icon name="FileText" className="text-black" size={48} />
-                <h3 className="text-3xl font-headline font-black text-black tracking-tighter uppercase">
-                  Полные правила
-                </h3>
+                </div>
               </div>
-              
-              <p className="text-black font-body text-lg leading-relaxed mb-6">
-                Здесь представлены основные правила. Полную версию со всеми нюансами можно найти на форуме сервера.
-              </p>
-              
-              <div className="border-4 border-black bg-white hover:bg-black hover:text-white transition-colors cursor-pointer group">
-                <div className="flex items-center justify-center gap-3 py-4">
-                  <span className="font-display font-black uppercase tracking-wider">
-                    Читать полные правила на форуме
-                  </span>
-                  <Icon name="ExternalLink" size={20} className="group-hover:text-white" />
+
+              <div className="border-4 border-black bg-white p-4">
+                <img 
+                  src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/fa40f034-dcd1-4569-a3b1-ee4b25251f3c.jpg"
+                  alt="Члены организации"
+                  className="w-full aspect-square object-cover old-photo border-2 border-black mb-2"
+                />
+                <div className="text-[10px] font-body text-center italic border-t-2 border-black pt-2">
+                  Рис. 1 — Члены организации, сфотографированы у штаб-квартиры, около 1925 года
+                </div>
+              </div>
+
+              <div className="border-4 border-black bg-white p-4">
+                <div className="border-b-2 border-black pb-2 mb-3 text-center">
+                  <h3 className="text-sm font-headline uppercase tracking-wider">
+                    Важная информация
+                  </h3>
+                </div>
+                <div className="space-y-2 text-xs font-body">
+                  <div className="border-b border-black pb-2">
+                    <div className="font-bold">Возраст:</div>
+                    <div>От 18 лет</div>
+                  </div>
+                  <div className="border-b border-black pb-2">
+                    <div className="font-bold">Микрофон:</div>
+                    <div>Обязателен</div>
+                  </div>
+                  <div className="border-b border-black pb-2">
+                    <div className="font-bold">Язык:</div>
+                    <div>Русский / English</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Signature - official document style */}
-          <div className="mt-8 text-center border-t-4 border-black pt-6">
-            <p className="font-body text-black text-sm uppercase tracking-widest">
-              Утверждено администрацией • Mafia House • 1925
-            </p>
+          <div className="border-4 border-black bg-white p-6 text-center">
+            <div className="text-xs uppercase tracking-wider mb-2">
+              Полная версия правил
+            </div>
+            <div className="text-sm font-body mb-4">
+              Здесь представлены основные правила. Полную версию со всеми нюансами можно найти на форуме сервера.
+            </div>
+            <div className="inline-block border-2 border-black px-6 py-2 hover:bg-black hover:text-white transition-colors cursor-pointer">
+              <span className="font-headline uppercase tracking-wider">
+                Читать на форуме →
+              </span>
+            </div>
           </div>
         </div>
       </div>

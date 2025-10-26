@@ -5,28 +5,28 @@ const NewsSection = () => {
   const news = [
     {
       id: 1,
-      title: 'NEW FAMILY ARRIVES IN TOWN',
-      subtitle: 'Corleone Organization Establishes Eastern District Control',
-      date: 'October 25, 1925',
-      category: 'Breaking',
+      title: 'НОВАЯ СЕМЬЯ ПРИБЫЛА В ГОРОД',
+      subtitle: 'Организация Корлеоне устанавливает контроль над восточным районом',
+      date: '25 октября 1925',
+      category: 'Срочные новости',
       image: 'https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/2322ea7f-61b6-4c91-901b-60cade2be720.jpg',
       excerpt: 'На улицах города замечена новая мафиозная группировка. Семья Корлеоне устанавливает свои порядки в восточном районе. Свидетели сообщают о вооружённых всадниках и подпольных операциях.',
     },
     {
       id: 2,
-      title: 'SALOON ROBBERY SHOCKS DISTRICT',
-      subtitle: 'Police Investigation Underway, Owner Silent',
-      date: 'October 23, 1925',
-      category: 'Crime',
+      title: 'ДЕРЗКОЕ ОГРАБЛЕНИЕ САЛУНА',
+      subtitle: 'Полиция ведёт расследование, владелец молчит',
+      date: '23 октября 1925',
+      category: 'Криминал',
       image: 'https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/9a73409c-d997-4539-bac2-07bc3743e5c1.jpg',
       excerpt: 'Этой ночью неизвестные лица совершили дерзкое ограбление главного салуна. Полиция ведёт расследование. Владелец заведения отказывается давать показания.',
     },
     {
       id: 3,
-      title: 'TRAIN HEIST THWARTED BY SHERIFF',
-      subtitle: 'Bandits Escape, Reward Offered for Capture',
-      date: 'October 20, 1925',
-      category: 'Law & Order',
+      title: 'ШЕРИФ ОСТАНОВИЛ ОГРАБЛЕНИЕ ПОЕЗДА',
+      subtitle: 'Бандиты скрылись, объявлена награда за поимку',
+      date: '20 октября 1925',
+      category: 'Закон и порядок',
       image: 'https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/68ecaba2-4e61-434a-a1b1-ff1755ea6f08.jpg',
       excerpt: 'Шериф сообщает об успешном предотвращении ограбления товарного поезда. Несколько бандитов скрылись. Объявлена награда за их поимку.',
     },
@@ -38,7 +38,7 @@ const NewsSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="border-t-4 border-b-4 border-black py-2 mb-8 bg-white text-center">
             <h2 className="text-4xl font-headline uppercase tracking-wider">
-              Latest News From The Streets
+              Последние новости с улиц
             </h2>
           </div>
 
@@ -72,7 +72,7 @@ const NewsSection = () => {
                             </div>
                           </div>
                           <div className="text-xs uppercase tracking-wider mt-4 border-t border-black pt-2">
-                            Continued on page 2 →
+                            Продолжение на стр. 2 →
                           </div>
                         </div>
                       </div>
@@ -110,26 +110,26 @@ const NewsSection = () => {
               <div className="border-4 border-black bg-white p-4">
                 <div className="border-b-2 border-black pb-2 mb-3 text-center">
                   <h3 className="text-sm font-headline uppercase tracking-wider">
-                    Notice Board
+                    Доска объявлений
                   </h3>
                 </div>
                 <div className="space-y-3 text-xs font-body">
                   <div className="border-2 border-black p-2">
-                    <div className="font-bold uppercase mb-1">Wanted</div>
+                    <div className="font-bold uppercase mb-1">Разыскивается</div>
                     <div className="text-[10px] leading-tight">
-                      Three armed men, suspected train robbers. $500 reward.
+                      Трое вооружённых мужчин, подозреваемые в ограблении поезда. Награда $500.
                     </div>
                   </div>
                   <div className="border-2 border-black p-2">
-                    <div className="font-bold uppercase mb-1">Casino Opening</div>
+                    <div className="font-bold uppercase mb-1">Открытие казино</div>
                     <div className="text-[10px] leading-tight">
-                      The Golden Horseshoe welcomes distinguished guests.
+                      «Золотая Подкова» приглашает уважаемых гостей.
                     </div>
                   </div>
                   <div className="border-2 border-black p-2">
-                    <div className="font-bold uppercase mb-1">Sheriff Notice</div>
+                    <div className="font-bold uppercase mb-1">Объявление шерифа</div>
                     <div className="text-[10px] leading-tight">
-                      Curfew enforced from midnight. Stay indoors.
+                      Комендантский час с полуночи. Оставайтесь дома.
                     </div>
                   </div>
                 </div>
@@ -137,12 +137,12 @@ const NewsSection = () => {
 
               <div className="border-4 border-black bg-black text-white p-4">
                 <div className="text-center">
-                  <div className="text-xs uppercase tracking-wider mb-2">Advertisement</div>
+                  <div className="text-xs uppercase tracking-wider mb-2">Реклама</div>
                   <div className="border-2 border-white p-3">
                     <div className="text-2xl font-headline mb-2">TOMMY'S</div>
-                    <div className="text-xs mb-2">Finest Whiskey</div>
+                    <div className="text-xs mb-2">Лучшее виски</div>
                     <div className="text-[10px] italic">
-                      "Quality you can trust"
+                      "Качество, которому можно доверять"
                     </div>
                   </div>
                 </div>
@@ -151,20 +151,20 @@ const NewsSection = () => {
               <div className="border-4 border-black bg-white p-4">
                 <div className="border-b-2 border-black pb-2 mb-3 text-center">
                   <h3 className="text-sm font-headline uppercase tracking-wider">
-                    Server Statistics
+                    Статистика сервера
                   </h3>
                 </div>
                 <div className="space-y-2 text-xs font-body">
                   <div className="flex justify-between border-b border-black pb-1">
-                    <span>Players Online</span>
+                    <span>Игроков онлайн</span>
                     <span className="font-headline">250+</span>
                   </div>
                   <div className="flex justify-between border-b border-black pb-1">
-                    <span>Active Families</span>
+                    <span>Активных семей</span>
                     <span className="font-headline">12</span>
                   </div>
                   <div className="flex justify-between border-b border-black pb-1">
-                    <span>Territories</span>
+                    <span>Территорий</span>
                     <span className="font-headline">8</span>
                   </div>
                 </div>
@@ -174,7 +174,7 @@ const NewsSection = () => {
 
           <div className="mt-8 border-t-2 border-b-2 border-black py-1 bg-white text-center">
             <div className="text-xs font-body uppercase tracking-widest">
-              The Mafia Times • Volume I • Est. 1920 • Price: 5¢
+              Мафия Таймс • Том I • Издание 1920 • Цена: 5¢
             </div>
           </div>
         </div>

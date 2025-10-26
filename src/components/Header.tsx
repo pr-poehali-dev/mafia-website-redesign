@@ -23,17 +23,17 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
       <div className="container mx-auto px-4">
         <div className="border-b-2 border-black py-2">
           <div className="flex items-center justify-between text-xs uppercase tracking-wider">
-            <div className="font-body">Сервер Мафия • Mafia House Server</div>
-            <div className="font-body">Выпуск № 1927 • Est. 1920</div>
+            <div className="font-body">Сервер Мафия • Издание 1920-х</div>
+            <div className="font-body">Выпуск № 1927 • Октябрь 1925</div>
           </div>
         </div>
         
         <div className="text-center py-6 border-b-4 border-black">
           <h1 className="text-6xl md:text-7xl font-display font-black text-black leading-none mb-2">
-            The Mafia Times
+            Мафия Таймс
           </h1>
           <p className="text-sm font-headline tracking-[0.3em] uppercase border-t-2 border-b-2 border-black py-1 inline-block px-8">
-            Всё о нашей семье • All Family News
+            Всё о нашей семье
           </p>
         </div>
 
