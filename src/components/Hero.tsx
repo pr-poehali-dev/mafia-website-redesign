@@ -51,12 +51,12 @@ const Hero = () => {
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div className="border-2 border-black p-6 bg-[#f8f5ec]">
                   <img 
-                    src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/71367b75-9a1f-4377-9e92-18c2f59e9b57.jpg" 
-                    alt="Mafia family"
+                    src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/fa40f034-dcd1-4569-a3b1-ee4b25251f3c.jpg" 
+                    alt="Gang members"
                     className="w-full h-64 object-cover old-photo mb-3"
                   />
                   <div className="text-xs font-body text-center italic border-t border-black pt-2">
-                    Fig. 1 — Семья Корлеоне, 1925
+                    Fig. 1 — Члены организации, 1925
                   </div>
                 </div>
                 <div className="flex flex-col justify-center space-y-4">

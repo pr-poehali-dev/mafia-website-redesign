@@ -86,6 +86,40 @@ const DonateSection = () => {
             </div>
           </div>
 
+          {/* Advertisement Photos */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-[#f8f5ec] border-2 border-black p-4">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/9a73409c-d997-4539-bac2-07bc3743e5c1.jpg"
+                alt="Saloon poker scene"
+                className="w-full old-photo border-2 border-black mb-3"
+              />
+              <p className="text-center text-black font-body text-sm italic">
+                Fig. 3 — Premium entertainment for distinguished members, 1925
+              </p>
+            </div>
+            <div className="bg-[#f8f5ec] border-2 border-black p-4">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/3438390e-31b2-4337-b212-4d3a6c7a242b.jpg"
+                alt="Western street"
+                className="w-full old-photo border-2 border-black mb-3"
+              />
+              <p className="text-center text-black font-body text-sm italic">
+                Fig. 4 — Exclusive access to premier locations, 1925
+              </p>
+            </div>
+            <div className="bg-[#f8f5ec] border-2 border-black p-4">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/68ecaba2-4e61-434a-a1b1-ff1755ea6f08.jpg"
+                alt="Train robbery"
+                className="w-full old-photo border-2 border-black mb-3"
+              />
+              <p className="text-center text-black font-body text-sm italic">
+                Fig. 5 — Adventure opportunities for elite members, 1925
+              </p>
+            </div>
+          </div>
+
           {/* Package Cards - 1920s Advertisement Posters */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {packages.map((pkg) => (

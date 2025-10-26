@@ -67,6 +67,30 @@ const RulesSection = () => {
             </div>
           </div>
 
+          {/* Wanted Poster Style Photos */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-[#f8f5ec] border-2 border-black p-4">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/fa40f034-dcd1-4569-a3b1-ee4b25251f3c.jpg"
+                alt="Gang members"
+                className="w-full old-photo border-2 border-black mb-3"
+              />
+              <p className="text-center text-black font-body text-sm italic">
+                Fig. 1 — Known associates of criminal organization, 1925
+              </p>
+            </div>
+            <div className="bg-[#f8f5ec] border-2 border-black p-4">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/2322ea7f-61b6-4c91-901b-60cade2be720.jpg"
+                alt="Cowboys in town"
+                className="w-full old-photo border-2 border-black mb-3"
+              />
+              <p className="text-center text-black font-body text-sm italic">
+                Fig. 2 — Street scene, lawless territory, 1925
+              </p>
+            </div>
+          </div>
+
           {/* Warning Notice - Wanted Poster Style */}
           <div className="bg-red-600 border-8 border-black mb-8 relative">
             <div className="bg-white border-4 border-black m-2 p-6">

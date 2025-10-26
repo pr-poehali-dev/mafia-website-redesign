@@ -107,6 +107,40 @@ const MonitoringSection = () => {
             </div>
           </div>
 
+          {/* Telegraph News Photos */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-[#f8f5ec] border-2 border-black p-4">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/2322ea7f-61b6-4c91-901b-60cade2be720.jpg"
+                alt="Server operations"
+                className="w-full old-photo border-2 border-black mb-3"
+              />
+              <p className="text-center text-black font-body text-sm italic">
+                Fig. 13 — Daily operations and server maintenance, 1925
+              </p>
+            </div>
+            <div className="bg-[#f8f5ec] border-2 border-black p-4">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/b25aa8e1-c16f-459e-aa83-6ae8f06a762d.jpg"
+                alt="Night watch"
+                className="w-full old-photo border-2 border-black mb-3"
+              />
+              <p className="text-center text-black font-body text-sm italic">
+                Fig. 14 — 24-hour monitoring and surveillance team, 1925
+              </p>
+            </div>
+            <div className="bg-[#f8f5ec] border-2 border-black p-4">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/68ecaba2-4e61-434a-a1b1-ff1755ea6f08.jpg"
+                alt="Emergency response"
+                className="w-full old-photo border-2 border-black mb-3"
+              />
+              <p className="text-center text-black font-body text-sm italic">
+                Fig. 15 — Rapid response team in action, 1925
+              </p>
+            </div>
+          </div>
+
           {/* Server Status - Telegraph Report Style */}
           <div className="bg-white border-8 border-black mb-8">
             <div className="border-b-4 border-black bg-white p-6">

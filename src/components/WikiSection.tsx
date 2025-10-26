@@ -104,6 +104,30 @@ const WikiSection = () => {
             </div>
           </div>
 
+          {/* Encyclopedia Illustrations */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-[#f8f5ec] border-2 border-black p-4">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/3438390e-31b2-4337-b212-4d3a6c7a242b.jpg"
+                alt="Town documentation"
+                className="w-full old-photo border-2 border-black mb-3"
+              />
+              <p className="text-center text-black font-body text-sm italic">
+                Fig. 8 — Historical documentation of main settlement, 1925
+              </p>
+            </div>
+            <div className="bg-[#f8f5ec] border-2 border-black p-4">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/2322ea7f-61b6-4c91-901b-60cade2be720.jpg"
+                alt="Transportation study"
+                className="w-full old-photo border-2 border-black mb-3"
+              />
+              <p className="text-center text-black font-body text-sm italic">
+                Fig. 9 — Study of transportation methods and routes, 1925
+              </p>
+            </div>
+          </div>
+
           {/* Search Box - Vintage Card Catalog Style */}
           <div className="bg-white border-8 border-black mb-8 p-6">
             <div className="border-4 border-black p-4">

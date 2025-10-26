@@ -114,6 +114,30 @@ const ForumSection = () => {
             </div>
           </div>
 
+          {/* Forum Member Photos */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-[#f8f5ec] border-2 border-black p-4">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/fa40f034-dcd1-4569-a3b1-ee4b25251f3c.jpg"
+                alt="Forum members"
+                className="w-full old-photo border-2 border-black mb-3"
+              />
+              <p className="text-center text-black font-body text-sm italic">
+                Fig. 6 — Active forum contributors and moderators, 1925
+              </p>
+            </div>
+            <div className="bg-[#f8f5ec] border-2 border-black p-4">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/b25aa8e1-c16f-459e-aa83-6ae8f06a762d.jpg"
+                alt="Camp gathering"
+                className="w-full old-photo border-2 border-black mb-3"
+              />
+              <p className="text-center text-black font-body text-sm italic">
+                Fig. 7 — Community gathering and discussion circle, 1925
+              </p>
+            </div>
+          </div>
+
           {/* Categories - Classified Ads Style */}
           <div className="bg-white border-8 border-black mb-8">
             <div className="border-b-4 border-black bg-white p-6">

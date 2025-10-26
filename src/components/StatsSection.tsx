@@ -59,6 +59,42 @@ const StatsSection = () => {
             </div>
           </div>
 
+          {/* Achievement Photos */}
+          <div className="bg-[#f8f5ec] border-2 border-black p-4 mb-8">
+            <div className="grid md:grid-cols-3 gap-4">
+              <div>
+                <img 
+                  src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/fa40f034-dcd1-4569-a3b1-ee4b25251f3c.jpg"
+                  alt="Top families"
+                  className="w-full old-photo border-2 border-black mb-2"
+                />
+                <p className="text-center text-black font-body text-xs italic">
+                  Fig. 10 — Leading families of 1925
+                </p>
+              </div>
+              <div>
+                <img 
+                  src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/9a73409c-d997-4539-bac2-07bc3743e5c1.jpg"
+                  alt="Champion players"
+                  className="w-full old-photo border-2 border-black mb-2"
+                />
+                <p className="text-center text-black font-body text-xs italic">
+                  Fig. 11 — Championship tournament winners
+                </p>
+              </div>
+              <div>
+                <img 
+                  src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/68ecaba2-4e61-434a-a1b1-ff1755ea6f08.jpg"
+                  alt="Notable achievements"
+                  className="w-full old-photo border-2 border-black mb-2"
+                />
+                <p className="text-center text-black font-body text-xs italic">
+                  Fig. 12 — Record-breaking accomplishments
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Server Stats - Statistical Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {serverStats.map((stat, index) => (
