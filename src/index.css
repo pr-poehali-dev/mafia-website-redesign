@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IM+Fell+English:ital@0;1&family=Bebas+Neue&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 95%;
+    --foreground: 0 0% 5%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 5%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 5%;
 
     --primary: 348 83% 47%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 16%;
+    --secondary: 0 0% 20%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 0 0% 16%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
 
     --accent: 348 83% 47%;
     --accent-foreground: 0 0% 100%;
@@ -30,19 +30,19 @@
     --destructive: 0 100% 27%;
     --destructive-foreground: 0 0% 95%;
 
-    --border: 0 0% 16%;
-    --input: 0 0% 16%;
+    --border: 0 0% 15%;
+    --input: 0 0% 95%;
     --ring: 348 83% 47%;
 
     --radius: 0rem;
 
-    --sidebar-background: 0 0% 4%;
-    --sidebar-foreground: 0 0% 95%;
+    --sidebar-background: 0 0% 95%;
+    --sidebar-foreground: 0 0% 5%;
     --sidebar-primary: 348 83% 47%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 16%;
+    --sidebar-accent: 0 0% 98%;
+    --sidebar-accent-foreground: 0 0% 5%;
+    --sidebar-border: 0 0% 15%;
     --sidebar-ring: 348 83% 47%;
   }
 
@@ -92,7 +92,22 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Inter", sans-serif;
+    font-family: "IM Fell English", serif;
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1) 0px,
+        transparent 1px,
+        transparent 2px,
+        rgba(0, 0, 0, 0.1) 3px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.1) 0px,
+        transparent 1px,
+        transparent 2px,
+        rgba(0, 0, 0, 0.1) 3px
+      );
   }
 
   h1,
@@ -102,5 +117,16 @@
   h5,
   h6 {
     font-family: "Playfair Display", serif;
+  }
+
+  .vintage-border {
+    border-image: repeating-linear-gradient(
+        45deg,
+        #000,
+        #000 10px,
+        transparent 10px,
+        transparent 20px
+      )
+      1;
   }
 }

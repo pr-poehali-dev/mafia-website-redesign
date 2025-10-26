@@ -19,43 +19,39 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-mafia-black/90 backdrop-blur-md border-b border-mafia-red">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-black shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-4">
-            <div className="relative">
-              <div className="absolute inset-0 bg-mafia-red blur-xl opacity-50"></div>
-              <div className="relative w-12 h-12 bg-gradient-to-br from-mafia-red to-mafia-red-dark flex items-center justify-center">
-                <Icon name="Crown" className="text-white" size={24} />
-              </div>
+            <div className="w-14 h-14 border-4 border-black bg-black flex items-center justify-center">
+              <Icon name="Crown" className="text-white" size={28} />
             </div>
             <div>
-              <h1 className="text-2xl font-display font-bold text-white tracking-widest">
+              <h1 className="text-3xl font-display font-black text-black tracking-tight uppercase">
                 MAFIA HOUSE
               </h1>
-              <p className="text-xs text-mafia-cream/60 font-medium tracking-wider">1920 ROLEPLAY</p>
+              <p className="text-xs font-body tracking-widest uppercase">Est. 1920</p>
             </div>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-2">
+          <nav className="hidden lg:flex items-center gap-1">
             {menuItems.map((item) => (
               <Button
                 key={item.id}
-                variant={activeSection === item.id ? 'default' : 'ghost'}
+                variant="ghost"
                 onClick={() => setActiveSection(item.id)}
-                className={`relative font-medium tracking-wide transition-all ${
+                className={`font-body uppercase tracking-wide transition-all border-2 ${
                   activeSection === item.id
-                    ? 'bg-mafia-red text-white hover:bg-mafia-red/90 shadow-lg shadow-mafia-red/50'
-                    : 'text-mafia-cream/70 hover:text-white hover:bg-mafia-gray'
+                    ? 'bg-black text-white border-black'
+                    : 'text-black border-transparent hover:border-black'
                 }`}
               >
-                <Icon name={item.icon as any} size={16} className="mr-2" />
                 {item.label}
               </Button>
             ))}
           </nav>
 
-          <Button className="lg:hidden bg-mafia-red text-white hover:bg-mafia-red/90">
+          <Button className="lg:hidden bg-black text-white hover:bg-mafia-red border-2 border-black">
             <Icon name="Menu" size={24} />
           </Button>
         </div>

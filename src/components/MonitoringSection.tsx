@@ -1,4 +1,3 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 
@@ -56,175 +55,231 @@ const MonitoringSection = () => {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'online':
-        return <Badge className="bg-green-600 text-white">Онлайн</Badge>;
-      case 'maintenance':
-        return <Badge className="bg-yellow-600 text-white">Тех. работы</Badge>;
-      case 'offline':
-        return <Badge className="bg-red-600 text-white">Оффлайн</Badge>;
       case 'operational':
-        return <Badge className="bg-green-600 text-white">Работает</Badge>;
+        return <Badge className="bg-white text-black border-2 border-black font-display font-black uppercase">Работает</Badge>;
+      case 'maintenance':
       case 'degraded':
-        return <Badge className="bg-yellow-600 text-white">Замедлен</Badge>;
+        return <Badge className="bg-white text-black border-2 border-black font-display font-black uppercase">Тех. работы</Badge>;
+      case 'offline':
+        return <Badge className="bg-red-600 text-white border-2 border-black font-display font-black uppercase">Оффлайн</Badge>;
       default:
-        return <Badge variant="outline">Неизвестно</Badge>;
+        return <Badge className="bg-white text-black border-2 border-black font-display font-black uppercase">Неизвестно</Badge>;
     }
   };
 
   const getEventIcon = (type: string) => {
     switch (type) {
       case 'success':
-        return { icon: 'CheckCircle2', color: 'text-green-500' };
+        return { icon: 'CheckCircle2', symbol: '✓' };
       case 'warning':
-        return { icon: 'AlertTriangle', color: 'text-yellow-500' };
+        return { icon: 'AlertTriangle', symbol: '⚠' };
       case 'maintenance':
-        return { icon: 'Settings', color: 'text-blue-500' };
+        return { icon: 'Settings', symbol: '⚙' };
       default:
-        return { icon: 'Info', color: 'text-mafia-red' };
+        return { icon: 'Info', symbol: 'ℹ' };
     }
   };
 
   return (
-    <section className="min-h-screen pt-32 pb-16 bg-mafia-black">
+    <section className="min-h-screen pt-32 pb-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-4 mb-12">
-            <Icon name="Activity" className="text-mafia-red" size={40} />
-            <h2 className="text-5xl font-display font-black text-white tracking-wider">МОНИТОРИНГ</h2>
+          {/* Telegraph/News Wire Header - 1920s Style */}
+          <div className="border-8 border-black bg-white p-8 mb-12 relative">
+            {/* Corner decorations */}
+            <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-black"></div>
+            <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-black"></div>
+            <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-black"></div>
+            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-black"></div>
+            
+            <div className="text-center">
+              <div className="text-sm font-display font-black uppercase tracking-widest mb-2">
+                Телеграфная служба мониторинга
+              </div>
+              <div className="border-y-4 border-black py-4">
+                <h2 className="text-7xl font-headline font-black text-black uppercase tracking-tighter">
+                  МОНИТОРИНГ
+                </h2>
+              </div>
+              <div className="mt-4 text-sm font-body text-black uppercase tracking-widest">
+                Состояние серверов • Актуально сейчас
+              </div>
+            </div>
           </div>
 
-          <div className="grid gap-6 mb-8">
-            <Card className="bg-mafia-gray border-mafia-red/30">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <Icon name="Server" className="text-mafia-red" size={32} />
-                  <CardTitle className="text-2xl font-display font-black text-white tracking-wider">ИГРОВЫЕ СЕРВЕРЫ</CardTitle>
-                </div>
-                <CardDescription className="font-body text-mafia-cream">
-                  Статус и информация о всех игровых серверах
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {servers.map((server) => (
-                    <div 
-                      key={server.id}
-                      className="p-5 rounded-lg bg-mafia-black/50 border border-mafia-red/20"
-                    >
-                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                        <div className="flex items-center gap-3">
-                          <div className={`w-3 h-3 rounded-full ${
-                            server.status === 'online' ? 'bg-green-500 animate-pulse' : 
-                            server.status === 'maintenance' ? 'bg-yellow-500' : 'bg-red-500'
+          {/* Server Status - Telegraph Report Style */}
+          <div className="bg-white border-8 border-black mb-8">
+            <div className="border-b-4 border-black bg-white p-6">
+              <div className="flex items-center justify-center gap-3">
+                <Icon name="Server" className="text-black" size={40} />
+                <h3 className="text-3xl font-headline font-black text-black uppercase tracking-tighter">
+                  Игровые серверы
+                </h3>
+              </div>
+              <p className="text-center font-body text-black text-sm uppercase tracking-wider mt-2">
+                Текущее состояние всех серверов
+              </p>
+            </div>
+            
+            <div className="p-6">
+              <div className="space-y-4">
+                {servers.map((server) => (
+                  <div 
+                    key={server.id}
+                    className="bg-white border-4 border-black p-6"
+                  >
+                    {/* Server header */}
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-4 border-b-4 border-black">
+                      <div className="flex items-center gap-4">
+                        {/* Status indicator - telegraph style */}
+                        <div className="flex flex-col items-center gap-1">
+                          <div className={`w-6 h-6 border-4 border-black ${
+                            server.status === 'online' ? 'bg-black' : 
+                            server.status === 'maintenance' ? 'bg-white' : 'bg-white'
                           }`} />
-                          <h3 className="text-xl font-display font-black text-white">{server.name}</h3>
+                          <div className="text-xs font-display font-black uppercase">
+                            {server.status === 'online' ? 'ON' : 'OFF'}
+                          </div>
                         </div>
-                        {getStatusBadge(server.status)}
+                        
+                        <div>
+                          <h4 className="text-2xl font-display font-black text-black uppercase mb-1">
+                            {server.name}
+                          </h4>
+                          <div className="text-sm font-body text-black uppercase tracking-wider">
+                            Версия {server.version} • Карта: {server.map}
+                          </div>
+                        </div>
                       </div>
                       
-                      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm font-body">
-                        <div>
-                          <div className="text-mafia-cream/70 mb-1">Игроки</div>
-                          <div className="text-mafia-cream font-bold flex items-center gap-1">
-                            <Icon name="Users" size={16} className="text-mafia-red" />
-                            {server.players}
-                          </div>
+                      {getStatusBadge(server.status)}
+                    </div>
+                    
+                    {/* Server stats grid - telegraph table */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                      <div className="border-2 border-black p-3 text-center">
+                        <div className="flex items-center justify-center gap-2 mb-2">
+                          <Icon name="Users" size={16} className="text-black" />
+                          <span className="text-xs font-body uppercase tracking-wider">Игроки</span>
                         </div>
-                        <div>
-                          <div className="text-mafia-cream/70 mb-1">Пинг</div>
-                          <div className="text-mafia-cream font-bold flex items-center gap-1">
-                            <Icon name="Wifi" size={16} className="text-mafia-red" />
-                            {server.ping}
-                          </div>
+                        <div className="font-display font-black text-xl text-black">{server.players}</div>
+                      </div>
+                      
+                      <div className="border-2 border-black p-3 text-center">
+                        <div className="flex items-center justify-center gap-2 mb-2">
+                          <Icon name="Wifi" size={16} className="text-black" />
+                          <span className="text-xs font-body uppercase tracking-wider">Пинг</span>
                         </div>
-                        <div>
-                          <div className="text-mafia-cream/70 mb-1">Аптайм</div>
-                          <div className="text-mafia-cream font-bold flex items-center gap-1">
-                            <Icon name="Clock" size={16} className="text-mafia-red" />
-                            {server.uptime}
-                          </div>
+                        <div className="font-display font-black text-xl text-black">{server.ping}</div>
+                      </div>
+                      
+                      <div className="border-2 border-black p-3 text-center">
+                        <div className="flex items-center justify-center gap-2 mb-2">
+                          <Icon name="Clock" size={16} className="text-black" />
+                          <span className="text-xs font-body uppercase tracking-wider">Аптайм</span>
                         </div>
-                        <div>
-                          <div className="text-mafia-cream/70 mb-1">Версия</div>
-                          <div className="text-mafia-cream font-bold">{server.version}</div>
+                        <div className="font-display font-black text-xl text-black">{server.uptime}</div>
+                      </div>
+                      
+                      <div className="border-2 border-black p-3 text-center">
+                        <div className="flex items-center justify-center gap-2 mb-2">
+                          <Icon name="Map" size={16} className="text-black" />
+                          <span className="text-xs font-body uppercase tracking-wider">Локация</span>
                         </div>
-                        <div>
-                          <div className="text-mafia-cream/70 mb-1">Карта</div>
-                          <div className="text-mafia-cream font-bold flex items-center gap-1">
-                            <Icon name="Map" size={16} className="text-mafia-red" />
-                            {server.map}
-                          </div>
-                        </div>
+                        <div className="font-display font-black text-base text-black">{server.map}</div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Two column layout */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* System Services - Service List */}
+            <div className="bg-white border-8 border-black">
+              <div className="border-b-4 border-black bg-white p-6">
+                <div className="flex items-center justify-center gap-3">
+                  <Icon name="Cpu" className="text-black" size={36} />
+                  <h3 className="text-2xl font-headline font-black text-black uppercase tracking-tighter">
+                    Сервисы
+                  </h3>
+                </div>
+              </div>
+              
+              <div className="p-4">
+                <div className="space-y-3">
+                  {systemStatus.map((item, index) => (
+                    <div 
+                      key={index}
+                      className="bg-white border-2 border-black p-4"
+                    >
+                      <div className="flex items-center justify-between gap-3 mb-2">
+                        <span className="font-body text-black font-bold">{item.service}</span>
+                        {getStatusBadge(item.status)}
+                      </div>
+                      <div className="flex items-center gap-2 text-sm font-body text-black">
+                        <Icon name="Zap" size={14} />
+                        <span className="uppercase tracking-wider">Отклик: {item.response}</span>
                       </div>
                     </div>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card className="bg-mafia-gray border-mafia-red/30">
-                <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Cpu" className="text-mafia-red" size={32} />
-                    <CardTitle className="text-2xl font-display font-black text-white tracking-wider">СИСТЕМНЫЕ СЕРВИСЫ</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    {systemStatus.map((item, index) => (
+            {/* Recent Events - Telegraph Reports */}
+            <div className="bg-white border-8 border-black">
+              <div className="border-b-4 border-black bg-white p-6">
+                <div className="flex items-center justify-center gap-3">
+                  <Icon name="Radio" className="text-black" size={36} />
+                  <h3 className="text-2xl font-headline font-black text-black uppercase tracking-tighter">
+                    События
+                  </h3>
+                </div>
+              </div>
+              
+              <div className="p-4">
+                <div className="space-y-3">
+                  {recentEvents.map((event, index) => {
+                    const eventData = getEventIcon(event.type);
+                    return (
                       <div 
                         key={index}
-                        className="flex items-center justify-between p-3 rounded-lg bg-mafia-black/50"
+                        className="bg-white border-2 border-black p-4"
                       >
-                        <div className="flex items-center gap-3">
-                          <div className={`w-2 h-2 rounded-full ${
-                            item.status === 'operational' ? 'bg-green-500' : 'bg-yellow-500'
-                          }`} />
-                          <span className="font-body text-mafia-cream">{item.service}</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <span className="text-sm text-mafia-cream/70 font-body">{item.response}</span>
-                          {getStatusBadge(item.status)}
+                        <div className="flex items-start gap-3">
+                          {/* Time stamp - telegraph style */}
+                          <div className="border-2 border-black px-3 py-1 flex-shrink-0">
+                            <span className="font-display font-black text-sm text-black">{event.time}</span>
+                          </div>
+                          
+                          {/* Symbol */}
+                          <div className="w-8 h-8 border-2 border-black flex items-center justify-center flex-shrink-0">
+                            <span className="text-xl">{eventData.symbol}</span>
+                          </div>
+                          
+                          {/* Event text */}
+                          <span className="font-body text-black flex-1">{event.event}</span>
                         </div>
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
 
-              <Card className="bg-mafia-gray border-mafia-red/30">
-                <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Bell" className="text-mafia-red" size={32} />
-                    <CardTitle className="text-2xl font-display font-black text-white tracking-wider">СОБЫТИЯ</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    {recentEvents.map((event, index) => {
-                      const eventStyle = getEventIcon(event.type);
-                      return (
-                        <div 
-                          key={index}
-                          className="flex items-start gap-3 p-3 rounded-lg bg-mafia-black/50"
-                        >
-                          <Icon 
-                            name={eventStyle.icon as any} 
-                            className={eventStyle.color} 
-                            size={20} 
-                          />
-                          <div className="flex-1">
-                            <div className="font-body text-mafia-cream">{event.event}</div>
-                            <div className="text-xs text-mafia-cream/70 font-body mt-1">
-                              {event.time}
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </CardContent>
-              </Card>
+          {/* Footer - Telegraph Office */}
+          <div className="mt-8 border-4 border-black p-6 text-center bg-white">
+            <div className="border-y-2 border-black py-3">
+              <p className="font-body text-black text-sm uppercase tracking-widest">
+                Телеграфная служба мониторинга • Mafia House Telegraph Office
+              </p>
+              <p className="font-body text-black text-xs uppercase tracking-widest mt-2">
+                Обновляется в режиме реального времени • Est. 1925
+              </p>
             </div>
           </div>
         </div>

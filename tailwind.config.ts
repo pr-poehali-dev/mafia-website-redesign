@@ -79,8 +79,9 @@ export default {
 			},
 			fontFamily: {
 				display: ['Playfair Display', 'serif'],
-				sans: ['Inter', 'sans-serif'],
-				body: ['Inter', 'sans-serif']
+				sans: ['IM Fell English', 'serif'],
+				body: ['IM Fell English', 'serif'],
+				headline: ['Bebas Neue', 'sans-serif']
 			},
 			keyframes: {
 				'accordion-down': {
