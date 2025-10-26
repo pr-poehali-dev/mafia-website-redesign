@@ -14,14 +14,14 @@ const Footer = () => {
                 <Icon name="Crown" className="text-white" size={24} />
               </div>
               <h3 className="text-4xl font-headline font-black text-black tracking-tighter uppercase">
-                MAFIA RDR2
+                МАФИЯ RDR2
               </h3>
               <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center">
                 <Icon name="Crown" className="text-white" size={24} />
               </div>
             </div>
             <div className="font-body text-black text-sm uppercase tracking-widest">
-              Официальное издание • Est. 1925
+              Официальное издание • Основано в 1925
             </div>
           </div>
 
@@ -166,7 +166,7 @@ const Footer = () => {
         <div className="mt-6 text-center">
           <div className="inline-block border-4 border-black px-8 py-2 bg-white">
             <p className="font-body text-black text-xs uppercase tracking-widest">
-              Printed at Mafia House Press • October 26, 1925 • Volume I, No. 1
+              Напечатано в типографии Mafia House Press • 26 октября 1925 • Том I, № 1
             </p>
           </div>
         </div>
