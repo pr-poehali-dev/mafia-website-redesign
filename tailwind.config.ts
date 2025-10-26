@@ -78,10 +78,11 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				display: ['Playfair Display', 'serif'],
-				sans: ['IM Fell English', 'serif'],
-				body: ['IM Fell English', 'serif'],
-				headline: ['Bebas Neue', 'sans-serif']
+				display: ['UnifrakturMaguntia', 'Old Standard TT', 'serif'],
+				sans: ['Libre Baskerville', 'serif'],
+				body: ['Libre Baskerville', 'serif'],
+				headline: ['Old Standard TT', 'serif'],
+				gothic: ['UnifrakturMaguntia', 'serif']
 			},
 			keyframes: {
 				'accordion-down': {
