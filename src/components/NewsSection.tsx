@@ -33,61 +33,61 @@ const NewsSection = () => {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Обновление':
-        return 'bg-vintage-gold text-vintage-brown';
+        return 'bg-mafia-red text-white';
       case 'События':
-        return 'bg-vintage-red text-vintage-sepia';
+        return 'bg-mafia-cream text-black';
       case 'Важное':
-        return 'bg-vintage-sepia text-vintage-brown';
+        return 'bg-white text-black';
       default:
         return 'bg-muted text-muted-foreground';
     }
   };
 
   return (
-    <section className="min-h-screen pt-32 pb-16">
+    <section className="min-h-screen pt-32 pb-16 bg-mafia-black">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 mb-12">
-            <Icon name="Newspaper" className="text-vintage-gold" size={40} />
-            <h2 className="text-5xl font-display font-bold text-vintage-gold">Новости</h2>
+            <Icon name="Newspaper" className="text-mafia-red" size={40} />
+            <h2 className="text-5xl font-display font-black text-white tracking-wider">НОВОСТИ</h2>
           </div>
 
           <div className="grid gap-6">
             {news.map((item) => (
               <Card 
                 key={item.id} 
-                className="overflow-hidden hover:shadow-2xl hover:shadow-vintage-gold/20 transition-all duration-300 bg-card border-vintage-gold/30 group"
+                className="overflow-hidden hover:shadow-2xl hover:shadow-mafia-red/30 transition-all duration-300 bg-mafia-gray border-mafia-red/20 hover:border-mafia-red group"
               >
                 <div className="grid md:grid-cols-3 gap-0">
                   <div className="relative md:col-span-1 h-64 md:h-auto overflow-hidden">
                     <img 
                       src={item.image} 
                       alt={item.title}
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/50" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-mafia-gray/80" />
                   </div>
                   
                   <div className="md:col-span-2">
                     <CardHeader>
                       <div className="flex items-center justify-between mb-3">
-                        <Badge className={getCategoryColor(item.category)}>
+                        <Badge className={`${getCategoryColor(item.category)} font-bold tracking-wide`}>
                           {item.category}
                         </Badge>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground font-body">
+                        <div className="flex items-center gap-2 text-sm text-mafia-cream/50 font-medium">
                           <Icon name="Calendar" size={16} />
                           {item.date}
                         </div>
                       </div>
-                      <CardTitle className="text-3xl font-display text-vintage-gold group-hover:text-vintage-gold/80 transition-colors">
+                      <CardTitle className="text-3xl font-display font-bold text-white group-hover:text-mafia-red transition-colors">
                         {item.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-foreground font-body text-base leading-relaxed">
+                      <CardDescription className="text-mafia-cream/80 text-base leading-relaxed">
                         {item.excerpt}
                       </CardDescription>
-                      <div className="mt-6 flex items-center gap-2 text-vintage-gold font-body hover:gap-4 transition-all cursor-pointer">
+                      <div className="mt-6 flex items-center gap-2 text-mafia-red font-medium hover:gap-4 transition-all cursor-pointer">
                         <span>Читать полностью</span>
                         <Icon name="ArrowRight" size={20} />
                       </div>

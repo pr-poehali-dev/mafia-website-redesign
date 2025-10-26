@@ -62,12 +62,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				vintage: {
-					gold: '#D4AF37',
-					sepia: '#F5E6D3',
-					brown: '#2C1810',
-					red: '#8B0000',
-					cream: '#FFF8E7'
+				mafia: {
+					black: '#0A0A0A',
+					gray: '#1A1A1A',
+					'gray-light': '#2A2A2A',
+					red: '#DC143C',
+					'red-dark': '#8B0000',
+					cream: '#F5E6D0',
+					gold: '#FFD700'
 				}
 			},
 			borderRadius: {
@@ -77,7 +79,8 @@ export default {
 			},
 			fontFamily: {
 				display: ['Playfair Display', 'serif'],
-				body: ['Merriweather', 'serif']
+				sans: ['Inter', 'sans-serif'],
+				body: ['Inter', 'sans-serif']
 			},
 			keyframes: {
 				'accordion-down': {

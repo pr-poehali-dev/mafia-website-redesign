@@ -79,27 +79,27 @@ const MonitoringSection = () => {
       case 'maintenance':
         return { icon: 'Settings', color: 'text-blue-500' };
       default:
-        return { icon: 'Info', color: 'text-vintage-gold' };
+        return { icon: 'Info', color: 'text-mafia-red' };
     }
   };
 
   return (
-    <section className="min-h-screen pt-32 pb-16">
+    <section className="min-h-screen pt-32 pb-16 bg-mafia-black">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 mb-12">
-            <Icon name="Activity" className="text-vintage-gold" size={40} />
-            <h2 className="text-5xl font-display font-bold text-vintage-gold">Мониторинг</h2>
+            <Icon name="Activity" className="text-mafia-red" size={40} />
+            <h2 className="text-5xl font-display font-black text-white tracking-wider">МОНИТОРИНГ</h2>
           </div>
 
           <div className="grid gap-6 mb-8">
-            <Card className="bg-card border-vintage-gold/30">
+            <Card className="bg-mafia-gray border-mafia-red/30">
               <CardHeader>
                 <div className="flex items-center gap-3">
-                  <Icon name="Server" className="text-vintage-gold" size={32} />
-                  <CardTitle className="text-2xl font-display text-vintage-gold">Игровые серверы</CardTitle>
+                  <Icon name="Server" className="text-mafia-red" size={32} />
+                  <CardTitle className="text-2xl font-display font-black text-white tracking-wider">ИГРОВЫЕ СЕРВЕРЫ</CardTitle>
                 </div>
-                <CardDescription className="font-body">
+                <CardDescription className="font-body text-mafia-cream">
                   Статус и информация о всех игровых серверах
                 </CardDescription>
               </CardHeader>
@@ -108,7 +108,7 @@ const MonitoringSection = () => {
                   {servers.map((server) => (
                     <div 
                       key={server.id}
-                      className="p-5 rounded-lg bg-vintage-brown/30 border border-vintage-gold/20"
+                      className="p-5 rounded-lg bg-mafia-black/50 border border-mafia-red/20"
                     >
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                         <div className="flex items-center gap-3">
@@ -116,41 +116,41 @@ const MonitoringSection = () => {
                             server.status === 'online' ? 'bg-green-500 animate-pulse' : 
                             server.status === 'maintenance' ? 'bg-yellow-500' : 'bg-red-500'
                           }`} />
-                          <h3 className="text-xl font-display text-vintage-gold">{server.name}</h3>
+                          <h3 className="text-xl font-display font-black text-white">{server.name}</h3>
                         </div>
                         {getStatusBadge(server.status)}
                       </div>
                       
                       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm font-body">
                         <div>
-                          <div className="text-muted-foreground mb-1">Игроки</div>
-                          <div className="text-foreground font-bold flex items-center gap-1">
-                            <Icon name="Users" size={16} className="text-vintage-gold" />
+                          <div className="text-mafia-cream/70 mb-1">Игроки</div>
+                          <div className="text-mafia-cream font-bold flex items-center gap-1">
+                            <Icon name="Users" size={16} className="text-mafia-red" />
                             {server.players}
                           </div>
                         </div>
                         <div>
-                          <div className="text-muted-foreground mb-1">Пинг</div>
-                          <div className="text-foreground font-bold flex items-center gap-1">
-                            <Icon name="Wifi" size={16} className="text-vintage-gold" />
+                          <div className="text-mafia-cream/70 mb-1">Пинг</div>
+                          <div className="text-mafia-cream font-bold flex items-center gap-1">
+                            <Icon name="Wifi" size={16} className="text-mafia-red" />
                             {server.ping}
                           </div>
                         </div>
                         <div>
-                          <div className="text-muted-foreground mb-1">Аптайм</div>
-                          <div className="text-foreground font-bold flex items-center gap-1">
-                            <Icon name="Clock" size={16} className="text-vintage-gold" />
+                          <div className="text-mafia-cream/70 mb-1">Аптайм</div>
+                          <div className="text-mafia-cream font-bold flex items-center gap-1">
+                            <Icon name="Clock" size={16} className="text-mafia-red" />
                             {server.uptime}
                           </div>
                         </div>
                         <div>
-                          <div className="text-muted-foreground mb-1">Версия</div>
-                          <div className="text-foreground font-bold">{server.version}</div>
+                          <div className="text-mafia-cream/70 mb-1">Версия</div>
+                          <div className="text-mafia-cream font-bold">{server.version}</div>
                         </div>
                         <div>
-                          <div className="text-muted-foreground mb-1">Карта</div>
-                          <div className="text-foreground font-bold flex items-center gap-1">
-                            <Icon name="Map" size={16} className="text-vintage-gold" />
+                          <div className="text-mafia-cream/70 mb-1">Карта</div>
+                          <div className="text-mafia-cream font-bold flex items-center gap-1">
+                            <Icon name="Map" size={16} className="text-mafia-red" />
                             {server.map}
                           </div>
                         </div>
@@ -162,11 +162,11 @@ const MonitoringSection = () => {
             </Card>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="bg-card border-vintage-gold/30">
+              <Card className="bg-mafia-gray border-mafia-red/30">
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <Icon name="Cpu" className="text-vintage-gold" size={32} />
-                    <CardTitle className="text-2xl font-display text-vintage-gold">Системные сервисы</CardTitle>
+                    <Icon name="Cpu" className="text-mafia-red" size={32} />
+                    <CardTitle className="text-2xl font-display font-black text-white tracking-wider">СИСТЕМНЫЕ СЕРВИСЫ</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -174,16 +174,16 @@ const MonitoringSection = () => {
                     {systemStatus.map((item, index) => (
                       <div 
                         key={index}
-                        className="flex items-center justify-between p-3 rounded-lg bg-vintage-brown/30"
+                        className="flex items-center justify-between p-3 rounded-lg bg-mafia-black/50"
                       >
                         <div className="flex items-center gap-3">
                           <div className={`w-2 h-2 rounded-full ${
                             item.status === 'operational' ? 'bg-green-500' : 'bg-yellow-500'
                           }`} />
-                          <span className="font-body text-foreground">{item.service}</span>
+                          <span className="font-body text-mafia-cream">{item.service}</span>
                         </div>
                         <div className="flex items-center gap-3">
-                          <span className="text-sm text-muted-foreground font-body">{item.response}</span>
+                          <span className="text-sm text-mafia-cream/70 font-body">{item.response}</span>
                           {getStatusBadge(item.status)}
                         </div>
                       </div>
@@ -192,11 +192,11 @@ const MonitoringSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-card border-vintage-gold/30">
+              <Card className="bg-mafia-gray border-mafia-red/30">
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <Icon name="Bell" className="text-vintage-gold" size={32} />
-                    <CardTitle className="text-2xl font-display text-vintage-gold">События</CardTitle>
+                    <Icon name="Bell" className="text-mafia-red" size={32} />
+                    <CardTitle className="text-2xl font-display font-black text-white tracking-wider">СОБЫТИЯ</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -206,7 +206,7 @@ const MonitoringSection = () => {
                       return (
                         <div 
                           key={index}
-                          className="flex items-start gap-3 p-3 rounded-lg bg-vintage-brown/30"
+                          className="flex items-start gap-3 p-3 rounded-lg bg-mafia-black/50"
                         >
                           <Icon 
                             name={eventStyle.icon as any} 
@@ -214,8 +214,8 @@ const MonitoringSection = () => {
                             size={20} 
                           />
                           <div className="flex-1">
-                            <div className="font-body text-foreground">{event.event}</div>
-                            <div className="text-xs text-muted-foreground font-body mt-1">
+                            <div className="font-body text-mafia-cream">{event.event}</div>
+                            <div className="text-xs text-mafia-cream/70 font-body mt-1">
                               {event.time}
                             </div>
                           </div>

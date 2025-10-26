@@ -43,23 +43,23 @@ const RulesSection = () => {
   ];
 
   return (
-    <section className="min-h-screen pt-32 pb-16">
+    <section className="min-h-screen pt-32 pb-16 bg-mafia-black">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
-            <Icon name="ScrollText" className="text-vintage-gold" size={40} />
-            <h2 className="text-5xl font-display font-bold text-vintage-gold">Правила</h2>
+            <Icon name="ScrollText" className="text-mafia-red" size={40} />
+            <h2 className="text-5xl font-display font-black text-white tracking-wider">ПРАВИЛА</h2>
           </div>
 
-          <Card className="mb-8 bg-vintage-red/20 border-vintage-red">
+          <Card className="mb-8 bg-mafia-red/20 border-mafia-red">
             <CardHeader>
               <div className="flex items-center gap-3">
-                <Icon name="AlertTriangle" className="text-vintage-red" size={32} />
-                <CardTitle className="text-2xl font-display text-vintage-gold">Важно</CardTitle>
+                <Icon name="AlertTriangle" className="text-mafia-red" size={32} />
+                <CardTitle className="text-2xl font-display font-black text-white tracking-wider">ВАЖНО</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <CardDescription className="text-foreground font-body text-base leading-relaxed">
+              <CardDescription className="text-mafia-cream font-body text-base leading-relaxed">
                 Незнание правил не освобождает от ответственности. Перед началом игры обязательно ознакомьтесь со всеми правилами сервера. Нарушение может привести к бану аккаунта.
               </CardDescription>
             </CardContent>
@@ -70,20 +70,20 @@ const RulesSection = () => {
               <AccordionItem 
                 key={rule.id} 
                 value={rule.id}
-                className="border border-vintage-gold/30 rounded-lg overflow-hidden bg-card"
+                className="border border-mafia-red/30 rounded-lg overflow-hidden bg-mafia-gray"
               >
-                <AccordionTrigger className="px-6 py-4 hover:bg-vintage-gold/10 transition-colors hover:no-underline">
+                <AccordionTrigger className="px-6 py-4 hover:bg-mafia-red/10 transition-colors hover:no-underline">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-vintage-gold/20 flex items-center justify-center">
-                      <Icon name={rule.icon as any} className="text-vintage-gold" size={24} />
+                    <div className="w-12 h-12 rounded-full bg-mafia-red/20 flex items-center justify-center">
+                      <Icon name={rule.icon as any} className="text-mafia-red" size={24} />
                     </div>
-                    <span className="text-xl font-display text-vintage-gold text-left">
+                    <span className="text-xl font-display font-black text-white text-left tracking-wider">
                       {rule.title}
                     </span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-6 pt-2">
-                  <p className="text-foreground font-body text-base leading-relaxed ml-16">
+                  <p className="text-mafia-cream font-body text-base leading-relaxed ml-16">
                     {rule.content}
                   </p>
                 </AccordionContent>
@@ -91,18 +91,18 @@ const RulesSection = () => {
             ))}
           </Accordion>
 
-          <Card className="mt-8 bg-vintage-gold/10 border-vintage-gold">
+          <Card className="mt-8 bg-mafia-gray border-mafia-red">
             <CardHeader>
               <div className="flex items-center gap-3">
-                <Icon name="FileText" className="text-vintage-gold" size={32} />
-                <CardTitle className="text-2xl font-display text-vintage-gold">Полные правила</CardTitle>
+                <Icon name="FileText" className="text-mafia-red" size={32} />
+                <CardTitle className="text-2xl font-display font-black text-white tracking-wider">ПОЛНЫЕ ПРАВИЛА</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <CardDescription className="text-foreground font-body text-base leading-relaxed mb-4">
+              <CardDescription className="text-mafia-cream font-body text-base leading-relaxed mb-4">
                 Здесь представлены основные правила. Полную версию со всеми нюансами можно найти на форуме сервера.
               </CardDescription>
-              <div className="flex items-center gap-2 text-vintage-gold font-body hover:gap-4 transition-all cursor-pointer">
+              <div className="flex items-center gap-2 text-mafia-red font-body hover:gap-4 transition-all cursor-pointer">
                 <span>Читать полные правила на форуме</span>
                 <Icon name="ExternalLink" size={20} />
               </div>

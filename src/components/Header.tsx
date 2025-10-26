@@ -19,40 +19,43 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-vintage-brown/95 backdrop-blur-sm border-b-2 border-vintage-gold">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-mafia-black/90 backdrop-blur-md border-b border-mafia-red">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-vintage-gold rounded-full flex items-center justify-center">
-              <Icon name="Crown" className="text-vintage-brown" size={24} />
+          <div className="flex items-center gap-4">
+            <div className="relative">
+              <div className="absolute inset-0 bg-mafia-red blur-xl opacity-50"></div>
+              <div className="relative w-12 h-12 bg-gradient-to-br from-mafia-red to-mafia-red-dark flex items-center justify-center">
+                <Icon name="Crown" className="text-white" size={24} />
+              </div>
             </div>
             <div>
-              <h1 className="text-2xl font-display font-bold text-vintage-gold tracking-wider">
-                MAFIA RDR2
+              <h1 className="text-2xl font-display font-bold text-white tracking-widest">
+                MAFIA HOUSE
               </h1>
-              <p className="text-xs text-vintage-sepia/80 font-body">Prohibition Era Roleplay</p>
+              <p className="text-xs text-mafia-cream/60 font-medium tracking-wider">1920 ROLEPLAY</p>
             </div>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-2">
             {menuItems.map((item) => (
               <Button
                 key={item.id}
                 variant={activeSection === item.id ? 'default' : 'ghost'}
                 onClick={() => setActiveSection(item.id)}
-                className={`flex items-center gap-2 ${
+                className={`relative font-medium tracking-wide transition-all ${
                   activeSection === item.id
-                    ? 'bg-vintage-gold text-vintage-brown hover:bg-vintage-gold/90'
-                    : 'text-vintage-sepia hover:text-vintage-gold hover:bg-vintage-brown/50'
+                    ? 'bg-mafia-red text-white hover:bg-mafia-red/90 shadow-lg shadow-mafia-red/50'
+                    : 'text-mafia-cream/70 hover:text-white hover:bg-mafia-gray'
                 }`}
               >
-                <Icon name={item.icon as any} size={16} />
-                <span className="font-body text-sm">{item.label}</span>
+                <Icon name={item.icon as any} size={16} className="mr-2" />
+                {item.label}
               </Button>
             ))}
           </nav>
 
-          <Button className="lg:hidden bg-vintage-gold text-vintage-brown hover:bg-vintage-gold/90">
+          <Button className="lg:hidden bg-mafia-red text-white hover:bg-mafia-red/90">
             <Icon name="Menu" size={24} />
           </Button>
         </div>
