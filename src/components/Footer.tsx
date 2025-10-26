@@ -163,11 +163,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom decorative border */}
         <div className="mt-6 text-center">
           <div className="inline-block border-4 border-black px-8 py-2 bg-white">
             <p className="font-body text-black text-xs uppercase tracking-widest">
-              Напечатано в типографии Mafia House Press • 26 октября 1925
+              Printed at Mafia House Press • October 26, 1925 • Volume I, No. 1
             </p>
           </div>
         </div>

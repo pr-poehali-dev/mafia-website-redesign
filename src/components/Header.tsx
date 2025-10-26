@@ -8,53 +8,59 @@ interface HeaderProps {
 
 const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
   const menuItems = [
-    { id: 'home', label: 'Главная', icon: 'Home' },
-    { id: 'news', label: 'Новости', icon: 'Newspaper' },
-    { id: 'rules', label: 'Правила', icon: 'ScrollText' },
-    { id: 'donate', label: 'Донат', icon: 'Coins' },
-    { id: 'forum', label: 'Форум', icon: 'MessageSquare' },
-    { id: 'wiki', label: 'Вики', icon: 'BookOpen' },
-    { id: 'stats', label: 'Статистика', icon: 'BarChart3' },
-    { id: 'monitoring', label: 'Мониторинг', icon: 'Activity' },
+    { id: 'home', label: 'Главная' },
+    { id: 'news', label: 'Новости' },
+    { id: 'rules', label: 'Правила' },
+    { id: 'donate', label: 'Донат' },
+    { id: 'forum', label: 'Форум' },
+    { id: 'wiki', label: 'Вики' },
+    { id: 'stats', label: 'Статистика' },
+    { id: 'monitoring', label: 'Мониторинг' },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-black shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#F5E6D0] border-t-8 border-b-4 border-black shadow-2xl">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 border-4 border-black bg-black flex items-center justify-center">
-              <Icon name="Crown" className="text-white" size={28} />
-            </div>
-            <div>
-              <h1 className="text-3xl font-display font-black text-black tracking-tight uppercase">
-                MAFIA HOUSE
-              </h1>
-              <p className="text-xs font-body tracking-widest uppercase">Est. 1920</p>
-            </div>
+        <div className="border-b-2 border-black py-2">
+          <div className="flex items-center justify-between text-xs uppercase tracking-wider">
+            <div className="font-body">Сервер Мафия • Mafia House Server</div>
+            <div className="font-body">Выпуск № 1927 • Est. 1920</div>
           </div>
+        </div>
+        
+        <div className="text-center py-6 border-b-4 border-black">
+          <h1 className="text-6xl md:text-7xl font-display font-black text-black leading-none mb-2">
+            The Mafia Times
+          </h1>
+          <p className="text-sm font-headline tracking-[0.3em] uppercase border-t-2 border-b-2 border-black py-1 inline-block px-8">
+            Всё о нашей семье • All Family News
+          </p>
+        </div>
 
-          <nav className="hidden lg:flex items-center gap-1">
-            {menuItems.map((item) => (
+        <nav className="hidden lg:flex items-center justify-center gap-0 border-b-2 border-black">
+          {menuItems.map((item, index) => (
+            <div key={item.id} className="flex items-center">
               <Button
-                key={item.id}
                 variant="ghost"
                 onClick={() => setActiveSection(item.id)}
-                className={`font-body uppercase tracking-wide transition-all border-2 ${
+                className={`font-headline uppercase tracking-wider text-sm px-6 py-3 rounded-none border-0 ${
                   activeSection === item.id
-                    ? 'bg-black text-white border-black'
-                    : 'text-black border-transparent hover:border-black'
+                    ? 'bg-black text-white'
+                    : 'text-black hover:bg-black/10'
                 }`}
               >
                 {item.label}
               </Button>
-            ))}
-          </nav>
+              {index < menuItems.length - 1 && (
+                <div className="w-px h-6 bg-black"></div>
+              )}
+            </div>
+          ))}
+        </nav>
 
-          <Button className="lg:hidden bg-black text-white hover:bg-mafia-red border-2 border-black">
-            <Icon name="Menu" size={24} />
-          </Button>
-        </div>
+        <Button className="lg:hidden absolute top-4 right-4 bg-black text-white hover:bg-black/80 border-2 border-black">
+          <Icon name="Menu" size={24} />
+        </Button>
       </div>
     </header>
   );
