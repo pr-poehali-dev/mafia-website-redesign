@@ -211,13 +211,13 @@ const RulesSection = () => {
           {activeCategory === 'admin' && (
             <div className="space-y-6">
               <div className="border-8 border-[#8B0000] aged-paper shadow-2xl transform rotate-1">
-                <div className="border-4 border-black m-2 bg-gradient-to-r from-red-800 to-red-900 text-white p-4 text-center">
-                  <div className="border-2 border-amber-400 p-3">
-                    <Icon name="AlertTriangle" size={36} className="mx-auto mb-2 text-amber-300" />
-                    <div className="text-2xl font-headline uppercase tracking-wider">
+                <div className="border-4 border-black m-2 bg-white p-4 text-center">
+                  <div className="border-2 border-black p-3">
+                    <Icon name="AlertTriangle" size={36} className="mx-auto mb-2 text-[#8B0000]" />
+                    <div className="text-2xl font-headline uppercase tracking-wider text-black">
                       ⚠ Регламент Администрации ⚠
                     </div>
-                    <div className="text-[10px] uppercase tracking-widest mt-2 border-t border-b border-amber-400 py-1">
+                    <div className="text-[10px] uppercase tracking-widest mt-2 border-t border-b border-black py-1 text-black">
                       Строго обязательно к исполнению
                     </div>
                   </div>
@@ -379,13 +379,13 @@ const RulesSection = () => {
           {activeCategory === 'general' && (
             <div className="space-y-6">
               <div className="border-8 border-black aged-paper shadow-2xl transform -rotate-1">
-                <div className="border-4 border-[#8B0000] m-2 bg-gradient-to-r from-zinc-800 to-black text-white p-4 text-center">
-                  <div className="border-2 border-white p-3">
-                    <Icon name="BookOpen" size={36} className="mx-auto mb-2" />
-                    <div className="text-2xl font-headline uppercase tracking-wider">
+                <div className="border-4 border-black m-2 bg-white p-4 text-center">
+                  <div className="border-2 border-black p-3">
+                    <Icon name="BookOpen" size={36} className="mx-auto mb-2 text-black" />
+                    <div className="text-2xl font-headline uppercase tracking-wider text-black">
                       ⚖ Общие правила сервера ⚖
                     </div>
-                    <div className="text-[10px] uppercase tracking-widest mt-2 border-t border-b border-white py-1">
+                    <div className="text-[10px] uppercase tracking-widest mt-2 border-t border-b border-black py-1 text-black">
                       Обязательны для всех участников
                     </div>
                   </div>
@@ -524,13 +524,13 @@ const RulesSection = () => {
           {activeCategory === 'leaders' && (
             <div className="space-y-6">
               <div className="border-8 border-black aged-paper shadow-2xl transform rotate-1">
-                <div className="border-4 border-[#8B0000] m-2 bg-gradient-to-r from-zinc-800 to-black text-white p-4 text-center">
-                  <div className="border-2 border-white p-3">
-                    <Icon name="Crown" size={36} className="mx-auto mb-2" />
-                    <div className="text-2xl font-headline uppercase tracking-wider">
+                <div className="border-4 border-black m-2 bg-white p-4 text-center">
+                  <div className="border-2 border-black p-3">
+                    <Icon name="Crown" size={36} className="mx-auto mb-2 text-black" />
+                    <div className="text-2xl font-headline uppercase tracking-wider text-black">
                       ⚜ Правила для лидеров фракций ⚜
                     </div>
-                    <div className="text-[10px] uppercase tracking-widest mt-2 border-t border-b border-white py-1">
+                    <div className="text-[10px] uppercase tracking-widest mt-2 border-t border-b border-black py-1 text-black">
                       Обязательны для всех лидеров
                     </div>
                   </div>
