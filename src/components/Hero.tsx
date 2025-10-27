@@ -43,21 +43,55 @@ const Hero = () => {
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-4 mb-6">
-                  <div className="border-4 border-black bg-white p-4 text-center shadow-lg">
-                    <Icon name="DollarSign" size={32} className="mx-auto mb-2 text-[#8B0000]" />
-                    <div className="text-2xl font-headline mb-1 text-[#8B0000]">$500K+</div>
-                    <div className="text-xs uppercase font-body border-t-2 border-black pt-2">В обороте ежедневно</div>
+                <div className="border-8 border-[#8B0000] bg-gradient-to-r from-red-700 via-red-800 to-red-900 p-4 text-white text-center vintage-stamp relative mb-6">
+                  <div className="absolute -top-2 -right-2 w-12 h-12 border-4 border-white bg-black rounded-full flex items-center justify-center">
+                    <Icon name="Skull" size={24} className="text-white" />
                   </div>
-                  <div className="border-4 border-black bg-white p-4 text-center shadow-lg">
-                    <Icon name="MapPin" size={32} className="mx-auto mb-2 text-[#8B0000]" />
-                    <div className="text-2xl font-headline mb-1 text-[#8B0000]">12</div>
-                    <div className="text-xs uppercase font-body border-t-2 border-black pt-2">Активных семей</div>
+                  <div className="text-2xl font-headline uppercase mb-2">⚠ Внимание! ⚠</div>
+                  <div className="text-xs uppercase tracking-widest border-t-2 border-b-2 border-white py-2">
+                    Предательство карается смертью • Честь превыше всего
                   </div>
-                  <div className="border-4 border-black bg-white p-4 text-center shadow-lg">
-                    <Icon name="Swords" size={32} className="mx-auto mb-2 text-[#8B0000]" />
-                    <div className="text-2xl font-headline mb-1 text-[#8B0000]">150+</div>
-                    <div className="text-xs uppercase font-body border-t-2 border-black pt-2">Разборок в месяц</div>
+                </div>
+
+                <div className="border-8 border-black aged-paper p-5 mb-6 shadow-xl">
+                  <div className="text-center border-b-4 border-black pb-3 mb-4">
+                    <div className="text-xs uppercase tracking-[0.3em] mb-1 font-bold">★ Эксклюзивная статистика ★</div>
+                    <div className="text-2xl font-headline uppercase">Империя в цифрах</div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="border-4 border-black bg-white p-3 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-black flex items-center justify-center">
+                          <Icon name="DollarSign" size={20} className="text-amber-400" />
+                        </div>
+                        <div className="text-left">
+                          <div className="text-2xl font-headline text-[#8B0000]">$500K+</div>
+                          <div className="text-[10px] uppercase tracking-wider font-bold">В обороте ежедневно</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="border-4 border-black bg-white p-3 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-black flex items-center justify-center">
+                          <Icon name="Users" size={20} className="text-amber-400" />
+                        </div>
+                        <div className="text-left">
+                          <div className="text-2xl font-headline text-[#8B0000]">12</div>
+                          <div className="text-[10px] uppercase tracking-wider font-bold">Активных семей</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="border-4 border-black bg-white p-3 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-black flex items-center justify-center">
+                          <Icon name="Swords" size={20} className="text-amber-400" />
+                        </div>
+                        <div className="text-left">
+                          <div className="text-2xl font-headline text-[#8B0000]">150+</div>
+                          <div className="text-[10px] uppercase tracking-wider font-bold">Разборок в месяц</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -91,16 +125,6 @@ const Hero = () => {
                   </div>
                   <div className="text-[10px] text-center mt-2 border-t border-black pt-1">
                     — Метеобюро, 26 октября 1925
-                  </div>
-                </div>
-
-                <div className="border-8 border-[#8B0000] bg-gradient-to-r from-red-700 via-red-800 to-red-900 p-4 text-white text-center vintage-stamp relative">
-                  <div className="absolute -top-2 -right-2 w-12 h-12 border-4 border-white bg-black rounded-full flex items-center justify-center">
-                    <Icon name="Skull" size={24} className="text-white" />
-                  </div>
-                  <div className="text-2xl font-headline uppercase mb-2">⚠ Внимание! ⚠</div>
-                  <div className="text-xs uppercase tracking-widest border-t-2 border-b-2 border-white py-2">
-                    Предательство карается смертью • Честь превыше всего
                   </div>
                 </div>
               </div>
