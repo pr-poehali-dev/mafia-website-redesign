@@ -55,7 +55,7 @@ const Index = () => {
         {activeSection === 'stats' && <StatsSection />}
       </main>
 
-      <Footer />
+      <Footer setActiveSection={handleSectionChange} />
     </div>
   );
 };
