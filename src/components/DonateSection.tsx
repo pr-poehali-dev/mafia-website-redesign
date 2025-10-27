@@ -168,30 +168,8 @@ const DonateSection = () => {
                 key={index}
                 className={`relative ${pkg.popular ? 'transform -rotate-2 scale-105' : index % 2 === 0 ? 'transform rotate-1' : 'transform -rotate-1'}`}
               >
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10" style={{transform: `translateX(-50%) rotate(${index % 2 === 0 ? '8deg' : '-12deg'})`}}>
-                  <div className="relative filter drop-shadow-md">
-                    <svg width="12" height="50" viewBox="0 0 12 50" className="overflow-visible">
-                      <defs>
-                        <linearGradient id={`rust-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{stopColor: '#8B6914', stopOpacity: 1}} />
-                          <stop offset="30%" style={{stopColor: '#704214', stopOpacity: 1}} />
-                          <stop offset="60%" style={{stopColor: '#4A4A4A', stopOpacity: 1}} />
-                          <stop offset="100%" style={{stopColor: '#2C2C2C', stopOpacity: 1}} />
-                        </linearGradient>
-                      </defs>
-                      <path 
-                        d={`M 6 0 Q ${index % 2 === 0 ? '7' : '5'} 15, 6 25 Q ${index % 2 === 0 ? '5' : '7'} 35, 6 45 L 6 50`}
-                        stroke={`url(#rust-${index})`}
-                        strokeWidth="2"
-                        fill="none"
-                        strokeLinecap="round"
-                      />
-                      <ellipse cx="6" cy="3" rx="4.5" ry="3.5" fill="#704214" opacity="0.9" />
-                      <ellipse cx="6" cy="3" rx="3.5" ry="2.5" fill="#8B6914" />
-                      <ellipse cx="5" cy="2.5" rx="1.5" ry="1" fill="#A0826D" opacity="0.7" />
-                      <path d="M 4 3 Q 5 4, 6 3.5" stroke="#5C4033" strokeWidth="0.5" fill="none" opacity="0.6" />
-                    </svg>
-                  </div>
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-8 bg-gradient-to-b from-zinc-700 to-zinc-900 rounded-full shadow-lg z-10 flex items-center justify-center">
+                  <div className="w-2 h-2 bg-zinc-400 rounded-full"></div>
                 </div>
 
                 <div className={`border-6 border-black aged-paper shadow-2xl ${pkg.premium ? 'border-8 border-[#8B0000]' : ''}`}>
@@ -247,29 +225,8 @@ const DonateSection = () => {
                 key={index}
                 className={`transform ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
               >
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10" style={{transform: `translateX(-50%) rotate(${index % 3 === 0 ? '15deg' : index % 3 === 1 ? '-10deg' : '5deg'})`}}>
-                  <div className="relative filter drop-shadow-md">
-                    <svg width="8" height="35" viewBox="0 0 8 35" className="overflow-visible">
-                      <defs>
-                        <linearGradient id={`rust-small-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{stopColor: '#8B6914', stopOpacity: 1}} />
-                          <stop offset="35%" style={{stopColor: '#5C4033', stopOpacity: 1}} />
-                          <stop offset="70%" style={{stopColor: '#3D3D3D', stopOpacity: 1}} />
-                          <stop offset="100%" style={{stopColor: '#1F1F1F', stopOpacity: 1}} />
-                        </linearGradient>
-                      </defs>
-                      <path 
-                        d={`M 4 0 Q ${index % 2 === 0 ? '5' : '3'} 10, 4 18 Q ${index % 2 === 0 ? '3' : '5'} 25, 4 32 L 4 35`}
-                        stroke={`url(#rust-small-${index})`}
-                        strokeWidth="1.5"
-                        fill="none"
-                        strokeLinecap="round"
-                      />
-                      <ellipse cx="4" cy="2" rx="3" ry="2.5" fill="#5C4033" opacity="0.9" />
-                      <ellipse cx="4" cy="2" rx="2.5" ry="2" fill="#8B6914" />
-                      <ellipse cx="3.5" cy="1.7" rx="1" ry="0.8" fill="#A0826D" opacity="0.6" />
-                    </svg>
-                  </div>
+                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-6 h-6 bg-gradient-to-b from-zinc-700 to-zinc-900 rounded-full shadow-lg z-10 flex items-center justify-center">
+                  <div className="w-1.5 h-1.5 bg-zinc-400 rounded-full"></div>
                 </div>
 
                 <div className="border-4 border-black aged-paper shadow-xl relative">
