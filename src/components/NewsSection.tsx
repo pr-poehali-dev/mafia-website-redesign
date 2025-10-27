@@ -1,4 +1,3 @@
-import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 
 const NewsSection = () => {
@@ -10,7 +9,8 @@ const NewsSection = () => {
       date: '25 октября 1925',
       category: 'Срочные новости',
       image: 'https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/2322ea7f-61b6-4c91-901b-60cade2be720.jpg',
-      excerpt: 'На улицах города замечена новая мафиозная группировка. Семья Корлеоне устанавливает свои порядки в восточном районе. Свидетели сообщают о вооружённых всадниках и подпольных операциях.',
+      excerpt: 'На улицах города замечена новая мафиозная группировка. Семья Корлеоне устанавливает свои порядки в восточном районе. Свидетели сообщают о вооружённых всадниках и подпольных операциях. Местные жители обеспокоены происходящим.',
+      content: 'По сообщениям очевидцев, вчера вечером в восточный район прибыла колонна всадников. Лидер группировки представился как Дон Корлеоне. Новая семья уже начала устанавливать свои порядки, договариваясь с местными торговцами о "защите". Шериф пока воздерживается от комментариев.',
     },
     {
       id: 2,
@@ -20,6 +20,7 @@ const NewsSection = () => {
       category: 'Криминал',
       image: 'https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/9a73409c-d997-4539-bac2-07bc3743e5c1.jpg',
       excerpt: 'Этой ночью неизвестные лица совершили дерзкое ограбление главного салуна. Полиция ведёт расследование. Владелец заведения отказывается давать показания.',
+      content: 'Около полуночи трое вооружённых мужчин ворвались в салун "Красный фонарь". Похищена вся выручка за неделю. Странно, что владелец отказывается сотрудничать с полицией.',
     },
     {
       id: 3,
@@ -28,7 +29,26 @@ const NewsSection = () => {
       date: '20 октября 1925',
       category: 'Закон и порядок',
       image: 'https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/68ecaba2-4e61-434a-a1b1-ff1755ea6f08.jpg',
-      excerpt: 'Шериф сообщает об успешном предотвращении ограбления товарного поезда. Несколько бандитов скрылись. Объявлена награда за их поимку.',
+      excerpt: 'Шериф сообщает об успешном предотвращении ограбления товарного поезда. Несколько бандитов скрылись в горах. Объявлена награда за их поимку - 500 долларов.',
+      content: 'Благодаря бдительности шерифа и его помощников удалось предотвратить крупное ограбление. Банда планировала похитить золото на сумму более 10,000 долларов.',
+    },
+    {
+      id: 4,
+      title: 'ПЕРЕСТРЕЛКА НА ГЛАВНОЙ УЛИЦЕ',
+      subtitle: 'Двое ранено, нападавшие скрылись верхом',
+      date: '18 октября 1925',
+      category: 'Инциденты',
+      image: 'https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/2322ea7f-61b6-4c91-901b-60cade2be720.jpg',
+      excerpt: 'Вчера днём на главной улице произошла перестрелка между двумя группировками. Двое прохожих получили ранения.',
+    },
+    {
+      id: 5,
+      title: 'НОВЫЙ САЛУН ОТКРЫВАЕТСЯ',
+      subtitle: 'Владелец обещает лучшее виски в округе',
+      date: '15 октября 1925',
+      category: 'Бизнес',
+      image: 'https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/9a73409c-d997-4539-bac2-07bc3743e5c1.jpg',
+      excerpt: 'На окраине города открывается новый салун "Золотая звезда". Владелец обещает развлечения на любой вкус.',
     },
   ];
 
@@ -36,191 +56,186 @@ const NewsSection = () => {
     <section className="min-h-screen pt-[280px] pb-16 newspaper-texture">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="border-t-8 border-b-8 border-black py-6 mb-8 aged-paper text-center shadow-xl">
-            <div className="flex items-center justify-center gap-4 mb-3">
-              <Icon name="Newspaper" size={48} className="text-[#8B0000]" />
-              <h2 className="text-6xl font-headline uppercase tracking-wider">
-                Новости
-              </h2>
-              <Icon name="Newspaper" size={48} className="text-[#8B0000]" />
-            </div>
-            <div className="text-sm uppercase tracking-widest mt-2 border-t-2 border-b-2 border-black py-2 inline-block px-8">
-              📰 Последние события с улиц города • Выпуск от 26.10.1925 📰
+          <div className="border-8 border-black aged-paper shadow-2xl mb-12 transform -rotate-1">
+            <div className="border-4 border-black m-2 bg-white p-6">
+              <div className="text-center border-b-4 border-black pb-4 mb-4">
+                <div className="text-xs uppercase tracking-[0.3em] mb-2">№ 42 • Год издания VIII</div>
+                <h1 className="text-7xl font-headline uppercase tracking-wider mb-2" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
+                  Валентайнская Газета
+                </h1>
+                <div className="text-sm uppercase tracking-widest">
+                  The Valentine Gazette
+                </div>
+              </div>
+              <div className="grid grid-cols-3 text-center text-xs border-t-2 border-black pt-2">
+                <div>26 октября 1925</div>
+                <div className="border-l-2 border-r-2 border-black">Цена: 5 центов</div>
+                <div>Выпуск ежедневный</div>
+              </div>
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 space-y-6">
-              {news.map((item, index) => (
-                <div key={item.id} className="border-8 border-black aged-paper shadow-2xl hover:shadow-3xl hover:-translate-y-1 transition-all">
-                  {index === 0 ? (
-                    <div>
-                      <div className="border-b-4 border-black p-4 bg-gradient-to-r from-[#8B0000] to-red-900 text-white">
-                        <div className="flex items-center justify-between">
-                          <div className="text-sm font-headline uppercase tracking-wider flex items-center gap-2">
-                            <Icon name="AlertCircle" size={20} />
-                            {item.category}
-                          </div>
-                          <div className="text-sm font-headline uppercase">
-                            {item.date}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="grid md:grid-cols-2 gap-6 p-6">
-                        <div className="border-4 border-black photo-border">
-                          <img 
-                            src={item.image} 
-                            alt={item.title}
-                            className="w-full aspect-[4/3] object-cover old-photo"
-                          />
-                        </div>
-                        <div className="flex flex-col justify-between">
-                          <div>
-                            <h3 className="text-4xl font-headline font-black leading-tight uppercase mb-3">
-                              {item.title}
-                            </h3>
-                            <div className="text-base font-headline mb-4 border-b-2 border-black pb-3">
-                              {item.subtitle}
-                            </div>
-                            <div className="font-body text-base leading-relaxed text-justify">
-                              {item.excerpt}
-                            </div>
-                          </div>
-                          <div className="text-sm uppercase tracking-wider mt-5 border-t-2 border-black pt-3 flex items-center gap-2">
-                            <Icon name="ArrowRight" size={16} />
-                            Продолжение на стр. 2
-                          </div>
-                        </div>
-                      </div>
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-8">
+              {news.slice(0, 1).map((item) => (
+                <div key={item.id} className="border-6 border-black aged-paper shadow-2xl">
+                  <div className="border-b-4 border-black p-3 bg-[#8B0000] text-white text-center">
+                    <div className="flex items-center justify-center gap-2 text-sm font-headline uppercase tracking-wider">
+                      <Icon name="AlertCircle" size={18} />
+                      {item.category}
+                      <Icon name="AlertCircle" size={18} />
                     </div>
-                  ) : (
-                    <div className="grid md:grid-cols-5 gap-0">
-                      <div className="md:col-span-2 border-r-4 border-black">
+                  </div>
+                  <div className="p-6">
+                    <div className="text-right text-xs mb-3 uppercase tracking-wide border-b border-black pb-2">
+                      {item.date}
+                    </div>
+                    <h2 className="text-5xl font-headline font-black leading-none uppercase mb-3 border-b-4 border-black pb-3">
+                      {item.title}
+                    </h2>
+                    <div className="text-xl font-headline italic mb-4 border-l-4 border-black pl-3">
+                      {item.subtitle}
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-6 mb-4">
+                      <div className="border-4 border-black photo-border">
                         <img 
                           src={item.image} 
                           alt={item.title}
-                          className="w-full h-full object-cover old-photo"
+                          className="w-full aspect-[4/3] object-cover old-photo"
                         />
                       </div>
-                      <div className="md:col-span-3 p-5">
-                        <div className="text-xs uppercase tracking-wider mb-3 flex items-center justify-between border-b-2 border-black pb-2">
-                          <span className="flex items-center gap-1">
-                            <Icon name="Tag" size={12} />
-                            {item.category}
-                          </span>
-                          <span>{item.date}</span>
-                        </div>
-                        <h3 className="text-2xl font-headline font-bold leading-tight uppercase mb-2">
-                          {item.title}
-                        </h3>
-                        <div className="text-sm font-headline mb-3 border-b-2 border-black pb-2">
-                          {item.subtitle}
-                        </div>
-                        <div className="font-body text-sm leading-relaxed text-justify">
+                      <div className="space-y-3">
+                        <p className="font-body text-base leading-relaxed text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none">
                           {item.excerpt}
-                        </div>
+                        </p>
+                        <p className="font-body text-sm leading-relaxed text-justify">
+                          {item.content}
+                        </p>
                       </div>
                     </div>
-                  )}
+                    <div className="border-t-2 border-dashed border-black pt-3 text-xs italic text-center">
+                      Продолжение на стр. 3 →
+                    </div>
+                  </div>
                 </div>
               ))}
+
+              <div className="border-6 border-black aged-paper shadow-xl">
+                <div className="border-b-2 border-black p-3 bg-black text-white text-center">
+                  <div className="text-lg font-headline uppercase tracking-wider">Городская хроника</div>
+                </div>
+                <div className="p-6 newspaper-column">
+                  {news.slice(1, 3).map((item) => (
+                    <div key={item.id} className="mb-6 break-inside-avoid">
+                      <div className="flex items-start gap-3 mb-2">
+                        <div className="w-20 h-20 flex-shrink-0 border-2 border-black">
+                          <img 
+                            src={item.image} 
+                            alt={item.title}
+                            className="w-full h-full object-cover old-photo"
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <div className="text-[10px] uppercase mb-1 flex items-center justify-between">
+                            <span>{item.category}</span>
+                            <span>{item.date}</span>
+                          </div>
+                          <h3 className="text-lg font-headline font-bold uppercase leading-tight mb-1">
+                            {item.title}
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="text-sm font-headline italic mb-2 border-l-2 border-black pl-2">
+                        {item.subtitle}
+                      </div>
+                      <p className="font-body text-xs leading-relaxed text-justify">
+                        {item.excerpt}
+                      </p>
+                      {item.content && (
+                        <p className="font-body text-xs leading-relaxed text-justify mt-2">
+                          {item.content}
+                        </p>
+                      )}
+                      <div className="border-b border-dashed border-black mt-3"></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div className="space-y-6">
-              <div className="border-6 border-black aged-paper shadow-xl">
-                <div className="border-b-4 border-black p-4 bg-gradient-to-r from-black to-zinc-800 text-amber-400 text-center">
-                  <Icon name="Pin" size={28} className="mx-auto mb-2" />
+              <div className="border-6 border-black aged-paper shadow-xl transform rotate-1">
+                <div className="border-b-4 border-black p-3 bg-black text-white text-center">
+                  <Icon name="Pin" size={24} className="mx-auto mb-1" />
                   <h3 className="text-base font-headline uppercase tracking-wider">
                     Доска объявлений
                   </h3>
                 </div>
-                <div className="p-4 space-y-4">
-                  <div className="border-4 border-[#8B0000] bg-gradient-to-br from-red-50 to-red-100 p-3">
-                    <div className="font-bold uppercase mb-2 text-sm flex items-center gap-2">
-                      <Icon name="AlertTriangle" size={16} />
+                <div className="p-4 space-y-3">
+                  <div className="border-4 border-[#8B0000] bg-red-50 p-3">
+                    <div className="font-bold uppercase mb-1 text-xs flex items-center gap-1">
+                      <Icon name="AlertTriangle" size={14} />
                       Разыскивается
                     </div>
-                    <div className="text-xs leading-tight font-body">
-                      Трое вооружённых мужчин, подозреваемые в ограблении поезда. Награда $500.
+                    <div className="text-[11px] leading-tight font-body">
+                      Трое вооружённых мужчин. Награда $500.
                     </div>
                   </div>
-                  <div className="border-4 border-black bg-white p-3">
-                    <div className="font-bold uppercase mb-2 text-sm flex items-center gap-2">
-                      <Icon name="Sparkles" size={16} />
+                  <div className="border-2 border-black bg-white p-3">
+                    <div className="font-bold uppercase mb-1 text-xs">
                       Открытие казино
                     </div>
-                    <div className="text-xs leading-tight font-body">
-                      «Золотая Подкова» приглашает уважаемых гостей. Каждую ночь с полуночи.
+                    <div className="text-[11px] leading-tight font-body">
+                      «Золотая Подкова». Каждую ночь с полуночи.
                     </div>
                   </div>
-                  <div className="border-4 border-black bg-white p-3">
-                    <div className="font-bold uppercase mb-2 text-sm flex items-center gap-2">
-                      <Icon name="ShieldAlert" size={16} />
+                  <div className="border-2 border-black bg-white p-3">
+                    <div className="font-bold uppercase mb-1 text-xs">
                       Объявление шерифа
                     </div>
-                    <div className="text-xs leading-tight font-body">
-                      Комендантский час с полуночи до рассвета. Оставайтесь дома.
+                    <div className="text-[11px] leading-tight font-body">
+                      Комендантский час с полуночи.
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="border-6 border-amber-600 bg-gradient-to-br from-amber-50 via-amber-100 to-yellow-200 shadow-2xl p-6 text-center relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute top-0 left-0 w-24 h-24 border-8 border-amber-600 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-                  <div className="absolute bottom-0 right-0 w-24 h-24 border-8 border-amber-600 rounded-full translate-x-1/2 translate-y-1/2"></div>
+              <div className="border-6 border-black aged-paper shadow-xl transform -rotate-1">
+                <div className="border-b-2 border-black p-3 bg-white text-center">
+                  <div className="text-sm font-headline uppercase tracking-wider">Короткие новости</div>
                 </div>
-                <div className="relative z-10">
-                  <div className="text-xs uppercase tracking-wider mb-3 font-bold">
-                    ⭐ Реклама ⭐
-                  </div>
-                  <div className="border-4 border-black p-4 bg-white">
-                    <div className="text-3xl font-headline mb-2">TOMMY'S</div>
-                    <div className="text-sm mb-2 font-headline">Лучшее виски в городе</div>
-                    <div className="text-xs italic font-body border-t-2 border-black pt-2">
-                      "Качество, которому можно доверять"
+                <div className="p-4 space-y-4">
+                  {news.slice(3).map((item) => (
+                    <div key={item.id} className="border-b-2 border-dashed border-black pb-3 last:border-0">
+                      <div className="text-[10px] uppercase mb-1">{item.date}</div>
+                      <h4 className="text-sm font-headline font-bold uppercase leading-tight mb-1">
+                        {item.title}
+                      </h4>
+                      <p className="text-[11px] font-body leading-snug text-justify">
+                        {item.excerpt}
+                      </p>
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="border-6 border-black aged-paper shadow-xl">
-                <div className="border-b-4 border-black p-4 bg-black text-white text-center">
-                  <Icon name="BarChart3" size={28} className="mx-auto mb-2" />
-                  <h3 className="text-base font-headline uppercase tracking-wider">
-                    Статистика сервера
-                  </h3>
-                </div>
-                <div className="p-4 space-y-3">
-                  <div className="flex justify-between border-b-2 border-black pb-2 items-center">
-                    <span className="font-body text-sm flex items-center gap-2">
-                      <Icon name="Users" size={14} />
-                      Игроков онлайн
-                    </span>
-                    <span className="font-headline text-xl text-[#8B0000]">250+</span>
+              <div className="border-4 border-black bg-white p-4 text-center transform rotate-2">
+                <div className="border-2 border-black p-3">
+                  <Icon name="Info" size={20} className="mx-auto mb-2" />
+                  <div className="text-[10px] font-headline uppercase tracking-widest">
+                    Хотите разместить объявление?
                   </div>
-                  <div className="flex justify-between border-b-2 border-black pb-2 items-center">
-                    <span className="font-body text-sm flex items-center gap-2">
-                      <Icon name="Shield" size={14} />
-                      Активных семей
-                    </span>
-                    <span className="font-headline text-xl text-[#8B0000]">12</span>
-                  </div>
-                  <div className="flex justify-between border-b-2 border-black pb-2 items-center">
-                    <span className="font-body text-sm flex items-center gap-2">
-                      <Icon name="MapPin" size={14} />
-                      Территорий
-                    </span>
-                    <span className="font-headline text-xl text-[#8B0000]">8</span>
+                  <div className="text-[9px] font-body mt-2">
+                    Обращайтесь в редакцию газеты
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 border-t-4 border-b-4 border-black py-3 aged-paper text-center shadow-lg">
-            <div className="text-xs font-body uppercase tracking-widest">
-              📰 Мафия Таймс • Том I • Издание 1925 • Цена: 5¢ • Печатается ежедневно 📰
+          <div className="mt-8 border-t-4 border-b-4 border-black py-2 bg-white text-center">
+            <div className="text-[10px] font-body uppercase tracking-widest">
+              Валентайнская Газета • Основана в 1917 году • Главный редактор: Джеймс Макдональд
             </div>
           </div>
         </div>
