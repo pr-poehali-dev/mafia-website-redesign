@@ -238,7 +238,7 @@ const RulesSection = () => {
                     <div className="space-y-2">
                       {adminRules.mainProvisions.map((rule, index) => (
                         <div key={index} className="border-b border-black/30 pb-2 last:border-0">
-                          <div className="flex gap-2 text-xs font-body leading-snug">
+                          <div className="flex gap-2 text-sm md:text-base font-body leading-snug">
                             <span className="font-black flex-shrink-0">{index + 1}.</span>
                             <p className="text-justify">{rule}</p>
                           </div>
@@ -265,7 +265,7 @@ const RulesSection = () => {
                       <div className="space-y-2">
                         {adminRules.gameProperty.map((rule, index) => (
                           <div key={index} className="border-b border-black/30 pb-2 last:border-0">
-                            <div className="flex gap-2 text-xs font-body leading-snug">
+                            <div className="flex gap-2 text-sm md:text-base font-body leading-snug">
                               <span className="font-black flex-shrink-0">{index + 1}.</span>
                               <p className="text-justify">{rule}</p>
                             </div>
@@ -291,7 +291,7 @@ const RulesSection = () => {
                       <div className="space-y-2">
                         {adminRules.behaviorNorms.map((rule, index) => (
                           <div key={index} className="border-b border-black/30 pb-2 last:border-0">
-                            <div className="flex gap-2 text-xs font-body leading-snug">
+                            <div className="flex gap-2 text-sm md:text-base font-body leading-snug">
                               <span className="font-black flex-shrink-0">{index + 1}.</span>
                               <p className="text-justify">{rule}</p>
                             </div>
@@ -320,7 +320,7 @@ const RulesSection = () => {
                     <div className="space-y-2">
                       {adminRules.curatorDuties.map((rule, index) => (
                         <div key={index} className="border-b border-black/30 pb-2 last:border-0">
-                          <div className="flex gap-2 text-xs font-body leading-snug">
+                          <div className="flex gap-2 text-sm md:text-base font-body leading-snug">
                             <span className="font-black flex-shrink-0">{index + 1}.</span>
                             <p className="text-justify">{rule}</p>
                           </div>
@@ -346,7 +346,7 @@ const RulesSection = () => {
                     <div className="space-y-2">
                       {adminRules.conclusion.map((rule, index) => (
                         <div key={index} className="border-b border-black/30 pb-2 last:border-0">
-                          <div className="flex gap-2 text-xs font-body leading-snug">
+                          <div className="flex gap-2 text-sm md:text-base font-body leading-snug">
                             <span className="font-black flex-shrink-0">{index + 1}.</span>
                             <p className="text-justify">{rule}</p>
                           </div>
@@ -366,7 +366,7 @@ const RulesSection = () => {
                   <div className="text-sm font-headline uppercase mb-2">
                     ★ Примечание ★
                   </div>
-                  <p className="text-xs font-body leading-relaxed">
+                  <p className="text-sm md:text-base font-body leading-relaxed">
                     Все вышеперечисленные правила являются обязательными для исполнения. 
                     Нарушение регламента влечёт за собой дисциплинарные меры, вплоть до снятия с должности. 
                     Решения принимаются Главным Администратором или Руководством проекта.
@@ -402,7 +402,7 @@ const RulesSection = () => {
                     <div className="space-y-2">
                       {generalRules.patient.map((rule, index) => (
                         <div key={index} className="border-b border-black/30 pb-2 last:border-0">
-                          <div className="flex gap-2 text-xs font-body leading-snug">
+                          <div className="flex gap-2 text-sm md:text-base font-body leading-snug">
                             <span className="font-black flex-shrink-0">0.{index + 1}</span>
                             <p className="text-justify">{rule}</p>
                           </div>
@@ -424,7 +424,7 @@ const RulesSection = () => {
                     <div className="space-y-2">
                       {generalRules.sheriff.map((rule, index) => (
                         <div key={index} className="border-b border-black/30 pb-2 last:border-0">
-                          <div className="flex gap-2 text-xs font-body leading-snug">
+                          <div className="flex gap-2 text-sm md:text-base font-body leading-snug">
                             <span className="font-black flex-shrink-0">3.{index + 1}</span>
                             <p className="text-justify">{rule}</p>
                           </div>
@@ -447,7 +447,7 @@ const RulesSection = () => {
                   <div className="columns-2 gap-4 space-y-2">
                     {generalRules.citizen.map((rule, index) => (
                       <div key={index} className="border-b border-black/30 pb-2 break-inside-avoid last:border-0">
-                        <div className="flex gap-2 text-xs font-body leading-snug">
+                        <div className="flex gap-2 text-sm md:text-base font-body leading-snug">
                           <span className="font-black flex-shrink-0">1.{index}</span>
                           <p className="text-justify">{rule}</p>
                         </div>
@@ -469,7 +469,7 @@ const RulesSection = () => {
                   <div className="columns-2 gap-4 space-y-2">
                     {generalRules.bandit.map((rule, index) => (
                       <div key={index} className="border-b border-black/30 pb-2 break-inside-avoid last:border-0">
-                        <div className="flex gap-2 text-xs font-body leading-snug">
+                        <div className="flex gap-2 text-sm md:text-base font-body leading-snug">
                           <span className="font-black flex-shrink-0">2.{index + 1}</span>
                           <p className="text-justify">{rule}</p>
                         </div>
@@ -491,7 +491,7 @@ const RulesSection = () => {
                   <div className="space-y-2">
                     {generalRules.raids.map((rule, index) => (
                       <div key={index} className="border-b border-black/30 pb-2 last:border-0">
-                        <div className="flex gap-2 text-xs font-body leading-snug">
+                        <div className="flex gap-2 text-sm md:text-base font-body leading-snug">
                           <span className="font-black flex-shrink-0">4.{index + 1}</span>
                           <p className="text-justify">{rule}</p>
                         </div>
@@ -508,7 +508,7 @@ const RulesSection = () => {
                 <div className="border-4 border-black p-4">
                   <Icon name="AlertCircle" size={32} className="mx-auto mb-2" />
                   <div className="text-sm font-headline uppercase mb-3">★ Важные примечания ★</div>
-                  <div className="text-xs font-body leading-relaxed space-y-2 text-left">
+                  <div className="text-sm md:text-base font-body leading-relaxed space-y-2 text-left">
                     <p>• Незнание правил не освобождает от ответственности</p>
                     <p>• Правила могут быть изменены без предварительного уведомления</p>
                     <p>• Администрация не несет ответственности за происходящее за пределами сервера и дискорд канала сервера</p>
@@ -553,17 +553,17 @@ const RulesSection = () => {
                             </div>
                           </div>
                           <div className="flex-1">
-                            <p className="text-sm font-body leading-relaxed text-justify mb-2">{rule.text}</p>
+                            <p className="text-sm md:text-base font-body leading-relaxed text-justify mb-2">{rule.text}</p>
                             {rule.note && (
                               <div className="border-l-4 border-[#8B0000] pl-3 py-1 bg-yellow-50">
                                 <div className="text-[10px] uppercase font-bold text-[#8B0000] mb-1">Примечание:</div>
-                                <p className="text-xs font-body italic">{rule.note}</p>
+                                <p className="text-sm md:text-base font-body italic">{rule.note}</p>
                               </div>
                             )}
                             {rule.punishment && (
                               <div className="border-2 border-[#8B0000] p-2 bg-red-50 mt-2">
                                 <div className="text-[10px] uppercase font-bold text-[#8B0000] mb-1">⚠ Наказание:</div>
-                                <p className="text-xs font-body font-bold text-[#8B0000]">{rule.punishment}</p>
+                                <p className="text-sm md:text-base font-body font-bold text-[#8B0000]">{rule.punishment}</p>
                               </div>
                             )}
                           </div>
@@ -581,7 +581,7 @@ const RulesSection = () => {
                 <div className="border-4 border-black p-4">
                   <Icon name="ShieldAlert" size={32} className="mx-auto mb-2 text-[#8B0000]" />
                   <div className="text-sm font-headline uppercase mb-3">★ Система страйков ★</div>
-                  <div className="text-xs font-body leading-relaxed space-y-2 text-left">
+                  <div className="text-sm md:text-base font-body leading-relaxed space-y-2 text-left">
                     <p>• <strong>1 страйк</strong> — предупреждение с занесением в личное дело</p>
                     <p>• <strong>2 страйка</strong> — строгое предупреждение, возможна временная приостановка полномочий</p>
                     <p>• <strong>3 страйка</strong> — снятие с должности с запретом на слот лидера на 30 дней (или навсегда)</p>
