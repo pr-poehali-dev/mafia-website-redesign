@@ -186,70 +186,131 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="border-8 border-black aged-paper shadow-xl">
-              <div className="border-b-4 border-black p-4 bg-black text-amber-400 text-center">
-                <Icon name="Star" size={32} className="mx-auto mb-2" />
-                <h3 className="text-xl font-headline uppercase">
-                  Что нас отличает
-                </h3>
-              </div>
-              <div className="p-6 space-y-4">
-                <div className="border-l-4 border-[#8B0000] pl-4">
-                  <h4 className="font-headline text-base uppercase mb-1">Реалистичная экономика</h4>
-                  <p className="font-body text-xs text-justify leading-relaxed">
-                    Контрабанда виски, подпольные казино, рэкет — каждое действие влияет на твой доход и репутацию в мире.
-                  </p>
-                </div>
-                <div className="border-l-4 border-[#8B0000] pl-4">
-                  <h4 className="font-headline text-base uppercase mb-1">Глубокий ролевой отыгрыш</h4>
-                  <p className="font-body text-xs text-justify leading-relaxed">
-                    Создай своего персонажа, обзаведись связями, строй карьеру от простого солдата до босса семьи.
-                  </p>
-                </div>
-                <div className="border-l-4 border-[#8B0000] pl-4">
-                  <h4 className="font-headline text-base uppercase mb-1">Территориальные войны</h4>
-                  <p className="font-body text-xs text-justify leading-relaxed">
-                    Захватывай районы, защищай свои территории, веди переговоры или разборки с конкурентами.
-                  </p>
-                </div>
+          <div className="border-8 border-black aged-paper shadow-2xl mb-8">
+            <div className="border-b-6 border-black p-5 bg-gradient-to-r from-black via-zinc-900 to-black text-white text-center relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
+              <Icon name="FileText" size={40} className="mx-auto mb-3 text-amber-400" />
+              <h2 className="text-4xl font-headline uppercase tracking-wider text-amber-400">
+                О проекте
+              </h2>
+              <div className="text-xs uppercase tracking-widest mt-2 text-amber-200">
+                История начинается здесь
               </div>
             </div>
 
-            <div className="border-8 border-black aged-paper shadow-xl">
-              <div className="border-b-4 border-black p-4 bg-gradient-to-r from-[#8B0000] to-red-900 text-white text-center">
-                <Icon name="Trophy" size={32} className="mx-auto mb-2" />
-                <h3 className="text-xl font-headline uppercase">
-                  Топ семей недели
-                </h3>
+            <div className="grid lg:grid-cols-3 gap-0">
+              <div className="lg:col-span-2 p-8 border-r-6 border-black bg-gradient-to-br from-[#F5E6D0] via-[#EDD9B7] to-[#E5D3A8]">
+                <div className="mb-6 border-l-4 border-[#8B0000] pl-4 bg-gradient-to-r from-white/40 to-transparent p-4">
+                  <p className="font-body text-sm italic leading-relaxed text-justify">
+                    «Меланхолия, эта страшная болезнь, избрала вас своей жертвой. Помимо газеты и собственных мыслей, ничто другое вас уже не интересовало. Любовь перестала быть источником радости. Девизом как будто стали слова: живи и мирись с жалким прозябанием».
+                  </p>
+                </div>
+
+                <div className="columns-2 gap-6 text-justify font-body text-sm leading-relaxed">
+                  <p className="mb-3">
+                    <strong className="text-[#8B0000]">Первый русскоязычный массовый ролевой сервер</strong> в Red Dead Redemption 2 на платформе RedM, где не требуется квента, а большинство рудиментарных правил перенесены на рельсы игровых механик.
+                  </p>
+                  <p className="mb-3">
+                    Запустившись в <strong>конце 2021 года</strong>, «Меланхолия» дала старт массовому русскоязычному сегменту RedM. Для того, чтобы вы могли окунуться во вселенную сервера, мы подготавливаем подробные текста, охватывающие как культурные аспекты, так и технические.
+                  </p>
+                  <p className="mb-3">
+                    <strong className="text-[#8B0000]">MH1919</strong> — это атмосферный RP-проект на базе RedM, вдохновлённый эстетикой Mafia и нуарной Америки 40–50-х годов.
+                  </p>
+                  <p className="mb-3">
+                    Уникальные персонажи, живая экономика, криминальные разборки и детализированный город создают глубокий мир, где каждая твоя реплика и поступок могут изменить ход истории.
+                  </p>
+                </div>
               </div>
-              <div className="p-6 space-y-3">
-                <div className="flex items-center gap-3 border-b-2 border-black pb-2">
-                  <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-amber-600 border-4 border-black flex items-center justify-center font-headline text-xl text-white shadow-lg">
-                    1
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-headline text-base">Семья Корлеоне</div>
-                    <div className="text-xs font-body">Заработано: $45,890</div>
-                  </div>
-                  <Icon name="Crown" size={24} className="text-amber-600" />
-                </div>
-                <div className="flex items-center gap-3 border-b-2 border-black pb-2">
-                  <div className="w-10 h-10 bg-gradient-to-br from-gray-300 to-gray-500 border-4 border-black flex items-center justify-center font-headline text-xl text-white shadow-lg">
-                    2
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-headline text-base">Семья Лучано</div>
-                    <div className="text-xs font-body">Заработано: $38,750</div>
+
+              <div className="p-6 space-y-4 bg-gradient-to-b from-[#E5D3A8] to-[#D2B48C]">
+                <div className="border-4 border-black aged-paper p-4 text-center shadow-lg">
+                  <Icon name="Calendar" size={32} className="mx-auto mb-2 text-[#8B0000]" />
+                  <div className="text-3xl font-headline mb-1">2021</div>
+                  <div className="text-xs uppercase tracking-wider font-bold border-t-2 border-black pt-2 mt-2">
+                    Год основания
                   </div>
                 </div>
-                <div className="flex items-center gap-3 border-b-2 border-black pb-2">
-                  <div className="w-10 h-10 bg-gradient-to-br from-amber-700 to-amber-900 border-4 border-black flex items-center justify-center font-headline text-xl text-white shadow-lg">
-                    3
+
+                <div className="border-4 border-black bg-gradient-to-br from-black to-zinc-800 text-amber-400 p-5 text-center shadow-xl">
+                  <Icon name="Award" size={40} className="mx-auto mb-2" />
+                  <div className="text-xs uppercase tracking-widest text-white mb-2">Достижение</div>
+                  <div className="text-base font-headline leading-tight">
+                    Первый массовый RU сервер RedM
                   </div>
-                  <div className="flex-1">
-                    <div className="font-headline text-base">Семья Дженовезе</div>
-                    <div className="text-xs font-body">Заработано: $32,100</div>
+                </div>
+
+                <div className="border-4 border-black aged-paper p-4">
+                  <div className="text-center font-headline uppercase text-xs mb-3 border-b-2 border-black pb-2">
+                    📍 Где узнать больше
+                  </div>
+                  <div className="text-xs font-body text-center leading-relaxed">
+                    Прочесть подробные материалы об истории и механиках можно в нашем официальном Discord-сервере
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-8 border-black aged-paper shadow-2xl mb-8">
+            <div className="border-b-6 border-black p-5 bg-gradient-to-r from-[#8B0000] via-red-900 to-[#8B0000] text-white text-center">
+              <Icon name="Gamepad2" size={40} className="mx-auto mb-3" />
+              <h2 className="text-4xl font-headline uppercase tracking-wider">
+                Как начать играть?
+              </h2>
+              <div className="text-xs uppercase tracking-widest mt-2 border-t-2 border-b-2 border-white py-2 inline-block px-8 mt-3">
+                Три простых шага до старта
+              </div>
+            </div>
+
+            <div className="p-8 bg-gradient-to-br from-[#F5E6D0] via-[#EDD9B7] to-[#E5D3A8]">
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="border-6 border-black aged-paper shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+                  <div className="border-b-4 border-black p-5 bg-white text-center relative">
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-[#8B0000] to-red-900 border-4 border-black flex items-center justify-center shadow-xl">
+                      <span className="text-2xl font-headline text-white font-black">1</span>
+                    </div>
+                    <Icon name="ShoppingCart" size={40} className="mx-auto mb-3 mt-4 text-[#8B0000]" />
+                    <h3 className="text-lg font-headline uppercase">Купи RDR2</h3>
+                  </div>
+                  <div className="p-5">
+                    <p className="font-body text-sm leading-relaxed text-justify">
+                      Чтобы начать, тебе нужен <strong>Red Dead Redemption 2</strong>. Купи игру в Steam или в магазине Rockstar Games — это твой билет в мир мафии.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="border-6 border-black aged-paper shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+                  <div className="border-b-4 border-black p-5 bg-white text-center relative">
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-[#8B0000] to-red-900 border-4 border-black flex items-center justify-center shadow-xl">
+                      <span className="text-2xl font-headline text-white font-black">2</span>
+                    </div>
+                    <Icon name="Download" size={40} className="mx-auto mb-3 mt-4 text-[#8B0000]" />
+                    <h3 className="text-lg font-headline uppercase">Скачай RedM</h3>
+                  </div>
+                  <div className="p-5">
+                    <p className="font-body text-sm leading-relaxed text-justify">
+                      Установи <strong>RedM</strong> по ссылке, чтобы получить доступ к мультиплееру. Это платформа, через которую ты подключишься к нашему серверу.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="border-6 border-black aged-paper shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+                  <div className="border-b-4 border-black p-5 bg-white text-center relative">
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-[#8B0000] to-red-900 border-4 border-black flex items-center justify-center shadow-xl">
+                      <span className="text-2xl font-headline text-white font-black">3</span>
+                    </div>
+                    <Icon name="LogIn" size={40} className="mx-auto mb-3 mt-4 text-[#8B0000]" />
+                    <h3 className="text-lg font-headline uppercase">Заходи на сервер</h3>
+                  </div>
+                  <div className="p-5">
+                    <p className="font-body text-sm leading-relaxed text-justify mb-4">
+                      Открой лаунчер RedM, найди наш проект по названию, зайди на сервер — и наслаждайся атмосферой и глубоким ролевым взаимодействием.
+                    </p>
+                    <div className="border-4 border-black bg-white p-3 text-center">
+                      <div className="text-xs uppercase tracking-wider mb-1 font-bold">IP адрес:</div>
+                      <div className="font-headline text-lg text-[#8B0000]">46.174.49.200</div>
+                    </div>
                   </div>
                 </div>
               </div>
