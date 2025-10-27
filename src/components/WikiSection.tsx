@@ -1,4 +1,3 @@
-import { Input } from '@/components/ui/input';
 import Icon from '@/components/ui/icon';
 
 const WikiSection = () => {
@@ -7,6 +6,7 @@ const WikiSection = () => {
       id: 1,
       name: 'Основы игры',
       icon: 'BookOpen',
+      color: 'bg-blue-700',
       articles: [
         'Создание персонажа',
         'Первые шаги в игре',
@@ -18,6 +18,7 @@ const WikiSection = () => {
       id: 2,
       name: 'Мафиозные семьи',
       icon: 'Users',
+      color: 'bg-red-700',
       articles: [
         'Структура семьи',
         'Как вступить в семью',
@@ -29,6 +30,7 @@ const WikiSection = () => {
       id: 3,
       name: 'Экономика',
       icon: 'Coins',
+      color: 'bg-amber-600',
       articles: [
         'Виды заработка',
         'Контрабанда алкоголя',
@@ -40,6 +42,7 @@ const WikiSection = () => {
       id: 4,
       name: 'Территории',
       icon: 'Map',
+      color: 'bg-green-700',
       articles: [
         'Карта города',
         'Районы и влияние',
@@ -51,6 +54,7 @@ const WikiSection = () => {
       id: 5,
       name: 'PvP и войны',
       icon: 'Swords',
+      color: 'bg-purple-700',
       articles: [
         'Правила PvP',
         'Объявление войны',
@@ -62,6 +66,7 @@ const WikiSection = () => {
       id: 6,
       name: 'Транспорт',
       icon: 'Car',
+      color: 'bg-orange-700',
       articles: [
         'Виды транспорта',
         'Покупка автомобилей',
@@ -95,18 +100,6 @@ const WikiSection = () => {
             </div>
           </div>
 
-          <div className="border-6 border-black aged-paper mb-8 shadow-xl">
-            <div className="p-5">
-              <div className="relative">
-                <Icon name="Search" className="absolute left-4 top-1/2 -translate-y-1/2 text-black z-10" size={24} />
-                <Input 
-                  placeholder="ПОИСК ПО ЭНЦИКЛОПЕДИИ..."
-                  className="pl-14 h-14 bg-white border-4 border-black text-black placeholder:text-black/50 font-headline uppercase tracking-wider text-base shadow-inner"
-                />
-              </div>
-            </div>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {wikiCategories.map((category, index) => (
               <div 
@@ -114,12 +107,12 @@ const WikiSection = () => {
                 className="border-6 border-black aged-paper shadow-xl hover:shadow-2xl transition-all cursor-pointer group"
                 style={{transform: `rotate(${index % 2 === 0 ? '0.5deg' : '-0.5deg'})`}}
               >
-                <div className="border-b-4 border-black p-5 bg-white">
+                <div className={`border-b-4 border-black p-5 ${category.color}`}>
                   <div className="flex items-center gap-3">
-                    <div className="w-14 h-14 border-4 border-black bg-black flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <Icon name={category.icon as any} size={28} className="text-white" />
+                    <div className="w-14 h-14 border-4 border-white bg-white flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <Icon name={category.icon as any} size={28} className="text-black" />
                     </div>
-                    <h3 className="text-2xl font-headline uppercase tracking-wide">
+                    <h3 className="text-2xl font-headline uppercase tracking-wide text-white">
                       {category.name}
                     </h3>
                   </div>
@@ -138,7 +131,7 @@ const WikiSection = () => {
                         <div className="flex-1">
                           <span className="font-body text-base block group-hover/item:underline">{article}</span>
                         </div>
-                        <Icon name="ChevronRight" size={20} className="text-black mt-1 group-hover/item:translate-x-1 transition-transform" />
+                        <Icon name="ChevronRight" size={20} className={`${category.color.replace('bg-', 'text-')} mt-1 group-hover/item:translate-x-1 transition-transform`} />
                       </div>
                     ))}
                   </div>
@@ -149,15 +142,15 @@ const WikiSection = () => {
 
           <div className="border-8 border-black aged-paper shadow-2xl transform rotate-1">
             <div className="border-4 border-black m-2">
-              <div className="border-b-4 border-black p-6 bg-white text-center">
+              <div className="border-b-4 border-black p-6 bg-gradient-to-r from-red-700 to-red-800 text-center">
                 <div className="flex items-center justify-center gap-3 mb-2">
-                  <Icon name="TrendingUp" size={32} />
-                  <h3 className="text-4xl font-headline uppercase">
+                  <Icon name="TrendingUp" size={32} className="text-white" />
+                  <h3 className="text-4xl font-headline uppercase text-white">
                     Популярные статьи
                   </h3>
-                  <Icon name="TrendingUp" size={32} />
+                  <Icon name="TrendingUp" size={32} className="text-white" />
                 </div>
-                <div className="text-xs uppercase tracking-widest border-t-2 border-b-2 border-black py-1 inline-block px-6 mt-2">
+                <div className="text-xs uppercase tracking-widest border-t-2 border-b-2 border-white py-1 inline-block px-6 mt-2 text-white">
                   Самое читаемое за неделю
                 </div>
               </div>
@@ -170,11 +163,11 @@ const WikiSection = () => {
                   >
                     <div className="flex items-center justify-between gap-4">
                       <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 border-4 border-black bg-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                          <span className="font-headline font-black text-2xl text-white">{index + 1}</span>
+                        <div className="w-14 h-14 border-4 border-black bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                          <span className="font-headline font-black text-2xl text-black">{index + 1}</span>
                         </div>
-                        <div className="w-12 h-12 border-4 border-black bg-white flex items-center justify-center">
-                          <Icon name={article.icon as any} size={24} className="text-black" />
+                        <div className="w-12 h-12 border-4 border-black bg-gradient-to-br from-red-700 to-red-800 flex items-center justify-center">
+                          <Icon name={article.icon as any} size={24} className="text-white" />
                         </div>
                         <span className="font-headline uppercase text-lg group-hover:underline">
                           {article.title}
