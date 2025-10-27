@@ -134,95 +134,105 @@ const Hero = () => {
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="border-8 border-black aged-paper shadow-xl transform hover:-translate-y-2 transition-all">
               <div className="border-b-4 border-black p-4 bg-gradient-to-r from-black to-zinc-800 text-amber-400 text-center">
-                <Icon name="TrendingUp" size={32} className="mx-auto mb-2" />
+                <Icon name="Camera" size={32} className="mx-auto mb-2" />
                 <h3 className="text-xl font-headline uppercase">
-                  Еженедельная сводка
+                  Жизнь семей
                 </h3>
               </div>
-              <div className="p-5 font-body text-sm leading-relaxed space-y-3">
-                <div className="flex justify-between items-center border-b-2 border-black pb-2">
-                  <span className="flex items-center gap-2">
-                    <Icon name="DollarSign" size={16} />
-                    Казино операции
-                  </span>
-                  <span className="font-headline text-xl text-[#8B0000]">127</span>
+              <div className="p-5 space-y-3">
+                <div className="border-4 border-black photo-border">
+                  <img 
+                    src="https://mh-rp.com/uploads/guide/88-media.webp" 
+                    alt="Момент из жизни семьи"
+                    className="w-full aspect-video object-cover old-photo"
+                  />
+                  <div className="bg-white border-t-4 border-black p-2">
+                    <div className="text-[10px] font-headline text-center uppercase">
+                      Рис. 2 — Встреча боссов, 1925
+                    </div>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center border-b-2 border-black pb-2">
-                  <span className="flex items-center gap-2">
-                    <Icon name="Swords" size={16} />
-                    Разборки
-                  </span>
-                  <span className="font-headline text-xl text-[#8B0000]">43</span>
-                </div>
-                <div className="flex justify-between items-center border-b-2 border-black pb-2">
-                  <span className="flex items-center gap-2">
-                    <Icon name="UserPlus" size={16} />
-                    Новобранцы
-                  </span>
-                  <span className="font-headline text-xl text-green-700">+89</span>
-                </div>
-                <div className="flex justify-between items-center border-b-2 border-black pb-2">
-                  <span className="flex items-center gap-2">
-                    <Icon name="Package" size={16} />
-                    Контрабанда
-                  </span>
-                  <span className="font-headline text-xl text-[#8B0000]">156</span>
+                <div className="border-4 border-black photo-border">
+                  <img 
+                    src="https://mh-rp.com/uploads/guide/91-5467567.png" 
+                    alt="Семейный бизнес"
+                    className="w-full aspect-video object-cover old-photo"
+                  />
+                  <div className="bg-white border-t-4 border-black p-2">
+                    <div className="text-[10px] font-headline text-center uppercase">
+                      Рис. 3 — Контроль территории
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="border-8 border-amber-600 bg-gradient-to-br from-amber-50 via-amber-100 to-yellow-200 shadow-2xl flex flex-col justify-center items-center text-center p-8 relative overflow-hidden transform hover:scale-105 transition-all">
-              <div className="absolute inset-0 opacity-20">
-                <div className="absolute top-0 left-0 w-32 h-32 border-8 border-amber-400 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 border-8 border-amber-400 rounded-full translate-x-1/2 translate-y-1/2"></div>
+            <div className="border-8 border-black aged-paper shadow-xl transform hover:-translate-y-2 transition-all">
+              <div className="border-b-4 border-black p-4 bg-gradient-to-r from-black to-zinc-800 text-amber-400 text-center">
+                <Icon name="Newspaper" size={32} className="mx-auto mb-2" />
+                <h3 className="text-xl font-headline uppercase">
+                  Из архивов
+                </h3>
               </div>
-              <Icon name="Crown" size={56} className="mb-3 text-amber-600 relative z-10" />
-              <div className="text-xs uppercase tracking-[0.3em] mb-3 font-bold text-amber-800 relative z-10">⭐ Специальное предложение ⭐</div>
-              <div className="text-3xl font-headline uppercase mb-5 leading-tight text-black relative z-10">
-                Вступи в семью<br/>на этой неделе
+              <div className="p-5 space-y-3">
+                <div className="border-4 border-black photo-border">
+                  <img 
+                    src="https://mh-rp.com/uploads/guide/96-media4.webp" 
+                    alt="Исторический момент"
+                    className="w-full aspect-video object-cover old-photo"
+                  />
+                  <div className="bg-white border-t-4 border-black p-2">
+                    <div className="text-[10px] font-headline text-center uppercase">
+                      Рис. 6 — Сбор семьи
+                    </div>
+                  </div>
+                </div>
+                <div className="border-4 border-black photo-border">
+                  <img 
+                    src="https://mh-rp.com/uploads/guide/97-media1.webp" 
+                    alt="Важный момент"
+                    className="w-full aspect-video object-cover old-photo"
+                  />
+                  <div className="bg-white border-t-4 border-black p-2">
+                    <div className="text-[10px] font-headline text-center uppercase">
+                      Рис. 7 — Деловая встреча
+                    </div>
+                  </div>
+                </div>
               </div>
-              <Button 
-                className="bg-gradient-to-r from-black to-zinc-800 text-amber-400 hover:from-zinc-800 hover:to-black font-headline uppercase tracking-wider border-4 border-black text-base px-8 py-6 shadow-xl relative z-10"
-              >
-                Вступить сейчас →
-              </Button>
             </div>
 
             <div className="border-8 border-black aged-paper shadow-xl transform hover:-translate-y-2 transition-all">
               <div className="border-b-4 border-black p-4 bg-gradient-to-r from-[#8B0000] to-red-900 text-white text-center">
-                <Icon name="Map" size={32} className="mx-auto mb-2" />
+                <Icon name="Image" size={32} className="mx-auto mb-2" />
                 <h3 className="text-xl font-headline uppercase">
-                  Территории
+                  Хроника событий
                 </h3>
               </div>
-              <div className="p-5 font-body text-sm leading-relaxed space-y-3">
-                <div className="flex justify-between items-center border-b-2 border-black pb-2">
-                  <span className="flex items-center gap-2">
-                    <Icon name="Building" size={16} />
-                    Центр
-                  </span>
-                  <span className="font-headline text-base">Корлеоне</span>
+              <div className="p-5 space-y-3">
+                <div className="border-4 border-black photo-border">
+                  <img 
+                    src="https://mh-rp.com/uploads/guide/92-1111.webp" 
+                    alt="Событие на сервере"
+                    className="w-full aspect-video object-cover old-photo"
+                  />
+                  <div className="bg-white border-t-4 border-black p-2">
+                    <div className="text-[10px] font-headline text-center uppercase">
+                      Рис. 4 — Подпольное дело
+                    </div>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center border-b-2 border-black pb-2">
-                  <span className="flex items-center gap-2">
-                    <Icon name="Warehouse" size={16} />
-                    Восток
-                  </span>
-                  <span className="font-headline text-base">Лучано</span>
-                </div>
-                <div className="flex justify-between items-center border-b-2 border-black pb-2">
-                  <span className="flex items-center gap-2">
-                    <Icon name="Anchor" size={16} />
-                    Доки
-                  </span>
-                  <span className="font-headline text-base">Дженовезе</span>
-                </div>
-                <div className="flex justify-between items-center border-b-2 border-black pb-2">
-                  <span className="flex items-center gap-2">
-                    <Icon name="Coins" size={16} />
-                    Казино
-                  </span>
-                  <span className="font-headline text-base">Гамбино</span>
+                <div className="border-4 border-black photo-border">
+                  <img 
+                    src="https://mh-rp.com/uploads/guide/95-56.webp" 
+                    alt="Городская жизнь"
+                    className="w-full aspect-video object-cover old-photo"
+                  />
+                  <div className="bg-white border-t-4 border-black p-2">
+                    <div className="text-[10px] font-headline text-center uppercase">
+                      Рис. 5 — Улицы города
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
