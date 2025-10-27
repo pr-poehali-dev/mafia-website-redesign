@@ -25,7 +25,7 @@ const Hero = () => {
 
             <div className="grid lg:grid-cols-3 gap-0">
               <div className="lg:col-span-2 p-8 border-r-8 border-black bg-gradient-to-br from-[#F5E6D0] via-[#EDD9B7] to-[#E5D3A8]">
-                <div className="columns-2 gap-8 text-justify font-body text-base leading-relaxed mb-8">
+                <div className="columns-2 gap-8 text-justify font-body text-base leading-relaxed mb-6">
                   <div className="relative">
                     <span className="float-left text-8xl font-gothic leading-none mr-3 mt-2 text-[#8B0000]">В</span>
                     <p className="mb-4">
@@ -41,6 +41,24 @@ const Hero = () => {
                   <p className="mb-4">
                     Создавай свою репутацию, заводи союзников, веди бизнес и защищай территорию семьи. Здесь каждый день — новая глава в истории преступного мира 1920-х годов.
                   </p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-4 mb-6">
+                  <div className="border-4 border-black bg-white p-4 text-center shadow-lg">
+                    <Icon name="DollarSign" size={32} className="mx-auto mb-2 text-[#8B0000]" />
+                    <div className="text-2xl font-headline mb-1 text-[#8B0000]">$500K+</div>
+                    <div className="text-xs uppercase font-body border-t-2 border-black pt-2">В обороте ежедневно</div>
+                  </div>
+                  <div className="border-4 border-black bg-white p-4 text-center shadow-lg">
+                    <Icon name="MapPin" size={32} className="mx-auto mb-2 text-[#8B0000]" />
+                    <div className="text-2xl font-headline mb-1 text-[#8B0000]">12</div>
+                    <div className="text-xs uppercase font-body border-t-2 border-black pt-2">Активных семей</div>
+                  </div>
+                  <div className="border-4 border-black bg-white p-4 text-center shadow-lg">
+                    <Icon name="Swords" size={32} className="mx-auto mb-2 text-[#8B0000]" />
+                    <div className="text-2xl font-headline mb-1 text-[#8B0000]">150+</div>
+                    <div className="text-xs uppercase font-body border-t-2 border-black pt-2">Разборок в месяц</div>
+                  </div>
                 </div>
 
                 <div className="border-8 border-[#8B0000] bg-gradient-to-r from-red-700 via-red-800 to-red-900 p-6 text-white text-center vintage-stamp relative">
