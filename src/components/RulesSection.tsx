@@ -333,7 +333,7 @@ const RulesSection = () => {
                   </div>
                 </div>
 
-                <div className="border-6 border-black aged-paper shadow-xl transform -rotate-1">
+                <div className="border-6 border-black aged-paper shadow-xl transform -rotate-1 flex flex-col">
                   <div className="border-b-4 border-black p-3 bg-black text-white text-center">
                     <div className="text-xl font-headline uppercase tracking-wider">
                       § V §
@@ -342,7 +342,7 @@ const RulesSection = () => {
                       Заключение
                     </div>
                   </div>
-                  <div className="p-4">
+                  <div className="p-4 flex-1">
                     <div className="space-y-2">
                       {adminRules.conclusion.map((rule, index) => (
                         <div key={index} className="border-b border-black/30 pb-2 last:border-0">
@@ -415,12 +415,12 @@ const RulesSection = () => {
                   </div>
                 </div>
 
-                <div className="border-6 border-black aged-paper shadow-xl transform -rotate-1">
+                <div className="border-6 border-black aged-paper shadow-xl transform -rotate-1 flex flex-col">
                   <div className="border-b-4 border-black p-3 bg-black text-white text-center">
                     <div className="text-xl font-headline uppercase tracking-wider">§ 3 §</div>
                     <div className="text-sm font-headline uppercase mt-1">Правила "Шерифа"</div>
                   </div>
-                  <div className="p-4">
+                  <div className="p-4 flex-1">
                     <div className="space-y-2">
                       {generalRules.sheriff.map((rule, index) => (
                         <div key={index} className="border-b border-black/30 pb-2 last:border-0">
