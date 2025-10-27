@@ -24,7 +24,7 @@ const Hero = () => {
             </div>
 
             <div className="grid lg:grid-cols-3 gap-0">
-              <div className="lg:col-span-2 p-8 border-r-8 border-black bg-gradient-to-br from-[#F5E6D0] via-[#EDD9B7] to-[#E5D3A8]">
+              <div className="lg:col-span-2 p-8 border-r-8 border-black aged-paper">
                 <div className="columns-2 gap-8 text-justify font-body text-base leading-relaxed mb-6">
                   <div className="relative">
                     <span className="float-left text-8xl font-gothic leading-none mr-3 mt-2 text-[#8B0000]">В</span>
