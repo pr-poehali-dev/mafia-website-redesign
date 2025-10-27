@@ -82,11 +82,7 @@ const WikiSection = () => {
     }
   ];
 
-  const popularArticles = [
-    { title: 'Гайд для новичков', views: 2456, icon: 'Star' },
-    { title: 'Как заработать первый миллион', views: 1834, icon: 'DollarSign' },
-    { title: 'Лучшие тактики в войнах', views: 1523, icon: 'Swords' }
-  ];
+
 
   return (
     <section className="min-h-screen pt-[280px] pb-16 newspaper-texture">
@@ -106,7 +102,7 @@ const WikiSection = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8">
             {wikiCategories.map((category, index) => (
               <div 
                 key={category.id}
@@ -144,50 +140,6 @@ const WikiSection = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="border-8 border-black aged-paper shadow-2xl transform rotate-1">
-            <div className="border-4 border-black m-2">
-              <div className="border-b-4 border-black p-6 bg-gradient-to-r from-zinc-800 to-stone-800 text-center">
-                <div className="flex items-center justify-center gap-3 mb-2">
-                  <Icon name="TrendingUp" size={32} className="text-amber-200" />
-                  <h3 className="text-4xl font-headline uppercase text-amber-100">
-                    Популярные статьи
-                  </h3>
-                  <Icon name="TrendingUp" size={32} className="text-amber-200" />
-                </div>
-                <div className="text-xs uppercase tracking-widest border-t-2 border-b-2 border-amber-200 py-1 inline-block px-6 mt-2 text-amber-100">
-                  Самое читаемое за неделю
-                </div>
-              </div>
-              
-              <div className="p-6 space-y-4 bg-white">
-                {popularArticles.map((article, index) => (
-                  <div 
-                    key={index}
-                    className="border-4 border-black bg-white p-5 hover:shadow-xl transition-all cursor-pointer group"
-                  >
-                    <div className="flex items-center justify-between gap-4">
-                      <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 border-4 border-black bg-gradient-to-br from-amber-700 to-amber-800 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                          <span className="font-headline font-black text-2xl text-amber-100">{index + 1}</span>
-                        </div>
-                        <div className="w-12 h-12 border-4 border-black bg-gradient-to-br from-stone-700 to-stone-800 flex items-center justify-center">
-                          <Icon name={article.icon as any} size={24} className="text-amber-100" />
-                        </div>
-                        <span className="font-headline uppercase text-lg group-hover:underline">
-                          {article.title}
-                        </span>
-                      </div>
-                      <div className="text-sm font-body border-l-4 border-black pl-4 flex items-center gap-2">
-                        <Icon name="Eye" size={18} />
-                        <span className="font-bold">{article.views}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           <div className="mt-12 border-t-4 border-b-4 border-black py-3 aged-paper text-center shadow-lg">
