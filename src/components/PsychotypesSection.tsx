@@ -210,7 +210,7 @@ const PsychotypesSection = () => {
                         <div className="border-4 border-black bg-white p-5">
                           <div className="flex items-center gap-2 mb-4 pb-3 border-b-4 border-black">
                             <Icon name="TrendingUp" size={28} className="text-green-700" />
-                            <h4 className="font-headline uppercase text-xl md:text-2xl">Преимущества</h4>
+                            <h4 className="font-headline uppercase md:text-2xl text-base">Преимущества</h4>
                           </div>
                           <div className="space-y-3">
                             {psycho.bonuses.map((bonus, i) => (
@@ -229,7 +229,7 @@ const PsychotypesSection = () => {
                         <div className="border-4 border-black bg-white p-5">
                           <div className="flex items-center gap-2 mb-4 pb-3 border-b-4 border-black">
                             <Icon name="TrendingDown" size={28} className="text-red-700" />
-                            <h4 className="font-headline uppercase text-xl md:text-2xl">Недостатки</h4>
+                            <h4 className="font-headline uppercase md:text-2xl text-base">Недостатки</h4>
                           </div>
                           <div className="space-y-3">
                             {psycho.penalties.map((penalty, i) => (
