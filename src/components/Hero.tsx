@@ -90,8 +90,8 @@ const Hero = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="border-6 border-black aged-paper shadow-xl transform hover:-translate-y-1 transition-all">
-              <div className="border-b-4 border-black p-4 bg-black text-amber-400 text-center">
+            <div className="border-8 border-black aged-paper shadow-xl transform hover:-translate-y-2 transition-all">
+              <div className="border-b-4 border-black p-4 bg-gradient-to-r from-black to-zinc-800 text-amber-400 text-center">
                 <Icon name="TrendingUp" size={32} className="mx-auto mb-2" />
                 <h3 className="text-xl font-headline uppercase">
                   Еженедельная сводка
@@ -129,7 +129,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="border-6 border-amber-600 bg-gradient-to-br from-amber-50 via-amber-100 to-yellow-200 shadow-2xl flex flex-col justify-center items-center text-center p-8 relative overflow-hidden transform hover:scale-105 transition-all">
+            <div className="border-8 border-amber-600 bg-gradient-to-br from-amber-50 via-amber-100 to-yellow-200 shadow-2xl flex flex-col justify-center items-center text-center p-8 relative overflow-hidden transform hover:scale-105 transition-all">
               <div className="absolute inset-0 opacity-20">
                 <div className="absolute top-0 left-0 w-32 h-32 border-8 border-amber-400 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
                 <div className="absolute bottom-0 right-0 w-32 h-32 border-8 border-amber-400 rounded-full translate-x-1/2 translate-y-1/2"></div>
@@ -146,8 +146,8 @@ const Hero = () => {
               </Button>
             </div>
 
-            <div className="border-6 border-black aged-paper shadow-xl transform hover:-translate-y-1 transition-all">
-              <div className="border-b-4 border-black p-4 bg-[#8B0000] text-white text-center">
+            <div className="border-8 border-black aged-paper shadow-xl transform hover:-translate-y-2 transition-all">
+              <div className="border-b-4 border-black p-4 bg-gradient-to-r from-[#8B0000] to-red-900 text-white text-center">
                 <Icon name="Map" size={32} className="mx-auto mb-2" />
                 <h3 className="text-xl font-headline uppercase">
                   Территории
@@ -186,7 +186,77 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="border-t-8 border-b-8 border-black py-6 aged-paper shadow-lg">
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="border-8 border-black aged-paper shadow-xl">
+              <div className="border-b-4 border-black p-4 bg-black text-amber-400 text-center">
+                <Icon name="Star" size={32} className="mx-auto mb-2" />
+                <h3 className="text-xl font-headline uppercase">
+                  Что нас отличает
+                </h3>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="border-l-4 border-[#8B0000] pl-4">
+                  <h4 className="font-headline text-base uppercase mb-1">Реалистичная экономика</h4>
+                  <p className="font-body text-xs text-justify leading-relaxed">
+                    Контрабанда виски, подпольные казино, рэкет — каждое действие влияет на твой доход и репутацию в мире.
+                  </p>
+                </div>
+                <div className="border-l-4 border-[#8B0000] pl-4">
+                  <h4 className="font-headline text-base uppercase mb-1">Глубокий ролевой отыгрыш</h4>
+                  <p className="font-body text-xs text-justify leading-relaxed">
+                    Создай своего персонажа, обзаведись связями, строй карьеру от простого солдата до босса семьи.
+                  </p>
+                </div>
+                <div className="border-l-4 border-[#8B0000] pl-4">
+                  <h4 className="font-headline text-base uppercase mb-1">Территориальные войны</h4>
+                  <p className="font-body text-xs text-justify leading-relaxed">
+                    Захватывай районы, защищай свои территории, веди переговоры или разборки с конкурентами.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-8 border-black aged-paper shadow-xl">
+              <div className="border-b-4 border-black p-4 bg-gradient-to-r from-[#8B0000] to-red-900 text-white text-center">
+                <Icon name="Trophy" size={32} className="mx-auto mb-2" />
+                <h3 className="text-xl font-headline uppercase">
+                  Топ семей недели
+                </h3>
+              </div>
+              <div className="p-6 space-y-3">
+                <div className="flex items-center gap-3 border-b-2 border-black pb-2">
+                  <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-amber-600 border-4 border-black flex items-center justify-center font-headline text-xl text-white shadow-lg">
+                    1
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-headline text-base">Семья Корлеоне</div>
+                    <div className="text-xs font-body">Заработано: $45,890</div>
+                  </div>
+                  <Icon name="Crown" size={24} className="text-amber-600" />
+                </div>
+                <div className="flex items-center gap-3 border-b-2 border-black pb-2">
+                  <div className="w-10 h-10 bg-gradient-to-br from-gray-300 to-gray-500 border-4 border-black flex items-center justify-center font-headline text-xl text-white shadow-lg">
+                    2
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-headline text-base">Семья Лучано</div>
+                    <div className="text-xs font-body">Заработано: $38,750</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 border-b-2 border-black pb-2">
+                  <div className="w-10 h-10 bg-gradient-to-br from-amber-700 to-amber-900 border-4 border-black flex items-center justify-center font-headline text-xl text-white shadow-lg">
+                    3
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-headline text-base">Семья Дженовезе</div>
+                    <div className="text-xs font-body">Заработано: $32,100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t-8 border-b-8 border-black py-6 aged-paper shadow-lg mb-8">
             <div className="flex items-center justify-center gap-12 flex-wrap">
               <div className="text-center transform hover:scale-110 transition-transform">
                 <Icon name="Calendar" size={32} className="mx-auto mb-2 text-[#8B0000]" />
@@ -205,6 +275,38 @@ const Hero = () => {
                 <div className="text-4xl font-headline text-black">RU/EN</div>
                 <div className="text-xs uppercase tracking-wider font-bold">Два языка</div>
               </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="border-6 border-black aged-paper shadow-xl p-6 text-center">
+              <div className="border-4 border-black inline-block p-4 bg-white mb-3">
+                <Icon name="MessageCircle" size={40} className="text-[#8B0000]" />
+              </div>
+              <h3 className="text-lg font-headline uppercase mb-2">Активное сообщество</h3>
+              <p className="text-xs font-body leading-relaxed">
+                Присоединяйся к Discord, где 5000+ игроков обсуждают стратегии и делятся опытом
+              </p>
+            </div>
+            
+            <div className="border-6 border-black aged-paper shadow-xl p-6 text-center">
+              <div className="border-4 border-black inline-block p-4 bg-white mb-3">
+                <Icon name="Headphones" size={40} className="text-[#8B0000]" />
+              </div>
+              <h3 className="text-lg font-headline uppercase mb-2">Поддержка 24/7</h3>
+              <p className="text-xs font-body leading-relaxed">
+                Команда администраторов всегда на связи, чтобы помочь разобраться в любой ситуации
+              </p>
+            </div>
+            
+            <div className="border-6 border-black aged-paper shadow-xl p-6 text-center">
+              <div className="border-4 border-black inline-block p-4 bg-white mb-3">
+                <Icon name="Zap" size={40} className="text-[#8B0000]" />
+              </div>
+              <h3 className="text-lg font-headline uppercase mb-2">Регулярные обновления</h3>
+              <p className="text-xs font-body leading-relaxed">
+                Новый контент, события и улучшения каждую неделю — сервер постоянно развивается
+              </p>
             </div>
           </div>
         </div>

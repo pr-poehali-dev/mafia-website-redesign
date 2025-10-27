@@ -91,39 +91,49 @@ const ForumSection = () => {
     <section className="min-h-screen pt-[240px] pb-16">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="border-t-4 border-b-4 border-black py-3 mb-8 bg-white text-center">
-            <h2 className="text-5xl font-headline uppercase tracking-wider">
-              Форум сообщества
-            </h2>
-            <div className="text-xs uppercase tracking-widest mt-1">
-              Место встречи всех семей
+          <div className="border-t-8 border-b-8 border-black py-6 mb-8 aged-paper text-center shadow-xl">
+            <div className="flex items-center justify-center gap-4 mb-3">
+              <Icon name="MessagesSquare" size={48} className="text-[#8B0000]" />
+              <h2 className="text-6xl font-headline uppercase tracking-wider">
+                Форум
+              </h2>
+              <Icon name="MessagesSquare" size={48} className="text-[#8B0000]" />
+            </div>
+            <div className="text-sm uppercase tracking-widest mt-2 border-t-2 border-b-2 border-black py-2 inline-block px-8">
+              📰 Место встречи всех семей • Последние обсуждения 📰
             </div>
           </div>
 
-          <div className="grid gap-4 mb-8">
+          <div className="grid gap-6 mb-8">
             {categories.map((category) => (
               <div 
                 key={category.id}
-                className="border-4 border-black bg-white hover:bg-black hover:text-white transition-all cursor-pointer group"
+                className="border-6 border-black aged-paper shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer group"
               >
-                <div className="p-4 flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-3 flex-1">
-                    <div className="w-12 h-12 border-2 border-current flex items-center justify-center flex-shrink-0">
-                      <Icon name={category.icon as any} size={20} />
+                <div className="p-5 flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-4 flex-1">
+                    <div className="w-16 h-16 border-4 border-black bg-gradient-to-br from-black to-zinc-800 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                      <Icon name={category.icon as any} size={28} className="text-amber-400" />
                     </div>
                     
                     <div className="flex-1">
-                      <h4 className="text-lg font-headline uppercase mb-1">{category.name}</h4>
-                      <div className="flex items-center gap-4 text-xs font-body">
-                        <span>{category.topics} тем</span>
-                        <span>{category.posts} сообщений</span>
+                      <h4 className="text-xl font-headline uppercase mb-2 tracking-wide">{category.name}</h4>
+                      <div className="flex items-center gap-6 text-sm font-body">
+                        <span className="flex items-center gap-1">
+                          <Icon name="FileText" size={14} />
+                          {category.topics} тем
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Icon name="MessageSquare" size={14} />
+                          {category.posts} сообщений
+                        </span>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="hidden md:block text-right border-l-2 border-current pl-4">
-                    <div className="text-xs font-body mb-1">{category.lastPost.title}</div>
-                    <div className="text-[10px] uppercase tracking-wider opacity-70">
+                  <div className="hidden lg:block text-right border-l-4 border-black pl-6 max-w-xs">
+                    <div className="text-sm font-headline mb-1 uppercase">{category.lastPost.title}</div>
+                    <div className="text-xs font-body border-t-2 border-black pt-1 mt-1">
                       {category.lastPost.author} • {category.lastPost.time}
                     </div>
                   </div>
@@ -132,39 +142,51 @@ const ForumSection = () => {
             ))}
           </div>
 
-          <div className="border-4 border-black bg-white">
-            <div className="border-b-2 border-black bg-white p-4 text-center">
-              <h3 className="text-2xl font-headline uppercase">
-                Последние темы
+          <div className="border-8 border-black aged-paper shadow-2xl">
+            <div className="border-b-4 border-black bg-gradient-to-r from-black to-zinc-800 p-5 text-center">
+              <h3 className="text-2xl font-headline uppercase text-amber-400 flex items-center justify-center gap-3">
+                <Icon name="Flame" size={28} />
+                Горячие темы
+                <Icon name="Flame" size={28} />
               </h3>
             </div>
             
-            <div className="p-4 space-y-3">
+            <div className="p-6 space-y-4">
               {recentTopics.map((topic) => (
                 <div 
                   key={topic.id}
-                  className="border-2 border-black p-3 hover:bg-black hover:text-white transition-all cursor-pointer group"
+                  className="border-4 border-black bg-gradient-to-br from-[#F5E6D0] to-[#E5D3A8] p-4 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group"
                 >
-                  <div className="flex items-start gap-3">
-                    <Avatar className="w-10 h-10 border-2 border-current flex-shrink-0">
-                      <AvatarFallback className="font-headline font-bold bg-white text-black group-hover:bg-black group-hover:text-white">
+                  <div className="flex items-start gap-4">
+                    <Avatar className="w-12 h-12 border-4 border-black flex-shrink-0 shadow-lg">
+                      <AvatarFallback className="font-headline font-bold text-lg bg-white text-black">
                         {topic.author[0]}
                       </AvatarFallback>
                     </Avatar>
                     
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-start gap-2 mb-1">
-                        <h4 className="text-base font-headline uppercase flex-1">
+                      <div className="flex items-start gap-2 mb-2">
+                        <h4 className="text-lg font-headline uppercase flex-1 group-hover:text-[#8B0000] transition-colors">
                           {topic.title}
                         </h4>
                         {topic.hot && (
-                          <Badge className="bg-red-600 text-white border-2 border-current text-[10px] px-2 py-0">
-                            HOT
+                          <Badge className="bg-gradient-to-r from-red-600 to-red-800 text-white border-2 border-black text-xs px-3 py-1 shadow-lg">
+                            🔥 HOT
                           </Badge>
                         )}
                       </div>
-                      <div className="text-xs font-body opacity-70">
-                        {topic.author} в {topic.category} • {topic.replies} ответов • {topic.views} просмотров • {topic.time}
+                      <div className="flex items-center gap-4 text-xs font-body border-t-2 border-black pt-2">
+                        <span className="font-bold">{topic.author}</span>
+                        <span className="border-l-2 border-black pl-2">{topic.category}</span>
+                        <span className="border-l-2 border-black pl-2 flex items-center gap-1">
+                          <Icon name="MessageCircle" size={12} />
+                          {topic.replies}
+                        </span>
+                        <span className="border-l-2 border-black pl-2 flex items-center gap-1">
+                          <Icon name="Eye" size={12} />
+                          {topic.views}
+                        </span>
+                        <span className="border-l-2 border-black pl-2">{topic.time}</span>
                       </div>
                     </div>
                   </div>
@@ -173,9 +195,9 @@ const ForumSection = () => {
             </div>
           </div>
 
-          <div className="mt-6 border-t-2 border-b-2 border-black py-1 bg-white text-center">
+          <div className="mt-8 border-t-4 border-b-4 border-black py-3 aged-paper text-center shadow-lg">
             <div className="text-xs font-body uppercase tracking-widest">
-              Присоединяйтесь к обсуждениям • Делитесь историями • Находите союзников
+              💬 Присоединяйтесь к обсуждениям • Делитесь историями • Находите союзников 💬
             </div>
           </div>
         </div>

@@ -56,12 +56,26 @@ const MonitoringSection = () => {
     switch (status) {
       case 'online':
       case 'operational':
-        return 'bg-black';
+        return 'bg-green-600';
       case 'maintenance':
       case 'degraded':
-        return 'bg-white';
+        return 'bg-yellow-500';
       default:
         return 'bg-red-600';
+    }
+  };
+
+  const getStatusText = (status: string) => {
+    switch (status) {
+      case 'online':
+      case 'operational':
+        return 'Работает';
+      case 'maintenance':
+        return 'Тех. работы';
+      case 'degraded':
+        return 'Замедлено';
+      default:
+        return 'Недоступно';
     }
   };
 
@@ -69,48 +83,62 @@ const MonitoringSection = () => {
     <section className="min-h-screen pt-[240px] pb-16">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="border-t-4 border-b-4 border-black py-3 mb-8 bg-white text-center">
-            <h2 className="text-5xl font-headline uppercase tracking-wider">
-              Мониторинг серверов
-            </h2>
-            <div className="text-xs uppercase tracking-widest mt-1">
-              Состояние систем • Обновляется в реальном времени
+          <div className="border-t-8 border-b-8 border-black py-6 mb-8 aged-paper text-center shadow-xl">
+            <div className="flex items-center justify-center gap-4 mb-3">
+              <Icon name="Activity" size={48} className="text-[#8B0000]" />
+              <h2 className="text-6xl font-headline uppercase tracking-wider">
+                Мониторинг
+              </h2>
+              <Icon name="Activity" size={48} className="text-[#8B0000]" />
+            </div>
+            <div className="text-sm uppercase tracking-widest mt-2 border-t-2 border-b-2 border-black py-2 inline-block px-8">
+              🔧 Состояние систем • Обновляется в реальном времени 🔧
             </div>
           </div>
 
-          <div className="space-y-4 mb-8">
+          <div className="space-y-6 mb-8">
             {servers.map((server) => (
               <div 
                 key={server.id}
-                className="border-4 border-black bg-white p-4"
+                className="border-6 border-black aged-paper shadow-xl hover:shadow-2xl transition-all"
               >
-                <div className="flex items-center justify-between mb-3 pb-3 border-b-2 border-black">
-                  <div className="flex items-center gap-3">
-                    <div className={`w-4 h-4 border-2 border-black ${getStatusColor(server.status)}`} />
+                <div className="flex items-center justify-between p-5 border-b-4 border-black bg-gradient-to-r from-[#F5E6D0] to-[#E5D3A8]">
+                  <div className="flex items-center gap-4">
+                    <div className={`w-6 h-6 border-4 border-black ${getStatusColor(server.status)} shadow-lg animate-pulse`} />
                     <div>
-                      <h4 className="font-headline uppercase text-lg">{server.name}</h4>
-                      <div className="text-xs font-body">
-                        Версия {server.version} • Карта: {server.map}
+                      <h4 className="font-headline uppercase text-xl">{server.name}</h4>
+                      <div className="text-xs font-body flex items-center gap-3 mt-1">
+                        <span className="flex items-center gap-1">
+                          <Icon name="Package" size={12} />
+                          Версия {server.version}
+                        </span>
+                        <span className="border-l-2 border-black pl-3 flex items-center gap-1">
+                          <Icon name="MapPin" size={12} />
+                          {server.map}
+                        </span>
                       </div>
                     </div>
                   </div>
-                  <Badge className="bg-white text-black border-2 border-black font-headline uppercase text-xs">
-                    {server.status === 'online' ? 'Работает' : 'Тех. работы'}
+                  <Badge className="bg-white text-black border-4 border-black font-headline uppercase text-sm px-4 py-2">
+                    {getStatusText(server.status)}
                   </Badge>
                 </div>
                 
-                <div className="grid grid-cols-3 gap-3 text-xs">
-                  <div className="border-2 border-black p-2 text-center">
-                    <div className="font-body mb-1">Игроки</div>
-                    <div className="font-headline font-bold">{server.players}</div>
+                <div className="grid grid-cols-3 gap-4 p-5">
+                  <div className="border-4 border-black aged-paper p-4 text-center shadow-lg">
+                    <Icon name="Users" size={24} className="mx-auto mb-2 text-[#8B0000]" />
+                    <div className="font-body mb-1 text-xs uppercase">Игроки</div>
+                    <div className="font-headline font-bold text-xl">{server.players}</div>
                   </div>
-                  <div className="border-2 border-black p-2 text-center">
-                    <div className="font-body mb-1">Пинг</div>
-                    <div className="font-headline font-bold">{server.ping}</div>
+                  <div className="border-4 border-black aged-paper p-4 text-center shadow-lg">
+                    <Icon name="Wifi" size={24} className="mx-auto mb-2 text-[#8B0000]" />
+                    <div className="font-body mb-1 text-xs uppercase">Пинг</div>
+                    <div className="font-headline font-bold text-xl">{server.ping}</div>
                   </div>
-                  <div className="border-2 border-black p-2 text-center">
-                    <div className="font-body mb-1">Аптайм</div>
-                    <div className="font-headline font-bold">{server.uptime}</div>
+                  <div className="border-4 border-black aged-paper p-4 text-center shadow-lg">
+                    <Icon name="TrendingUp" size={24} className="mx-auto mb-2 text-[#8B0000]" />
+                    <div className="font-body mb-1 text-xs uppercase">Аптайм</div>
+                    <div className="font-headline font-bold text-xl">{server.uptime}</div>
                   </div>
                 </div>
               </div>
@@ -118,47 +146,56 @@ const MonitoringSection = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="border-4 border-black bg-white">
-              <div className="border-b-2 border-black p-4 text-center">
+            <div className="border-6 border-black aged-paper shadow-xl">
+              <div className="border-b-4 border-black p-5 bg-gradient-to-r from-black to-zinc-800 text-amber-400 text-center">
+                <Icon name="Settings" size={28} className="mx-auto mb-2" />
                 <h3 className="text-xl font-headline uppercase">
                   Состояние систем
                 </h3>
               </div>
               
-              <div className="p-4 space-y-2">
+              <div className="p-5 space-y-3">
                 {systemStatus.map((item, index) => (
                   <div 
                     key={index} 
-                    className="flex items-center justify-between border-b border-black pb-2 last:border-0"
+                    className="flex items-center justify-between border-b-2 border-black pb-3 last:border-0"
                   >
-                    <div className="flex items-center gap-2">
-                      <div className={`w-3 h-3 border-2 border-black ${getStatusColor(item.status)}`} />
+                    <div className="flex items-center gap-3">
+                      <div className={`w-4 h-4 border-2 border-black ${getStatusColor(item.status)}`} />
                       <span className="font-body text-sm">{item.service}</span>
                     </div>
-                    <span className="font-headline text-xs">{item.response}</span>
+                    <div className="flex items-center gap-3">
+                      <span className="font-headline text-sm border-2 border-black px-3 py-1 bg-white">
+                        {item.response}
+                      </span>
+                      <Badge className="bg-white text-black border-2 border-black font-headline text-xs px-2">
+                        {getStatusText(item.status)}
+                      </Badge>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="border-4 border-black bg-white">
-              <div className="border-b-2 border-black p-4 text-center">
+            <div className="border-6 border-black aged-paper shadow-xl">
+              <div className="border-b-4 border-black p-5 bg-gradient-to-r from-[#8B0000] to-red-900 text-white text-center">
+                <Icon name="Clock" size={28} className="mx-auto mb-2" />
                 <h3 className="text-xl font-headline uppercase">
                   Последние события
                 </h3>
               </div>
               
-              <div className="p-4 space-y-2">
+              <div className="p-5 space-y-3">
                 {recentEvents.map((event, index) => (
                   <div 
                     key={index}
-                    className="border-b border-black pb-2 last:border-0"
+                    className="border-b-2 border-black pb-3 last:border-0"
                   >
-                    <div className="flex items-start gap-2">
-                      <span className="font-headline text-xs border border-black px-2 py-0.5">
+                    <div className="flex items-start gap-3">
+                      <span className="font-headline text-sm border-2 border-black px-3 py-1 bg-white flex-shrink-0">
                         {event.time}
                       </span>
-                      <span className="font-body text-xs flex-1">{event.event}</span>
+                      <span className="font-body text-sm flex-1">{event.event}</span>
                     </div>
                   </div>
                 ))}
@@ -166,9 +203,9 @@ const MonitoringSection = () => {
             </div>
           </div>
 
-          <div className="mt-6 border-t-2 border-b-2 border-black py-1 bg-white text-center">
+          <div className="mt-8 border-t-4 border-b-4 border-black py-3 aged-paper text-center shadow-lg">
             <div className="text-xs font-body uppercase tracking-widest">
-              Автоматическое обновление каждые 30 секунд • Все системы под контролем
+              🔄 Автоматическое обновление каждые 30 секунд • Все системы под контролем 🔄
             </div>
           </div>
         </div>
