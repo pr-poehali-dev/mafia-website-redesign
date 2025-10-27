@@ -7,7 +7,6 @@ import DonateSection from '@/components/DonateSection';
 import LoreSection from '@/components/LoreSection';
 import WikiSection from '@/components/WikiSection';
 import StatsSection from '@/components/StatsSection';
-import MonitoringSection from '@/components/MonitoringSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -52,7 +51,6 @@ const Index = () => {
         {activeSection === 'lore' && <LoreSection />}
         {activeSection === 'wiki' && <WikiSection />}
         {activeSection === 'stats' && <StatsSection />}
-        {activeSection === 'monitoring' && <MonitoringSection />}
       </main>
 
       <Footer />
