@@ -207,13 +207,13 @@ const Footer = ({ setActiveSection }: FooterProps) => {
 
       {showPrivacy && (
         <div 
-          className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/80 transition-opacity duration-300 ${
+          className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/80 transition-opacity duration-300 animate-in fade-in ${
             isPrivacyClosing ? 'opacity-0' : 'opacity-100'
           }`}
           onClick={handleClosePrivacy}
         >
           <div 
-            className={`bg-white border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 ${
+            className={`bg-white border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 animate-in zoom-in-95 ${
               isPrivacyClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
             }`}
             onClick={(e) => e.stopPropagation()}
@@ -293,13 +293,13 @@ const Footer = ({ setActiveSection }: FooterProps) => {
 
       {showTerms && (
         <div 
-          className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/80 transition-opacity duration-300 ${
+          className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/80 transition-opacity duration-300 animate-in fade-in ${
             isTermsClosing ? 'opacity-0' : 'opacity-100'
           }`}
           onClick={handleCloseTerms}
         >
           <div 
-            className={`bg-white border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 ${
+            className={`bg-white border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 animate-in zoom-in-95 ${
               isTermsClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
             }`}
             onClick={(e) => e.stopPropagation()}
