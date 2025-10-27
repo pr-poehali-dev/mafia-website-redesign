@@ -96,7 +96,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="p-6 space-y-4 bg-gradient-to-b from-[#E5D3A8] to-[#D2B48C]">
+              <div className="p-6 space-y-4 aged-paper">
                 <div className="border-4 border-black photo-border transform -rotate-2 hover:rotate-0 transition-transform">
                   <img 
                     src="https://mh-rp.com/uploads/guide/98-media2.webp" 
