@@ -12,7 +12,7 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
     { id: 'news', label: 'Новости' },
     { id: 'rules', label: 'Правила' },
     { id: 'donate', label: 'Донат' },
-    { id: 'forum', label: 'Форум' },
+    { id: 'lore', label: 'Лор' },
     { id: 'wiki', label: 'Вики' },
     { id: 'stats', label: 'Статистика' },
     { id: 'monitoring', label: 'Мониторинг' },

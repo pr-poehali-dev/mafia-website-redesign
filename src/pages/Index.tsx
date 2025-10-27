@@ -4,7 +4,7 @@ import Hero from '@/components/Hero';
 import NewsSection from '@/components/NewsSection';
 import RulesSection from '@/components/RulesSection';
 import DonateSection from '@/components/DonateSection';
-import ForumSection from '@/components/ForumSection';
+import LoreSection from '@/components/LoreSection';
 import WikiSection from '@/components/WikiSection';
 import StatsSection from '@/components/StatsSection';
 import MonitoringSection from '@/components/MonitoringSection';
@@ -49,7 +49,7 @@ const Index = () => {
         {activeSection === 'news' && <NewsSection />}
         {activeSection === 'rules' && <RulesSection />}
         {activeSection === 'donate' && <DonateSection />}
-        {activeSection === 'forum' && <ForumSection />}
+        {activeSection === 'lore' && <LoreSection />}
         {activeSection === 'wiki' && <WikiSection />}
         {activeSection === 'stats' && <StatsSection />}
         {activeSection === 'monitoring' && <MonitoringSection />}
