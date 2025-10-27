@@ -1,199 +1,226 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Icon from '@/components/ui/icon';
+import { useState } from 'react';
 
 const RulesSection = () => {
-  const rules = [
-    {
-      id: '1',
-      title: 'Кодекс чести семьи',
-      icon: 'Shield',
-      content: 'Преданность семье превыше всего. Предательство карается смертью. Уважай старших по рангу и выполняй приказы босса без вопросов. Омерта — закон молчания. Никогда не сотрудничай с властями. Защищай честь семьи любой ценой.'
-    },
-    {
-      id: '2',
-      title: 'Правила ролевой игры',
-      icon: 'Users',
-      content: 'Играйте свою роль достойно. Запрещен метагейминг, повергейминг и использование OOC информации в IC. Уважайте других игроков. Все действия должны иметь RP обоснование. Общение в голосовом чате обязательно на русском языке.'
-    },
-    {
-      id: '3',
-      title: 'Территории и влияние',
-      icon: 'Map',
-      content: 'Каждая семья контролирует свою территорию. Вторжение на чужую территорию требует веских причин. Войны объявляются только через администрацию. Захват территорий происходит по расписанию. Нейтральные зоны неприкосновенны.'
-    },
-    {
-      id: '4',
-      title: 'Экономика и бизнес',
-      icon: 'DollarSign',
-      content: 'Контрабанда алкоголя, казино, рэкет - источники дохода. Все сделки должны быть отыграны. Запрещено использование багов для обогащения. Отмывание денег через легальный бизнес приветствуется. Взяточничество властей разрешено.'
-    },
-    {
-      id: '5',
-      title: 'Конфликты и PvP',
-      icon: 'Swords',
-      content: 'Перестрелки разрешены только при наличии RP причины. Обязательна озвучка действий. Нельзя убивать без предупреждения. После смерти забываете последние 15 минут (NLR). Запрещено возвращаться на место смерти в течение 30 минут.'
-    },
-    {
-      id: '6',
-      title: 'Администрация сервера',
-      icon: 'Gavel',
-      content: 'Решения администрации окончательны. Жалобы принимаются на форуме. Неуважение к администрации карается баном. Следуйте указаниям модераторов. Обман администрации приведёт к перманентному бану аккаунта.'
-    },
-  ];
+  const [activeCategory, setActiveCategory] = useState('admin');
+
+  const adminRules = {
+    mainProvisions: [
+      'Запрещено отменять или заменять наказания, выданные другим администратором. Все наказания выдаются строго по регламенту.',
+      'Запрещено принимать во внимание доказательства, присланные в личные сообщения и прочие неофициальные каналы. Исключения: доказательства нарушений, полученные от медиа-партнёров в разделе "Media", а также материалы по фактам использования стороннего ПО или торговли валютой/услугами.',
+      'Багоюз, торговля валютой, услугами или предметами — основание для немедленного снятия.',
+      'Администратор обязан хранить доказательства по каждому наказанию не менее 48 часов.',
+      'Запрещено демонстрировать превосходство над игроками и злоупотреблять своим статусом.',
+      'Запрещено спавнить объекты, технику или сущности в людных местах без обоснования. Разрешено: при помощи игроку, записи роликов, организации мероприятий.',
+      'Вмешательство в RP-процессы запрещено. Исключение — куратор в роли массовки.',
+      'Администратор обязан выдавать наказания беспристрастно, без личных симпатий и антипатий.',
+      'Незнание правил сервера не освобождает администратора от ответственности.',
+      'Запрещено разглашать внутреннюю информацию проекта — материалы Discord, переписок и прочее. Нарушение — немедленное снятие.',
+      'Ненормативная лексика, как в IC, так и в OOC-контексте — запрещена.',
+      'Угрозы в адрес игроков со стороны администратора — основание для немедленного снятия.',
+      'Запрещено давать некkorректные ответы в тикете.',
+      'Выдача игрокам HP, оружия, транспорта и т.д. без обоснования — строго запрещена.',
+    ],
+    gameProperty: [
+      'Администратор имеет право владеть домом, одеждой и иным личным имуществом.',
+      'Владение бизнесом запрещено. Исключение: по прямому поручению главного администратора или руководства проекта.',
+      'Покупка, продажа или дарение имущества от имени администрации без согласования — запрещено.',
+      'Проведение розыгрышей или передача денег/вещей игрокам — только с разрешения ГА.',
+    ],
+    behaviorNorms: [
+      'Администрации запрещено занимать руководящие должности во фракциях.',
+      'Жалоба на администратора рассматривается на общих основаниях, как на любого игрока. Пример: если администратор нарушил RP на втором слоте — он получает наказание на основном админ-слоте.',
+      'Запрещено использовать привилегии для давления, угроз, манипуляций или навязывания своего мнения. Даже разговор о наказаниях, оценках игроков или авторитарный тон — недопустимы.',
+    ],
+    curatorDuties: [
+      'Контролировать активность лидера и общей работы фракции.',
+      'Следить за количеством наборов и их корректностью.',
+      'Принимать и рассматривать жалобы на лидеров.',
+      'Контролировать склад фракции.',
+      'Модерировать фракционный Discord-чат.',
+      'Консультировать лидеров, отвечать на вопросы.',
+      'Владеть полной информацией о состоянии фракции, своевременно доносить её до руководства.',
+    ],
+    conclusion: [
+      'Вся администрация подчиняется регламенту.',
+      'Нарушение любого из вышеуказанных пунктов влечёт последствия, определяемые по тяжести проступка.',
+      'Решение о выговорах, снятии и поощрении принимает ГА или руководство проекта.',
+    ],
+  };
 
   return (
     <section className="min-h-screen pt-[280px] pb-16 newspaper-texture">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="border-t-8 border-b-8 border-black py-6 mb-8 aged-paper text-center shadow-xl">
             <div className="flex items-center justify-center gap-4 mb-3">
               <Icon name="Scale" size={48} className="text-[#8B0000]" />
               <h2 className="text-6xl font-headline uppercase tracking-wider">
-                Правила сервера
+                Регламент сервера
               </h2>
               <Icon name="Scale" size={48} className="text-[#8B0000]" />
             </div>
             <div className="text-sm uppercase tracking-widest mt-2 border-t-2 border-b-2 border-black py-2 inline-block px-8">
-              📜 Официальный кодекс чести • Обязательно к прочтению 📜
+              📜 Официальный кодекс • Обязательно к прочтению 📜
             </div>
           </div>
 
-          <div className="border-8 border-[#8B0000] bg-gradient-to-br from-red-700 via-red-800 to-red-900 mb-8 shadow-2xl vintage-stamp">
-            <div className="border-8 border-amber-400 m-3 p-6 text-center bg-black/20">
-              <Icon name="AlertTriangle" size={56} className="mx-auto mb-3 text-amber-300 animate-pulse" />
-              <div className="text-3xl font-headline uppercase mb-3 text-white">
-                ⚠ КРИТИЧЕСКИ ВАЖНО! ⚠
-              </div>
-              <div className="text-base font-body leading-relaxed text-amber-100 border-t-2 border-b-2 border-amber-400 py-3">
-                Незнание правил не освобождает от ответственности. Перед началом игры обязательно ознакомьтесь со всеми правилами сервера. Нарушение может привести к немедленному бану аккаунта без права восстановления.
-              </div>
+          <div className="border-8 border-black aged-paper mb-8 shadow-xl">
+            <div className="grid grid-cols-3 border-b-4 border-black">
+              <button
+                onClick={() => setActiveCategory('general')}
+                className={`p-4 font-headline uppercase text-sm border-r-4 border-black transition-all ${
+                  activeCategory === 'general'
+                    ? 'bg-black text-amber-400'
+                    : 'hover:bg-zinc-800 hover:text-amber-400'
+                }`}
+              >
+                <Icon name="BookOpen" size={24} className="mx-auto mb-2" />
+                Общие правила
+              </button>
+              <button
+                onClick={() => setActiveCategory('admin')}
+                className={`p-4 font-headline uppercase text-sm border-r-4 border-black transition-all ${
+                  activeCategory === 'admin'
+                    ? 'bg-black text-amber-400'
+                    : 'hover:bg-zinc-800 hover:text-amber-400'
+                }`}
+              >
+                <Icon name="Shield" size={24} className="mx-auto mb-2" />
+                Администрация
+              </button>
+              <button
+                onClick={() => setActiveCategory('leaders')}
+                className={`p-4 font-headline uppercase text-sm transition-all ${
+                  activeCategory === 'leaders'
+                    ? 'bg-black text-amber-400'
+                    : 'hover:bg-zinc-800 hover:text-amber-400'
+                }`}
+              >
+                <Icon name="Crown" size={24} className="mx-auto mb-2" />
+                Для лидеров
+              </button>
             </div>
-          </div>
 
-          <div className="grid lg:grid-cols-4 gap-6 mb-8">
-            <div className="lg:col-span-3 space-y-4">
-              {rules.map((rule, index) => (
-                <Accordion key={rule.id} type="single" collapsible>
-                  <AccordionItem value={rule.id} className="border-6 border-black aged-paper shadow-lg hover:shadow-2xl transition-shadow">
-                    <AccordionTrigger className="px-6 py-4 hover:bg-gradient-to-r hover:from-black hover:to-zinc-800 hover:text-amber-400 transition-all hover:no-underline">
-                      <div className="flex items-center gap-4 w-full">
-                        <div className="w-12 h-12 border-4 border-current flex items-center justify-center flex-shrink-0 bg-white text-black">
-                          <span className="text-xl font-headline font-black">
-                            {index + 1}
-                          </span>
-                        </div>
-                        <Icon name={rule.icon as any} size={28} />
-                        <span className="text-lg font-headline uppercase text-left tracking-wide">
-                          {rule.title}
-                        </span>
+            {activeCategory === 'admin' && (
+              <div className="p-8">
+                <div className="border-8 border-[#8B0000] bg-gradient-to-br from-red-700 via-red-800 to-red-900 mb-6 shadow-2xl vintage-stamp">
+                  <div className="border-4 border-amber-400 m-2 p-4 text-center bg-black/20">
+                    <Icon name="AlertTriangle" size={40} className="mx-auto mb-2 text-amber-300" />
+                    <div className="text-xl font-headline uppercase mb-2 text-white">
+                      ⚠ РЕГЛАМЕНТ АДМИНИСТРАЦИИ ⚠
+                    </div>
+                    <div className="text-xs font-body text-amber-100 border-t border-b border-amber-400 py-2">
+                      Обязательно к соблюдению всеми членами администрации
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="border-4 border-black aged-paper p-6">
+                    <div className="flex items-center gap-3 mb-4 border-b-2 border-black pb-3">
+                      <div className="w-10 h-10 border-4 border-black bg-white flex items-center justify-center">
+                        <span className="font-headline font-black text-xl">I</span>
                       </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="border-t-4 border-black px-6 py-5 bg-gradient-to-br from-[#F5E6D0] to-[#E5D3A8]">
-                      <p className="font-body text-base leading-relaxed text-justify pl-16">
-                        {rule.content}
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              ))}
-            </div>
+                      <h3 className="text-2xl font-headline uppercase">Основные положения</h3>
+                    </div>
+                    <div className="space-y-3">
+                      {adminRules.mainProvisions.map((rule, index) => (
+                        <div key={index} className="flex gap-3 text-sm font-body leading-relaxed border-b border-black/20 pb-2 last:border-0">
+                          <span className="font-bold text-[#8B0000] flex-shrink-0">{index + 1}.</span>
+                          <p className="text-justify">{rule}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
 
-            <div className="space-y-6">
-              <div className="border-6 border-black aged-paper shadow-xl transform -rotate-1 hover:rotate-0 transition-transform">
-                <div className="photo-border">
-                  <img 
-                    src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/fa40f034-dcd1-4569-a3b1-ee4b25251f3c.jpg"
-                    alt="Члены организации"
-                    className="w-full aspect-square object-cover old-photo"
-                  />
-                </div>
-                <div className="bg-white border-t-4 border-black p-3">
-                  <div className="text-xs font-headline text-center uppercase">
-                    Рис. 2 — Совет старейшин, 1925
+                  <div className="border-4 border-black aged-paper p-6">
+                    <div className="flex items-center gap-3 mb-4 border-b-2 border-black pb-3">
+                      <div className="w-10 h-10 border-4 border-black bg-white flex items-center justify-center">
+                        <span className="font-headline font-black text-xl">II</span>
+                      </div>
+                      <h3 className="text-2xl font-headline uppercase">Игровое имущество</h3>
+                    </div>
+                    <div className="space-y-3">
+                      {adminRules.gameProperty.map((rule, index) => (
+                        <div key={index} className="flex gap-3 text-sm font-body leading-relaxed border-b border-black/20 pb-2 last:border-0">
+                          <span className="font-bold text-[#8B0000] flex-shrink-0">{index + 1}.</span>
+                          <p className="text-justify">{rule}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              <div className="border-6 border-black aged-paper shadow-xl">
-                <div className="border-b-4 border-black p-4 bg-gradient-to-r from-black to-zinc-800 text-amber-400 text-center">
-                  <Icon name="CheckCircle" size={32} className="mx-auto mb-2" />
-                  <h3 className="text-base font-headline uppercase">
-                    Требования
-                  </h3>
-                </div>
-                <div className="p-4 space-y-3 text-sm font-body">
-                  <div className="border-b-2 border-black pb-2 flex items-center gap-2">
-                    <Icon name="User" size={16} />
-                    <div>
-                      <div className="font-bold">Возраст:</div>
-                      <div>От 18 лет</div>
+                  <div className="border-4 border-black aged-paper p-6">
+                    <div className="flex items-center gap-3 mb-4 border-b-2 border-black pb-3">
+                      <div className="w-10 h-10 border-4 border-black bg-white flex items-center justify-center">
+                        <span className="font-headline font-black text-xl">III</span>
+                      </div>
+                      <h3 className="text-2xl font-headline uppercase">Поведенческие нормы</h3>
+                    </div>
+                    <div className="space-y-3">
+                      {adminRules.behaviorNorms.map((rule, index) => (
+                        <div key={index} className="flex gap-3 text-sm font-body leading-relaxed border-b border-black/20 pb-2 last:border-0">
+                          <span className="font-bold text-[#8B0000] flex-shrink-0">{index + 1}.</span>
+                          <p className="text-justify">{rule}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                  <div className="border-b-2 border-black pb-2 flex items-center gap-2">
-                    <Icon name="Mic" size={16} />
-                    <div>
-                      <div className="font-bold">Микрофон:</div>
-                      <div>Обязателен</div>
-                    </div>
-                  </div>
-                  <div className="border-b-2 border-black pb-2 flex items-center gap-2">
-                    <Icon name="Languages" size={16} />
-                    <div>
-                      <div className="font-bold">Язык:</div>
-                      <div>Русский / English</div>
-                    </div>
-                  </div>
-                  <div className="border-b-2 border-black pb-2 flex items-center gap-2">
-                    <Icon name="Gamepad2" size={16} />
-                    <div>
-                      <div className="font-bold">RedM:</div>
-                      <div>Лицензия</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <div className="border-6 border-[#8B0000] bg-gradient-to-br from-black to-zinc-900 text-white shadow-xl">
-                <div className="p-5 text-center">
-                  <Icon name="AlertOctagon" size={40} className="mx-auto mb-3 text-red-500" />
-                  <div className="text-sm uppercase mb-3 tracking-wider text-amber-400 font-bold">Система наказаний</div>
-                  <div className="space-y-2 text-xs">
-                    <div className="border-b border-white/30 pb-2 flex items-center justify-between">
-                      <span>1-е нарушение</span>
-                      <span className="text-yellow-400 font-bold">⚠ Предупреждение</span>
+                  <div className="border-4 border-black aged-paper p-6">
+                    <div className="flex items-center gap-3 mb-4 border-b-2 border-black pb-3">
+                      <div className="w-10 h-10 border-4 border-black bg-white flex items-center justify-center">
+                        <span className="font-headline font-black text-xl">IV</span>
+                      </div>
+                      <h3 className="text-2xl font-headline uppercase">Обязанности куратора</h3>
                     </div>
-                    <div className="border-b border-white/30 pb-2 flex items-center justify-between">
-                      <span>2-е нарушение</span>
-                      <span className="text-orange-400 font-bold">🚪 Кик</span>
+                    <div className="space-y-3">
+                      {adminRules.curatorDuties.map((rule, index) => (
+                        <div key={index} className="flex gap-3 text-sm font-body leading-relaxed border-b border-black/20 pb-2 last:border-0">
+                          <span className="font-bold text-[#8B0000] flex-shrink-0">{index + 1}.</span>
+                          <p className="text-justify">{rule}</p>
+                        </div>
+                      ))}
                     </div>
-                    <div className="border-b border-white/30 pb-2 flex items-center justify-between">
-                      <span>3-е нарушение</span>
-                      <span className="text-red-400 font-bold">⏱ Бан 24ч</span>
+                  </div>
+
+                  <div className="border-4 border-black aged-paper p-6">
+                    <div className="flex items-center gap-3 mb-4 border-b-2 border-black pb-3">
+                      <div className="w-10 h-10 border-4 border-black bg-white flex items-center justify-center">
+                        <span className="font-headline font-black text-xl">V</span>
+                      </div>
+                      <h3 className="text-2xl font-headline uppercase">Заключение</h3>
                     </div>
-                    <div className="pt-1 flex items-center justify-between">
-                      <span>4-е нарушение</span>
-                      <span className="text-red-600 font-bold">🔨 Перманент</span>
+                    <div className="space-y-3">
+                      {adminRules.conclusion.map((rule, index) => (
+                        <div key={index} className="flex gap-3 text-sm font-body leading-relaxed border-b border-black/20 pb-2 last:border-0">
+                          <span className="font-bold text-[#8B0000] flex-shrink-0">{index + 1}.</span>
+                          <p className="text-justify">{rule}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            )}
 
-          <div className="border-8 border-black aged-paper p-8 text-center shadow-2xl">
-            <Icon name="BookOpen" size={48} className="mx-auto mb-4 text-[#8B0000]" />
-            <div className="text-base uppercase tracking-wider mb-3 font-headline">
-              📖 Полная версия правил 📖
-            </div>
-            <div className="text-sm font-body mb-5 max-w-2xl mx-auto leading-relaxed">
-              Здесь представлены основные правила. Полную версию со всеми нюансами, примерами и исключениями можно найти на официальном форуме сервера.
-            </div>
-            <div className="inline-block border-4 border-black px-8 py-4 bg-black text-amber-400 hover:bg-zinc-800 transition-colors cursor-pointer shadow-lg transform hover:scale-105 transition-transform">
-              <span className="font-headline uppercase tracking-wider text-base flex items-center gap-2">
-                Читать на форуме
-                <Icon name="ExternalLink" size={20} />
-              </span>
-            </div>
+            {activeCategory === 'general' && (
+              <div className="p-8 text-center">
+                <Icon name="Construction" size={64} className="mx-auto mb-4 text-[#8B0000]" />
+                <p className="text-xl font-headline uppercase">Раздел в разработке</p>
+                <p className="text-sm font-body mt-2">Общие правила скоро появятся</p>
+              </div>
+            )}
+
+            {activeCategory === 'leaders' && (
+              <div className="p-8 text-center">
+                <Icon name="Construction" size={64} className="mx-auto mb-4 text-[#8B0000]" />
+                <p className="text-xl font-headline uppercase">Раздел в разработке</p>
+                <p className="text-sm font-body mt-2">Правила для лидеров скоро появятся</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
