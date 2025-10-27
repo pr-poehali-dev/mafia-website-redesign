@@ -76,6 +76,35 @@ const RulesSection = () => {
     ],
   };
 
+  const leaderRules = [
+    {
+      text: 'Лидер назначается на 30 дней с возможностью продления.',
+      note: 'Может быть снят раньше по решению администрации.',
+    },
+    {
+      text: 'Лидер имеет 3 страйка. При получении всех 3-ёх страйков лидер снимается с должности с запретом на слот лидера сроком в 30 дней (либо перманентно).',
+      note: 'Выдача страйков происходит за нарушение правил самим лидером, его замами, а также при грубом/массовом нарушении правил составом.',
+    },
+    {
+      text: 'При досрочном уходе с лидерского поста по собственному желанию, лидеру выдается запрет на слот лидера сроком в 30 дней. С досрочно сложившего полномочия может быть снята роль на срок в 3 дня.',
+    },
+    {
+      text: 'Лидеру фракции во время занятия слота разрешается играть только на одном персонаже.',
+    },
+    {
+      text: 'Лидер не может иметь более 2 заместителей.',
+      punishment: '1 страйк',
+    },
+    {
+      text: 'Лидер не может уволить игрока без причины. Исключения: бан, инактив.',
+      punishment: '1 страйк',
+    },
+    {
+      text: 'Лидер обязан вести учет склада и состав фракции.',
+      punishment: '1 страйк',
+    },
+  ];
+
   const adminRules = {
     mainProvisions: [
       'Запрещено отменять или заменять наказания, выданные другим администратором. Все наказания выдаются строго по регламенту.',
@@ -493,11 +522,77 @@ const RulesSection = () => {
           )}
 
           {activeCategory === 'leaders' && (
-            <div className="border-8 border-black aged-paper p-12 text-center shadow-xl">
-              <div className="border-4 border-black p-8">
-                <Icon name="Construction" size={64} className="mx-auto mb-4 text-[#8B0000]" />
-                <div className="text-3xl font-headline uppercase mb-3">В разработке</div>
-                <p className="text-sm font-body">Правила для лидеров скоро появятся</p>
+            <div className="space-y-6">
+              <div className="border-8 border-black aged-paper shadow-2xl transform rotate-1">
+                <div className="border-4 border-[#8B0000] m-2 bg-gradient-to-r from-zinc-800 to-black text-white p-4 text-center">
+                  <div className="border-2 border-white p-3">
+                    <Icon name="Crown" size={36} className="mx-auto mb-2" />
+                    <div className="text-2xl font-headline uppercase tracking-wider">
+                      ⚜ Правила для лидеров фракций ⚜
+                    </div>
+                    <div className="text-[10px] uppercase tracking-widest mt-2 border-t border-b border-white py-1">
+                      Обязательны для всех лидеров
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-6 border-black aged-paper shadow-xl transform -rotate-1">
+                <div className="border-b-4 border-black p-3 bg-black text-white text-center">
+                  <div className="text-xl font-headline uppercase tracking-wider">§ Правило Лидеров §</div>
+                  <div className="text-sm font-headline uppercase mt-1">Обязанности и ответственность</div>
+                </div>
+                <div className="p-6">
+                  <div className="space-y-4">
+                    {leaderRules.map((rule, index) => (
+                      <div key={index} className="border-2 border-black p-4 bg-white/50">
+                        <div className="flex gap-3">
+                          <div className="flex-shrink-0">
+                            <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold text-sm">
+                              1.{index + 1}
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-sm font-body leading-relaxed text-justify mb-2">{rule.text}</p>
+                            {rule.note && (
+                              <div className="border-l-4 border-[#8B0000] pl-3 py-1 bg-yellow-50">
+                                <div className="text-[10px] uppercase font-bold text-[#8B0000] mb-1">Примечание:</div>
+                                <p className="text-xs font-body italic">{rule.note}</p>
+                              </div>
+                            )}
+                            {rule.punishment && (
+                              <div className="border-2 border-[#8B0000] p-2 bg-red-50 mt-2">
+                                <div className="text-[10px] uppercase font-bold text-[#8B0000] mb-1">⚠ Наказание:</div>
+                                <p className="text-xs font-body font-bold text-[#8B0000]">{rule.punishment}</p>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="border-t-4 border-black p-2 text-center bg-black text-white">
+                  <div className="text-[10px] uppercase tracking-widest">7 основных пунктов</div>
+                </div>
+              </div>
+
+              <div className="border-8 border-black aged-paper shadow-xl p-6 text-center transform rotate-1">
+                <div className="border-4 border-black p-4">
+                  <Icon name="ShieldAlert" size={32} className="mx-auto mb-2 text-[#8B0000]" />
+                  <div className="text-sm font-headline uppercase mb-3">★ Система страйков ★</div>
+                  <div className="text-xs font-body leading-relaxed space-y-2 text-left">
+                    <p>• <strong>1 страйк</strong> — предупреждение с занесением в личное дело</p>
+                    <p>• <strong>2 страйка</strong> — строгое предупреждение, возможна временная приостановка полномочий</p>
+                    <p>• <strong>3 страйка</strong> — снятие с должности с запретом на слот лидера на 30 дней (или навсегда)</p>
+                    <div className="border-t-2 border-black pt-2 mt-3">
+                      <p className="font-bold">Страйки выдаются за:</p>
+                      <p>— Личное нарушение правил лидером</p>
+                      <p>— Нарушения заместителей лидера</p>
+                      <p>— Массовые/грубые нарушения состава фракции</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           )}
