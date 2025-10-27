@@ -200,7 +200,7 @@ const PsychotypesSection = () => {
 
                   <div className="p-8 bg-white">
                     <div className="border-4 border-black bg-gradient-to-br from-amber-50 to-amber-100 p-6 mb-6">
-                      <p className="font-body text-lg leading-relaxed">
+                      <p className="font-body text-xl md:text-2xl leading-relaxed">
                         {psycho.description}
                       </p>
                     </div>
@@ -209,14 +209,14 @@ const PsychotypesSection = () => {
                       {psycho.bonuses.length > 0 && (
                         <div className="border-4 border-black bg-white p-5">
                           <div className="flex items-center gap-2 mb-4 pb-3 border-b-4 border-black">
-                            <Icon name="TrendingUp" size={24} className="text-green-700" />
-                            <h4 className="font-headline uppercase text-lg">Преимущества</h4>
+                            <Icon name="TrendingUp" size={28} className="text-green-700" />
+                            <h4 className="font-headline uppercase text-xl md:text-2xl">Преимущества</h4>
                           </div>
                           <div className="space-y-3">
                             {psycho.bonuses.map((bonus, i) => (
-                              <div key={i} className="flex items-center justify-between text-base border-b-2 border-black pb-2 last:border-0">
+                              <div key={i} className="flex items-center justify-between text-lg md:text-xl border-b-2 border-black pb-2 last:border-0">
                                 <span className="font-body">{bonus.label}</span>
-                                <Badge className="bg-green-700 text-white border-2 border-black text-sm px-3 py-1">
+                                <Badge className="bg-green-700 text-white border-2 border-black text-base md:text-lg px-3 py-1">
                                   {bonus.value}
                                 </Badge>
                               </div>
@@ -228,14 +228,14 @@ const PsychotypesSection = () => {
                       {psycho.penalties.length > 0 && (
                         <div className="border-4 border-black bg-white p-5">
                           <div className="flex items-center gap-2 mb-4 pb-3 border-b-4 border-black">
-                            <Icon name="TrendingDown" size={24} className="text-red-700" />
-                            <h4 className="font-headline uppercase text-lg">Недостатки</h4>
+                            <Icon name="TrendingDown" size={28} className="text-red-700" />
+                            <h4 className="font-headline uppercase text-xl md:text-2xl">Недостатки</h4>
                           </div>
                           <div className="space-y-3">
                             {psycho.penalties.map((penalty, i) => (
-                              <div key={i} className="flex items-center justify-between text-base border-b-2 border-black pb-2 last:border-0">
+                              <div key={i} className="flex items-center justify-between text-lg md:text-xl border-b-2 border-black pb-2 last:border-0">
                                 <span className="font-body">{penalty.label}</span>
-                                <Badge className="bg-red-700 text-white border-2 border-black text-sm px-3 py-1">
+                                <Badge className="bg-red-700 text-white border-2 border-black text-base md:text-lg px-3 py-1">
                                   {penalty.value}
                                 </Badge>
                               </div>
@@ -246,15 +246,15 @@ const PsychotypesSection = () => {
 
                       <div className="border-4 border-black bg-white p-5">
                         <div className="flex items-center gap-2 mb-4 pb-3 border-b-4 border-black">
-                          <Icon name="AlertTriangle" size={24} className="text-amber-700" />
-                          <h4 className="font-headline uppercase text-lg">Риски</h4>
+                          <Icon name="AlertTriangle" size={28} className="text-amber-700" />
+                          <h4 className="font-headline uppercase text-xl md:text-2xl">Риски</h4>
                         </div>
                         <div className="space-y-3">
                           {psycho.risks.map((risk, i) => (
-                            <div key={i} className="text-base border-b-2 border-black pb-2 last:border-0">
+                            <div key={i} className="text-lg md:text-xl border-b-2 border-black pb-2 last:border-0">
                               <span className="font-body block mb-1">{risk.label}</span>
                               {risk.value && (
-                                <span className="font-headline font-bold text-amber-900">
+                                <span className="font-headline font-bold text-amber-900 text-base md:text-lg">
                                   {risk.value}
                                 </span>
                               )}
