@@ -9,6 +9,8 @@ const PsychotypesSection = () => {
       description: 'Зачастую — дети артистов, политиков и прочего высшего общества. Связи и образование дают преимущество в научных и правительственных сферах. Родом из Сен-Дени, Сан-Фиерро, Блэквотера и пр.',
       deposit: '$250',
       startCity: 'Сент-Дени',
+      color: 'from-blue-900 to-blue-950',
+      accentColor: 'bg-blue-800',
       bonuses: [
         { label: 'Харизма', value: '+20%', type: 'positive' },
         { label: 'Научный труд', value: '+75%', type: 'positive' },
@@ -31,6 +33,8 @@ const PsychotypesSection = () => {
       description: 'Могут выходить из любого общества, являясь больше детьми эпохи, чем окружения. Пренебрежение моральными и этическими нормами позволяет раскрыть себя там, где другому непозволительно.',
       deposit: '$100',
       startCity: 'Валентайн',
+      color: 'from-red-900 to-red-950',
+      accentColor: 'bg-red-800',
       bonuses: [
         { label: 'Физ. подготовка', value: '+30%', type: 'positive' },
         { label: 'Владение оружием', value: '+25%', type: 'positive' },
@@ -55,6 +59,8 @@ const PsychotypesSection = () => {
       description: 'Воспитан в строгости и дисциплине. Хорошо осведомлен в политике и военном деле. Круг интересов и характер способностей зачастую сводится к военной теме.',
       deposit: '$150',
       startCity: 'Строуберри',
+      color: 'from-amber-900 to-amber-950',
+      accentColor: 'bg-amber-800',
       bonuses: [
         { label: 'Физ. подготовка', value: '+50%', type: 'positive' },
         { label: 'Владение оружием', value: '+50%', type: 'positive' },
@@ -78,6 +84,8 @@ const PsychotypesSection = () => {
       description: 'Талантлив и хорошо во всём, за что бы ни взялся. Объяснить это чем-то рациональным едва ли удастся, как и его аномально слабое здоровье, совладать с которым современная медицина не в силах.',
       deposit: '$250',
       startCity: 'Блэквотер',
+      color: 'from-purple-900 to-purple-950',
+      accentColor: 'bg-purple-800',
       bonuses: [
         { label: 'Харизма', value: '+30%', type: 'positive' },
         { label: 'Владение оружием', value: '+50%', type: 'positive' },
@@ -97,6 +105,8 @@ const PsychotypesSection = () => {
       description: 'Не способен ни на что, кроме праздного прожигания жизни. Единственное, чем он способен удивить — невероятной выживаемостью. Мало у кого укладывается в голове то, как он выживает со своим образом жизни.',
       deposit: '$15',
       startCity: 'Случайный',
+      color: 'from-slate-800 to-slate-950',
+      accentColor: 'bg-slate-700',
       bonuses: [],
       penalties: [
         { label: 'Физ. подготовка', value: '-75%', type: 'negative' },
@@ -120,6 +130,8 @@ const PsychotypesSection = () => {
       description: 'Ни плох, ни хорош ни в чем определенном. Едва ли осознанно центрист во всех взглядах, скорее — недостаточно заинтересован в чём-либо и не имеет особых навыков и образования.',
       deposit: '$40',
       startCity: 'Случайный',
+      color: 'from-emerald-900 to-emerald-950',
+      accentColor: 'bg-emerald-800',
       bonuses: [],
       penalties: [
         { label: 'Физ. подготовка', value: '-25%', type: 'negative' },
@@ -144,7 +156,7 @@ const PsychotypesSection = () => {
                 <h1 className="text-7xl font-headline uppercase tracking-wider mb-2" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
                   Психотипы персонажей
                 </h1>
-                <div className="text-sm uppercase tracking-widest border-t-2 border-b-2 border-black py-2 mt-3">
+                <div className="text-base uppercase tracking-widest border-t-2 border-b-2 border-black py-2 mt-3">
                   Выбери свой путь в мире Mafia House
                 </div>
               </div>
@@ -155,53 +167,56 @@ const PsychotypesSection = () => {
             {psychotypes.map((psycho, index) => (
               <div 
                 key={index}
-                className="border-6 border-black aged-paper shadow-xl transform hover:scale-[1.01] transition-all"
+                className="border-8 border-black aged-paper shadow-xl hover:shadow-2xl transition-all group"
                 style={{transform: `rotate(${index % 2 === 0 ? '0.5deg' : '-0.5deg'})`}}
               >
-                <div className="grid md:grid-cols-[300px_1fr] gap-0">
-                  <div className="relative border-r-4 border-black overflow-hidden bg-black">
+                <div className="grid md:grid-cols-[350px_1fr] gap-0">
+                  <div className="relative border-r-6 border-black overflow-hidden">
                     <img 
                       src={psycho.image} 
                       alt={psycho.name}
-                      className="w-full h-full object-cover opacity-90"
+                      className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                      <h3 className="text-3xl font-headline uppercase tracking-wider mb-2">
-                        {psycho.name}
-                      </h3>
-                      <div className="flex items-center gap-3 text-xs">
-                        <div className="flex items-center gap-1 border-2 border-white px-2 py-1">
-                          <Icon name="DollarSign" size={14} />
-                          <span className="font-headline">{psycho.deposit}</span>
-                        </div>
-                        <div className="flex items-center gap-1 border-2 border-white px-2 py-1">
-                          <Icon name="MapPin" size={14} />
-                          <span className="font-body">{psycho.startCity}</span>
+                    <div className={`absolute inset-0 bg-gradient-to-t ${psycho.color} opacity-70`} />
+                    <div className="absolute inset-0 border-4 border-black m-2" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                      <div className={`border-4 border-amber-200 ${psycho.accentColor} p-4 mb-3`}>
+                        <h3 className="text-4xl font-headline uppercase tracking-wider mb-3 text-amber-100">
+                          {psycho.name}
+                        </h3>
+                        <div className="flex items-center gap-3 text-base">
+                          <div className="flex items-center gap-2 border-3 border-amber-200 bg-black/50 px-3 py-2">
+                            <Icon name="DollarSign" size={18} className="text-amber-200" />
+                            <span className="font-headline text-amber-100">{psycho.deposit}</span>
+                          </div>
+                          <div className="flex items-center gap-2 border-3 border-amber-200 bg-black/50 px-3 py-2">
+                            <Icon name="MapPin" size={18} className="text-amber-200" />
+                            <span className="font-body text-amber-100">{psycho.startCity}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="p-6">
-                    <div className="border-4 border-black bg-white p-4 mb-4">
-                      <p className="font-body text-sm leading-relaxed">
+                  <div className="p-8 bg-white">
+                    <div className="border-4 border-black bg-gradient-to-br from-amber-50 to-amber-100 p-6 mb-6">
+                      <p className="font-body text-lg leading-relaxed">
                         {psycho.description}
                       </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-4">
+                    <div className="grid md:grid-cols-3 gap-6">
                       {psycho.bonuses.length > 0 && (
-                        <div className="border-4 border-black bg-white p-3">
-                          <div className="flex items-center gap-2 mb-3 pb-2 border-b-2 border-black">
-                            <Icon name="TrendingUp" size={18} className="text-green-700" />
-                            <h4 className="font-headline uppercase text-sm">Преимущества</h4>
+                        <div className="border-4 border-black bg-white p-5">
+                          <div className="flex items-center gap-2 mb-4 pb-3 border-b-4 border-black">
+                            <Icon name="TrendingUp" size={24} className="text-green-700" />
+                            <h4 className="font-headline uppercase text-lg">Преимущества</h4>
                           </div>
-                          <div className="space-y-2">
+                          <div className="space-y-3">
                             {psycho.bonuses.map((bonus, i) => (
-                              <div key={i} className="flex items-center justify-between text-xs">
+                              <div key={i} className="flex items-center justify-between text-base border-b-2 border-black pb-2 last:border-0">
                                 <span className="font-body">{bonus.label}</span>
-                                <Badge className="bg-green-700 text-white border-2 border-black text-xs px-2 py-0">
+                                <Badge className="bg-green-700 text-white border-2 border-black text-sm px-3 py-1">
                                   {bonus.value}
                                 </Badge>
                               </div>
@@ -211,16 +226,16 @@ const PsychotypesSection = () => {
                       )}
 
                       {psycho.penalties.length > 0 && (
-                        <div className="border-4 border-black bg-white p-3">
-                          <div className="flex items-center gap-2 mb-3 pb-2 border-b-2 border-black">
-                            <Icon name="TrendingDown" size={18} className="text-red-700" />
-                            <h4 className="font-headline uppercase text-sm">Недостатки</h4>
+                        <div className="border-4 border-black bg-white p-5">
+                          <div className="flex items-center gap-2 mb-4 pb-3 border-b-4 border-black">
+                            <Icon name="TrendingDown" size={24} className="text-red-700" />
+                            <h4 className="font-headline uppercase text-lg">Недостатки</h4>
                           </div>
-                          <div className="space-y-2">
+                          <div className="space-y-3">
                             {psycho.penalties.map((penalty, i) => (
-                              <div key={i} className="flex items-center justify-between text-xs">
+                              <div key={i} className="flex items-center justify-between text-base border-b-2 border-black pb-2 last:border-0">
                                 <span className="font-body">{penalty.label}</span>
-                                <Badge className="bg-red-700 text-white border-2 border-black text-xs px-2 py-0">
+                                <Badge className="bg-red-700 text-white border-2 border-black text-sm px-3 py-1">
                                   {penalty.value}
                                 </Badge>
                               </div>
@@ -229,15 +244,15 @@ const PsychotypesSection = () => {
                         </div>
                       )}
 
-                      <div className="border-4 border-black bg-white p-3">
-                        <div className="flex items-center gap-2 mb-3 pb-2 border-b-2 border-black">
-                          <Icon name="AlertTriangle" size={18} className="text-amber-700" />
-                          <h4 className="font-headline uppercase text-sm">Риски</h4>
+                      <div className="border-4 border-black bg-white p-5">
+                        <div className="flex items-center gap-2 mb-4 pb-3 border-b-4 border-black">
+                          <Icon name="AlertTriangle" size={24} className="text-amber-700" />
+                          <h4 className="font-headline uppercase text-lg">Риски</h4>
                         </div>
-                        <div className="space-y-2">
+                        <div className="space-y-3">
                           {psycho.risks.map((risk, i) => (
-                            <div key={i} className="text-xs">
-                              <span className="font-body block">{risk.label}</span>
+                            <div key={i} className="text-base border-b-2 border-black pb-2 last:border-0">
+                              <span className="font-body block mb-1">{risk.label}</span>
                               {risk.value && (
                                 <span className="font-headline font-bold text-amber-900">
                                   {risk.value}
@@ -254,8 +269,8 @@ const PsychotypesSection = () => {
             ))}
           </div>
 
-          <div className="border-t-4 border-b-4 border-black py-2 bg-white text-center mt-12">
-            <div className="text-[10px] font-body uppercase tracking-widest">
+          <div className="border-t-4 border-b-4 border-black py-3 bg-white text-center mt-12">
+            <div className="text-sm font-body uppercase tracking-widest">
               *РПК — Разрешение на Персонажную Казнь • ТР — Тяжелое Ранение • Каждое ТР добавляет 0.1% к шансу РПК
             </div>
           </div>
