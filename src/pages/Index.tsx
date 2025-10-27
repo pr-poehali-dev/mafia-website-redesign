@@ -6,6 +6,7 @@ import RulesSection from '@/components/RulesSection';
 import DonateSection from '@/components/DonateSection';
 import LoreSection from '@/components/LoreSection';
 import WikiSection from '@/components/WikiSection';
+import PsychotypesSection from '@/components/PsychotypesSection';
 import StatsSection from '@/components/StatsSection';
 import Footer from '@/components/Footer';
 
@@ -50,6 +51,7 @@ const Index = () => {
         {activeSection === 'donate' && <DonateSection />}
         {activeSection === 'lore' && <LoreSection />}
         {activeSection === 'wiki' && <WikiSection />}
+        {activeSection === 'psychotypes' && <PsychotypesSection />}
         {activeSection === 'stats' && <StatsSection />}
       </main>
 

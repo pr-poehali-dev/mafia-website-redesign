@@ -14,6 +14,7 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
     { id: 'donate', label: 'Донат' },
     { id: 'lore', label: 'Лор' },
     { id: 'wiki', label: 'Вики' },
+    { id: 'psychotypes', label: 'Психотипы' },
     { id: 'stats', label: 'Статистика' },
   ];
 
