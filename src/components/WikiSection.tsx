@@ -6,7 +6,8 @@ const WikiSection = () => {
       id: 1,
       name: 'Основы игры',
       icon: 'BookOpen',
-      color: 'bg-blue-700',
+      color: 'bg-[#5B7C99]',
+      accentColor: 'text-[#5B7C99]',
       articles: [
         'Создание персонажа',
         'Первые шаги в игре',
@@ -18,7 +19,8 @@ const WikiSection = () => {
       id: 2,
       name: 'Мафиозные семьи',
       icon: 'Users',
-      color: 'bg-red-700',
+      color: 'bg-[#8B4513]',
+      accentColor: 'text-[#8B4513]',
       articles: [
         'Структура семьи',
         'Как вступить в семью',
@@ -30,7 +32,8 @@ const WikiSection = () => {
       id: 3,
       name: 'Экономика',
       icon: 'Coins',
-      color: 'bg-amber-600',
+      color: 'bg-[#B8860B]',
+      accentColor: 'text-[#B8860B]',
       articles: [
         'Виды заработка',
         'Контрабанда алкоголя',
@@ -42,7 +45,8 @@ const WikiSection = () => {
       id: 4,
       name: 'Территории',
       icon: 'Map',
-      color: 'bg-green-700',
+      color: 'bg-[#556B2F]',
+      accentColor: 'text-[#556B2F]',
       articles: [
         'Карта города',
         'Районы и влияние',
@@ -54,7 +58,8 @@ const WikiSection = () => {
       id: 5,
       name: 'PvP и войны',
       icon: 'Swords',
-      color: 'bg-purple-700',
+      color: 'bg-[#6B4C7C]',
+      accentColor: 'text-[#6B4C7C]',
       articles: [
         'Правила PvP',
         'Объявление войны',
@@ -66,7 +71,8 @@ const WikiSection = () => {
       id: 6,
       name: 'Транспорт',
       icon: 'Car',
-      color: 'bg-orange-700',
+      color: 'bg-[#A0522D]',
+      accentColor: 'text-[#A0522D]',
       articles: [
         'Виды транспорта',
         'Покупка автомобилей',
@@ -109,10 +115,10 @@ const WikiSection = () => {
               >
                 <div className={`border-b-4 border-black p-5 ${category.color}`}>
                   <div className="flex items-center gap-3">
-                    <div className="w-14 h-14 border-4 border-white bg-white flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-14 h-14 border-4 border-amber-200 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                       <Icon name={category.icon as any} size={28} className="text-black" />
                     </div>
-                    <h3 className="text-2xl font-headline uppercase tracking-wide text-white">
+                    <h3 className="text-2xl font-headline uppercase tracking-wide text-amber-100">
                       {category.name}
                     </h3>
                   </div>
@@ -131,7 +137,7 @@ const WikiSection = () => {
                         <div className="flex-1">
                           <span className="font-body text-base block group-hover/item:underline">{article}</span>
                         </div>
-                        <Icon name="ChevronRight" size={20} className={`${category.color.replace('bg-', 'text-')} mt-1 group-hover/item:translate-x-1 transition-transform`} />
+                        <Icon name="ChevronRight" size={20} className={`${category.accentColor} mt-1 group-hover/item:translate-x-1 transition-transform`} />
                       </div>
                     ))}
                   </div>
@@ -142,15 +148,15 @@ const WikiSection = () => {
 
           <div className="border-8 border-black aged-paper shadow-2xl transform rotate-1">
             <div className="border-4 border-black m-2">
-              <div className="border-b-4 border-black p-6 bg-gradient-to-r from-red-700 to-red-800 text-center">
+              <div className="border-b-4 border-black p-6 bg-gradient-to-r from-zinc-800 to-stone-800 text-center">
                 <div className="flex items-center justify-center gap-3 mb-2">
-                  <Icon name="TrendingUp" size={32} className="text-white" />
-                  <h3 className="text-4xl font-headline uppercase text-white">
+                  <Icon name="TrendingUp" size={32} className="text-amber-200" />
+                  <h3 className="text-4xl font-headline uppercase text-amber-100">
                     Популярные статьи
                   </h3>
-                  <Icon name="TrendingUp" size={32} className="text-white" />
+                  <Icon name="TrendingUp" size={32} className="text-amber-200" />
                 </div>
-                <div className="text-xs uppercase tracking-widest border-t-2 border-b-2 border-white py-1 inline-block px-6 mt-2 text-white">
+                <div className="text-xs uppercase tracking-widest border-t-2 border-b-2 border-amber-200 py-1 inline-block px-6 mt-2 text-amber-100">
                   Самое читаемое за неделю
                 </div>
               </div>
@@ -163,11 +169,11 @@ const WikiSection = () => {
                   >
                     <div className="flex items-center justify-between gap-4">
                       <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 border-4 border-black bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                          <span className="font-headline font-black text-2xl text-black">{index + 1}</span>
+                        <div className="w-14 h-14 border-4 border-black bg-gradient-to-br from-amber-700 to-amber-800 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                          <span className="font-headline font-black text-2xl text-amber-100">{index + 1}</span>
                         </div>
-                        <div className="w-12 h-12 border-4 border-black bg-gradient-to-br from-red-700 to-red-800 flex items-center justify-center">
-                          <Icon name={article.icon as any} size={24} className="text-white" />
+                        <div className="w-12 h-12 border-4 border-black bg-gradient-to-br from-stone-700 to-stone-800 flex items-center justify-center">
+                          <Icon name={article.icon as any} size={24} className="text-amber-100" />
                         </div>
                         <span className="font-headline uppercase text-lg group-hover:underline">
                           {article.title}
