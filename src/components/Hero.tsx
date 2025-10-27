@@ -99,7 +99,7 @@ const Hero = () => {
               <div className="p-6 space-y-4 bg-gradient-to-b from-[#E5D3A8] to-[#D2B48C]">
                 <div className="border-4 border-black photo-border transform -rotate-2 hover:rotate-0 transition-transform">
                   <img 
-                    src="https://cdn.poehali.dev/projects/cb4b7b13-739f-47b7-b656-8e116473ab1f/files/fa40f034-dcd1-4569-a3b1-ee4b25251f3c.jpg" 
+                    src="https://mh-rp.com/uploads/guide/98-media2.webp" 
                     alt="Члены организации"
                     className="w-full aspect-square object-cover old-photo"
                   />
