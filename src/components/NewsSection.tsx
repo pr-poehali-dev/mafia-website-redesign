@@ -33,7 +33,7 @@ const NewsSection = () => {
   ];
 
   return (
-    <section className="min-h-screen pt-[240px] pb-16">
+    <section className="min-h-screen pt-[280px] pb-16 newspaper-texture">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div className="border-t-8 border-b-8 border-black py-6 mb-8 aged-paper text-center shadow-xl">

@@ -61,12 +61,36 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="border-8 border-[#8B0000] bg-gradient-to-r from-red-700 via-red-800 to-red-900 p-6 text-white text-center vintage-stamp relative">
+                <div className="border-8 border-black bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 p-6 text-center shadow-xl mb-6">
+                  <div className="text-2xl font-headline uppercase mb-4 text-black">🎮 Как начать играть? 🎮</div>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <a 
+                      href="https://redm.net/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="border-4 border-black bg-white hover:bg-gray-100 p-4 text-center transition-all transform hover:scale-105 shadow-lg"
+                    >
+                      <Icon name="Download" size={32} className="mx-auto mb-2 text-[#8B0000]" />
+                      <div className="text-lg font-headline uppercase text-black">1. Скачать RedM</div>
+                      <div className="text-xs font-body mt-1 text-gray-700">Установи клиент для игры</div>
+                    </a>
+                    <a 
+                      href="redm://connect/46.174.49.200:30120"
+                      className="border-4 border-black bg-gradient-to-br from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 p-4 text-center transition-all transform hover:scale-105 shadow-lg text-white"
+                    >
+                      <Icon name="Gamepad2" size={32} className="mx-auto mb-2" />
+                      <div className="text-lg font-headline uppercase">2. Подключиться</div>
+                      <div className="text-xs font-body mt-1">Войти на сервер</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="border-8 border-[#8B0000] bg-gradient-to-r from-red-700 via-red-800 to-red-900 p-4 text-white text-center vintage-stamp relative">
                   <div className="absolute -top-2 -right-2 w-12 h-12 border-4 border-white bg-black rounded-full flex items-center justify-center">
                     <Icon name="Skull" size={24} className="text-white" />
                   </div>
-                  <div className="text-3xl font-headline uppercase mb-2">⚠ Внимание! ⚠</div>
-                  <div className="text-sm uppercase tracking-widest border-t-2 border-b-2 border-white py-2">
+                  <div className="text-2xl font-headline uppercase mb-2">⚠ Внимание! ⚠</div>
+                  <div className="text-xs uppercase tracking-widest border-t-2 border-b-2 border-white py-2">
                     Предательство карается смертью • Честь превыше всего
                   </div>
                 </div>
