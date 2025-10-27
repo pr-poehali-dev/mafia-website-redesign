@@ -4,7 +4,7 @@ import Icon from '@/components/ui/icon';
 const Hero = () => {
   return (
     <section 
-      className="relative min-h-screen pt-[240px] pb-16 newspaper-texture"
+      className="relative min-h-screen pt-[300px] pb-16 newspaper-texture"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
@@ -58,30 +58,6 @@ const Hero = () => {
                     <Icon name="Swords" size={32} className="mx-auto mb-2 text-[#8B0000]" />
                     <div className="text-2xl font-headline mb-1 text-[#8B0000]">150+</div>
                     <div className="text-xs uppercase font-body border-t-2 border-black pt-2">Разборок в месяц</div>
-                  </div>
-                </div>
-
-                <div className="border-8 border-black bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 p-6 text-center shadow-xl mb-6">
-                  <div className="text-2xl font-headline uppercase mb-4 text-black">🎮 Как начать играть? 🎮</div>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <a 
-                      href="https://redm.net/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="border-4 border-black bg-white hover:bg-gray-100 p-4 text-center transition-all transform hover:scale-105 shadow-lg"
-                    >
-                      <Icon name="Download" size={32} className="mx-auto mb-2 text-[#8B0000]" />
-                      <div className="text-lg font-headline uppercase text-black">1. Скачать RedM</div>
-                      <div className="text-xs font-body mt-1 text-gray-700">Установи клиент для игры</div>
-                    </a>
-                    <a 
-                      href="redm://connect/46.174.49.200:30120"
-                      className="border-4 border-black bg-gradient-to-br from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 p-4 text-center transition-all transform hover:scale-105 shadow-lg text-white"
-                    >
-                      <Icon name="Gamepad2" size={32} className="mx-auto mb-2" />
-                      <div className="text-lg font-headline uppercase">2. Подключиться</div>
-                      <div className="text-xs font-body mt-1">Войти на сервер</div>
-                    </a>
                   </div>
                 </div>
 
@@ -331,9 +307,18 @@ const Hero = () => {
                     <h3 className="text-lg font-headline uppercase">Скачай RedM</h3>
                   </div>
                   <div className="p-5">
-                    <p className="font-body text-sm leading-relaxed text-justify">
+                    <p className="font-body text-sm leading-relaxed text-justify mb-4">
                       Установи <strong>RedM</strong> по ссылке, чтобы получить доступ к мультиплееру. Это платформа, через которую ты подключишься к нашему серверу.
                     </p>
+                    <a 
+                      href="https://redm.net/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block border-4 border-black bg-gradient-to-br from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 p-3 text-center transition-all transform hover:scale-105 shadow-lg"
+                    >
+                      <Icon name="Download" size={24} className="mx-auto mb-1 text-black" />
+                      <div className="text-base font-headline uppercase text-black">Скачать RedM</div>
+                    </a>
                   </div>
                 </div>
 
@@ -349,6 +334,13 @@ const Hero = () => {
                     <p className="font-body text-sm leading-relaxed text-justify mb-4">
                       Открой лаунчер RedM, найди наш проект по названию, зайди на сервер — и наслаждайся атмосферой и глубоким ролевым взаимодействием.
                     </p>
+                    <a 
+                      href="redm://connect/46.174.49.200:30120"
+                      className="block border-4 border-black bg-gradient-to-br from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 p-3 text-center transition-all transform hover:scale-105 shadow-lg text-white mb-3"
+                    >
+                      <Icon name="Gamepad2" size={24} className="mx-auto mb-1" />
+                      <div className="text-base font-headline uppercase">Подключиться</div>
+                    </a>
                     <div className="border-4 border-black bg-white p-3 text-center">
                       <div className="text-xs uppercase tracking-wider mb-1 font-bold">IP адрес:</div>
                       <div className="font-headline text-lg text-[#8B0000]">46.174.49.200</div>
