@@ -376,4 +376,8 @@
     border-radius: 50%;
     filter: blur(2px);
   }
+
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
 }
