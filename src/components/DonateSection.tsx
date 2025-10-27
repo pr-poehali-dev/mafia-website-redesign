@@ -150,7 +150,7 @@ const DonateSection = () => {
                   <Button className="w-full font-headline uppercase tracking-wider bg-black text-white border-4 border-black hover:bg-white hover:text-black text-lg py-6">
                     Пополнить
                   </Button>
-                  <p className="text-[10px] font-body text-center leading-tight">
+                  <p className="font-body text-center leading-tight text-sm">
                     Нажимая кнопку "Пополнить" вы автоматически соглашаетесь с договором оферты.
                   </p>
                 </div>
