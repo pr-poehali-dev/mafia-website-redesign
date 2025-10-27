@@ -179,18 +179,18 @@ const PsychotypesSection = () => {
                     />
                     <div className={`absolute inset-0 bg-gradient-to-t ${psycho.color} opacity-70`} />
                     <div className="absolute inset-0 border-4 border-black m-2" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      <div className={`border-4 border-amber-200 ${psycho.accentColor} p-4 mb-3`}>
-                        <h3 className="text-4xl font-headline uppercase tracking-wider mb-3 text-amber-100">
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                      <div className={`border-4 border-amber-200 ${psycho.accentColor} p-3 mb-3`}>
+                        <h3 className="text-2xl md:text-3xl font-headline uppercase tracking-wide mb-2 text-amber-100 break-words leading-tight">
                           {psycho.name}
                         </h3>
-                        <div className="flex items-center gap-3 text-base">
-                          <div className="flex items-center gap-2 border-3 border-amber-200 bg-black/50 px-3 py-2">
-                            <Icon name="DollarSign" size={18} className="text-amber-200" />
+                        <div className="flex flex-wrap items-center gap-2 text-sm">
+                          <div className="flex items-center gap-1 border-2 border-amber-200 bg-black/50 px-2 py-1">
+                            <Icon name="DollarSign" size={16} className="text-amber-200" />
                             <span className="font-headline text-amber-100">{psycho.deposit}</span>
                           </div>
-                          <div className="flex items-center gap-2 border-3 border-amber-200 bg-black/50 px-3 py-2">
-                            <Icon name="MapPin" size={18} className="text-amber-200" />
+                          <div className="flex items-center gap-1 border-2 border-amber-200 bg-black/50 px-2 py-1">
+                            <Icon name="MapPin" size={16} className="text-amber-200" />
                             <span className="font-body text-amber-100">{psycho.startCity}</span>
                           </div>
                         </div>
