@@ -1,4 +1,3 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Icon from '@/components/ui/icon';
 import { useState } from 'react';
 
@@ -19,7 +18,7 @@ const RulesSection = () => {
       'Запрещено разглашать внутреннюю информацию проекта — материалы Discord, переписок и прочее. Нарушение — немедленное снятие.',
       'Ненормативная лексика, как в IC, так и в OOC-контексте — запрещена.',
       'Угрозы в адрес игроков со стороны администратора — основание для немедленного снятия.',
-      'Запрещено давать некkorректные ответы в тикете.',
+      'Запрещено давать некорректные ответы в тикете.',
       'Выдача игрокам HP, оружия, транспорта и т.д. без обоснования — строго запрещена.',
     ],
     gameProperty: [
@@ -53,175 +52,248 @@ const RulesSection = () => {
     <section className="min-h-screen pt-[280px] pb-16 newspaper-texture">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="border-t-8 border-b-8 border-black py-6 mb-8 aged-paper text-center shadow-xl">
-            <div className="flex items-center justify-center gap-4 mb-3">
-              <Icon name="Scale" size={48} className="text-[#8B0000]" />
-              <h2 className="text-6xl font-headline uppercase tracking-wider">
-                Регламент сервера
-              </h2>
-              <Icon name="Scale" size={48} className="text-[#8B0000]" />
-            </div>
-            <div className="text-sm uppercase tracking-widest mt-2 border-t-2 border-b-2 border-black py-2 inline-block px-8">
-              📜 Официальный кодекс • Обязательно к прочтению 📜
+          <div className="border-8 border-black aged-paper text-center shadow-xl mb-8 p-6 transform -rotate-1">
+            <div className="border-4 border-black p-4 bg-black text-white">
+              <div className="border-2 border-white p-3">
+                <Icon name="Scale" size={40} className="mx-auto mb-2" />
+                <h2 className="text-5xl font-headline uppercase tracking-widest mb-2">
+                  Регламент
+                </h2>
+                <div className="text-xs uppercase tracking-[0.3em] border-t-2 border-b-2 border-white py-1 mt-2">
+                  ⚖ Свод правил сервера ⚖
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="border-8 border-black aged-paper mb-8 shadow-xl">
-            <div className="grid grid-cols-3 border-b-4 border-black">
-              <button
-                onClick={() => setActiveCategory('general')}
-                className={`p-4 font-headline uppercase text-sm border-r-4 border-black transition-all ${
-                  activeCategory === 'general'
-                    ? 'bg-black text-amber-400'
-                    : 'hover:bg-zinc-800 hover:text-amber-400'
-                }`}
-              >
-                <Icon name="BookOpen" size={24} className="mx-auto mb-2" />
-                Общие правила
-              </button>
-              <button
-                onClick={() => setActiveCategory('admin')}
-                className={`p-4 font-headline uppercase text-sm border-r-4 border-black transition-all ${
-                  activeCategory === 'admin'
-                    ? 'bg-black text-amber-400'
-                    : 'hover:bg-zinc-800 hover:text-amber-400'
-                }`}
-              >
-                <Icon name="Shield" size={24} className="mx-auto mb-2" />
-                Администрация
-              </button>
-              <button
-                onClick={() => setActiveCategory('leaders')}
-                className={`p-4 font-headline uppercase text-sm transition-all ${
-                  activeCategory === 'leaders'
-                    ? 'bg-black text-amber-400'
-                    : 'hover:bg-zinc-800 hover:text-amber-400'
-                }`}
-              >
-                <Icon name="Crown" size={24} className="mx-auto mb-2" />
-                Для лидеров
-              </button>
-            </div>
+          <div className="grid grid-cols-3 gap-4 mb-8">
+            <button
+              onClick={() => setActiveCategory('general')}
+              className={`border-6 border-black aged-paper p-4 transform transition-all hover:scale-105 hover:-rotate-1 ${
+                activeCategory === 'general' ? 'shadow-2xl -rotate-1' : 'shadow-lg'
+              }`}
+            >
+              <div className="border-2 border-black p-3">
+                <Icon name="BookOpen" size={32} className="mx-auto mb-2" />
+                <div className="font-headline uppercase text-lg">Общие</div>
+                <div className="font-headline uppercase text-lg">Правила</div>
+              </div>
+            </button>
+            
+            <button
+              onClick={() => setActiveCategory('admin')}
+              className={`border-6 border-black aged-paper p-4 transform transition-all hover:scale-105 hover:rotate-1 ${
+                activeCategory === 'admin' ? 'shadow-2xl rotate-1' : 'shadow-lg'
+              }`}
+            >
+              <div className="border-2 border-black p-3">
+                <Icon name="Shield" size={32} className="mx-auto mb-2" />
+                <div className="font-headline uppercase text-lg">Регламент</div>
+                <div className="font-headline uppercase text-lg">Администрации</div>
+              </div>
+            </button>
+            
+            <button
+              onClick={() => setActiveCategory('leaders')}
+              className={`border-6 border-black aged-paper p-4 transform transition-all hover:scale-105 hover:-rotate-1 ${
+                activeCategory === 'leaders' ? 'shadow-2xl -rotate-1' : 'shadow-lg'
+              }`}
+            >
+              <div className="border-2 border-black p-3">
+                <Icon name="Crown" size={32} className="mx-auto mb-2" />
+                <div className="font-headline uppercase text-lg">Правила</div>
+                <div className="font-headline uppercase text-lg">для Лидеров</div>
+              </div>
+            </button>
+          </div>
 
-            {activeCategory === 'admin' && (
-              <div className="p-8">
-                <div className="border-8 border-[#8B0000] bg-gradient-to-br from-red-700 via-red-800 to-red-900 mb-6 shadow-2xl vintage-stamp">
-                  <div className="border-4 border-amber-400 m-2 p-4 text-center bg-black/20">
-                    <Icon name="AlertTriangle" size={40} className="mx-auto mb-2 text-amber-300" />
-                    <div className="text-xl font-headline uppercase mb-2 text-white">
-                      ⚠ РЕГЛАМЕНТ АДМИНИСТРАЦИИ ⚠
+          {activeCategory === 'admin' && (
+            <div className="space-y-6">
+              <div className="border-8 border-[#8B0000] aged-paper shadow-2xl transform rotate-1">
+                <div className="border-4 border-black m-2 bg-gradient-to-r from-red-800 to-red-900 text-white p-4 text-center">
+                  <div className="border-2 border-amber-400 p-3">
+                    <Icon name="AlertTriangle" size={36} className="mx-auto mb-2 text-amber-300" />
+                    <div className="text-2xl font-headline uppercase tracking-wider">
+                      ⚠ Регламент Администрации ⚠
                     </div>
-                    <div className="text-xs font-body text-amber-100 border-t border-b border-amber-400 py-2">
-                      Обязательно к соблюдению всеми членами администрации
+                    <div className="text-[10px] uppercase tracking-widest mt-2 border-t border-b border-amber-400 py-1">
+                      Строго обязательно к исполнению
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="border-6 border-black aged-paper shadow-xl transform -rotate-1">
+                  <div className="border-b-4 border-black p-3 bg-black text-white text-center">
+                    <div className="text-xl font-headline uppercase tracking-wider">
+                      § I §
+                    </div>
+                    <div className="text-sm font-headline uppercase mt-1">
+                      Основные положения
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <div className="space-y-2">
+                      {adminRules.mainProvisions.map((rule, index) => (
+                        <div key={index} className="border-b border-black/30 pb-2 last:border-0">
+                          <div className="flex gap-2 text-xs font-body leading-snug">
+                            <span className="font-black flex-shrink-0">{index + 1}.</span>
+                            <p className="text-justify">{rule}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="border-t-4 border-black p-2 text-center bg-black text-white">
+                    <div className="text-[10px] uppercase tracking-widest">14 пунктов</div>
                   </div>
                 </div>
 
                 <div className="space-y-6">
-                  <div className="border-4 border-black aged-paper p-6">
-                    <div className="flex items-center gap-3 mb-4 border-b-2 border-black pb-3">
-                      <div className="w-10 h-10 border-4 border-black bg-white flex items-center justify-center">
-                        <span className="font-headline font-black text-xl">I</span>
+                  <div className="border-6 border-black aged-paper shadow-xl transform rotate-1">
+                    <div className="border-b-4 border-black p-3 bg-black text-white text-center">
+                      <div className="text-xl font-headline uppercase tracking-wider">
+                        § II §
                       </div>
-                      <h3 className="text-2xl font-headline uppercase">Основные положения</h3>
+                      <div className="text-sm font-headline uppercase mt-1">
+                        Игровое имущество
+                      </div>
                     </div>
-                    <div className="space-y-3">
-                      {adminRules.mainProvisions.map((rule, index) => (
-                        <div key={index} className="flex gap-3 text-sm font-body leading-relaxed border-b border-black/20 pb-2 last:border-0">
-                          <span className="font-bold text-[#8B0000] flex-shrink-0">{index + 1}.</span>
-                          <p className="text-justify">{rule}</p>
-                        </div>
-                      ))}
+                    <div className="p-4">
+                      <div className="space-y-2">
+                        {adminRules.gameProperty.map((rule, index) => (
+                          <div key={index} className="border-b border-black/30 pb-2 last:border-0">
+                            <div className="flex gap-2 text-xs font-body leading-snug">
+                              <span className="font-black flex-shrink-0">{index + 1}.</span>
+                              <p className="text-justify">{rule}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="border-t-4 border-black p-2 text-center bg-black text-white">
+                      <div className="text-[10px] uppercase tracking-widest">4 пункта</div>
                     </div>
                   </div>
 
-                  <div className="border-4 border-black aged-paper p-6">
-                    <div className="flex items-center gap-3 mb-4 border-b-2 border-black pb-3">
-                      <div className="w-10 h-10 border-4 border-black bg-white flex items-center justify-center">
-                        <span className="font-headline font-black text-xl">II</span>
+                  <div className="border-6 border-black aged-paper shadow-xl">
+                    <div className="border-b-4 border-black p-3 bg-black text-white text-center">
+                      <div className="text-xl font-headline uppercase tracking-wider">
+                        § III §
                       </div>
-                      <h3 className="text-2xl font-headline uppercase">Игровое имущество</h3>
-                    </div>
-                    <div className="space-y-3">
-                      {adminRules.gameProperty.map((rule, index) => (
-                        <div key={index} className="flex gap-3 text-sm font-body leading-relaxed border-b border-black/20 pb-2 last:border-0">
-                          <span className="font-bold text-[#8B0000] flex-shrink-0">{index + 1}.</span>
-                          <p className="text-justify">{rule}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="border-4 border-black aged-paper p-6">
-                    <div className="flex items-center gap-3 mb-4 border-b-2 border-black pb-3">
-                      <div className="w-10 h-10 border-4 border-black bg-white flex items-center justify-center">
-                        <span className="font-headline font-black text-xl">III</span>
+                      <div className="text-sm font-headline uppercase mt-1">
+                        Поведенческие нормы
                       </div>
-                      <h3 className="text-2xl font-headline uppercase">Поведенческие нормы</h3>
                     </div>
-                    <div className="space-y-3">
-                      {adminRules.behaviorNorms.map((rule, index) => (
-                        <div key={index} className="flex gap-3 text-sm font-body leading-relaxed border-b border-black/20 pb-2 last:border-0">
-                          <span className="font-bold text-[#8B0000] flex-shrink-0">{index + 1}.</span>
-                          <p className="text-justify">{rule}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="border-4 border-black aged-paper p-6">
-                    <div className="flex items-center gap-3 mb-4 border-b-2 border-black pb-3">
-                      <div className="w-10 h-10 border-4 border-black bg-white flex items-center justify-center">
-                        <span className="font-headline font-black text-xl">IV</span>
+                    <div className="p-4">
+                      <div className="space-y-2">
+                        {adminRules.behaviorNorms.map((rule, index) => (
+                          <div key={index} className="border-b border-black/30 pb-2 last:border-0">
+                            <div className="flex gap-2 text-xs font-body leading-snug">
+                              <span className="font-black flex-shrink-0">{index + 1}.</span>
+                              <p className="text-justify">{rule}</p>
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                      <h3 className="text-2xl font-headline uppercase">Обязанности куратора</h3>
                     </div>
-                    <div className="space-y-3">
-                      {adminRules.curatorDuties.map((rule, index) => (
-                        <div key={index} className="flex gap-3 text-sm font-body leading-relaxed border-b border-black/20 pb-2 last:border-0">
-                          <span className="font-bold text-[#8B0000] flex-shrink-0">{index + 1}.</span>
-                          <p className="text-justify">{rule}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="border-4 border-black aged-paper p-6">
-                    <div className="flex items-center gap-3 mb-4 border-b-2 border-black pb-3">
-                      <div className="w-10 h-10 border-4 border-black bg-white flex items-center justify-center">
-                        <span className="font-headline font-black text-xl">V</span>
-                      </div>
-                      <h3 className="text-2xl font-headline uppercase">Заключение</h3>
-                    </div>
-                    <div className="space-y-3">
-                      {adminRules.conclusion.map((rule, index) => (
-                        <div key={index} className="flex gap-3 text-sm font-body leading-relaxed border-b border-black/20 pb-2 last:border-0">
-                          <span className="font-bold text-[#8B0000] flex-shrink-0">{index + 1}.</span>
-                          <p className="text-justify">{rule}</p>
-                        </div>
-                      ))}
+                    <div className="border-t-4 border-black p-2 text-center bg-black text-white">
+                      <div className="text-[10px] uppercase tracking-widest">3 пункта</div>
                     </div>
                   </div>
                 </div>
               </div>
-            )}
 
-            {activeCategory === 'general' && (
-              <div className="p-8 text-center">
-                <Icon name="Construction" size={64} className="mx-auto mb-4 text-[#8B0000]" />
-                <p className="text-xl font-headline uppercase">Раздел в разработке</p>
-                <p className="text-sm font-body mt-2">Общие правила скоро появятся</p>
-              </div>
-            )}
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="border-6 border-black aged-paper shadow-xl transform rotate-1">
+                  <div className="border-b-4 border-black p-3 bg-black text-white text-center">
+                    <div className="text-xl font-headline uppercase tracking-wider">
+                      § IV §
+                    </div>
+                    <div className="text-sm font-headline uppercase mt-1">
+                      Обязанности куратора
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <div className="space-y-2">
+                      {adminRules.curatorDuties.map((rule, index) => (
+                        <div key={index} className="border-b border-black/30 pb-2 last:border-0">
+                          <div className="flex gap-2 text-xs font-body leading-snug">
+                            <span className="font-black flex-shrink-0">{index + 1}.</span>
+                            <p className="text-justify">{rule}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="border-t-4 border-black p-2 text-center bg-black text-white">
+                    <div className="text-[10px] uppercase tracking-widest">7 пунктов</div>
+                  </div>
+                </div>
 
-            {activeCategory === 'leaders' && (
-              <div className="p-8 text-center">
-                <Icon name="Construction" size={64} className="mx-auto mb-4 text-[#8B0000]" />
-                <p className="text-xl font-headline uppercase">Раздел в разработке</p>
-                <p className="text-sm font-body mt-2">Правила для лидеров скоро появятся</p>
+                <div className="border-6 border-black aged-paper shadow-xl transform -rotate-1">
+                  <div className="border-b-4 border-black p-3 bg-black text-white text-center">
+                    <div className="text-xl font-headline uppercase tracking-wider">
+                      § V §
+                    </div>
+                    <div className="text-sm font-headline uppercase mt-1">
+                      Заключение
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <div className="space-y-2">
+                      {adminRules.conclusion.map((rule, index) => (
+                        <div key={index} className="border-b border-black/30 pb-2 last:border-0">
+                          <div className="flex gap-2 text-xs font-body leading-snug">
+                            <span className="font-black flex-shrink-0">{index + 1}.</span>
+                            <p className="text-justify">{rule}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="border-t-4 border-black p-2 text-center bg-black text-white">
+                    <div className="text-[10px] uppercase tracking-widest">3 пункта</div>
+                  </div>
+                </div>
               </div>
-            )}
-          </div>
+
+              <div className="border-8 border-black aged-paper shadow-xl p-6 text-center">
+                <div className="border-4 border-black p-4">
+                  <Icon name="Info" size={32} className="mx-auto mb-2" />
+                  <div className="text-sm font-headline uppercase mb-2">
+                    ★ Примечание ★
+                  </div>
+                  <p className="text-xs font-body leading-relaxed">
+                    Все вышеперечисленные правила являются обязательными для исполнения. 
+                    Нарушение регламента влечёт за собой дисциплинарные меры, вплоть до снятия с должности. 
+                    Решения принимаются Главным Администратором или Руководством проекта.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {activeCategory === 'general' && (
+            <div className="border-8 border-black aged-paper p-12 text-center shadow-xl">
+              <div className="border-4 border-black p-8">
+                <Icon name="Construction" size={64} className="mx-auto mb-4 text-[#8B0000]" />
+                <div className="text-3xl font-headline uppercase mb-3">В разработке</div>
+                <p className="text-sm font-body">Общие правила скоро появятся</p>
+              </div>
+            </div>
+          )}
+
+          {activeCategory === 'leaders' && (
+            <div className="border-8 border-black aged-paper p-12 text-center shadow-xl">
+              <div className="border-4 border-black p-8">
+                <Icon name="Construction" size={64} className="mx-auto mb-4 text-[#8B0000]" />
+                <div className="text-3xl font-headline uppercase mb-3">В разработке</div>
+                <p className="text-sm font-body">Правила для лидеров скоро появятся</p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
