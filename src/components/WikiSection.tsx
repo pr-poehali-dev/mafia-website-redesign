@@ -80,17 +80,18 @@ const WikiSection = () => {
   return (
     <section className="min-h-screen pt-[280px] pb-16 newspaper-texture">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="border-t-8 border-b-8 border-black py-6 mb-8 aged-paper text-center shadow-xl">
-            <div className="flex items-center justify-center gap-4 mb-3">
-              <Icon name="BookMarked" size={48} className="text-[#8B0000]" />
-              <h2 className="text-6xl font-headline uppercase tracking-wider">
-                Энциклопедия
-              </h2>
-              <Icon name="BookMarked" size={48} className="text-[#8B0000]" />
-            </div>
-            <div className="text-sm uppercase tracking-widest mt-2 border-t-2 border-b-2 border-black py-2 inline-block px-8">
-              📚 Справочник игрока • Том I • Издание 1925 📚
+        <div className="max-w-7xl mx-auto">
+          <div className="border-8 border-black aged-paper shadow-2xl mb-12 transform -rotate-1">
+            <div className="border-4 border-black m-2 bg-white p-6 text-center">
+              <div className="border-2 border-black p-4">
+                <Icon name="BookMarked" size={48} className="mx-auto mb-3 text-black" />
+                <h1 className="text-7xl font-headline uppercase tracking-wider mb-2" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
+                  Энциклопедия Мафии
+                </h1>
+                <div className="text-sm uppercase tracking-widest border-t-2 border-b-2 border-black py-2 mt-3">
+                  Справочник игрока • Том I • Издание 1925
+                </div>
+              </div>
             </div>
           </div>
 
@@ -106,35 +107,38 @@ const WikiSection = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            {wikiCategories.map((category) => (
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {wikiCategories.map((category, index) => (
               <div 
                 key={category.id}
-                className="border-6 border-black aged-paper shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer group"
+                className="border-6 border-black aged-paper shadow-xl hover:shadow-2xl transition-all cursor-pointer group"
+                style={{transform: `rotate(${index % 2 === 0 ? '0.5deg' : '-0.5deg'})`}}
               >
-                <div className="border-b-4 border-black p-4 bg-gradient-to-r from-black to-zinc-800 text-amber-400">
+                <div className="border-b-4 border-black p-5 bg-white">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 border-4 border-amber-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <Icon name={category.icon as any} size={24} />
+                    <div className="w-14 h-14 border-4 border-black bg-black flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <Icon name={category.icon as any} size={28} className="text-white" />
                     </div>
-                    <h3 className="text-lg font-headline uppercase tracking-wide">
+                    <h3 className="text-2xl font-headline uppercase tracking-wide">
                       {category.name}
                     </h3>
                   </div>
                 </div>
 
-                <div className="p-5">
+                <div className="p-6 bg-white border-4 border-black m-2">
                   <div className="space-y-3">
                     {category.articles.map((article, articleIndex) => (
                       <div 
                         key={articleIndex}
-                        className="flex items-center gap-3 text-sm border-b-2 border-black pb-2 last:border-0 hover:pl-2 transition-all"
+                        className="flex items-start gap-3 text-sm border-b-2 border-black pb-3 last:border-0 hover:pl-2 transition-all group/item"
                       >
-                        <div className="w-6 h-6 border-2 border-black flex items-center justify-center flex-shrink-0 bg-white">
-                          <span className="font-headline font-bold text-xs">{articleIndex + 1}</span>
+                        <div className="w-8 h-8 border-2 border-black flex items-center justify-center flex-shrink-0 bg-white mt-0.5">
+                          <span className="font-headline font-bold text-sm">{articleIndex + 1}</span>
                         </div>
-                        <span className="flex-1 font-body">{article}</span>
-                        <Icon name="ChevronRight" size={16} className="text-[#8B0000]" />
+                        <div className="flex-1">
+                          <span className="font-body text-base block group-hover/item:underline">{article}</span>
+                        </div>
+                        <Icon name="ChevronRight" size={20} className="text-black mt-1 group-hover/item:translate-x-1 transition-transform" />
                       </div>
                     ))}
                   </div>
@@ -143,46 +147,53 @@ const WikiSection = () => {
             ))}
           </div>
 
-          <div className="border-8 border-black aged-paper shadow-2xl">
-            <div className="border-b-4 border-black p-5 bg-gradient-to-r from-[#8B0000] to-red-900 text-center">
-              <h3 className="text-2xl font-headline uppercase text-white flex items-center justify-center gap-3">
-                <Icon name="TrendingUp" size={28} />
-                Популярные статьи недели
-                <Icon name="TrendingUp" size={28} />
-              </h3>
-            </div>
-            
-            <div className="p-6 space-y-4">
-              {popularArticles.map((article, index) => (
-                <div 
-                  key={index}
-                  className="border-4 border-black bg-gradient-to-br from-[#F5E6D0] to-[#E5D3A8] p-4 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group"
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 border-4 border-black bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                        <span className="font-headline font-black text-xl">{index + 1}</span>
+          <div className="border-8 border-black aged-paper shadow-2xl transform rotate-1">
+            <div className="border-4 border-black m-2">
+              <div className="border-b-4 border-black p-6 bg-white text-center">
+                <div className="flex items-center justify-center gap-3 mb-2">
+                  <Icon name="TrendingUp" size={32} />
+                  <h3 className="text-4xl font-headline uppercase">
+                    Популярные статьи
+                  </h3>
+                  <Icon name="TrendingUp" size={32} />
+                </div>
+                <div className="text-xs uppercase tracking-widest border-t-2 border-b-2 border-black py-1 inline-block px-6 mt-2">
+                  Самое читаемое за неделю
+                </div>
+              </div>
+              
+              <div className="p-6 space-y-4 bg-white">
+                {popularArticles.map((article, index) => (
+                  <div 
+                    key={index}
+                    className="border-4 border-black bg-white p-5 hover:shadow-xl transition-all cursor-pointer group"
+                  >
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 border-4 border-black bg-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                          <span className="font-headline font-black text-2xl text-white">{index + 1}</span>
+                        </div>
+                        <div className="w-12 h-12 border-4 border-black bg-white flex items-center justify-center">
+                          <Icon name={article.icon as any} size={24} className="text-black" />
+                        </div>
+                        <span className="font-headline uppercase text-lg group-hover:underline">
+                          {article.title}
+                        </span>
                       </div>
-                      <div className="w-10 h-10 border-4 border-black bg-[#8B0000] flex items-center justify-center">
-                        <Icon name={article.icon as any} size={20} className="text-white" />
+                      <div className="text-sm font-body border-l-4 border-black pl-4 flex items-center gap-2">
+                        <Icon name="Eye" size={18} />
+                        <span className="font-bold">{article.views}</span>
                       </div>
-                      <span className="font-headline uppercase text-base group-hover:text-[#8B0000] transition-colors">
-                        {article.title}
-                      </span>
-                    </div>
-                    <div className="text-sm font-body border-l-4 border-black pl-4 flex items-center gap-2">
-                      <Icon name="Eye" size={16} />
-                      {article.views} просмотров
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="mt-8 border-t-4 border-b-4 border-black py-3 aged-paper text-center shadow-lg">
+          <div className="mt-12 border-t-4 border-b-4 border-black py-3 aged-paper text-center shadow-lg">
             <div className="text-xs font-body uppercase tracking-widest">
-              📖 Более 500 статей • Постоянно обновляется • Создано сообществом 📖
+              Более 500 статей • Постоянно обновляется • Создано сообществом
             </div>
           </div>
         </div>
