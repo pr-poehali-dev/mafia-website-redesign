@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 
@@ -9,6 +9,35 @@ interface FooterProps {
 const Footer = ({ setActiveSection }: FooterProps) => {
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [showTerms, setShowTerms] = useState(false);
+  const [isPrivacyClosing, setIsPrivacyClosing] = useState(false);
+  const [isTermsClosing, setIsTermsClosing] = useState(false);
+
+  const handleClosePrivacy = () => {
+    setIsPrivacyClosing(true);
+    setTimeout(() => {
+      setShowPrivacy(false);
+      setIsPrivacyClosing(false);
+    }, 300);
+  };
+
+  const handleCloseTerms = () => {
+    setIsTermsClosing(true);
+    setTimeout(() => {
+      setShowTerms(false);
+      setIsTermsClosing(false);
+    }, 300);
+  };
+
+  useEffect(() => {
+    if (showPrivacy || showTerms) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [showPrivacy, showTerms]);
 
   return (
     <>
@@ -178,11 +207,15 @@ const Footer = ({ setActiveSection }: FooterProps) => {
 
       {showPrivacy && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 animate-in fade-in duration-300"
-          onClick={() => setShowPrivacy(false)}
+          className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/80 transition-opacity duration-300 ${
+            isPrivacyClosing ? 'opacity-0' : 'opacity-100'
+          }`}
+          onClick={handleClosePrivacy}
         >
           <div 
-            className="bg-white border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 animate-in zoom-in-95 duration-300"
+            className={`bg-white border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 ${
+              isPrivacyClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
+            }`}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="border-4 border-black m-2 p-8">
@@ -196,7 +229,7 @@ const Footer = ({ setActiveSection }: FooterProps) => {
                   </p>
                 </div>
                 <Button
-                  onClick={() => setShowPrivacy(false)}
+                  onClick={handleClosePrivacy}
                   className="bg-black text-white hover:bg-black/80 border-4 border-black"
                   size="icon"
                 >
@@ -260,11 +293,15 @@ const Footer = ({ setActiveSection }: FooterProps) => {
 
       {showTerms && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 animate-in fade-in duration-300"
-          onClick={() => setShowTerms(false)}
+          className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/80 transition-opacity duration-300 ${
+            isTermsClosing ? 'opacity-0' : 'opacity-100'
+          }`}
+          onClick={handleCloseTerms}
         >
           <div 
-            className="bg-white border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 animate-in zoom-in-95 duration-300"
+            className={`bg-white border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 ${
+              isTermsClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
+            }`}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="border-4 border-black m-2 p-8">
@@ -278,7 +315,7 @@ const Footer = ({ setActiveSection }: FooterProps) => {
                   </p>
                 </div>
                 <Button
-                  onClick={() => setShowTerms(false)}
+                  onClick={handleCloseTerms}
                   className="bg-black text-white hover:bg-black/80 border-4 border-black"
                   size="icon"
                 >
