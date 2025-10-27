@@ -60,16 +60,6 @@ const Hero = () => {
                     <div className="text-xs uppercase font-body border-t-2 border-black pt-2">Разборок в месяц</div>
                   </div>
                 </div>
-
-                <div className="border-8 border-[#8B0000] bg-gradient-to-r from-red-700 via-red-800 to-red-900 p-4 text-white text-center vintage-stamp relative">
-                  <div className="absolute -top-2 -right-2 w-12 h-12 border-4 border-white bg-black rounded-full flex items-center justify-center">
-                    <Icon name="Skull" size={24} className="text-white" />
-                  </div>
-                  <div className="text-2xl font-headline uppercase mb-2">⚠ Внимание! ⚠</div>
-                  <div className="text-xs uppercase tracking-widest border-t-2 border-b-2 border-white py-2">
-                    Предательство карается смертью • Честь превыше всего
-                  </div>
-                </div>
               </div>
 
               <div className="p-6 space-y-4 bg-gradient-to-b from-[#E5D3A8] to-[#D2B48C]">
@@ -101,6 +91,16 @@ const Hero = () => {
                   </div>
                   <div className="text-[10px] text-center mt-2 border-t border-black pt-1">
                     — Метеобюро, 26 октября 1925
+                  </div>
+                </div>
+
+                <div className="border-8 border-[#8B0000] bg-gradient-to-r from-red-700 via-red-800 to-red-900 p-4 text-white text-center vintage-stamp relative">
+                  <div className="absolute -top-2 -right-2 w-12 h-12 border-4 border-white bg-black rounded-full flex items-center justify-center">
+                    <Icon name="Skull" size={24} className="text-white" />
+                  </div>
+                  <div className="text-2xl font-headline uppercase mb-2">⚠ Внимание! ⚠</div>
+                  <div className="text-xs uppercase tracking-widest border-t-2 border-b-2 border-white py-2">
+                    Предательство карается смертью • Честь превыше всего
                   </div>
                 </div>
               </div>
@@ -336,15 +336,11 @@ const Hero = () => {
                     </p>
                     <a 
                       href="redm://connect/46.174.49.200:30120"
-                      className="block border-4 border-black bg-gradient-to-br from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 p-3 text-center transition-all transform hover:scale-105 shadow-lg text-white mb-3"
+                      className="block border-4 border-black bg-gradient-to-br from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 p-3 text-center transition-all transform hover:scale-105 shadow-lg text-white"
                     >
                       <Icon name="Gamepad2" size={24} className="mx-auto mb-1" />
                       <div className="text-base font-headline uppercase">Подключиться</div>
                     </a>
-                    <div className="border-4 border-black bg-white p-3 text-center">
-                      <div className="text-xs uppercase tracking-wider mb-1 font-bold">IP адрес:</div>
-                      <div className="font-headline text-lg text-[#8B0000]">46.174.49.200</div>
-                    </div>
                   </div>
                 </div>
               </div>
