@@ -37,26 +37,26 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
         </div>
         
         <div className="relative text-center py-4 md:py-6 border-b-4 border-black">
-          <div className="flex items-center justify-center gap-3 md:gap-6 mb-2 md:mb-3">
+          <div className="flex items-center justify-center gap-2 md:gap-6 mb-2 md:mb-3 pr-12 lg:pr-0">
             <img 
               src="https://mh-rp.com/uploads/125-image222.png" 
               alt="Mafia House RDR2"
-              className="h-12 md:h-20 lg:h-24 object-contain drop-shadow-2xl"
+              className="h-10 md:h-20 lg:h-24 object-contain drop-shadow-2xl"
             />
-            <h1 className="text-3xl md:text-6xl lg:text-7xl font-display font-black text-black leading-none">
+            <h1 className="text-2xl md:text-6xl lg:text-7xl font-display font-black text-black leading-none">
               Мафия Таймс
             </h1>
           </div>
-          <p className="text-[10px] md:text-sm font-headline tracking-[0.3em] uppercase border-t-2 border-b-2 border-black py-1 inline-block px-4 md:px-8">
+          <p className="text-[9px] md:text-sm font-headline tracking-[0.2em] md:tracking-[0.3em] uppercase border-t-2 border-b-2 border-black py-1 inline-block px-3 md:px-8">
             Всё о нашей семье
           </p>
 
           <Button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden absolute top-4 right-0 bg-black text-white hover:bg-black/80 border-2 border-black"
+            className="lg:hidden absolute top-2 right-2 bg-black text-white hover:bg-black/80 border-2 border-black z-10"
             size="icon"
           >
-            <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
+            <Icon name={mobileMenuOpen ? "X" : "Menu"} size={20} />
           </Button>
         </div>
 

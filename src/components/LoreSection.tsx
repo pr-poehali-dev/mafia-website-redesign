@@ -2,39 +2,39 @@ import Icon from '@/components/ui/icon';
 
 const LoreSection = () => {
   return (
-    <section className="min-h-screen pt-[280px] pb-16 newspaper-texture">
+    <section className="min-h-screen pt-[180px] md:pt-[280px] pb-8 md:pb-16 newspaper-texture">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="border-8 border-black aged-paper shadow-2xl mb-12">
-            <div className="border-4 border-black m-2 bg-white text-center">
-              <div className="border-b-4 border-black bg-black text-white py-2 px-4">
-                <div className="text-xs uppercase tracking-[0.5em] font-body">Выпуск № 47</div>
+          <div className="border-4 md:border-8 border-black aged-paper shadow-2xl mb-8 md:mb-12">
+            <div className="border-2 md:border-4 border-black m-2 bg-white text-center">
+              <div className="border-b-2 md:border-b-4 border-black bg-black text-white py-2 px-4">
+                <div className="text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.5em] font-body">Выпуск № 47</div>
               </div>
-              <div className="p-6 border-b-4 border-black">
-                <h1 className="text-7xl font-headline uppercase tracking-wider mb-2" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
+              <div className="p-4 md:p-6 border-b-2 md:border-b-4 border-black">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline uppercase tracking-wider mb-2 leading-tight" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
                   Новостинская Газета
                 </h1>
-                <div className="text-sm uppercase tracking-widest">
+                <div className="text-xs md:text-sm uppercase tracking-widest">
                   The Frontier Gazette
                 </div>
-                <div className="text-sm uppercase tracking-widest border-t-2 border-black py-2 mt-3 font-body">
-                  Нью-Остин • Понедельник, 15 Сентября 1919 • Цена 5 центов
+                <div className="text-[10px] md:text-sm uppercase tracking-widest border-t-2 border-black py-2 mt-2 md:mt-3 font-body">
+                  Нью-Остин • 15.09.1919 • 5 ¢
                 </div>
               </div>
               <div className="bg-black text-white py-1 px-4">
-                <div className="text-xs uppercase tracking-widest font-body">«Голос Дикого Запада»</div>
+                <div className="text-[10px] md:text-xs uppercase tracking-widest font-body">«Голос Дикого Запада»</div>
               </div>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="border-6 border-black aged-paper shadow-xl">
-              <div className="border-b-4 border-black p-3 bg-black text-white">
-                <h2 className="text-3xl font-headline uppercase tracking-wider text-center">
+            <div className="border-4 md:border-6 border-black aged-paper shadow-xl">
+              <div className="border-b-2 md:border-b-4 border-black p-3 bg-black text-white">
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-headline uppercase tracking-wider text-center leading-tight">
                   Эпоха перемен наступила
                 </h2>
               </div>
-              <div className="p-6">
+              <div className="p-4 md:p-6">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-28 h-28 flex-shrink-0 border-4 border-black bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center transform -rotate-3">
                     <div className="text-4xl font-headline">1919</div>
@@ -44,8 +44,8 @@ const LoreSection = () => {
                     <div className="mt-1">От нашего корреспондента</div>
                   </div>
                 </div>
-                <div className="space-y-3 font-body text-sm leading-relaxed text-justify columns-1">
-                  <p className="first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none first-letter:font-headline">
+                <div className="space-y-3 font-body text-xs md:text-sm leading-relaxed text-justify columns-1">
+                  <p className="first-letter:text-4xl md:first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none first-letter:font-headline">
                     На дворе 1919 год. Эпоха Дикого Запада уже позади, и большинство штатов постепенно отходят от прежнего образа жизни, характерного для этого времени. Вместо этого на фоне изменений начинают расти преступные синдикаты мафии, которые пользуются шансом на расширение своих влияний в новых условиях.
                   </p>
                   <p>
@@ -61,13 +61,13 @@ const LoreSection = () => {
                   Сухой закон: новая угроза
                 </h2>
               </div>
-              <div className="p-6">
+              <div className="p-4 md:p-6">
                 <div className="border-4 border-black p-3 mb-4 bg-amber-50 text-center">
                   <div className="text-xs uppercase tracking-widest font-bold font-body">Экстренное объявление</div>
                   <div className="text-2xl font-headline mt-1">ЗАПРЕЩЕНО</div>
                 </div>
-                <div className="space-y-3 font-body text-sm leading-relaxed text-justify columns-1">
-                  <p className="first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none first-letter:font-headline">
+                <div className="space-y-3 font-body text-xs md:text-sm leading-relaxed text-justify columns-1">
+                  <p className="first-letter:text-4xl md:first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none first-letter:font-headline">
                     Одним из ключевых факторов, способствующих росту преступности, является действие сухого закона, введенного в США в 1919 году. Этот закон запрещает производство, продажу и транспортировку алкогольных напитков.
                   </p>
                   <p>
@@ -84,7 +84,7 @@ const LoreSection = () => {
                 </h2>
                 <div className="text-xs uppercase tracking-widest mt-2 font-body">Эксклюзивный материал с границ цивилизации</div>
               </div>
-              <div className="p-6">
+              <div className="p-4 md:p-6">
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="border-4 border-black p-4 bg-white/80">
                     <div className="text-center mb-3 pb-2 border-b-4 border-black">
@@ -134,7 +134,7 @@ const LoreSection = () => {
                   Конфликт за ресурсы разгорается
                 </h2>
               </div>
-              <div className="p-6">
+              <div className="p-4 md:p-6">
                 <div className="border-l-8 border-black pl-4 mb-4 bg-amber-50 py-3">
                   <div className="text-xs uppercase tracking-widest font-bold mb-1 font-body">Срочные новости</div>
                   <div className="text-lg font-headline">НАПРЯЖЕНИЕ РАСТЕТ</div>
@@ -156,7 +156,7 @@ const LoreSection = () => {
                   Будущее остается неясным
                 </h2>
               </div>
-              <div className="p-6">
+              <div className="p-4 md:p-6">
                 <div className="mb-4 text-center">
                   <Icon name="Newspaper" size={48} className="mx-auto text-amber-800 mb-2" />
                   <div className="text-xs uppercase tracking-widest font-body border-y-2 border-black py-2">

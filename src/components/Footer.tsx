@@ -168,25 +168,25 @@ const Footer = ({ setActiveSection }: FooterProps) => {
             <div className="border-t-4 border-black pt-6">
               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 <div className="text-center md:text-left">
-                  <p className="text-sm text-black font-body uppercase tracking-wider font-bold">
+                  <p className="text-xs md:text-sm text-black font-body uppercase tracking-wider font-bold">
                     © 1925 Mafia House RDR2
                   </p>
-                  <p className="text-xs text-black font-body uppercase tracking-widest">
+                  <p className="text-[10px] md:text-xs text-black font-body uppercase tracking-widest">
                     Все права защищены
                   </p>
                 </div>
                 
-                <div className="flex items-center gap-6 text-xs font-body">
+                <div className="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-[10px] md:text-xs font-body">
                   <button 
                     onClick={() => setShowPrivacy(true)}
-                    className="text-black border-b-2 border-black hover:border-transparent transition-all uppercase tracking-wider font-bold"
+                    className="text-black border-b-2 border-black hover:border-transparent transition-all uppercase tracking-wider font-bold whitespace-nowrap"
                   >
                     Политика конфиденциальности
                   </button>
-                  <span className="w-1 h-1 bg-black"></span>
+                  <span className="hidden md:block w-1 h-1 bg-black"></span>
                   <button 
                     onClick={() => setShowTerms(true)}
-                    className="text-black border-b-2 border-black hover:border-transparent transition-all uppercase tracking-wider font-bold"
+                    className="text-black border-b-2 border-black hover:border-transparent transition-all uppercase tracking-wider font-bold whitespace-nowrap"
                   >
                     Пользовательское соглашение
                   </button>
@@ -196,9 +196,9 @@ const Footer = ({ setActiveSection }: FooterProps) => {
           </div>
 
           <div className="mt-6 text-center">
-            <div className="inline-block border-4 border-black px-8 py-2 bg-white">
-              <p className="font-body text-black text-xs uppercase tracking-widest">
-                Напечатано в типографии Mafia House Press • 26 октября 1925 • Том I, № 1
+            <div className="inline-block border-2 md:border-4 border-black px-4 md:px-8 py-2 bg-white">
+              <p className="font-body text-black text-[10px] md:text-xs uppercase tracking-widest">
+                Mafia House Press • 26.10.1925 • Том I, № 1
               </p>
             </div>
           </div>
@@ -213,19 +213,19 @@ const Footer = ({ setActiveSection }: FooterProps) => {
           onClick={handleClosePrivacy}
         >
           <div 
-            className={`bg-white border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 animate-in zoom-in-95 ${
+            className={`bg-white border-4 md:border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 animate-in zoom-in-95 ${
               isPrivacyClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
             }`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="border-4 border-black m-2 p-8">
-              <div className="flex items-start justify-between mb-6 pb-4 border-b-4 border-black">
-                <div>
-                  <h2 className="text-4xl font-headline uppercase tracking-wider mb-2">
+            <div className="border-2 md:border-4 border-black m-2 p-4 md:p-8">
+              <div className="flex items-start justify-between mb-4 md:mb-6 pb-3 md:pb-4 border-b-2 md:border-b-4 border-black">
+                <div className="flex-1 pr-2">
+                  <h2 className="text-2xl md:text-4xl font-headline uppercase tracking-wider mb-2 leading-tight">
                     Политика конфиденциальности
                   </h2>
-                  <p className="text-xs font-body uppercase tracking-widest">
-                    Mafia House RDR2 • Действует с октября 1925
+                  <p className="text-[10px] md:text-xs font-body uppercase tracking-widest">
+                    Mafia House RDR2 • Октябрь 1925
                   </p>
                 </div>
                 <Button
@@ -299,27 +299,27 @@ const Footer = ({ setActiveSection }: FooterProps) => {
           onClick={handleCloseTerms}
         >
           <div 
-            className={`bg-white border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 animate-in zoom-in-95 ${
+            className={`bg-white border-4 md:border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 animate-in zoom-in-95 ${
               isTermsClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
             }`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="border-4 border-black m-2 p-8">
-              <div className="flex items-start justify-between mb-6 pb-4 border-b-4 border-black">
-                <div>
-                  <h2 className="text-4xl font-headline uppercase tracking-wider mb-2">
+            <div className="border-2 md:border-4 border-black m-2 p-4 md:p-8">
+              <div className="flex items-start justify-between mb-4 md:mb-6 pb-3 md:pb-4 border-b-2 md:border-b-4 border-black">
+                <div className="flex-1 pr-2">
+                  <h2 className="text-2xl md:text-4xl font-headline uppercase tracking-wider mb-2 leading-tight">
                     Пользовательское соглашение
                   </h2>
-                  <p className="text-xs font-body uppercase tracking-widest">
+                  <p className="text-[10px] md:text-xs font-body uppercase tracking-widest">
                     Mafia House RDR2 • Версия 1.0
                   </p>
                 </div>
                 <Button
                   onClick={handleCloseTerms}
-                  className="bg-black text-white hover:bg-black/80 border-4 border-black"
+                  className="bg-black text-white hover:bg-black/80 border-2 md:border-4 border-black flex-shrink-0"
                   size="icon"
                 >
-                  <Icon name="X" size={24} />
+                  <Icon name="X" size={20} className="md:w-6 md:h-6" />
                 </Button>
               </div>
 
