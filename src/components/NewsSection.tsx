@@ -53,52 +53,51 @@ const NewsSection = () => {
   ];
 
   return (
-    <section className="min-h-screen pt-[180px] md:pt-[280px] pb-8 md:pb-16 newspaper-texture overflow-x-hidden">
-      <div className="container mx-auto px-2 md:px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="border-4 md:border-8 border-black aged-paper shadow-2xl mb-8 md:mb-12 transform -rotate-1 max-w-full">
-            <div className="border-2 md:border-4 border-black m-1 md:m-2 bg-white p-3 md:p-4 lg:p-6">
-              <div className="text-center border-b-2 md:border-b-4 border-black pb-2 md:pb-3 lg:pb-4 mb-2 md:mb-3 lg:mb-4">
-                <div className="text-[9px] md:text-[10px] lg:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] mb-1 md:mb-2 break-words">№ 42 • Год издания VIII</div>
-                <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-headline uppercase tracking-wide md:tracking-wider mb-1 md:mb-2 leading-tight break-words px-1" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
+    <section className="min-h-screen pt-[180px] md:pt-[280px] pb-8 md:pb-16 newspaper-texture overflow-x-hidden w-full">
+      <div className="w-full px-3 md:px-4 max-w-7xl mx-auto">
+        <div className="w-full">
+          <div className="border-3 md:border-6 lg:border-8 border-black aged-paper shadow-2xl mb-6 md:mb-12 mx-auto" style={{maxWidth: 'calc(100vw - 24px)'}}>
+            <div className="border-2 md:border-4 border-black m-1 md:m-2 bg-white p-2 md:p-4 lg:p-6">
+              <div className="text-center border-b-2 md:border-b-4 border-black pb-2 md:pb-4 mb-2 md:mb-4">
+                <div className="text-[8px] md:text-[10px] uppercase tracking-wider md:tracking-[0.3em] mb-1 md:mb-2">№ 42 • Год VIII</div>
+                <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-headline uppercase tracking-tight md:tracking-wide lg:tracking-wider mb-1 md:mb-2 leading-tight" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
                   Валентайнская Газета
                 </h1>
-                <div className="text-[10px] md:text-xs lg:text-sm uppercase tracking-wider md:tracking-widest break-words">
+                <div className="text-[9px] md:text-xs uppercase tracking-wide md:tracking-widest">
                   The Valentine Gazette
                 </div>
               </div>
-              <div className="grid grid-cols-3 text-center text-[9px] md:text-[10px] lg:text-xs border-t-2 border-black pt-1 md:pt-2 gap-1">
-                <div className="break-words leading-tight">26 октября 1925</div>
-                <div className="border-l-2 border-r-2 border-black break-words leading-tight px-1">Цена: 5¢</div>
-                <div className="hidden md:block break-words leading-tight">Выпуск ежедневный</div>
-                <div className="md:hidden break-words leading-tight">Ежедневно</div>
+              <div className="grid grid-cols-3 text-center text-[8px] md:text-[10px] border-t-2 border-black pt-1 md:pt-2">
+                <div className="px-1">26.10.1925</div>
+                <div className="border-l-2 border-r-2 border-black px-1">5¢</div>
+                <div className="px-1">Ежедневно</div>
               </div>
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-4 md:gap-8 max-w-full">
-            <div className="lg:col-span-2 space-y-4 md:space-y-8 max-w-full">
+          <div className="grid lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8 w-full">
+            <div className="lg:col-span-2 space-y-3 md:space-y-6 lg:space-y-8 w-full">
               {news.slice(0, 1).map((item) => (
-                <div key={item.id} className="border-4 md:border-6 border-black aged-paper shadow-2xl max-w-full overflow-hidden">
+                <div key={item.id} className="border-3 md:border-4 lg:border-6 border-black aged-paper shadow-2xl w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
                   <div className="border-b-2 md:border-b-4 border-black p-2 md:p-3 bg-[#8B0000] text-white text-center">
-                    <div className="flex items-center justify-center gap-2 text-xs md:text-sm font-headline uppercase tracking-wider">
-                      <Icon name="AlertCircle" size={18} />
-                      {item.category}
-                      <Icon name="AlertCircle" size={18} />
+                    <div className="flex items-center justify-center gap-1 md:gap-2 text-[10px] md:text-xs lg:text-sm font-headline uppercase tracking-wide">
+                      <Icon name="AlertCircle" size={14} className="md:w-4 md:h-4" />
+                      <span className="truncate">{item.category}</span>
+                      <Icon name="AlertCircle" size={14} className="md:w-4 md:h-4" />
                     </div>
                   </div>
-                  <div className="p-4 md:p-6">
-                    <div className="text-right text-[10px] md:text-xs mb-2 md:mb-3 uppercase tracking-wide border-b border-black pb-2">
+                  <div className="p-3 md:p-4 lg:p-6">
+                    <div className="text-right text-[9px] md:text-[10px] mb-2 uppercase tracking-wide border-b border-black pb-1 md:pb-2">
                       {item.date}
                     </div>
-                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-headline font-black leading-none uppercase mb-3 border-b-2 md:border-b-4 border-black pb-3 break-words">
+                    <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-headline font-black leading-tight uppercase mb-2 md:mb-3 border-b-2 md:border-b-4 border-black pb-2 md:pb-3 break-words">
                       {item.title}
                     </h2>
-                    <div className="text-sm md:text-lg lg:text-xl font-headline italic mb-4 border-l-2 md:border-l-4 border-black pl-3 leading-tight">
+                    <div className="text-xs md:text-sm lg:text-base xl:text-lg font-headline italic mb-3 md:mb-4 border-l-2 md:border-l-4 border-black pl-2 md:pl-3 leading-tight">
                       {item.subtitle}
                     </div>
-                    <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4">
-                      <div className="border-2 md:border-4 border-black photo-border">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 mb-3 md:mb-4">
+                      <div className="border-2 md:border-4 border-black">
                         <img 
                           src={item.image} 
                           alt={item.title}
@@ -106,30 +105,30 @@ const NewsSection = () => {
                         />
                       </div>
                       <div className="space-y-2 md:space-y-3">
-                        <p className="font-body text-xs md:text-sm lg:text-base leading-relaxed text-justify first-letter:text-3xl md:first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none">
+                        <p className="font-body text-[11px] md:text-xs lg:text-sm leading-relaxed text-justify first-letter:text-2xl md:first-letter:text-4xl first-letter:font-bold first-letter:float-left first-letter:mr-1 md:first-letter:mr-2 first-letter:leading-none">
                           {item.excerpt}
                         </p>
-                        <p className="font-body text-xs md:text-sm leading-relaxed text-justify">
+                        <p className="font-body text-[10px] md:text-xs lg:text-sm leading-relaxed text-justify">
                           {item.content}
                         </p>
                       </div>
                     </div>
-                    <div className="border-t-2 border-dashed border-black pt-3 text-xs italic text-center">
+                    <div className="border-t-2 border-dashed border-black pt-2 md:pt-3 text-[10px] md:text-xs italic text-center">
                       Продолжение на стр. 3 →
                     </div>
                   </div>
                 </div>
               ))}
 
-              <div className="border-4 md:border-6 border-black aged-paper shadow-xl">
+              <div className="border-3 md:border-4 lg:border-6 border-black aged-paper shadow-xl w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
                 <div className="border-b-2 border-black p-2 md:p-3 bg-black text-white text-center">
-                  <div className="text-sm md:text-base lg:text-lg font-headline uppercase tracking-wider break-words">Городская хроника</div>
+                  <div className="text-xs md:text-sm lg:text-base font-headline uppercase tracking-wide">Городская хроника</div>
                 </div>
-                <div className="p-4 md:p-6 newspaper-column">
+                <div className="p-3 md:p-4 lg:p-6">
                   {news.slice(1, 3).map((item) => (
-                    <div key={item.id} className="mb-4 md:mb-6 break-inside-avoid">
+                    <div key={item.id} className="mb-3 md:mb-6 last:mb-0 break-inside-avoid">
                       <div className="flex items-start gap-2 md:gap-3 mb-2">
-                        <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 border-2 border-black">
+                        <div className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 border-2 border-black">
                           <img 
                             src={item.image} 
                             alt={item.title}
@@ -137,82 +136,82 @@ const NewsSection = () => {
                           />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-[9px] md:text-[10px] uppercase mb-1 flex items-center justify-between gap-1">
-                            <span className="truncate">{item.category}</span>
-                            <span className="whitespace-nowrap text-[8px] md:text-[10px]">{item.date}</span>
+                          <div className="text-[8px] md:text-[10px] uppercase mb-1 flex items-center justify-between gap-1">
+                            <span className="truncate flex-1">{item.category}</span>
+                            <span className="whitespace-nowrap text-[7px] md:text-[9px]">{item.date}</span>
                           </div>
-                          <h3 className="text-sm md:text-base lg:text-lg font-headline font-bold uppercase leading-tight mb-1 break-words">
+                          <h3 className="text-xs md:text-sm lg:text-base font-headline font-bold uppercase leading-tight mb-1 break-words">
                             {item.title}
                           </h3>
                         </div>
                       </div>
-                      <div className="text-xs md:text-sm font-headline italic mb-2 border-l-2 border-black pl-2 leading-tight">
+                      <div className="text-[10px] md:text-xs font-headline italic mb-2 border-l-2 border-black pl-2 leading-tight">
                         {item.subtitle}
                       </div>
-                      <p className="font-body text-[10px] md:text-xs leading-relaxed text-justify">
+                      <p className="font-body text-[9px] md:text-[10px] lg:text-xs leading-relaxed text-justify">
                         {item.excerpt}
                       </p>
                       {item.content && (
-                        <p className="font-body text-[10px] md:text-xs leading-relaxed text-justify mt-2">
+                        <p className="font-body text-[9px] md:text-[10px] lg:text-xs leading-relaxed text-justify mt-2">
                           {item.content}
                         </p>
                       )}
-                      <div className="border-b border-dashed border-black mt-3"></div>
+                      <div className="border-b border-dashed border-black mt-2 md:mt-3"></div>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className="space-y-4 md:space-y-6 max-w-full">
-              <div className="border-4 md:border-6 border-black aged-paper shadow-xl transform rotate-1 max-w-full overflow-hidden">
+            <div className="space-y-3 md:space-y-6 w-full">
+              <div className="border-3 md:border-4 lg:border-6 border-black aged-paper shadow-xl w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
                 <div className="border-b-2 md:border-b-4 border-black p-2 md:p-3 bg-black text-white text-center">
-                  <Icon name="Pin" size={20} className="mx-auto mb-1 md:w-6 md:h-6" />
-                  <h3 className="text-sm md:text-base font-headline uppercase tracking-wider break-words">
+                  <Icon name="Pin" size={18} className="mx-auto mb-1 md:w-6 md:h-6" />
+                  <h3 className="text-xs md:text-sm lg:text-base font-headline uppercase tracking-wide">
                     Доска объявлений
                   </h3>
                 </div>
-                <div className="p-4 space-y-3">
-                  <div className="border-4 border-[#8B0000] bg-red-50 p-3">
-                    <div className="font-bold uppercase mb-1 text-xs flex items-center gap-1">
-                      <Icon name="AlertTriangle" size={14} />
+                <div className="p-3 md:p-4 space-y-2 md:space-y-3">
+                  <div className="border-3 border-[#8B0000] bg-red-50 p-2 md:p-3">
+                    <div className="font-bold uppercase mb-1 text-[10px] md:text-xs flex items-center gap-1">
+                      <Icon name="AlertTriangle" size={12} className="md:w-4 md:h-4" />
                       Разыскивается
                     </div>
-                    <div className="text-[11px] leading-tight font-body">
+                    <div className="text-[9px] md:text-[11px] leading-tight font-body">
                       Трое вооружённых мужчин. Награда $500.
                     </div>
                   </div>
-                  <div className="border-2 border-black bg-white p-3">
-                    <div className="font-bold uppercase mb-1 text-xs">
+                  <div className="border-2 border-black bg-white p-2 md:p-3">
+                    <div className="font-bold uppercase mb-1 text-[10px] md:text-xs">
                       Открытие казино
                     </div>
-                    <div className="text-[11px] leading-tight font-body">
+                    <div className="text-[9px] md:text-[11px] leading-tight font-body">
                       «Золотая Подкова». Каждую ночь с полуночи.
                     </div>
                   </div>
-                  <div className="border-2 border-black bg-white p-3">
-                    <div className="font-bold uppercase mb-1 text-xs">
+                  <div className="border-2 border-black bg-white p-2 md:p-3">
+                    <div className="font-bold uppercase mb-1 text-[10px] md:text-xs">
                       Объявление шерифа
                     </div>
-                    <div className="text-[11px] leading-tight font-body">
+                    <div className="text-[9px] md:text-[11px] leading-tight font-body">
                       Комендантский час с полуночи.
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="border-4 md:border-6 border-black aged-paper shadow-xl transform -rotate-1">
+              <div className="border-3 md:border-4 lg:border-6 border-black aged-paper shadow-xl w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
                 <div className="border-b-2 border-black p-2 md:p-3 bg-white text-center">
-                  <div className="text-xs md:text-sm font-headline uppercase tracking-wider break-words">Короткие новости</div>
+                  <div className="text-xs md:text-sm font-headline uppercase tracking-wide">Короткие новости</div>
                 </div>
-                <div className="p-4 space-y-4">
+                <div className="p-3 md:p-4 space-y-3 md:space-y-4">
                   {news.slice(3).map((item) => (
                     <div key={item.id} className="border-b-2 border-dashed border-black pb-2 md:pb-3 last:border-0">
-                      <div className="text-[9px] md:text-[10px] uppercase mb-1">{item.date}</div>
-                      <h4 className="text-xs md:text-sm font-headline font-bold uppercase leading-tight mb-1 break-words">
+                      <div className="text-[8px] md:text-[10px] uppercase mb-1">{item.date}</div>
+                      <h4 className="text-[11px] md:text-xs lg:text-sm font-headline font-bold uppercase leading-tight mb-1 break-words">
                         {item.title}
                       </h4>
-                      <p className="text-[10px] md:text-[11px] font-body leading-snug text-justify">
+                      <p className="text-[9px] md:text-[10px] lg:text-[11px] font-body leading-snug text-justify">
                         {item.excerpt}
                       </p>
                     </div>
@@ -220,13 +219,13 @@ const NewsSection = () => {
                 </div>
               </div>
 
-              <div className="border-4 border-black bg-white p-4 text-center transform rotate-2">
-                <div className="border-2 border-black p-3">
-                  <Icon name="Info" size={20} className="mx-auto mb-2" />
-                  <div className="text-[10px] font-headline uppercase tracking-widest">
+              <div className="border-3 border-black bg-white p-3 md:p-4 text-center w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
+                <div className="border-2 border-black p-2 md:p-3">
+                  <Icon name="Info" size={16} className="mx-auto mb-1 md:mb-2 md:w-5 md:h-5" />
+                  <div className="text-[9px] md:text-[10px] font-headline uppercase tracking-wide">
                     Хотите разместить объявление?
                   </div>
-                  <div className="text-[9px] font-body mt-2">
+                  <div className="text-[8px] md:text-[9px] font-body mt-1 md:mt-2">
                     Обращайтесь в редакцию газеты
                   </div>
                 </div>
@@ -234,8 +233,8 @@ const NewsSection = () => {
             </div>
           </div>
 
-          <div className="mt-8 border-t-4 border-b-4 border-black py-2 bg-white text-center">
-            <div className="text-[10px] font-body uppercase tracking-widest">
+          <div className="mt-6 md:mt-8 border-t-2 md:border-t-4 border-b-2 md:border-b-4 border-black py-2 bg-white text-center w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
+            <div className="text-[8px] md:text-[10px] font-body uppercase tracking-wide md:tracking-widest px-2">
               Валентайнская Газета • Основана в 1917 году • Главный редактор: Джеймс Макдональд
             </div>
           </div>
