@@ -187,42 +187,42 @@ const WikiSection = () => {
   };
 
   return (
-    <section className="min-h-screen pt-[280px] pb-16 newspaper-texture">
+    <section className="min-h-screen pt-[180px] md:pt-[280px] pb-8 md:pb-16 newspaper-texture">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="border-8 border-black aged-paper shadow-2xl mb-12 transform -rotate-1">
-            <div className="border-4 border-black m-2 bg-white p-6 text-center">
-              <div className="border-2 border-black p-4">
-                <Icon name="BookMarked" size={48} className="mx-auto mb-3 text-black" />
-                <h1 className="text-7xl font-headline uppercase tracking-wider mb-2" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
+          <div className="border-4 md:border-8 border-black aged-paper shadow-2xl mb-8 md:mb-12 transform -rotate-1">
+            <div className="border-2 md:border-4 border-black m-2 bg-white p-4 md:p-6 text-center">
+              <div className="border-2 border-black p-3 md:p-4">
+                <Icon name="BookMarked" size={32} className="mx-auto mb-2 md:mb-3 text-black md:w-12 md:h-12" />
+                <h1 className="text-3xl md:text-6xl lg:text-7xl font-headline uppercase tracking-wider mb-2 leading-tight break-words" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
                   Энциклопедия Мафии
                 </h1>
-                <div className="text-sm uppercase tracking-widest border-t-2 border-b-2 border-black py-2 mt-3">
-                  Справочник игрока • Том I • Издание 1925
+                <div className="text-[10px] md:text-sm uppercase tracking-widest border-t-2 border-b-2 border-black py-2 mt-2 md:mt-3">
+                  Справочник • Том I • 1925
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-8">
             {wikiCategories.map((category, index) => (
               <div 
                 key={category.id}
-                className="border-6 border-black aged-paper shadow-xl"
+                className="border-4 md:border-6 border-black aged-paper shadow-xl"
                 style={{transform: `rotate(${index % 2 === 0 ? '0.5deg' : '-0.5deg'})`}}
               >
-                <div className={`border-b-4 border-black p-5 ${category.color}`}>
-                  <div className="flex items-center gap-3">
-                    <div className="w-14 h-14 border-4 border-amber-200 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center flex-shrink-0">
-                      <Icon name={category.icon as any} size={28} className="text-black" />
+                <div className={`border-b-2 md:border-b-4 border-black p-3 md:p-5 ${category.color}`}>
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <div className="w-10 h-10 md:w-14 md:h-14 border-2 md:border-4 border-amber-200 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center flex-shrink-0">
+                      <Icon name={category.icon as any} size={20} className="text-black md:w-7 md:h-7" />
                     </div>
-                    <h3 className="text-2xl font-headline uppercase tracking-wide text-amber-100">
+                    <h3 className="text-base md:text-xl lg:text-2xl font-headline uppercase tracking-wide text-amber-100 leading-tight">
                       {category.name}
                     </h3>
                   </div>
                 </div>
 
-                <div className="p-6 bg-white border-4 border-black m-2">
+                <div className="p-4 md:p-6 bg-white border-2 md:border-4 border-black m-2">
                   <div className="space-y-3">
                     {category.articles.map((article, articleIndex) => (
                       <div 
@@ -261,47 +261,47 @@ const WikiSection = () => {
           onClick={handleClose}
         >
           <div 
-            className={`bg-white border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 animate-in zoom-in-95 ${
+            className={`bg-white border-4 md:border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 animate-in zoom-in-95 ${
               isClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
             }`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="border-4 border-black m-2">
-              <div className={`border-b-4 border-black p-6 ${selectedArticle.category.color}`}>
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex items-start gap-4 flex-1">
-                    <div className="w-16 h-16 border-4 border-amber-200 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center flex-shrink-0">
-                      <span className="font-headline font-bold text-3xl">{selectedArticle.index + 1}</span>
+            <div className="border-2 md:border-4 border-black m-2">
+              <div className={`border-b-2 md:border-b-4 border-black p-4 md:p-6 ${selectedArticle.category.color}`}>
+                <div className="flex items-start justify-between gap-2 md:gap-4">
+                  <div className="flex items-start gap-2 md:gap-4 flex-1">
+                    <div className="w-12 h-12 md:w-16 md:h-16 border-2 md:border-4 border-amber-200 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center flex-shrink-0">
+                      <span className="font-headline font-bold text-2xl md:text-3xl">{selectedArticle.index + 1}</span>
                     </div>
-                    <div>
-                      <div className="text-xs uppercase tracking-widest text-amber-200 mb-2">
+                    <div className="flex-1 min-w-0">
+                      <div className="text-[10px] md:text-xs uppercase tracking-widest text-amber-200 mb-1 md:mb-2">
                         {selectedArticle.category.name}
                       </div>
-                      <h2 className="text-3xl font-headline uppercase tracking-wider text-white leading-tight">
+                      <h2 className="text-xl md:text-2xl lg:text-3xl font-headline uppercase tracking-wider text-white leading-tight break-words">
                         {selectedArticle.article.title}
                       </h2>
                     </div>
                   </div>
                   <Button
                     onClick={handleClose}
-                    className="bg-black text-white hover:bg-black/80 border-4 border-white flex-shrink-0"
+                    className="bg-black text-white hover:bg-black/80 border-2 md:border-4 border-white flex-shrink-0"
                     size="icon"
                   >
-                    <Icon name="X" size={24} />
+                    <Icon name="X" size={20} className="md:w-6 md:h-6" />
                   </Button>
                 </div>
               </div>
 
-              <div className="p-8 aged-paper">
-                <div className="border-l-4 border-black pl-6">
-                  <p className="font-body text-lg leading-relaxed text-justify first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:font-headline">
+              <div className="p-4 md:p-8 aged-paper">
+                <div className="border-l-2 md:border-l-4 border-black pl-3 md:pl-6">
+                  <p className="font-body text-sm md:text-base lg:text-lg leading-relaxed text-justify first-letter:text-4xl md:first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 md:first-letter:mr-3 first-letter:leading-none first-letter:font-headline">
                     {selectedArticle.article.content}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-6 border-t-4 border-black text-center">
-                  <div className="flex items-center justify-center gap-2 text-sm uppercase tracking-widest font-body">
-                    <Icon name="BookMarked" size={20} />
+                <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t-2 md:border-t-4 border-black text-center">
+                  <div className="flex items-center justify-center gap-2 text-[10px] md:text-sm uppercase tracking-widest font-body">
+                    <Icon name="BookMarked" size={16} className="md:w-5 md:h-5" />
                     <span>Энциклопедия Мафии • Том I</span>
                   </div>
                 </div>

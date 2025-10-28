@@ -76,25 +76,25 @@ const NewsSection = () => {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 space-y-8">
+          <div className="grid lg:grid-cols-3 gap-4 md:gap-8">
+            <div className="lg:col-span-2 space-y-4 md:space-y-8">
               {news.slice(0, 1).map((item) => (
-                <div key={item.id} className="border-6 border-black aged-paper shadow-2xl">
-                  <div className="border-b-4 border-black p-3 bg-[#8B0000] text-white text-center">
-                    <div className="flex items-center justify-center gap-2 text-sm font-headline uppercase tracking-wider">
+                <div key={item.id} className="border-4 md:border-6 border-black aged-paper shadow-2xl">
+                  <div className="border-b-2 md:border-b-4 border-black p-2 md:p-3 bg-[#8B0000] text-white text-center">
+                    <div className="flex items-center justify-center gap-2 text-xs md:text-sm font-headline uppercase tracking-wider">
                       <Icon name="AlertCircle" size={18} />
                       {item.category}
                       <Icon name="AlertCircle" size={18} />
                     </div>
                   </div>
-                  <div className="p-6">
-                    <div className="text-right text-xs mb-3 uppercase tracking-wide border-b border-black pb-2">
+                  <div className="p-4 md:p-6">
+                    <div className="text-right text-[10px] md:text-xs mb-2 md:mb-3 uppercase tracking-wide border-b border-black pb-2">
                       {item.date}
                     </div>
-                    <h2 className="text-5xl font-headline font-black leading-none uppercase mb-3 border-b-4 border-black pb-3">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-headline font-black leading-none uppercase mb-3 border-b-2 md:border-b-4 border-black pb-3 break-words">
                       {item.title}
                     </h2>
-                    <div className="text-xl font-headline italic mb-4 border-l-4 border-black pl-3">
+                    <div className="text-sm md:text-lg lg:text-xl font-headline italic mb-4 border-l-2 md:border-l-4 border-black pl-3 leading-tight">
                       {item.subtitle}
                     </div>
                     <div className="grid md:grid-cols-2 gap-6 mb-4">
