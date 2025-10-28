@@ -11,10 +11,13 @@ const LoreSection = () => {
                 <div className="text-xs uppercase tracking-[0.5em] font-body">Выпуск № 47</div>
               </div>
               <div className="p-6 border-b-4 border-black">
-                <h1 className="text-8xl font-headline uppercase tracking-wider mb-2" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
-                  The Frontier Gazette
+                <h1 className="text-7xl font-headline uppercase tracking-wider mb-2" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
+                  Новостинская Газета
                 </h1>
-                <div className="text-sm uppercase tracking-widest border-t-2 border-b-2 border-black py-2 mt-3 font-body">
+                <div className="text-sm uppercase tracking-widest">
+                  The Frontier Gazette
+                </div>
+                <div className="text-sm uppercase tracking-widest border-t-2 border-black py-2 mt-3 font-body">
                   Нью-Остин • Понедельник, 15 Сентября 1919 • Цена 5 центов
                 </div>
               </div>
