@@ -36,8 +36,8 @@ const LoreSection = () => {
               </div>
               <div className="p-6">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-24 h-24 flex-shrink-0 border-4 border-black bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center transform -rotate-3">
-                    <div className="text-5xl font-headline">1919</div>
+                  <div className="w-28 h-28 flex-shrink-0 border-4 border-black bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center transform -rotate-3">
+                    <div className="text-4xl font-headline">1919</div>
                   </div>
                   <div className="text-xs uppercase tracking-wider border-l-4 border-black pl-3 py-2 font-body">
                     <div>Специальный репортаж</div>
