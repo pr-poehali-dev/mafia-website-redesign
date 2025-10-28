@@ -196,14 +196,14 @@ const RulesSection = () => {
             
             <button
               onClick={() => setActiveCategory('leaders')}
-              className={`border-4 md:border-6 border-black aged-paper p-2 md:p-4 transform transition-all hover:scale-105 hover:-rotate-1 ${
+              className={`border-2 md:border-4 lg:border-6 border-black aged-paper p-1 md:p-2 lg:p-4 transform transition-all hover:scale-105 hover:-rotate-1 ${
                 activeCategory === 'leaders' ? 'shadow-2xl -rotate-1' : 'shadow-lg'
               }`}
             >
-              <div className="border-2 border-black p-2 md:p-3">
-                <Icon name="Crown" size={20} className="mx-auto mb-1 md:mb-2 md:w-8 md:h-8" />
-                <div className="font-headline uppercase text-xs md:text-base lg:text-lg leading-tight">Правила</div>
-                <div className="font-headline uppercase text-xs md:text-base lg:text-lg leading-tight">для Лидеров</div>
+              <div className="border border-black md:border-2 p-1 md:p-2 lg:p-3">
+                <Icon name="Crown" size={16} className="mx-auto mb-0.5 md:mb-1 lg:mb-2 md:w-6 md:h-6 lg:w-8 lg:h-8" />
+                <div className="font-headline uppercase text-[10px] md:text-xs lg:text-sm xl:text-base leading-tight break-words">Правила</div>
+                <div className="font-headline uppercase text-[10px] md:text-xs lg:text-sm xl:text-base leading-tight break-words">для Лидеров</div>
               </div>
             </button>
           </div>
