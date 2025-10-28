@@ -29,18 +29,23 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
         </div>
         
         <div className="text-center py-6 border-b-4 border-black">
-          <div className="flex items-center justify-center gap-6 mb-4">
+          <div className="flex items-center justify-center gap-4 mb-4">
             <img 
               src="https://mh-rp.com/uploads/125-image222.png" 
-              alt="Логотип Мафия Хаус"
-              className="h-20 md:h-24 object-contain"
+              alt="Mafia House RDR2"
+              className="h-24 md:h-32 object-contain drop-shadow-2xl"
             />
-            <h1 className="text-6xl md:text-7xl font-display font-black text-black leading-none">
-              Мафия Таймс
-            </h1>
+            <div>
+              <h1 className="text-5xl md:text-6xl font-headline text-black leading-none uppercase tracking-wider" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
+                Mafia House
+              </h1>
+              <div className="text-2xl md:text-3xl font-headline uppercase tracking-widest mt-1 text-[#8B0000]">
+                RDR2 Roleplay
+              </div>
+            </div>
           </div>
-          <p className="text-sm font-headline tracking-[0.3em] uppercase border-t-2 border-b-2 border-black py-1 inline-block px-8">
-            Всё о нашей семье
+          <p className="text-xs font-headline tracking-[0.3em] uppercase border-t-2 border-b-2 border-black py-1 inline-block px-8">
+            Нью-Остин • Эпоха мафии • 1919
           </p>
         </div>
 
