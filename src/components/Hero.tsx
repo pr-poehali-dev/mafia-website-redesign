@@ -4,28 +4,28 @@ import Icon from '@/components/ui/icon';
 const Hero = () => {
   return (
     <section 
-      className="relative min-h-screen pt-[300px] pb-16 newspaper-texture"
+      className="relative min-h-screen pt-[180px] md:pt-[280px] pb-8 md:pb-16 newspaper-texture"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="border-8 border-black aged-paper mb-8 shadow-2xl transform hover:scale-[1.01] transition-transform duration-300">
-            <div className="border-b-8 border-black p-6 bg-gradient-to-r from-black via-zinc-900 to-black text-white text-center relative overflow-hidden">
+          <div className="border-4 md:border-8 border-black aged-paper mb-8 shadow-2xl transform hover:scale-[1.01] transition-transform duration-300">
+            <div className="border-b-4 md:border-b-8 border-black p-4 md:p-6 bg-gradient-to-r from-black via-zinc-900 to-black text-white text-center relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
               <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
-              <h2 className="text-5xl md:text-6xl font-headline font-black leading-tight uppercase tracking-tight relative z-10">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-headline font-black leading-tight uppercase tracking-tight relative z-10">
                 МАФИЯ ХАУС
               </h2>
-              <div className="text-2xl font-headline mt-2 text-amber-400 uppercase">
+              <div className="text-lg md:text-2xl font-headline mt-2 text-amber-400 uppercase">
                 Империя начинается здесь
               </div>
-              <div className="text-xs font-body mt-3 uppercase tracking-widest text-amber-200">
+              <div className="text-[10px] md:text-xs font-body mt-3 uppercase tracking-widest text-amber-200">
                 🔥 Эксклюзивный игровой опыт • Вступай в семью прямо сейчас 🔥
               </div>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-0">
-              <div className="lg:col-span-2 p-8 border-r-8 border-black aged-paper">
-                <div className="columns-2 gap-8 text-justify font-body text-base leading-relaxed mb-6">
+              <div className="lg:col-span-2 p-4 md:p-8 lg:border-r-8 border-black aged-paper">
+                <div className="md:columns-2 gap-8 text-justify font-body text-sm md:text-base leading-relaxed mb-6">
                   <div className="relative">
                     <span className="float-left text-8xl font-gothic leading-none mr-3 mt-2 text-[#8B0000]">В</span>
                     <p className="mb-4">
@@ -43,20 +43,20 @@ const Hero = () => {
                   </p>
                 </div>
 
-                <div className="border-8 border-[#8B0000] bg-gradient-to-r from-red-700 via-red-800 to-red-900 p-4 text-white text-center vintage-stamp relative mb-6">
-                  <div className="absolute -top-2 -right-2 w-12 h-12 border-4 border-white bg-black rounded-full flex items-center justify-center">
-                    <Icon name="Skull" size={24} className="text-white" />
+                <div className="border-4 md:border-8 border-[#8B0000] bg-gradient-to-r from-red-700 via-red-800 to-red-900 p-3 md:p-4 text-white text-center vintage-stamp relative mb-6">
+                  <div className="absolute -top-2 -right-2 w-10 h-10 md:w-12 md:h-12 border-2 md:border-4 border-white bg-black rounded-full flex items-center justify-center">
+                    <Icon name="Skull" size={20} className="text-white md:w-6 md:h-6" />
                   </div>
-                  <div className="text-2xl font-headline uppercase mb-2">⚠ Внимание! ⚠</div>
-                  <div className="text-xs uppercase tracking-widest border-t-2 border-b-2 border-white py-2">
+                  <div className="text-lg md:text-2xl font-headline uppercase mb-2">⚠ Внимание! ⚠</div>
+                  <div className="text-[10px] md:text-xs uppercase tracking-widest border-t-2 border-b-2 border-white py-2">
                     Предательство карается смертью • Честь превыше всего
                   </div>
                 </div>
 
-                <div className="border-8 border-black aged-paper p-5 mb-6 shadow-xl">
+                <div className="border-4 md:border-8 border-black aged-paper p-4 md:p-5 mb-6 shadow-xl">
                   <div className="text-center border-b-4 border-black pb-3 mb-4">
-                    <div className="text-xs uppercase tracking-[0.3em] mb-1 font-bold">★ Эксклюзивная статистика ★</div>
-                    <div className="text-2xl font-headline uppercase">Империя в цифрах</div>
+                    <div className="text-[10px] md:text-xs uppercase tracking-[0.3em] mb-1 font-bold">★ Эксклюзивная статистика ★</div>
+                    <div className="text-xl md:text-2xl font-headline uppercase">Империя в цифрах</div>
                   </div>
                   <div className="space-y-3">
                     <div className="border-4 border-black bg-white p-3 flex items-center justify-between">
@@ -96,7 +96,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="p-6 space-y-4 aged-paper">
+              <div className="p-4 md:p-6 space-y-4 aged-paper">
                 <div className="border-4 border-black photo-border transform -rotate-2 hover:rotate-0 transition-transform">
                   <img 
                     src="https://mh-rp.com/uploads/guide/98-media2.webp" 
@@ -131,7 +131,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-8">
             <div className="border-8 border-black aged-paper shadow-xl transform hover:-translate-y-2 transition-all">
               <div className="border-b-4 border-black p-4 bg-gradient-to-r from-black to-zinc-800 text-amber-400 text-center">
                 <Icon name="Camera" size={32} className="mx-auto mb-2" />

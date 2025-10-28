@@ -53,24 +53,25 @@ const NewsSection = () => {
   ];
 
   return (
-    <section className="min-h-screen pt-[280px] pb-16 newspaper-texture">
+    <section className="min-h-screen pt-[180px] md:pt-[280px] pb-8 md:pb-16 newspaper-texture">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="border-8 border-black aged-paper shadow-2xl mb-12 transform -rotate-1">
-            <div className="border-4 border-black m-2 bg-white p-6">
-              <div className="text-center border-b-4 border-black pb-4 mb-4">
-                <div className="text-xs uppercase tracking-[0.3em] mb-2">№ 42 • Год издания VIII</div>
-                <h1 className="text-7xl font-headline uppercase tracking-wider mb-2" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
+          <div className="border-4 md:border-8 border-black aged-paper shadow-2xl mb-8 md:mb-12 transform -rotate-1">
+            <div className="border-2 md:border-4 border-black m-2 bg-white p-4 md:p-6">
+              <div className="text-center border-b-2 md:border-b-4 border-black pb-3 md:pb-4 mb-3 md:mb-4">
+                <div className="text-[10px] md:text-xs uppercase tracking-[0.3em] mb-2">№ 42 • Год издания VIII</div>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline uppercase tracking-wider mb-2" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
                   Валентайнская Газета
                 </h1>
-                <div className="text-sm uppercase tracking-widest">
+                <div className="text-xs md:text-sm uppercase tracking-widest">
                   The Valentine Gazette
                 </div>
               </div>
-              <div className="grid grid-cols-3 text-center text-xs border-t-2 border-black pt-2">
+              <div className="grid grid-cols-3 text-center text-[10px] md:text-xs border-t-2 border-black pt-2">
                 <div>26 октября 1925</div>
                 <div className="border-l-2 border-r-2 border-black">Цена: 5 центов</div>
-                <div>Выпуск ежедневный</div>
+                <div className="hidden md:block">Выпуск ежедневный</div>
+                <div className="md:hidden">Ежедневно</div>
               </div>
             </div>
           </div>
