@@ -29,9 +29,16 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
         </div>
         
         <div className="text-center py-6 border-b-4 border-black">
-          <h1 className="text-6xl md:text-7xl font-display font-black text-black mb-3 leading-none">
-            Мафия Таймс
-          </h1>
+          <div className="flex items-center justify-center gap-6 mb-3">
+            <img 
+              src="https://mh-rp.com/uploads/125-image222.png" 
+              alt="Mafia House RDR2"
+              className="h-20 md:h-24 object-contain drop-shadow-2xl"
+            />
+            <h1 className="text-6xl md:text-7xl font-display font-black text-black leading-none">
+              Мафия Таймс
+            </h1>
+          </div>
           <p className="text-sm font-headline tracking-[0.3em] uppercase border-t-2 border-b-2 border-black py-1 inline-block px-8">
             Всё о нашей семье
           </p>
