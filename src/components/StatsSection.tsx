@@ -93,37 +93,37 @@ const StatsSection = () => {
   };
 
   return (
-    <section className="min-h-screen pt-[280px] pb-16 newspaper-texture">
+    <section className="min-h-screen pt-[180px] md:pt-[280px] pb-8 md:pb-16 newspaper-texture">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="border-8 border-black aged-paper shadow-2xl mb-12 transform -rotate-1">
-            <div className="border-4 border-black m-2 bg-white p-6 text-center">
-              <div className="border-2 border-black p-4">
-                <Icon name="BarChart3" size={48} className="mx-auto mb-3 text-black" />
-                <h1 className="text-7xl font-headline uppercase tracking-wider mb-2" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
+          <div className="border-4 md:border-6 lg:border-8 border-black aged-paper shadow-2xl mb-6 md:mb-12 transform -rotate-1">
+            <div className="border-2 md:border-3 lg:border-4 border-black m-2 bg-white p-3 md:p-4 lg:p-6 text-center">
+              <div className="border border-black md:border-2 p-2 md:p-3 lg:p-4">
+                <Icon name="BarChart3" size={32} className="mx-auto mb-2 md:mb-3 text-black md:w-10 md:h-10 lg:w-12 lg:h-12" />
+                <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-headline uppercase tracking-wide md:tracking-wider mb-2 leading-tight break-words" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
                   Статистика и Мониторинг
                 </h1>
-                <div className="text-sm uppercase tracking-widest border-t-2 border-b-2 border-black py-2 mt-3">
+                <div className="text-xs md:text-sm uppercase tracking-wider md:tracking-widest border-t border-b md:border-t-2 md:border-b-2 border-black py-1 md:py-2 mt-2 md:mt-3 break-words">
                   Данные сервера в реальном времени
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 lg:gap-4 mb-4 md:mb-6 lg:mb-8">
             {serverStats.map((stat, index) => (
               <div 
                 key={index} 
-                className="border-4 border-black aged-paper shadow-xl transform hover:scale-105 transition-transform"
+                className="border-2 md:border-3 lg:border-4 border-black aged-paper shadow-xl transform hover:scale-105 transition-transform"
               >
-                <div className="border-b-2 border-black bg-black text-white p-2 text-center">
-                  <Icon name={stat.icon as any} className="mx-auto" size={24} />
+                <div className="border-b border-black md:border-b-2 bg-black text-white p-1 md:p-2 text-center">
+                  <Icon name={stat.icon as any} className="mx-auto" size={18} />
                 </div>
-                <div className="p-4 text-center">
-                  <div className="text-3xl font-headline font-bold mb-1">
+                <div className="p-2 md:p-3 lg:p-4 text-center">
+                  <div className="text-xl md:text-2xl lg:text-3xl font-headline font-bold mb-0.5 md:mb-1 break-words">
                     {stat.value}
                   </div>
-                  <div className="text-[10px] font-body uppercase tracking-wider">
+                  <div className="text-[9px] md:text-[10px] font-body uppercase tracking-wider break-words leading-tight">
                     {stat.label}
                   </div>
                 </div>
@@ -131,54 +131,54 @@ const StatsSection = () => {
             ))}
           </div>
 
-          <div className="border-t-4 border-b-4 border-black py-3 mb-8 bg-white text-center">
-            <h2 className="text-3xl font-headline uppercase tracking-wider">Состояние серверов</h2>
+          <div className="border-t-2 md:border-t-3 lg:border-t-4 border-b-2 md:border-b-3 lg:border-b-4 border-black py-2 md:py-3 mb-4 md:mb-6 lg:mb-8 bg-white text-center">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-headline uppercase tracking-wider break-words leading-tight">Состояние серверов</h2>
           </div>
 
-          <div className="space-y-6 mb-12">
+          <div className="space-y-3 md:space-y-4 lg:space-y-6 mb-6 md:mb-8 lg:mb-12">
             {servers.map((server) => (
               <div 
                 key={server.id}
-                className="border-6 border-black aged-paper shadow-xl transform hover:rotate-0 transition-transform"
+                className="border-4 md:border-5 lg:border-6 border-black aged-paper shadow-xl transform hover:rotate-0 transition-transform"
                 style={{transform: `rotate(${server.id % 2 === 0 ? '0.5deg' : '-0.5deg'})`}}
               >
-                <div className="flex items-center justify-between p-4 border-b-4 border-black bg-white">
-                  <div className="flex items-center gap-4">
-                    <div className={`w-6 h-6 border-4 border-black ${getStatusColor(server.status)} ${server.status === 'online' ? 'animate-pulse' : ''}`} />
-                    <div>
-                      <h4 className="font-headline uppercase text-xl">{server.name}</h4>
-                      <div className="text-xs font-body flex items-center gap-3 mt-1">
-                        <span className="flex items-center gap-1">
-                          <Icon name="Package" size={12} />
-                          {server.version}
+                <div className="flex flex-col md:flex-row items-start md:items-center justify-between p-2 md:p-3 lg:p-4 border-b-2 md:border-b-3 lg:border-b-4 border-black bg-white gap-2 md:gap-4">
+                  <div className="flex items-center gap-2 md:gap-3 lg:gap-4 min-w-0 flex-1">
+                    <div className={`w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 border-2 md:border-3 lg:border-4 border-black ${getStatusColor(server.status)} ${server.status === 'online' ? 'animate-pulse' : ''} flex-shrink-0`} />
+                    <div className="min-w-0 flex-1">
+                      <h4 className="font-headline uppercase text-sm md:text-base lg:text-xl break-words leading-tight">{server.name}</h4>
+                      <div className="text-[9px] md:text-xs font-body flex flex-wrap items-center gap-1 md:gap-2 lg:gap-3 mt-0.5 md:mt-1">
+                        <span className="flex items-center gap-0.5 md:gap-1">
+                          <Icon name="Package" size={10} className="md:w-3 md:h-3" />
+                          <span className="text-[8px] md:text-xs">{server.version}</span>
                         </span>
-                        <span className="border-l-2 border-black pl-3 flex items-center gap-1">
-                          <Icon name="MapPin" size={12} />
-                          {server.map}
+                        <span className="border-l border-black md:border-l-2 pl-1 md:pl-2 lg:pl-3 flex items-center gap-0.5 md:gap-1">
+                          <Icon name="MapPin" size={10} className="md:w-3 md:h-3" />
+                          <span className="text-[8px] md:text-xs">{server.map}</span>
                         </span>
                       </div>
                     </div>
                   </div>
-                  <Badge className="bg-white text-black border-4 border-black font-headline uppercase text-sm px-4 py-2">
+                  <Badge className="bg-white text-black border-2 md:border-3 lg:border-4 border-black font-headline uppercase text-[10px] md:text-xs lg:text-sm px-2 md:px-3 lg:px-4 py-1 md:py-1.5 lg:py-2 whitespace-nowrap flex-shrink-0">
                     {getStatusText(server.status)}
                   </Badge>
                 </div>
                 
-                <div className="grid grid-cols-3 gap-4 p-4">
-                  <div className="border-4 border-black bg-white p-3 text-center">
-                    <Icon name="Users" size={20} className="mx-auto mb-1" />
-                    <div className="font-body mb-1 text-[10px] uppercase">Игроки</div>
-                    <div className="font-headline font-bold text-lg">{server.players}</div>
+                <div className="grid grid-cols-3 gap-2 md:gap-3 lg:gap-4 p-2 md:p-3 lg:p-4">
+                  <div className="border-2 md:border-3 lg:border-4 border-black bg-white p-1.5 md:p-2 lg:p-3 text-center">
+                    <Icon name="Users" size={16} className="mx-auto mb-0.5 md:mb-1 md:w-5 md:h-5" />
+                    <div className="font-body mb-0.5 md:mb-1 text-[8px] md:text-[10px] uppercase break-words leading-tight">Игроки</div>
+                    <div className="font-headline font-bold text-xs md:text-sm lg:text-base break-words">{server.players}</div>
                   </div>
-                  <div className="border-4 border-black bg-white p-3 text-center">
-                    <Icon name="Wifi" size={20} className="mx-auto mb-1" />
-                    <div className="font-body mb-1 text-[10px] uppercase">Пинг</div>
-                    <div className="font-headline font-bold text-lg">{server.ping}</div>
+                  <div className="border-2 md:border-3 lg:border-4 border-black bg-white p-1.5 md:p-2 lg:p-3 text-center">
+                    <Icon name="Wifi" size={16} className="mx-auto mb-0.5 md:mb-1 md:w-5 md:h-5" />
+                    <div className="font-body mb-0.5 md:mb-1 text-[8px] md:text-[10px] uppercase break-words leading-tight">Пинг</div>
+                    <div className="font-headline font-bold text-xs md:text-sm lg:text-base break-words">{server.ping}</div>
                   </div>
-                  <div className="border-4 border-black bg-white p-3 text-center">
-                    <Icon name="TrendingUp" size={20} className="mx-auto mb-1" />
-                    <div className="font-body mb-1 text-[10px] uppercase">Аптайм</div>
-                    <div className="font-headline font-bold text-lg">{server.uptime}</div>
+                  <div className="border-2 md:border-3 lg:border-4 border-black bg-white p-1.5 md:p-2 lg:p-3 text-center">
+                    <Icon name="TrendingUp" size={16} className="mx-auto mb-0.5 md:mb-1 md:w-5 md:h-5" />
+                    <div className="font-body mb-0.5 md:mb-1 text-[8px] md:text-[10px] uppercase break-words leading-tight">Аптайм</div>
+                    <div className="font-headline font-bold text-xs md:text-sm lg:text-base break-words">{server.uptime}</div>
                   </div>
                 </div>
               </div>

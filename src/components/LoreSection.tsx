@@ -11,7 +11,7 @@ const LoreSection = () => {
                 <div className="text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.5em] font-body">Выпуск № 47</div>
               </div>
               <div className="p-4 md:p-6 border-b-2 md:border-b-4 border-black">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline uppercase tracking-wider mb-2 leading-tight" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
+                <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-headline uppercase tracking-wide md:tracking-wider mb-2 leading-tight break-words" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
                   Новостинская Газета
                 </h1>
                 <div className="text-xs md:text-sm uppercase tracking-widest">

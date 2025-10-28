@@ -157,7 +157,7 @@ const RulesSection = () => {
             <div className="border-2 md:border-4 border-black p-3 md:p-4 bg-black text-white">
               <div className="border-2 border-white p-2 md:p-3">
                 <Icon name="Scale" size={28} className="mx-auto mb-2 md:w-10 md:h-10" />
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline uppercase tracking-widest mb-2 leading-tight break-words">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-headline uppercase tracking-wider md:tracking-widest mb-2 leading-tight break-words">
                   Регламент
                 </h2>
                 <div className="text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] border-t-2 border-b-2 border-white py-1 mt-2">
@@ -170,27 +170,27 @@ const RulesSection = () => {
           <div className="grid grid-cols-3 gap-2 md:gap-4 mb-6 md:mb-8">
             <button
               onClick={() => setActiveCategory('general')}
-              className={`border-4 md:border-6 border-black aged-paper p-2 md:p-4 transform transition-all hover:scale-105 hover:-rotate-1 ${
+              className={`border-2 md:border-4 lg:border-6 border-black aged-paper p-1 md:p-2 lg:p-4 transform transition-all hover:scale-105 hover:-rotate-1 ${
                 activeCategory === 'general' ? 'shadow-2xl -rotate-1' : 'shadow-lg'
               }`}
             >
-              <div className="border-2 border-black p-2 md:p-3">
-                <Icon name="BookOpen" size={20} className="mx-auto mb-1 md:mb-2 md:w-8 md:h-8" />
-                <div className="font-headline uppercase text-xs md:text-base lg:text-lg leading-tight">Общие</div>
-                <div className="font-headline uppercase text-xs md:text-base lg:text-lg leading-tight">Правила</div>
+              <div className="border border-black md:border-2 p-1 md:p-2 lg:p-3">
+                <Icon name="BookOpen" size={16} className="mx-auto mb-0.5 md:mb-1 lg:mb-2 md:w-6 md:h-6 lg:w-8 lg:h-8" />
+                <div className="font-headline uppercase text-[10px] md:text-xs lg:text-sm xl:text-base leading-tight break-words">Общие</div>
+                <div className="font-headline uppercase text-[10px] md:text-xs lg:text-sm xl:text-base leading-tight break-words">Правила</div>
               </div>
             </button>
             
             <button
               onClick={() => setActiveCategory('admin')}
-              className={`border-4 md:border-6 border-black aged-paper p-2 md:p-4 transform transition-all hover:scale-105 hover:rotate-1 ${
+              className={`border-2 md:border-4 lg:border-6 border-black aged-paper p-1 md:p-2 lg:p-4 transform transition-all hover:scale-105 hover:rotate-1 ${
                 activeCategory === 'admin' ? 'shadow-2xl rotate-1' : 'shadow-lg'
               }`}
             >
-              <div className="border-2 border-black p-2 md:p-3">
-                <Icon name="Shield" size={20} className="mx-auto mb-1 md:mb-2 md:w-8 md:h-8" />
-                <div className="font-headline uppercase text-xs md:text-base lg:text-lg leading-tight">Регламент</div>
-                <div className="font-headline uppercase text-xs md:text-base lg:text-lg leading-tight">Администрации</div>
+              <div className="border border-black md:border-2 p-1 md:p-2 lg:p-3">
+                <Icon name="Shield" size={16} className="mx-auto mb-0.5 md:mb-1 lg:mb-2 md:w-6 md:h-6 lg:w-8 lg:h-8" />
+                <div className="font-headline uppercase text-[9px] md:text-xs lg:text-sm xl:text-base leading-tight break-words">Регламент</div>
+                <div className="font-headline uppercase text-[9px] md:text-xs lg:text-sm xl:text-base leading-tight break-words">Админ-ции</div>
               </div>
             </button>
             

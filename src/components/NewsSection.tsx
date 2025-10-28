@@ -97,19 +97,19 @@ const NewsSection = () => {
                     <div className="text-sm md:text-lg lg:text-xl font-headline italic mb-4 border-l-2 md:border-l-4 border-black pl-3 leading-tight">
                       {item.subtitle}
                     </div>
-                    <div className="grid md:grid-cols-2 gap-6 mb-4">
-                      <div className="border-4 border-black photo-border">
+                    <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4">
+                      <div className="border-2 md:border-4 border-black photo-border">
                         <img 
                           src={item.image} 
                           alt={item.title}
                           className="w-full aspect-[4/3] object-cover old-photo"
                         />
                       </div>
-                      <div className="space-y-3">
-                        <p className="font-body text-base leading-relaxed text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none">
+                      <div className="space-y-2 md:space-y-3">
+                        <p className="font-body text-xs md:text-sm lg:text-base leading-relaxed text-justify first-letter:text-3xl md:first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none">
                           {item.excerpt}
                         </p>
-                        <p className="font-body text-sm leading-relaxed text-justify">
+                        <p className="font-body text-xs md:text-sm leading-relaxed text-justify">
                           {item.content}
                         </p>
                       </div>
@@ -121,39 +121,39 @@ const NewsSection = () => {
                 </div>
               ))}
 
-              <div className="border-6 border-black aged-paper shadow-xl">
-                <div className="border-b-2 border-black p-3 bg-black text-white text-center">
-                  <div className="text-lg font-headline uppercase tracking-wider">Городская хроника</div>
+              <div className="border-4 md:border-6 border-black aged-paper shadow-xl">
+                <div className="border-b-2 border-black p-2 md:p-3 bg-black text-white text-center">
+                  <div className="text-sm md:text-base lg:text-lg font-headline uppercase tracking-wider break-words">Городская хроника</div>
                 </div>
-                <div className="p-6 newspaper-column">
+                <div className="p-4 md:p-6 newspaper-column">
                   {news.slice(1, 3).map((item) => (
-                    <div key={item.id} className="mb-6 break-inside-avoid">
-                      <div className="flex items-start gap-3 mb-2">
-                        <div className="w-20 h-20 flex-shrink-0 border-2 border-black">
+                    <div key={item.id} className="mb-4 md:mb-6 break-inside-avoid">
+                      <div className="flex items-start gap-2 md:gap-3 mb-2">
+                        <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 border-2 border-black">
                           <img 
                             src={item.image} 
                             alt={item.title}
                             className="w-full h-full object-cover old-photo"
                           />
                         </div>
-                        <div className="flex-1">
-                          <div className="text-[10px] uppercase mb-1 flex items-center justify-between">
-                            <span>{item.category}</span>
-                            <span>{item.date}</span>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-[9px] md:text-[10px] uppercase mb-1 flex items-center justify-between gap-1">
+                            <span className="truncate">{item.category}</span>
+                            <span className="whitespace-nowrap text-[8px] md:text-[10px]">{item.date}</span>
                           </div>
-                          <h3 className="text-lg font-headline font-bold uppercase leading-tight mb-1">
+                          <h3 className="text-sm md:text-base lg:text-lg font-headline font-bold uppercase leading-tight mb-1 break-words">
                             {item.title}
                           </h3>
                         </div>
                       </div>
-                      <div className="text-sm font-headline italic mb-2 border-l-2 border-black pl-2">
+                      <div className="text-xs md:text-sm font-headline italic mb-2 border-l-2 border-black pl-2 leading-tight">
                         {item.subtitle}
                       </div>
-                      <p className="font-body text-xs leading-relaxed text-justify">
+                      <p className="font-body text-[10px] md:text-xs leading-relaxed text-justify">
                         {item.excerpt}
                       </p>
                       {item.content && (
-                        <p className="font-body text-xs leading-relaxed text-justify mt-2">
+                        <p className="font-body text-[10px] md:text-xs leading-relaxed text-justify mt-2">
                           {item.content}
                         </p>
                       )}
@@ -164,11 +164,11 @@ const NewsSection = () => {
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="border-6 border-black aged-paper shadow-xl transform rotate-1">
-                <div className="border-b-4 border-black p-3 bg-black text-white text-center">
-                  <Icon name="Pin" size={24} className="mx-auto mb-1" />
-                  <h3 className="text-base font-headline uppercase tracking-wider">
+            <div className="space-y-4 md:space-y-6">
+              <div className="border-4 md:border-6 border-black aged-paper shadow-xl transform rotate-1">
+                <div className="border-b-2 md:border-b-4 border-black p-2 md:p-3 bg-black text-white text-center">
+                  <Icon name="Pin" size={20} className="mx-auto mb-1 md:w-6 md:h-6" />
+                  <h3 className="text-sm md:text-base font-headline uppercase tracking-wider break-words">
                     Доска объявлений
                   </h3>
                 </div>
@@ -201,18 +201,18 @@ const NewsSection = () => {
                 </div>
               </div>
 
-              <div className="border-6 border-black aged-paper shadow-xl transform -rotate-1">
-                <div className="border-b-2 border-black p-3 bg-white text-center">
-                  <div className="text-sm font-headline uppercase tracking-wider">Короткие новости</div>
+              <div className="border-4 md:border-6 border-black aged-paper shadow-xl transform -rotate-1">
+                <div className="border-b-2 border-black p-2 md:p-3 bg-white text-center">
+                  <div className="text-xs md:text-sm font-headline uppercase tracking-wider break-words">Короткие новости</div>
                 </div>
                 <div className="p-4 space-y-4">
                   {news.slice(3).map((item) => (
-                    <div key={item.id} className="border-b-2 border-dashed border-black pb-3 last:border-0">
-                      <div className="text-[10px] uppercase mb-1">{item.date}</div>
-                      <h4 className="text-sm font-headline font-bold uppercase leading-tight mb-1">
+                    <div key={item.id} className="border-b-2 border-dashed border-black pb-2 md:pb-3 last:border-0">
+                      <div className="text-[9px] md:text-[10px] uppercase mb-1">{item.date}</div>
+                      <h4 className="text-xs md:text-sm font-headline font-bold uppercase leading-tight mb-1 break-words">
                         {item.title}
                       </h4>
-                      <p className="text-[11px] font-body leading-snug text-justify">
+                      <p className="text-[10px] md:text-[11px] font-body leading-snug text-justify">
                         {item.excerpt}
                       </p>
                     </div>

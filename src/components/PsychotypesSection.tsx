@@ -146,77 +146,77 @@ const PsychotypesSection = () => {
   ];
 
   return (
-    <section className="min-h-screen pt-[280px] pb-16 newspaper-texture">
+    <section className="min-h-screen pt-[180px] md:pt-[280px] pb-8 md:pb-16 newspaper-texture">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="border-8 border-black aged-paper shadow-2xl mb-12 transform -rotate-1">
-            <div className="border-4 border-black m-2 bg-white p-6 text-center">
-              <div className="border-2 border-black p-4">
-                <Icon name="Brain" size={48} className="mx-auto mb-3 text-black" />
-                <h1 className="text-7xl font-headline uppercase tracking-wider mb-2" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
+          <div className="border-4 md:border-6 lg:border-8 border-black aged-paper shadow-2xl mb-6 md:mb-12 transform -rotate-1">
+            <div className="border-2 md:border-3 lg:border-4 border-black m-2 bg-white p-3 md:p-4 lg:p-6 text-center">
+              <div className="border border-black md:border-2 p-2 md:p-3 lg:p-4">
+                <Icon name="Brain" size={32} className="mx-auto mb-2 md:mb-3 text-black md:w-10 md:h-10 lg:w-12 lg:h-12" />
+                <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-headline uppercase tracking-wide md:tracking-wider mb-2 leading-tight break-words" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
                   Психотипы персонажей
                 </h1>
-                <div className="text-base uppercase tracking-widest border-t-2 border-b-2 border-black py-2 mt-3">
+                <div className="text-xs md:text-sm lg:text-base uppercase tracking-wider md:tracking-widest border-t border-b md:border-t-2 md:border-b-2 border-black py-1 md:py-2 mt-2 md:mt-3 break-words">
                   Выбери свой путь в мире Mafia House
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-4 md:space-y-6 lg:space-y-8">
             {psychotypes.map((psycho, index) => (
               <div 
                 key={index}
-                className="border-8 border-black aged-paper shadow-xl hover:shadow-2xl transition-all group"
+                className="border-4 md:border-6 lg:border-8 border-black aged-paper shadow-xl hover:shadow-2xl transition-all group"
                 style={{transform: `rotate(${index % 2 === 0 ? '0.5deg' : '-0.5deg'})`}}
               >
-                <div className="grid md:grid-cols-[350px_1fr] gap-0">
-                  <div className="relative border-r-6 border-black overflow-hidden">
+                <div className="grid md:grid-cols-[280px_1fr] lg:grid-cols-[350px_1fr] gap-0">
+                  <div className="relative md:border-r-4 lg:border-r-6 border-black overflow-hidden h-64 md:h-auto">
                     <img 
                       src={psycho.image} 
                       alt={psycho.name}
                       className="w-full h-full object-cover"
                     />
                     <div className={`absolute inset-0 bg-gradient-to-t ${psycho.color} opacity-70`} />
-                    <div className="absolute inset-0 border-4 border-black m-2" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                      <div className={`border-4 border-amber-200 ${psycho.accentColor} p-3 mb-3`}>
-                        <h3 className="text-2xl md:text-3xl font-headline uppercase tracking-wide mb-2 text-amber-100 break-words leading-tight">
+                    <div className="absolute inset-0 border-2 md:border-3 lg:border-4 border-black m-1 md:m-2" />
+                    <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 lg:p-4 text-white">
+                      <div className={`border-2 md:border-3 lg:border-4 border-amber-200 ${psycho.accentColor} p-2 md:p-2.5 lg:p-3 mb-2 md:mb-3`}>
+                        <h3 className="text-xl md:text-2xl lg:text-3xl font-headline uppercase tracking-wide mb-1 md:mb-2 text-amber-100 break-words leading-tight">
                           {psycho.name}
                         </h3>
-                        <div className="flex flex-wrap items-center gap-2 text-sm">
-                          <div className="flex items-center gap-1 border-2 border-amber-200 bg-black/50 px-2 py-1">
-                            <Icon name="DollarSign" size={16} className="text-amber-200" />
-                            <span className="font-headline text-amber-100">{psycho.deposit}</span>
+                        <div className="flex flex-wrap items-center gap-1 md:gap-2 text-xs md:text-sm">
+                          <div className="flex items-center gap-1 border border-amber-200 md:border-2 bg-black/50 px-1.5 md:px-2 py-0.5 md:py-1">
+                            <Icon name="DollarSign" size={14} className="text-amber-200 md:w-4 md:h-4" />
+                            <span className="font-headline text-amber-100 text-xs md:text-sm">{psycho.deposit}</span>
                           </div>
-                          <div className="flex items-center gap-1 border-2 border-amber-200 bg-black/50 px-2 py-1">
-                            <Icon name="MapPin" size={16} className="text-amber-200" />
-                            <span className="font-body text-amber-100">{psycho.startCity}</span>
+                          <div className="flex items-center gap-1 border border-amber-200 md:border-2 bg-black/50 px-1.5 md:px-2 py-0.5 md:py-1">
+                            <Icon name="MapPin" size={14} className="text-amber-200 md:w-4 md:h-4" />
+                            <span className="font-body text-amber-100 text-xs md:text-sm truncate max-w-[120px]">{psycho.startCity}</span>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="p-8 bg-white">
-                    <div className="border-4 border-black bg-gradient-to-br from-amber-50 to-amber-100 p-6 mb-6">
-                      <p className="font-body text-xl md:text-2xl leading-relaxed">
+                  <div className="p-3 md:p-5 lg:p-8 bg-white">
+                    <div className="border-2 md:border-3 lg:border-4 border-black bg-gradient-to-br from-amber-50 to-amber-100 p-3 md:p-4 lg:p-6 mb-3 md:mb-4 lg:mb-6">
+                      <p className="font-body text-sm md:text-base lg:text-xl leading-relaxed">
                         {psycho.description}
                       </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
                       {psycho.bonuses.length > 0 && (
-                        <div className="border-4 border-black bg-white p-5">
-                          <div className="flex items-center gap-2 mb-4 pb-3 border-b-4 border-black">
-                            <Icon name="TrendingUp" size={24} className="text-green-700 flex-shrink-0" />
-                            <h4 className="font-headline uppercase text-base md:text-lg">Преимущества</h4>
+                        <div className="border-2 md:border-3 lg:border-4 border-black bg-white p-2 md:p-3 lg:p-5">
+                          <div className="flex items-center gap-1 md:gap-2 mb-2 md:mb-3 lg:mb-4 pb-2 md:pb-3 border-b-2 md:border-b-3 lg:border-b-4 border-black">
+                            <Icon name="TrendingUp" size={18} className="text-green-700 flex-shrink-0 md:w-5 md:h-5 lg:w-6 lg:h-6" />
+                            <h4 className="font-headline uppercase text-xs md:text-sm lg:text-base break-words leading-tight">Преимущества</h4>
                           </div>
-                          <div className="space-y-3">
+                          <div className="space-y-2 md:space-y-2.5 lg:space-y-3">
                             {psycho.bonuses.map((bonus, i) => (
-                              <div key={i} className="flex items-center justify-between gap-2 text-sm md:text-base border-b-2 border-black pb-2 last:border-0">
-                                <span className="font-body break-words flex-1">{bonus.label}</span>
-                                <Badge className="bg-green-700 text-white border-2 border-black text-xs md:text-sm px-2 py-1 whitespace-nowrap flex-shrink-0">
+                              <div key={i} className="flex items-center justify-between gap-1 md:gap-2 text-xs md:text-sm border-b border-black md:border-b-2 pb-1 md:pb-2 last:border-0">
+                                <span className="font-body break-words flex-1 leading-tight">{bonus.label}</span>
+                                <Badge className="bg-green-700 text-white border border-black md:border-2 text-[10px] md:text-xs px-1 md:px-2 py-0.5 md:py-1 whitespace-nowrap flex-shrink-0">
                                   {bonus.value}
                                 </Badge>
                               </div>
@@ -226,16 +226,16 @@ const PsychotypesSection = () => {
                       )}
 
                       {psycho.penalties.length > 0 && (
-                        <div className="border-4 border-black bg-white p-5">
-                          <div className="flex items-center gap-2 mb-4 pb-3 border-b-4 border-black">
-                            <Icon name="TrendingDown" size={24} className="text-red-700 flex-shrink-0" />
-                            <h4 className="font-headline uppercase text-base md:text-lg">Недостатки</h4>
+                        <div className="border-2 md:border-3 lg:border-4 border-black bg-white p-2 md:p-3 lg:p-5">
+                          <div className="flex items-center gap-1 md:gap-2 mb-2 md:mb-3 lg:mb-4 pb-2 md:pb-3 border-b-2 md:border-b-3 lg:border-b-4 border-black">
+                            <Icon name="TrendingDown" size={18} className="text-red-700 flex-shrink-0 md:w-5 md:h-5 lg:w-6 lg:h-6" />
+                            <h4 className="font-headline uppercase text-xs md:text-sm lg:text-base break-words leading-tight">Недостатки</h4>
                           </div>
-                          <div className="space-y-3">
+                          <div className="space-y-2 md:space-y-2.5 lg:space-y-3">
                             {psycho.penalties.map((penalty, i) => (
-                              <div key={i} className="flex items-center justify-between gap-2 text-sm md:text-base border-b-2 border-black pb-2 last:border-0">
-                                <span className="font-body break-words flex-1">{penalty.label}</span>
-                                <Badge className="bg-red-700 text-white border-2 border-black text-xs md:text-sm px-2 py-1 whitespace-nowrap flex-shrink-0">
+                              <div key={i} className="flex items-center justify-between gap-1 md:gap-2 text-xs md:text-sm border-b border-black md:border-b-2 pb-1 md:pb-2 last:border-0">
+                                <span className="font-body break-words flex-1 leading-tight">{penalty.label}</span>
+                                <Badge className="bg-red-700 text-white border border-black md:border-2 text-[10px] md:text-xs px-1 md:px-2 py-0.5 md:py-1 whitespace-nowrap flex-shrink-0">
                                   {penalty.value}
                                 </Badge>
                               </div>
@@ -244,17 +244,17 @@ const PsychotypesSection = () => {
                         </div>
                       )}
 
-                      <div className="border-4 border-black bg-white p-5">
-                        <div className="flex items-center gap-2 mb-4 pb-3 border-b-4 border-black">
-                          <Icon name="AlertTriangle" size={24} className="text-amber-700 flex-shrink-0" />
-                          <h4 className="font-headline uppercase text-base md:text-lg">Риски</h4>
+                      <div className="border-2 md:border-3 lg:border-4 border-black bg-white p-2 md:p-3 lg:p-5">
+                        <div className="flex items-center gap-1 md:gap-2 mb-2 md:mb-3 lg:mb-4 pb-2 md:pb-3 border-b-2 md:border-b-3 lg:border-b-4 border-black">
+                          <Icon name="AlertTriangle" size={18} className="text-amber-700 flex-shrink-0 md:w-5 md:h-5 lg:w-6 lg:h-6" />
+                          <h4 className="font-headline uppercase text-xs md:text-sm lg:text-base break-words leading-tight">Риски</h4>
                         </div>
-                        <div className="space-y-3">
+                        <div className="space-y-2 md:space-y-2.5 lg:space-y-3">
                           {psycho.risks.map((risk, i) => (
-                            <div key={i} className="text-sm md:text-base border-b-2 border-black pb-2 last:border-0">
-                              <span className="font-body block mb-1 break-words">{risk.label}</span>
+                            <div key={i} className="text-xs md:text-sm border-b border-black md:border-b-2 pb-1 md:pb-2 last:border-0">
+                              <span className="font-body block mb-0.5 md:mb-1 break-words leading-tight">{risk.label}</span>
                               {risk.value && (
-                                <span className="font-headline font-bold text-amber-900 text-xs md:text-sm">
+                                <span className="font-headline font-bold text-amber-900 text-[10px] md:text-xs">
                                   {risk.value}
                                 </span>
                               )}
