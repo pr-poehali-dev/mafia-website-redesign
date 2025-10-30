@@ -56,9 +56,9 @@ const NewsSection = () => {
     <section className="min-h-screen pt-[180px] md:pt-[280px] pb-8 md:pb-16 newspaper-texture overflow-x-hidden w-full">
       <div className="w-full px-3 md:px-4 max-w-7xl mx-auto">
         <div className="w-full">
-          <div className="border-3 md:border-6 lg:border-8 border-black aged-paper shadow-2xl mb-6 md:mb-12 mx-auto" style={{maxWidth: 'calc(100vw - 24px)'}}>
-            <div className="border-2 md:border-4 border-black m-1 md:m-2 bg-white p-2 md:p-4 lg:p-6">
-              <div className="text-center border-b-2 md:border-b-4 border-black pb-2 md:pb-4 mb-2 md:mb-4">
+          <div className="border-3 md:border-6 lg:border-8 border-mafia-sepia aged-paper shadow-2xl mb-6 md:mb-12 mx-auto torn-edge-top crumpled-paper burn-mark burn-mark-top-right ink-stain ink-stain-bottom-right" style={{maxWidth: 'calc(100vw - 24px)'}}>
+            <div className="border-2 md:border-4 border-mafia-sepia m-1 md:m-2 aged-paper p-2 md:p-4 lg:p-6">
+              <div className="text-center border-b-2 md:border-b-4 border-mafia-sepia pb-2 md:pb-4 mb-2 md:mb-4 text-mafia-gray">
                 <div className="text-[8px] md:text-[10px] uppercase tracking-wider md:tracking-[0.3em] mb-1 md:mb-2">№ 42 • Год VIII</div>
                 <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-headline uppercase tracking-tight md:tracking-wide lg:tracking-wider mb-1 md:mb-2 leading-tight" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
                   Валентайнская Газета
@@ -67,9 +67,9 @@ const NewsSection = () => {
                   The Valentine Gazette
                 </div>
               </div>
-              <div className="grid grid-cols-3 text-center text-[8px] md:text-[10px] border-t-2 border-black pt-1 md:pt-2">
+              <div className="grid grid-cols-3 text-center text-[8px] md:text-[10px] border-t-2 border-mafia-sepia pt-1 md:pt-2 text-mafia-gray-light">
                 <div className="px-1">26.10.1925</div>
-                <div className="border-l-2 border-r-2 border-black px-1">5¢</div>
+                <div className="border-l-2 border-r-2 border-mafia-sepia px-1">5¢</div>
                 <div className="px-1">Ежедневно</div>
               </div>
             </div>
@@ -78,26 +78,26 @@ const NewsSection = () => {
           <div className="grid lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8 w-full">
             <div className="lg:col-span-2 space-y-3 md:space-y-6 lg:space-y-8 w-full">
               {news.slice(0, 1).map((item) => (
-                <div key={item.id} className="border-3 md:border-4 lg:border-6 border-black aged-paper shadow-2xl w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
-                  <div className="border-b-2 md:border-b-4 border-black p-2 md:p-3 bg-[#8B0000] text-white text-center">
+                <div key={item.id} className="border-3 md:border-4 lg:border-6 border-mafia-sepia aged-paper shadow-2xl w-full torn-edge-bottom crumpled-paper burn-mark burn-mark-bottom-left ink-stain ink-stain-top-left" style={{maxWidth: 'calc(100vw - 24px)'}}>
+                  <div className="border-b-2 md:border-b-4 border-mafia-sepia p-2 md:p-3 bg-mafia-red text-mafia-cream text-center">
                     <div className="flex items-center justify-center gap-1 md:gap-2 text-[10px] md:text-xs lg:text-sm font-headline uppercase tracking-wide">
                       <Icon name="AlertCircle" size={14} className="md:w-4 md:h-4" />
                       <span className="truncate">{item.category}</span>
                       <Icon name="AlertCircle" size={14} className="md:w-4 md:h-4" />
                     </div>
                   </div>
-                  <div className="p-3 md:p-4 lg:p-6">
-                    <div className="text-right text-[9px] md:text-[10px] mb-2 uppercase tracking-wide border-b border-black pb-1 md:pb-2">
+                  <div className="p-3 md:p-4 lg:p-6 text-mafia-gray">
+                    <div className="text-right text-[9px] md:text-[10px] mb-2 uppercase tracking-wide border-b border-mafia-sepia pb-1 md:pb-2 text-mafia-gray-light">
                       {item.date}
                     </div>
-                    <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-headline font-black leading-tight uppercase mb-2 md:mb-3 border-b-2 md:border-b-4 border-black pb-2 md:pb-3 break-words">
+                    <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-headline font-black leading-tight uppercase mb-2 md:mb-3 border-b-2 md:border-b-4 border-mafia-sepia pb-2 md:pb-3 break-words text-mafia-gray">
                       {item.title}
                     </h2>
-                    <div className="text-xs md:text-sm lg:text-base xl:text-lg font-headline italic mb-3 md:mb-4 border-l-2 md:border-l-4 border-black pl-2 md:pl-3 leading-tight">
+                    <div className="text-xs md:text-sm lg:text-base xl:text-lg font-headline italic mb-3 md:mb-4 border-l-2 md:border-l-4 border-mafia-sepia pl-2 md:pl-3 leading-tight text-mafia-gray-light">
                       {item.subtitle}
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 mb-3 md:mb-4">
-                      <div className="border-2 md:border-4 border-black">
+                      <div className="border-2 md:border-4 border-mafia-sepia">
                         <img 
                           src={item.image} 
                           alt={item.title}
@@ -113,22 +113,22 @@ const NewsSection = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="border-t-2 border-dashed border-black pt-2 md:pt-3 text-[10px] md:text-xs italic text-center">
+                    <div className="border-t-2 border-dashed border-mafia-sepia pt-2 md:pt-3 text-[10px] md:text-xs italic text-center text-mafia-gray-light">
                       Продолжение на стр. 3 →
                     </div>
                   </div>
                 </div>
               ))}
 
-              <div className="border-3 md:border-4 lg:border-6 border-black aged-paper shadow-xl w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
-                <div className="border-b-2 border-black p-2 md:p-3 bg-black text-white text-center">
+              <div className="border-3 md:border-4 lg:border-6 border-mafia-sepia aged-paper shadow-xl w-full torn-edge-top crumpled-paper burn-mark burn-mark-top-right ink-stain ink-stain-bottom-right" style={{maxWidth: 'calc(100vw - 24px)'}}>
+                <div className="border-b-2 border-mafia-sepia p-2 md:p-3 bg-mafia-gray text-mafia-cream text-center">
                   <div className="text-xs md:text-sm lg:text-base font-headline uppercase tracking-wide">Городская хроника</div>
                 </div>
-                <div className="p-3 md:p-4 lg:p-6">
+                <div className="p-3 md:p-4 lg:p-6 text-mafia-gray">
                   {news.slice(1, 3).map((item) => (
                     <div key={item.id} className="mb-3 md:mb-6 last:mb-0 break-inside-avoid">
                       <div className="flex items-start gap-2 md:gap-3 mb-2">
-                        <div className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 border-2 border-black">
+                        <div className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 border-2 border-mafia-sepia">
                           <img 
                             src={item.image} 
                             alt={item.title}

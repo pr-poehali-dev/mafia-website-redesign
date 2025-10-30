@@ -6,82 +6,82 @@
 
 @layer base {
   :root {
-    --background: 40 35% 92%;
-    --foreground: 0 0% 10%;
+    --background: 30 15% 18%;
+    --foreground: 40 20% 90%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 5%;
+    --card: 30 15% 15%;
+    --card-foreground: 40 20% 95%;
 
-    --popover: 0 0% 98%;
-    --popover-foreground: 0 0% 5%;
+    --popover: 30 15% 12%;
+    --popover-foreground: 40 20% 95%;
 
-    --primary: 348 83% 47%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 25 35% 25%;
+    --primary-foreground: 40 25% 85%;
 
-    --secondary: 0 0% 20%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 20 20% 20%;
+    --secondary-foreground: 40 20% 90%;
 
-    --muted: 0 0% 90%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 30 10% 25%;
+    --muted-foreground: 40 15% 60%;
 
-    --accent: 348 83% 47%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 25 30% 22%;
+    --accent-foreground: 40 25% 88%;
 
-    --destructive: 0 100% 27%;
-    --destructive-foreground: 0 0% 95%;
+    --destructive: 10 40% 25%;
+    --destructive-foreground: 40 20% 95%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 95%;
-    --ring: 348 83% 47%;
+    --border: 30 20% 25%;
+    --input: 30 15% 20%;
+    --ring: 25 35% 30%;
 
     --radius: 0rem;
 
-    --sidebar-background: 0 0% 95%;
-    --sidebar-foreground: 0 0% 5%;
-    --sidebar-primary: 348 83% 47%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 98%;
-    --sidebar-accent-foreground: 0 0% 5%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 348 83% 47%;
+    --sidebar-background: 30 15% 15%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 25 35% 25%;
+    --sidebar-primary-foreground: 40 25% 85%;
+    --sidebar-accent: 30 15% 18%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 30 20% 25%;
+    --sidebar-ring: 25 35% 30%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 30 15% 12%;
+    --foreground: 40 20% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 15% 10%;
+    --card-foreground: 40 20% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 15% 8%;
+    --popover-foreground: 40 20% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 40 20% 95%;
+    --primary-foreground: 30 15% 15%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 20 15% 15%;
+    --secondary-foreground: 40 20% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 30 10% 20%;
+    --muted-foreground: 40 15% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 20 15% 15%;
+    --accent-foreground: 40 20% 95%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 10 40% 20%;
+    --destructive-foreground: 40 20% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 30 15% 20%;
+    --input: 30 15% 15%;
+    --ring: 25 35% 40%;
+    --sidebar-background: 30 15% 10%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 25 35% 30%;
+    --sidebar-primary-foreground: 40 25% 90%;
+    --sidebar-accent: 30 15% 12%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 30 15% 18%;
+    --sidebar-ring: 25 35% 40%;
   }
 }
 
@@ -97,9 +97,9 @@
     position: relative;
     background: linear-gradient(
       to bottom,
-      #ede4d3 0%,
-      #e8dcc8 50%,
-      #e0d3bf 100%
+      #2a2318 0%,
+      #1f1a12 50%,
+      #1a150f 100%
     );
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
@@ -121,12 +121,12 @@
     background:
       radial-gradient(
         ellipse 1200px 800px at 15% 25%,
-        rgba(180, 140, 90, 0.08) 0%,
+        rgba(80, 60, 40, 0.15) 0%,
         transparent 50%
       ),
       radial-gradient(
         ellipse 1000px 900px at 85% 75%,
-        rgba(160, 120, 80, 0.06) 0%,
+        rgba(60, 45, 30, 0.12) 0%,
         transparent 50%
       );
     z-index: -3;
@@ -140,10 +140,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml,%3Csvg width="500" height="500" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="grain"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="1.8" numOctaves="4" seed="2" /%3E%3CfeColorMatrix values="0 0 0 0 0, 0 0 0 0 0, 0 0 0 0 0, 0 0 0 0.04 0"/%3E%3C/filter%3E%3Crect width="500" height="500" filter="url(%23grain)"/%3E%3C/svg%3E');
-    background-size: 300px 300px;
+    background: url('data:image/svg+xml,%3Csvg width="500" height="500" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="grain"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="2.2" numOctaves="5" seed="3" /%3E%3CfeColorMatrix values="0 0 0 0 0, 0 0 0 0 0, 0 0 0 0 0, 0 0 0 0.08 0"/%3E%3C/filter%3E%3Crect width="500" height="500" filter="url(%23grain)"/%3E%3C/svg%3E');
+    background-size: 250px 250px;
     z-index: -2;
     pointer-events: none;
+    opacity: 0.8;
   }
 
   h1 {
@@ -165,8 +166,8 @@
   .vintage-border {
     border-image: repeating-linear-gradient(
         45deg,
-        #000,
-        #000 10px,
+        #3d2f1f,
+        #3d2f1f 10px,
         transparent 10px,
         transparent 20px
       )
@@ -184,12 +185,12 @@
     background-image:
       radial-gradient(
         circle at 10% 20%,
-        rgba(0, 0, 0, 0.03) 1px,
+        rgba(0, 0, 0, 0.15) 1px,
         transparent 1px
       ),
       radial-gradient(
         circle at 90% 80%,
-        rgba(0, 0, 0, 0.03) 1px,
+        rgba(0, 0, 0, 0.12) 1px,
         transparent 1px
       );
     background-size: 100px 100px;
@@ -197,15 +198,15 @@
   }
 
   .old-photo {
-    filter: grayscale(100%) contrast(1.1) brightness(0.95);
+    filter: grayscale(100%) contrast(1.2) brightness(0.7) sepia(0.4);
     image-rendering: crisp-edges;
   }
 
   .photo-border {
     box-shadow:
-      inset 0 0 0 8px white,
-      inset 0 0 0 12px black,
-      0 4px 0 0 rgba(0, 0, 0, 0.3);
+      inset 0 0 0 6px #c9b896,
+      inset 0 0 0 10px #3d2f1f,
+      0 6px 0 0 rgba(0, 0, 0, 0.6);
   }
 
   @keyframes page-turn {
@@ -249,7 +250,7 @@
       page-turn 0.8s cubic-bezier(0.4, 0, 0.2, 1),
       paper-rustle 0.4s ease-in-out 0.4s;
     transform-origin: left center;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
   }
 
   @keyframes paper-gradient {
@@ -265,20 +266,20 @@
   .newspaper-column {
     column-count: 2;
     column-gap: 2rem;
-    column-rule: 2px solid #8b634c;
+    column-rule: 2px solid #5a4a35;
   }
 
   .vintage-stamp {
     background: radial-gradient(
       circle,
-      rgba(220, 20, 60, 0.8) 0%,
-      rgba(139, 0, 0, 0.9) 100%
+      rgba(180, 20, 40, 0.85) 0%,
+      rgba(120, 0, 0, 0.95) 100%
     );
     box-shadow:
-      0 0 0 3px #8b0000,
-      0 0 0 6px #f5e6d0,
-      0 4px 8px rgba(0, 0, 0, 0.3),
-      inset 0 0 20px rgba(0, 0, 0, 0.2);
+      0 0 0 3px #7a0000,
+      0 0 0 6px #c9b896,
+      0 6px 12px rgba(0, 0, 0, 0.5),
+      inset 0 0 25px rgba(0, 0, 0, 0.4);
     transform: rotate(-5deg);
     transition: transform 0.3s ease;
   }
@@ -290,14 +291,14 @@
   .aged-paper {
     background: linear-gradient(
       to bottom,
-      #f5e6d0 0%,
-      #edd9b7 50%,
-      #e5d3a8 100%
+      #c9b896 0%,
+      #b5a589 50%,
+      #9f8f76 100%
     );
     box-shadow:
-      inset 0 2px 4px rgba(139, 99, 76, 0.1),
-      inset 0 -2px 4px rgba(210, 180, 140, 0.1),
-      0 4px 8px rgba(0, 0, 0, 0.15);
+      inset 0 3px 6px rgba(60, 45, 30, 0.25),
+      inset 0 -3px 6px rgba(80, 60, 45, 0.2),
+      0 6px 12px rgba(0, 0, 0, 0.4);
     position: relative;
   }
 
@@ -311,13 +312,18 @@
     background:
       radial-gradient(
         ellipse 400px 300px at 10% 15%,
-        rgba(120, 90, 60, 0.08) 0%,
+        rgba(60, 45, 30, 0.2) 0%,
         transparent 70%
       ),
       radial-gradient(
         ellipse 350px 250px at 90% 85%,
-        rgba(100, 70, 45, 0.06) 0%,
+        rgba(50, 35, 25, 0.18) 0%,
         transparent 70%
+      ),
+      radial-gradient(
+        circle 40px at 15% 80%,
+        rgba(40, 30, 20, 0.15) 0%,
+        transparent 100%
       );
     pointer-events: none;
     z-index: 1;
@@ -332,56 +338,370 @@
     height: 100%;
     background:
       radial-gradient(
-        circle 30px at 8% 12%,
-        rgba(70, 50, 30, 0.12) 0%,
+        circle 35px at 8% 12%,
+        rgba(30, 20, 10, 0.2) 0%,
         transparent 100%
       ),
       radial-gradient(
-        circle 25px at 92% 18%,
-        rgba(80, 55, 35, 0.1) 0%,
+        circle 30px at 92% 18%,
+        rgba(35, 25, 15, 0.18) 0%,
         transparent 100%
       ),
       radial-gradient(
-        circle 20px at 15% 85%,
-        rgba(75, 52, 32, 0.11) 0%,
+        circle 25px at 20% 88%,
+        rgba(40, 30, 20, 0.16) 0%,
         transparent 100%
       ),
       radial-gradient(
-        circle 22px at 88% 88%,
-        rgba(65, 48, 28, 0.1) 0%,
+        circle 28px at 78% 92%,
+        rgba(30, 20, 15, 0.17) 0%,
         transparent 100%
       ),
-      url('data:image/svg+xml,%3Csvg width="400" height="400" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="texture"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="2" numOctaves="4" seed="5" /%3E%3CfeColorMatrix values="0 0 0 0 0, 0 0 0 0 0, 0 0 0 0 0, 0 0 0 0.05 0"/%3E%3C/filter%3E%3Crect width="400" height="400" filter="url(%23texture)"/%3E%3C/svg%3E');
-    background-size:
-      100% 100%,
-      100% 100%,
-      100% 100%,
-      100% 100%,
-      250px 250px;
+      linear-gradient(
+        135deg,
+        transparent 0%,
+        rgba(30, 20, 10, 0.08) 20%,
+        transparent 40%,
+        rgba(35, 25, 15, 0.06) 60%,
+        transparent 80%
+      );
     pointer-events: none;
-    z-index: 1;
-  }
-
-  .aged-paper > * {
-    position: relative;
     z-index: 2;
   }
 
-  .ink-splatter {
+  .torn-edge-top {
+    position: relative;
+    clip-path: polygon(
+      0 3%,
+      2% 1%,
+      4% 2.5%,
+      6% 0.8%,
+      8% 2%,
+      10% 1.2%,
+      12% 2.8%,
+      14% 1.5%,
+      16% 3%,
+      18% 1.8%,
+      20% 2.5%,
+      22% 1%,
+      24% 2.2%,
+      26% 1.5%,
+      28% 2.8%,
+      30% 1.2%,
+      32% 2.5%,
+      34% 1.8%,
+      36% 3%,
+      38% 1.5%,
+      40% 2.2%,
+      42% 1%,
+      44% 2.5%,
+      46% 1.8%,
+      48% 2.8%,
+      50% 1.5%,
+      52% 2.2%,
+      54% 1.2%,
+      56% 2.5%,
+      58% 1.8%,
+      60% 3%,
+      62% 1.5%,
+      64% 2.2%,
+      66% 1%,
+      68% 2.5%,
+      70% 1.8%,
+      72% 2.8%,
+      74% 1.2%,
+      76% 2.5%,
+      78% 1.5%,
+      80% 3%,
+      82% 1.8%,
+      84% 2.2%,
+      86% 1%,
+      88% 2.5%,
+      90% 1.8%,
+      92% 2.8%,
+      94% 1.5%,
+      96% 2.2%,
+      98% 1.2%,
+      100% 2.5%,
+      100% 100%,
+      0 100%
+    );
+  }
+
+  .torn-edge-bottom {
+    position: relative;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 97%,
+      98% 98.5%,
+      96% 97.2%,
+      94% 98.8%,
+      92% 97.5%,
+      90% 98.2%,
+      88% 97%,
+      86% 98.5%,
+      84% 97.8%,
+      82% 98.2%,
+      80% 97.5%,
+      78% 98.8%,
+      76% 97.2%,
+      74% 98.5%,
+      72% 97.8%,
+      70% 98.2%,
+      68% 97%,
+      66% 98.5%,
+      64% 97.8%,
+      62% 98.2%,
+      60% 97.5%,
+      58% 98.8%,
+      56% 97.2%,
+      54% 98.5%,
+      52% 97.8%,
+      50% 98.2%,
+      48% 97.5%,
+      46% 98.8%,
+      44% 97.2%,
+      42% 98.5%,
+      40% 97.8%,
+      38% 98.2%,
+      36% 97.5%,
+      34% 98.8%,
+      32% 97.2%,
+      30% 98.5%,
+      28% 97.8%,
+      26% 98.2%,
+      24% 97.5%,
+      22% 98.8%,
+      20% 97.2%,
+      18% 98.5%,
+      16% 97.8%,
+      14% 98.2%,
+      12% 97.5%,
+      10% 98.8%,
+      8% 97.2%,
+      6% 98.5%,
+      4% 97.8%,
+      2% 98.2%,
+      0 97%
+    );
+  }
+
+  .torn-edge-left {
+    position: relative;
+    clip-path: polygon(
+      2% 0,
+      100% 0,
+      100% 100%,
+      2% 100%,
+      1% 98%,
+      2.5% 96%,
+      1.2% 94%,
+      2.8% 92%,
+      1.5% 90%,
+      2.2% 88%,
+      1% 86%,
+      2.5% 84%,
+      1.8% 82%,
+      2.8% 80%,
+      1.2% 78%,
+      2.5% 76%,
+      1.8% 74%,
+      3% 72%,
+      1.5% 70%,
+      2.2% 68%,
+      1% 66%,
+      2.5% 64%,
+      1.8% 62%,
+      2.8% 60%,
+      1.5% 58%,
+      2.2% 56%,
+      1.2% 54%,
+      2.5% 52%,
+      1.8% 50%,
+      3% 48%,
+      1.5% 46%,
+      2.2% 44%,
+      1% 42%,
+      2.5% 40%,
+      1.8% 38%,
+      2.8% 36%,
+      1.2% 34%,
+      2.5% 32%,
+      1.5% 30%,
+      3% 28%,
+      1.8% 26%,
+      2.2% 24%,
+      1% 22%,
+      2.5% 20%,
+      1.8% 18%,
+      2.8% 16%,
+      1.5% 14%,
+      2.2% 12%,
+      1.2% 10%,
+      2.5% 8%,
+      1.5% 6%,
+      2.8% 4%,
+      1.2% 2%
+    );
+  }
+
+  .torn-edge-right {
+    position: relative;
+    clip-path: polygon(
+      0 0,
+      98% 0,
+      98.8% 2%,
+      97.2% 4%,
+      98.5% 6%,
+      97% 8%,
+      98.5% 10%,
+      97.8% 12%,
+      99% 14%,
+      97.5% 16%,
+      98.2% 18%,
+      97% 20%,
+      98.5% 22%,
+      97.8% 24%,
+      98.2% 26%,
+      97.5% 28%,
+      98.8% 30%,
+      97.2% 32%,
+      98.5% 34%,
+      97.8% 36%,
+      98.2% 38%,
+      97% 40%,
+      98.5% 42%,
+      97.8% 44%,
+      98.2% 46%,
+      97.5% 48%,
+      98.8% 50%,
+      97.2% 52%,
+      98.5% 54%,
+      97.8% 56%,
+      98.2% 58%,
+      97.5% 60%,
+      98.8% 62%,
+      97.2% 64%,
+      98.5% 66%,
+      97.8% 68%,
+      99% 70%,
+      97.5% 72%,
+      98.2% 74%,
+      97% 76%,
+      98.5% 78%,
+      97.8% 80%,
+      98.2% 82%,
+      97.5% 84%,
+      98.8% 86%,
+      97.2% 88%,
+      98.5% 90%,
+      97.8% 92%,
+      98.2% 94%,
+      97.5% 96%,
+      98.8% 98%,
+      98% 100%,
+      0 100%
+    );
+  }
+
+  .crumpled-paper {
     position: relative;
   }
 
-  .ink-splatter::after {
+  .crumpled-paper::before {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
+    inset: 0;
+    background:
+      radial-gradient(
+        circle 60px at 25% 30%,
+        rgba(0, 0, 0, 0.08) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle 45px at 70% 20%,
+        rgba(0, 0, 0, 0.06) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle 50px at 15% 75%,
+        rgba(0, 0, 0, 0.07) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle 55px at 85% 65%,
+        rgba(0, 0, 0, 0.09) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle 40px at 50% 50%,
+        rgba(0, 0, 0, 0.05) 0%,
+        transparent 50%
+      );
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  .burn-mark {
+    position: relative;
+  }
+
+  .burn-mark::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
     background: radial-gradient(
       circle,
-      rgba(10, 10, 10, 0.3) 0%,
+      rgba(20, 15, 10, 0.4) 0%,
+      rgba(40, 30, 20, 0.2) 40%,
       transparent 70%
     );
     border-radius: 50%;
-    filter: blur(2px);
+    pointer-events: none;
+    z-index: 4;
+  }
+
+  .burn-mark-top-right::after {
+    top: 5%;
+    right: 8%;
+  }
+
+  .burn-mark-bottom-left::after {
+    bottom: 10%;
+    left: 6%;
+  }
+
+  .ink-stain {
+    position: relative;
+  }
+
+  .ink-stain::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(
+      ellipse 50% 40%,
+      rgba(20, 15, 25, 0.15) 0%,
+      rgba(30, 20, 30, 0.08) 50%,
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: 5;
+    filter: blur(1px);
+  }
+
+  .ink-stain-top-left::before {
+    top: 12%;
+    left: 10%;
+    transform: rotate(-15deg);
+  }
+
+  .ink-stain-bottom-right::before {
+    bottom: 15%;
+    right: 12%;
+    transform: rotate(25deg);
   }
 }

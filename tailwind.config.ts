@@ -63,13 +63,15 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				mafia: {
-					black: '#0A0A0A',
-					gray: '#1A1A1A',
-					'gray-light': '#2A2A2A',
-					red: '#DC143C',
-					'red-dark': '#8B0000',
-					cream: '#F5E6D0',
-					gold: '#FFD700'
+					black: '#1a150f',
+					gray: '#2a2318',
+					'gray-light': '#3d2f1f',
+					red: '#8B0000',
+					'red-dark': '#5a0000',
+					cream: '#c9b896',
+					'cream-dark': '#9f8f76',
+					gold: '#b8860b',
+					sepia: '#5a4a35'
 				}
 			},
 			borderRadius: {

@@ -80,17 +80,17 @@ const DonateSection = () => {
   ];
 
   return (
-    <section className="min-h-screen pt-[280px] pb-16 newspaper-texture">
+    <section className="min-h-screen pt-[280px] pb-16 newspaper-texture torn-edge-top crumpled-paper burn-mark burn-mark-top-right ink-stain ink-stain-bottom-right">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="border-8 border-black aged-paper shadow-2xl mb-12 transform -rotate-1">
-            <div className="border-4 border-black m-2 bg-white p-6 text-center">
-              <div className="border-2 border-black p-4">
-                <Icon name="DollarSign" size={48} className="mx-auto mb-3 text-black" />
+          <div className="border-8 border-mafia-sepia aged-paper shadow-2xl mb-12 transform -rotate-1">
+            <div className="border-4 border-mafia-sepia m-2 aged-paper p-6 text-center">
+              <div className="border-2 border-mafia-sepia p-4">
+                <Icon name="DollarSign" size={48} className="mx-auto mb-3 text-mafia-gray" />
                 <h2 className="text-5xl font-headline uppercase tracking-wider mb-2">
                   Донат
                 </h2>
-                <div className="text-sm uppercase tracking-widest border-t border-b border-black py-2 my-3">
+                <div className="text-sm uppercase tracking-widest border-t border-b border-mafia-sepia py-2 my-3">
                   Поддержите развитие сервера
                 </div>
               </div>
@@ -98,20 +98,20 @@ const DonateSection = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="border-6 border-black aged-paper shadow-xl transform rotate-1">
-              <div className="border-b-4 border-black p-3 bg-black text-white text-center">
+            <div className="border-6 border-mafia-sepia aged-paper shadow-xl transform rotate-1">
+              <div className="border-b-4 border-mafia-sepia p-3 bg-mafia-gray text-mafia-cream text-center">
                 <div className="text-xl font-headline uppercase tracking-wider">Информация</div>
               </div>
               <div className="p-6">
                 <div className="space-y-4 font-body text-sm">
-                  <div className="border-2 border-black p-3 bg-yellow-50">
+                  <div className="border-2 border-mafia-sepia p-3 bg-yellow-50">
                     <div className="font-bold mb-1">Курс валют:</div>
                     <div className="text-2xl font-headline">4₽ = 1$</div>
                   </div>
                   <p className="leading-relaxed">
                     Возникли проблемы с пополнением? Напишите в Discord нашего сервера.
                   </p>
-                  <div className="border-t-2 border-black pt-3 space-y-2">
+                  <div className="border-t-2 border-mafia-sepia pt-3 space-y-2">
                     <div className="flex items-center gap-2">
                       <Icon name="Receipt" size={16} />
                       <span className="uppercase text-xs tracking-wide">Договор оферты</span>
@@ -125,8 +125,8 @@ const DonateSection = () => {
               </div>
             </div>
 
-            <div className="border-6 border-black aged-paper shadow-xl transform -rotate-1">
-              <div className="border-b-4 border-black p-3 bg-black text-white text-center">
+            <div className="border-6 border-mafia-sepia aged-paper shadow-xl transform -rotate-1">
+              <div className="border-b-4 border-mafia-sepia p-3 bg-mafia-gray text-mafia-cream text-center">
                 <div className="text-xl font-headline uppercase tracking-wider">Как пополнить?</div>
               </div>
               <div className="p-6">
@@ -144,10 +144,10 @@ const DonateSection = () => {
                       value={amount}
                       onChange={(e) => setAmount(e.target.value)}
                       placeholder="Введите сумму в рублях"
-                      className="w-full border-4 border-black p-3 font-headline text-lg focus:outline-none focus:ring-2 focus:ring-black"
+                      className="w-full border-4 border-mafia-sepia p-3 font-headline text-lg focus:outline-none focus:ring-2 focus:ring-black"
                     />
                   </div>
-                  <Button className="w-full font-headline uppercase tracking-wider bg-black text-white border-4 border-black hover:bg-white hover:text-black text-lg py-6">
+                  <Button className="w-full font-headline uppercase tracking-wider bg-mafia-gray text-mafia-cream border-4 border-mafia-sepia hover:aged-paper hover:text-mafia-gray text-lg py-6">
                     Пополнить
                   </Button>
                   <p className="font-body text-center leading-tight text-sm">
@@ -158,7 +158,7 @@ const DonateSection = () => {
             </div>
           </div>
 
-          <div className="border-t-4 border-b-4 border-black py-3 mb-8 bg-white text-center">
+          <div className="border-t-4 border-b-4 border-mafia-sepia py-3 mb-8 aged-paper text-center">
             <h3 className="text-4xl font-headline uppercase tracking-wider">Наборы</h3>
           </div>
 
@@ -172,18 +172,18 @@ const DonateSection = () => {
                   <div className="w-2 h-2 bg-zinc-400 rounded-full"></div>
                 </div>
 
-                <div className={`border-6 border-black aged-paper shadow-2xl ${pkg.premium ? 'border-8 border-[#8B0000]' : ''}`}>
+                <div className={`border-6 border-mafia-sepia aged-paper shadow-2xl ${pkg.premium ? 'border-8 border-mafia-red' : ''}`}>
                   {pkg.popular && (
-                    <div className="bg-[#8B0000] text-white text-center py-2 border-b-4 border-black">
+                    <div className="bg-mafia-red text-mafia-cream text-center py-2 border-b-4 border-mafia-sepia">
                       <span className="text-sm font-headline uppercase tracking-wider">
                         ★ Популярный выбор ★
                       </span>
                     </div>
                   )}
 
-                  <div className="border-b-4 border-black p-4 bg-white text-center">
+                  <div className="border-b-4 border-mafia-sepia p-4 aged-paper text-center">
                     <h4 className="text-3xl font-headline uppercase tracking-wide mb-3">{pkg.name}</h4>
-                    <div className="inline-block border-4 border-black bg-white p-2">
+                    <div className="inline-block border-4 border-mafia-sepia aged-paper p-2">
                       <div className="text-sm line-through opacity-60">{pkg.oldPrice} Ꝑ</div>
                       <div className="text-4xl font-headline font-black">{pkg.price} Ꝑ</div>
                     </div>
@@ -194,7 +194,7 @@ const DonateSection = () => {
                       {pkg.benefits.map((benefit, idx) => (
                         <div 
                           key={idx} 
-                          className={`flex items-start gap-2 pb-1 ${benefit.startsWith('(') ? 'pl-4 text-[10px] italic opacity-80' : 'border-b border-black/20'}`}
+                          className={`flex items-start gap-2 pb-1 ${benefit.startsWith('(') ? 'pl-4 text-[10px] italic opacity-80' : 'border-b border-mafia-sepia/20'}`}
                         >
                           {!benefit.startsWith('(') && (
                             <span className="flex-shrink-0 text-[#8B0000] font-black">•</span>
@@ -205,8 +205,8 @@ const DonateSection = () => {
                     </div>
                   </div>
 
-                  <div className="border-t-4 border-black p-4">
-                    <Button className="w-full font-headline uppercase tracking-wider bg-black text-white border-2 border-black hover:bg-[#8B0000] hover:border-[#8B0000] text-base py-6">
+                  <div className="border-t-4 border-mafia-sepia p-4">
+                    <Button className="w-full font-headline uppercase tracking-wider bg-mafia-gray text-mafia-cream border-2 border-mafia-sepia hover:bg-mafia-red hover:border-mafia-red text-base py-6">
                       Приобрести
                     </Button>
                   </div>
@@ -215,7 +215,7 @@ const DonateSection = () => {
             ))}
           </div>
 
-          <div className="border-t-4 border-b-4 border-black py-3 mb-8 bg-white text-center">
+          <div className="border-t-4 border-b-4 border-mafia-sepia py-3 mb-8 aged-paper text-center">
             <h3 className="text-4xl font-headline uppercase tracking-wider">Валюта и услуги</h3>
           </div>
 
@@ -229,15 +229,15 @@ const DonateSection = () => {
                   <div className="w-1.5 h-1.5 bg-zinc-400 rounded-full"></div>
                 </div>
 
-                <div className="border-4 border-black aged-paper shadow-xl relative">
-                  <div className="border-b-2 border-black p-3 bg-white text-center">
+                <div className="border-4 border-mafia-sepia aged-paper shadow-xl relative">
+                  <div className="border-b-2 border-mafia-sepia p-3 aged-paper text-center">
                     <div className="text-lg font-headline uppercase leading-tight">{item.name}</div>
                   </div>
                   <div className="p-3 text-center">
                     <div className="text-xs mb-2 font-body">{item.amount}</div>
                     <div className="text-[10px] line-through opacity-60">{item.oldPrice} Ꝑ</div>
                     <div className="text-2xl font-headline font-black mb-3">{item.price} Ꝑ</div>
-                    <Button className="w-full font-headline uppercase text-[10px] bg-black text-white border-2 border-black hover:bg-white hover:text-black py-3">
+                    <Button className="w-full font-headline uppercase text-[10px] bg-mafia-gray text-mafia-cream border-2 border-mafia-sepia hover:aged-paper hover:text-mafia-gray py-3">
                       Купить
                     </Button>
                   </div>
@@ -246,8 +246,8 @@ const DonateSection = () => {
             ))}
           </div>
 
-          <div className="border-8 border-black aged-paper shadow-xl p-6 text-center">
-            <div className="border-4 border-black p-4">
+          <div className="border-8 border-mafia-sepia aged-paper shadow-xl p-6 text-center">
+            <div className="border-4 border-mafia-sepia p-4">
               <Icon name="Info" size={32} className="mx-auto mb-2" />
               <div className="text-xs font-body uppercase tracking-widest">
                 Все средства идут на развитие и поддержку сервера • Спасибо за вашу поддержку!

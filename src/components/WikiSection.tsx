@@ -187,17 +187,17 @@ const WikiSection = () => {
   };
 
   return (
-    <section className="min-h-screen pt-[180px] md:pt-[280px] pb-8 md:pb-16 newspaper-texture">
+    <section className="min-h-screen pt-[180px] md:pt-[280px] pb-8 md:pb-16 newspaper-texture torn-edge-top crumpled-paper burn-mark burn-mark-top-right ink-stain ink-stain-bottom-right">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="border-4 md:border-8 border-black aged-paper shadow-2xl mb-8 md:mb-12 transform -rotate-1">
-            <div className="border-2 md:border-4 border-black m-2 bg-white p-4 md:p-6 text-center">
-              <div className="border-2 border-black p-3 md:p-4">
-                <Icon name="BookMarked" size={32} className="mx-auto mb-2 md:mb-3 text-black md:w-12 md:h-12" />
+          <div className="border-4 md:border-8 border-mafia-sepia aged-paper shadow-2xl mb-8 md:mb-12 transform -rotate-1">
+            <div className="border-2 md:border-4 border-mafia-sepia m-2 aged-paper p-4 md:p-6 text-center">
+              <div className="border-2 border-mafia-sepia p-3 md:p-4">
+                <Icon name="BookMarked" size={32} className="mx-auto mb-2 md:mb-3 text-mafia-gray md:w-12 md:h-12" />
                 <h1 className="text-3xl md:text-6xl lg:text-7xl font-headline uppercase tracking-wider mb-2 leading-tight break-words" style={{fontFamily: 'UnifrakturMaguntia, serif'}}>
                   Энциклопедия Мафии
                 </h1>
-                <div className="text-[10px] md:text-sm uppercase tracking-widest border-t-2 border-b-2 border-black py-2 mt-2 md:mt-3">
+                <div className="text-[10px] md:text-sm uppercase tracking-widest border-t-2 border-b-2 border-mafia-sepia py-2 mt-2 md:mt-3">
                   Справочник • Том I • 1925
                 </div>
               </div>
@@ -208,13 +208,13 @@ const WikiSection = () => {
             {wikiCategories.map((category, index) => (
               <div 
                 key={category.id}
-                className="border-4 md:border-6 border-black aged-paper shadow-xl"
+                className="border-4 md:border-6 border-mafia-sepia aged-paper shadow-xl"
                 style={{transform: `rotate(${index % 2 === 0 ? '0.5deg' : '-0.5deg'})`}}
               >
-                <div className={`border-b-2 md:border-b-4 border-black p-3 md:p-5 ${category.color}`}>
+                <div className={`border-b-2 md:border-b-4 border-mafia-sepia p-3 md:p-5 ${category.color}`}>
                   <div className="flex items-center gap-2 md:gap-3">
                     <div className="w-10 h-10 md:w-14 md:h-14 border-2 md:border-4 border-amber-200 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center flex-shrink-0">
-                      <Icon name={category.icon as any} size={20} className="text-black md:w-7 md:h-7" />
+                      <Icon name={category.icon as any} size={20} className="text-mafia-gray md:w-7 md:h-7" />
                     </div>
                     <h3 className="text-base md:text-xl lg:text-2xl font-headline uppercase tracking-wide text-amber-100 leading-tight">
                       {category.name}
@@ -222,15 +222,15 @@ const WikiSection = () => {
                   </div>
                 </div>
 
-                <div className="p-4 md:p-6 bg-white border-2 md:border-4 border-black m-2">
+                <div className="p-4 md:p-6 aged-paper border-2 md:border-4 border-mafia-sepia m-2">
                   <div className="space-y-3">
                     {category.articles.map((article, articleIndex) => (
                       <div 
                         key={articleIndex}
                         onClick={() => handleArticleClick(category, article, articleIndex)}
-                        className="flex items-start gap-3 text-sm border-b-2 border-black pb-3 last:border-0 hover:pl-2 transition-all group/item cursor-pointer hover:bg-amber-50"
+                        className="flex items-start gap-3 text-sm border-b-2 border-mafia-sepia pb-3 last:border-0 hover:pl-2 transition-all group/item cursor-pointer hover:bg-amber-50"
                       >
-                        <div className="w-8 h-8 border-2 border-black flex items-center justify-center flex-shrink-0 bg-white mt-0.5 group-hover/item:bg-amber-100 transition-colors">
+                        <div className="w-8 h-8 border-2 border-mafia-sepia flex items-center justify-center flex-shrink-0 aged-paper mt-0.5 group-hover/item:bg-amber-100 transition-colors">
                           <span className="font-headline font-bold text-sm">{articleIndex + 1}</span>
                         </div>
                         <div className="flex-1">
@@ -245,7 +245,7 @@ const WikiSection = () => {
             ))}
           </div>
 
-          <div className="mt-12 border-t-4 border-b-4 border-black py-3 aged-paper text-center shadow-lg">
+          <div className="mt-12 border-t-4 border-b-4 border-mafia-sepia py-3 aged-paper text-center shadow-lg">
             <div className="text-xs font-body uppercase tracking-widest">
               Более 500 статей • Постоянно обновляется • Создано сообществом
             </div>
@@ -261,13 +261,13 @@ const WikiSection = () => {
           onClick={handleClose}
         >
           <div 
-            className={`bg-white border-4 md:border-8 border-black max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 animate-in zoom-in-95 ${
+            className={`aged-paper border-4 md:border-8 border-mafia-sepia max-w-3xl max-h-[80vh] overflow-y-auto m-4 transition-all duration-300 animate-in zoom-in-95 ${
               isClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
             }`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="border-2 md:border-4 border-black m-2">
-              <div className={`border-b-2 md:border-b-4 border-black p-4 md:p-6 ${selectedArticle.category.color}`}>
+            <div className="border-2 md:border-4 border-mafia-sepia m-2">
+              <div className={`border-b-2 md:border-b-4 border-mafia-sepia p-4 md:p-6 ${selectedArticle.category.color}`}>
                 <div className="flex items-start justify-between gap-2 md:gap-4">
                   <div className="flex items-start gap-2 md:gap-4 flex-1">
                     <div className="w-12 h-12 md:w-16 md:h-16 border-2 md:border-4 border-amber-200 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center flex-shrink-0">
@@ -293,13 +293,13 @@ const WikiSection = () => {
               </div>
 
               <div className="p-4 md:p-8 aged-paper">
-                <div className="border-l-2 md:border-l-4 border-black pl-3 md:pl-6">
+                <div className="border-l-2 md:border-l-4 border-mafia-sepia pl-3 md:pl-6">
                   <p className="font-body text-sm md:text-base lg:text-lg leading-relaxed text-justify first-letter:text-4xl md:first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 md:first-letter:mr-3 first-letter:leading-none first-letter:font-headline">
                     {selectedArticle.article.content}
                   </p>
                 </div>
 
-                <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t-2 md:border-t-4 border-black text-center">
+                <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t-2 md:border-t-4 border-mafia-sepia text-center">
                   <div className="flex items-center justify-center gap-2 text-[10px] md:text-sm uppercase tracking-widest font-body">
                     <Icon name="BookMarked" size={16} className="md:w-5 md:h-5" />
                     <span>Энциклопедия Мафии • Том I</span>
