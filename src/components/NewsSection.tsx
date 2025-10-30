@@ -156,7 +156,7 @@ const NewsSection = () => {
                           {item.content}
                         </p>
                       )}
-                      <div className="border-b border-dashed border-black mt-2 md:mt-3"></div>
+                      <div className="border-b border-dashed border-mafia-sepia mt-2 md:mt-3"></div>
                     </div>
                   ))}
                 </div>
@@ -164,54 +164,54 @@ const NewsSection = () => {
             </div>
 
             <div className="space-y-3 md:space-y-6 w-full">
-              <div className="border-3 md:border-4 lg:border-6 border-black aged-paper shadow-xl w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
-                <div className="border-b-2 md:border-b-4 border-black p-2 md:p-3 bg-black text-white text-center">
+              <div className="border-3 md:border-4 lg:border-6 border-mafia-sepia aged-paper shadow-xl w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
+                <div className="border-b-2 md:border-b-4 border-mafia-sepia p-2 md:p-3 bg-mafia-gray text-mafia-cream text-center">
                   <Icon name="Pin" size={18} className="mx-auto mb-1 md:w-6 md:h-6" />
                   <h3 className="text-xs md:text-sm lg:text-base font-headline uppercase tracking-wide">
                     Доска объявлений
                   </h3>
                 </div>
                 <div className="p-3 md:p-4 space-y-2 md:space-y-3">
-                  <div className="border-3 border-[#8B0000] bg-red-50 p-2 md:p-3">
-                    <div className="font-bold uppercase mb-1 text-[10px] md:text-xs flex items-center gap-1">
-                      <Icon name="AlertTriangle" size={12} className="md:w-4 md:h-4" />
+                  <div className="border-3 border-[#8B0000] aged-paper p-2 md:p-3">
+                    <div className="font-bold uppercase mb-1 text-[10px] md:text-xs flex items-center gap-1 text-mafia-gray">
+                      <Icon name="AlertTriangle" size={12} className="md:w-4 md:h-4 text-mafia-red" />
                       Разыскивается
                     </div>
-                    <div className="text-[9px] md:text-[11px] leading-tight font-body">
+                    <div className="text-[9px] md:text-[11px] leading-tight font-body text-mafia-gray">
                       Трое вооружённых мужчин. Награда $500.
                     </div>
                   </div>
-                  <div className="border-2 border-black bg-white p-2 md:p-3">
-                    <div className="font-bold uppercase mb-1 text-[10px] md:text-xs">
+                  <div className="border-2 border-mafia-sepia aged-paper p-2 md:p-3">
+                    <div className="font-bold uppercase mb-1 text-[10px] md:text-xs text-mafia-gray">
                       Открытие казино
                     </div>
-                    <div className="text-[9px] md:text-[11px] leading-tight font-body">
+                    <div className="text-[9px] md:text-[11px] leading-tight font-body text-mafia-gray">
                       «Золотая Подкова». Каждую ночь с полуночи.
                     </div>
                   </div>
-                  <div className="border-2 border-black bg-white p-2 md:p-3">
-                    <div className="font-bold uppercase mb-1 text-[10px] md:text-xs">
+                  <div className="border-2 border-mafia-sepia aged-paper p-2 md:p-3">
+                    <div className="font-bold uppercase mb-1 text-[10px] md:text-xs text-mafia-gray">
                       Объявление шерифа
                     </div>
-                    <div className="text-[9px] md:text-[11px] leading-tight font-body">
+                    <div className="text-[9px] md:text-[11px] leading-tight font-body text-mafia-gray">
                       Комендантский час с полуночи.
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="border-3 md:border-4 lg:border-6 border-black aged-paper shadow-xl w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
-                <div className="border-b-2 border-black p-2 md:p-3 bg-white text-center">
-                  <div className="text-xs md:text-sm font-headline uppercase tracking-wide">Короткие новости</div>
+              <div className="border-3 md:border-4 lg:border-6 border-mafia-sepia aged-paper shadow-xl w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
+                <div className="border-b-2 border-mafia-sepia p-2 md:p-3 aged-paper text-center">
+                  <div className="text-xs md:text-sm font-headline uppercase tracking-wide text-mafia-gray">Короткие новости</div>
                 </div>
                 <div className="p-3 md:p-4 space-y-3 md:space-y-4">
                   {news.slice(3).map((item) => (
-                    <div key={item.id} className="border-b-2 border-dashed border-black pb-2 md:pb-3 last:border-0">
-                      <div className="text-[8px] md:text-[10px] uppercase mb-1">{item.date}</div>
-                      <h4 className="text-[11px] md:text-xs lg:text-sm font-headline font-bold uppercase leading-tight mb-1 break-words">
+                    <div key={item.id} className="border-b-2 border-dashed border-mafia-sepia pb-2 md:pb-3 last:border-0">
+                      <div className="text-[8px] md:text-[10px] uppercase mb-1 text-mafia-gray-light">{item.date}</div>
+                      <h4 className="text-[11px] md:text-xs lg:text-sm font-headline font-bold uppercase leading-tight mb-1 break-words text-mafia-gray">
                         {item.title}
                       </h4>
-                      <p className="text-[9px] md:text-[10px] lg:text-[11px] font-body leading-snug text-justify">
+                      <p className="text-[9px] md:text-[10px] lg:text-[11px] font-body leading-snug text-justify text-mafia-gray">
                         {item.excerpt}
                       </p>
                     </div>
@@ -219,13 +219,13 @@ const NewsSection = () => {
                 </div>
               </div>
 
-              <div className="border-3 border-black bg-white p-3 md:p-4 text-center w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
-                <div className="border-2 border-black p-2 md:p-3">
-                  <Icon name="Info" size={16} className="mx-auto mb-1 md:mb-2 md:w-5 md:h-5" />
-                  <div className="text-[9px] md:text-[10px] font-headline uppercase tracking-wide">
+              <div className="border-3 border-mafia-sepia aged-paper p-3 md:p-4 text-center w-full" style={{maxWidth: 'calc(100vw - 24px)'}}>
+                <div className="border-2 border-mafia-sepia p-2 md:p-3">
+                  <Icon name="Info" size={16} className="mx-auto mb-1 md:mb-2 md:w-5 md:h-5 text-mafia-gray" />
+                  <div className="text-[9px] md:text-[10px] font-headline uppercase tracking-wide text-mafia-gray">
                     Хотите разместить объявление?
                   </div>
-                  <div className="text-[8px] md:text-[9px] font-body mt-1 md:mt-2">
+                  <div className="text-[8px] md:text-[9px] font-body mt-1 md:mt-2 text-mafia-gray-light">
                     Обращайтесь в редакцию газеты
                   </div>
                 </div>

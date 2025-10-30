@@ -103,22 +103,22 @@ const DonateSection = () => {
                 <div className="text-xl font-headline uppercase tracking-wider">Информация</div>
               </div>
               <div className="p-6">
-                <div className="space-y-4 font-body text-sm">
-                  <div className="border-2 border-mafia-sepia p-3 bg-yellow-50">
-                    <div className="font-bold mb-1">Курс валют:</div>
-                    <div className="text-2xl font-headline">4₽ = 1$</div>
+                <div className="space-y-4 font-body text-sm text-mafia-gray">
+                  <div className="border-2 border-mafia-sepia p-3 aged-paper">
+                    <div className="font-bold mb-1 text-mafia-gray">Курс валют:</div>
+                    <div className="text-2xl font-headline text-mafia-gray">4₽ = 1$</div>
                   </div>
-                  <p className="leading-relaxed">
+                  <p className="leading-relaxed text-mafia-gray">
                     Возникли проблемы с пополнением? Напишите в Discord нашего сервера.
                   </p>
-                  <div className="border-t-2 border-mafia-sepia pt-3 space-y-2">
+                  <div className="border-t-2 border-mafia-sepia pt-3 space-y-2 text-mafia-gray">
                     <div className="flex items-center gap-2">
-                      <Icon name="Receipt" size={16} />
-                      <span className="uppercase text-xs tracking-wide">Договор оферты</span>
+                      <Icon name="Receipt" size={16} className="text-mafia-gray" />
+                      <span className="uppercase text-xs tracking-wide text-mafia-gray">Договор оферты</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Icon name="Shield" size={16} />
-                      <span className="uppercase text-xs tracking-wide">Безопасность</span>
+                      <Icon name="Shield" size={16} className="text-mafia-gray" />
+                      <span className="uppercase text-xs tracking-wide text-mafia-gray">Безопасность</span>
                     </div>
                   </div>
                 </div>
@@ -130,13 +130,13 @@ const DonateSection = () => {
                 <div className="text-xl font-headline uppercase tracking-wider">Как пополнить?</div>
               </div>
               <div className="p-6">
-                <p className="text-sm font-body mb-4 leading-relaxed">
+                <p className="text-sm font-body mb-4 leading-relaxed text-mafia-gray">
                   Для пополнения пожалуйста введите сумму, после оплаты вы получите код, 
                   который необходимо активировать на любом почтампе
                 </p>
                 <div className="space-y-3">
                   <div>
-                    <label className="text-xs uppercase tracking-wide font-bold block mb-2">
+                    <label className="text-xs uppercase tracking-wide font-bold block mb-2 text-mafia-gray">
                       Сумма пополнения
                     </label>
                     <input
@@ -144,13 +144,13 @@ const DonateSection = () => {
                       value={amount}
                       onChange={(e) => setAmount(e.target.value)}
                       placeholder="Введите сумму в рублях"
-                      className="w-full border-4 border-mafia-sepia p-3 font-headline text-lg focus:outline-none focus:ring-2 focus:ring-black"
+                      className="w-full border-4 border-mafia-sepia p-3 font-headline text-lg focus:outline-none focus:ring-2 focus:ring-black aged-paper text-mafia-gray"
                     />
                   </div>
                   <Button className="w-full font-headline uppercase tracking-wider bg-mafia-gray text-mafia-cream border-4 border-mafia-sepia hover:aged-paper hover:text-mafia-gray text-lg py-6">
                     Пополнить
                   </Button>
-                  <p className="font-body text-center leading-tight text-sm">
+                  <p className="font-body text-center leading-tight text-sm text-mafia-gray-light">
                     Нажимая кнопку "Пополнить" вы автоматически соглашаетесь с договором оферты.
                   </p>
                 </div>
@@ -159,7 +159,7 @@ const DonateSection = () => {
           </div>
 
           <div className="border-t-4 border-b-4 border-mafia-sepia py-3 mb-8 aged-paper text-center">
-            <h3 className="text-4xl font-headline uppercase tracking-wider">Наборы</h3>
+            <h3 className="text-4xl font-headline uppercase tracking-wider text-mafia-gray">Наборы</h3>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -182,15 +182,15 @@ const DonateSection = () => {
                   )}
 
                   <div className="border-b-4 border-mafia-sepia p-4 aged-paper text-center">
-                    <h4 className="text-3xl font-headline uppercase tracking-wide mb-3">{pkg.name}</h4>
+                    <h4 className="text-3xl font-headline uppercase tracking-wide mb-3 text-mafia-gray">{pkg.name}</h4>
                     <div className="inline-block border-4 border-mafia-sepia aged-paper p-2">
-                      <div className="text-sm line-through opacity-60">{pkg.oldPrice} Ꝑ</div>
-                      <div className="text-4xl font-headline font-black">{pkg.price} Ꝑ</div>
+                      <div className="text-sm line-through opacity-60 text-mafia-gray-light">{pkg.oldPrice} Ꝑ</div>
+                      <div className="text-4xl font-headline font-black text-mafia-gray">{pkg.price} Ꝑ</div>
                     </div>
                   </div>
 
                   <div className="p-4 min-h-[400px]">
-                    <div className="space-y-1 text-xs font-body">
+                    <div className="space-y-1 text-xs font-body text-mafia-gray">
                       {pkg.benefits.map((benefit, idx) => (
                         <div 
                           key={idx} 
@@ -199,7 +199,7 @@ const DonateSection = () => {
                           {!benefit.startsWith('(') && (
                             <span className="flex-shrink-0 text-[#8B0000] font-black">•</span>
                           )}
-                          <span className="flex-1">{benefit}</span>
+                          <span className="flex-1 text-mafia-gray">{benefit}</span>
                         </div>
                       ))}
                     </div>
@@ -216,7 +216,7 @@ const DonateSection = () => {
           </div>
 
           <div className="border-t-4 border-b-4 border-mafia-sepia py-3 mb-8 aged-paper text-center">
-            <h3 className="text-4xl font-headline uppercase tracking-wider">Валюта и услуги</h3>
+            <h3 className="text-4xl font-headline uppercase tracking-wider text-mafia-gray">Валюта и услуги</h3>
           </div>
 
           <div className="grid md:grid-cols-5 gap-6 mb-12">
@@ -231,12 +231,12 @@ const DonateSection = () => {
 
                 <div className="border-4 border-mafia-sepia aged-paper shadow-xl relative">
                   <div className="border-b-2 border-mafia-sepia p-3 aged-paper text-center">
-                    <div className="text-lg font-headline uppercase leading-tight">{item.name}</div>
+                    <div className="text-lg font-headline uppercase leading-tight text-mafia-gray">{item.name}</div>
                   </div>
                   <div className="p-3 text-center">
-                    <div className="text-xs mb-2 font-body">{item.amount}</div>
-                    <div className="text-[10px] line-through opacity-60">{item.oldPrice} Ꝑ</div>
-                    <div className="text-2xl font-headline font-black mb-3">{item.price} Ꝑ</div>
+                    <div className="text-xs mb-2 font-body text-mafia-gray">{item.amount}</div>
+                    <div className="text-[10px] line-through opacity-60 text-mafia-gray-light">{item.oldPrice} Ꝑ</div>
+                    <div className="text-2xl font-headline font-black mb-3 text-mafia-gray">{item.price} Ꝑ</div>
                     <Button className="w-full font-headline uppercase text-[10px] bg-mafia-gray text-mafia-cream border-2 border-mafia-sepia hover:aged-paper hover:text-mafia-gray py-3">
                       Купить
                     </Button>
@@ -248,8 +248,8 @@ const DonateSection = () => {
 
           <div className="border-8 border-mafia-sepia aged-paper shadow-xl p-6 text-center">
             <div className="border-4 border-mafia-sepia p-4">
-              <Icon name="Info" size={32} className="mx-auto mb-2" />
-              <div className="text-xs font-body uppercase tracking-widest">
+              <Icon name="Info" size={32} className="mx-auto mb-2 text-mafia-gray" />
+              <div className="text-xs font-body uppercase tracking-widest text-mafia-gray">
                 Все средства идут на развитие и поддержку сервера • Спасибо за вашу поддержку!
               </div>
             </div>

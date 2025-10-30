@@ -120,10 +120,10 @@ const StatsSection = () => {
                   <Icon name={stat.icon as any} className="mx-auto" size={18} />
                 </div>
                 <div className="p-2 md:p-3 lg:p-4 text-center">
-                  <div className="text-xl md:text-2xl lg:text-3xl font-headline font-bold mb-0.5 md:mb-1 break-words">
+                  <div className="text-xl md:text-2xl lg:text-3xl font-headline font-bold mb-0.5 md:mb-1 break-words text-mafia-gray">
                     {stat.value}
                   </div>
-                  <div className="text-[9px] md:text-[10px] font-body uppercase tracking-wider break-words leading-tight">
+                  <div className="text-[9px] md:text-[10px] font-body uppercase tracking-wider break-words leading-tight text-mafia-gray-light">
                     {stat.label}
                   </div>
                 </div>
@@ -132,7 +132,7 @@ const StatsSection = () => {
           </div>
 
           <div className="border-t-2 md:border-t-3 lg:border-t-4 border-b-2 md:border-b-3 lg:border-b-4 border-mafia-sepia py-2 md:py-3 mb-4 md:mb-6 lg:mb-8 aged-paper text-center">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-headline uppercase tracking-wider break-words leading-tight">Состояние серверов</h2>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-headline uppercase tracking-wider break-words leading-tight text-mafia-gray">Состояние серверов</h2>
           </div>
 
           <div className="space-y-3 md:space-y-4 lg:space-y-6 mb-6 md:mb-8 lg:mb-12">
@@ -146,15 +146,15 @@ const StatsSection = () => {
                   <div className="flex items-center gap-2 md:gap-3 lg:gap-4 min-w-0 flex-1">
                     <div className={`w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 border-2 md:border-3 lg:border-4 border-mafia-sepia ${getStatusColor(server.status)} ${server.status === 'online' ? 'animate-pulse' : ''} flex-shrink-0`} />
                     <div className="min-w-0 flex-1">
-                      <h4 className="font-headline uppercase text-sm md:text-base lg:text-xl break-words leading-tight">{server.name}</h4>
-                      <div className="text-[9px] md:text-xs font-body flex flex-wrap items-center gap-1 md:gap-2 lg:gap-3 mt-0.5 md:mt-1">
+                      <h4 className="font-headline uppercase text-sm md:text-base lg:text-xl break-words leading-tight text-mafia-gray">{server.name}</h4>
+                      <div className="text-[9px] md:text-xs font-body flex flex-wrap items-center gap-1 md:gap-2 lg:gap-3 mt-0.5 md:mt-1 text-mafia-gray-light">
                         <span className="flex items-center gap-0.5 md:gap-1">
-                          <Icon name="Package" size={10} className="md:w-3 md:h-3" />
-                          <span className="text-[8px] md:text-xs">{server.version}</span>
+                          <Icon name="Package" size={10} className="md:w-3 md:h-3 text-mafia-gray-light" />
+                          <span className="text-[8px] md:text-xs text-mafia-gray-light">{server.version}</span>
                         </span>
                         <span className="border-l border-mafia-sepia md:border-l-2 pl-1 md:pl-2 lg:pl-3 flex items-center gap-0.5 md:gap-1">
-                          <Icon name="MapPin" size={10} className="md:w-3 md:h-3" />
-                          <span className="text-[8px] md:text-xs">{server.map}</span>
+                          <Icon name="MapPin" size={10} className="md:w-3 md:h-3 text-mafia-gray-light" />
+                          <span className="text-[8px] md:text-xs text-mafia-gray-light">{server.map}</span>
                         </span>
                       </div>
                     </div>
@@ -166,19 +166,19 @@ const StatsSection = () => {
                 
                 <div className="grid grid-cols-3 gap-2 md:gap-3 lg:gap-4 p-2 md:p-3 lg:p-4">
                   <div className="border-2 md:border-3 lg:border-4 border-mafia-sepia aged-paper p-1.5 md:p-2 lg:p-3 text-center">
-                    <Icon name="Users" size={16} className="mx-auto mb-0.5 md:mb-1 md:w-5 md:h-5" />
-                    <div className="font-body mb-0.5 md:mb-1 text-[8px] md:text-[10px] uppercase break-words leading-tight">Игроки</div>
-                    <div className="font-headline font-bold text-xs md:text-sm lg:text-base break-words">{server.players}</div>
+                    <Icon name="Users" size={16} className="mx-auto mb-0.5 md:mb-1 md:w-5 md:h-5 text-mafia-gray" />
+                    <div className="font-body mb-0.5 md:mb-1 text-[8px] md:text-[10px] uppercase break-words leading-tight text-mafia-gray-light">Игроки</div>
+                    <div className="font-headline font-bold text-xs md:text-sm lg:text-base break-words text-mafia-gray">{server.players}</div>
                   </div>
                   <div className="border-2 md:border-3 lg:border-4 border-mafia-sepia aged-paper p-1.5 md:p-2 lg:p-3 text-center">
-                    <Icon name="Wifi" size={16} className="mx-auto mb-0.5 md:mb-1 md:w-5 md:h-5" />
-                    <div className="font-body mb-0.5 md:mb-1 text-[8px] md:text-[10px] uppercase break-words leading-tight">Пинг</div>
-                    <div className="font-headline font-bold text-xs md:text-sm lg:text-base break-words">{server.ping}</div>
+                    <Icon name="Wifi" size={16} className="mx-auto mb-0.5 md:mb-1 md:w-5 md:h-5 text-mafia-gray" />
+                    <div className="font-body mb-0.5 md:mb-1 text-[8px] md:text-[10px] uppercase break-words leading-tight text-mafia-gray-light">Пинг</div>
+                    <div className="font-headline font-bold text-xs md:text-sm lg:text-base break-words text-mafia-gray">{server.ping}</div>
                   </div>
                   <div className="border-2 md:border-3 lg:border-4 border-mafia-sepia aged-paper p-1.5 md:p-2 lg:p-3 text-center">
-                    <Icon name="TrendingUp" size={16} className="mx-auto mb-0.5 md:mb-1 md:w-5 md:h-5" />
-                    <div className="font-body mb-0.5 md:mb-1 text-[8px] md:text-[10px] uppercase break-words leading-tight">Аптайм</div>
-                    <div className="font-headline font-bold text-xs md:text-sm lg:text-base break-words">{server.uptime}</div>
+                    <Icon name="TrendingUp" size={16} className="mx-auto mb-0.5 md:mb-1 md:w-5 md:h-5 text-mafia-gray" />
+                    <div className="font-body mb-0.5 md:mb-1 text-[8px] md:text-[10px] uppercase break-words leading-tight text-mafia-gray-light">Аптайм</div>
+                    <div className="font-headline font-bold text-xs md:text-sm lg:text-base break-words text-mafia-gray">{server.uptime}</div>
                   </div>
                 </div>
               </div>
@@ -205,13 +205,13 @@ const StatsSection = () => {
                         <span className="font-headline font-bold text-lg">{family.rank}</span>
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-headline uppercase text-base">{family.name}</h4>
-                        <p className="text-xs font-body">{family.members} членов • {family.territory} территорий</p>
+                        <h4 className="font-headline uppercase text-base text-mafia-gray">{family.name}</h4>
+                        <p className="text-xs font-body text-mafia-gray-light">{family.members} членов • {family.territory} территорий</p>
                       </div>
                     </div>
                     
                     <div>
-                      <div className="flex justify-between text-[10px] mb-1 font-headline uppercase">
+                      <div className="flex justify-between text-[10px] mb-1 font-headline uppercase text-mafia-gray">
                         <span>Влияние</span>
                         <span>{family.wealth}%</span>
                       </div>
@@ -246,8 +246,8 @@ const StatsSection = () => {
                         <span className="font-headline font-bold text-lg">{player.rank}</span>
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-headline uppercase text-base">{player.name}</h4>
-                        <div className="text-[10px] font-body">
+                        <h4 className="font-headline uppercase text-base text-mafia-gray">{player.name}</h4>
+                        <div className="text-[10px] font-body text-mafia-gray-light">
                           LVL {player.level} • {player.kills} убийств • {player.hours}ч
                         </div>
                       </div>
@@ -274,10 +274,10 @@ const StatsSection = () => {
                 >
                   <div className="flex items-center gap-3">
                     <div className={`w-5 h-5 border-4 border-mafia-sepia ${getStatusColor(item.status)} ${item.status === 'operational' ? 'animate-pulse' : ''}`} />
-                    <span className="font-body text-sm font-bold">{item.service}</span>
+                    <span className="font-body text-sm font-bold text-mafia-gray">{item.service}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="font-headline text-sm border-2 border-mafia-sepia px-3 py-1 bg-yellow-50">
+                    <span className="font-headline text-sm border-2 border-mafia-sepia px-3 py-1 aged-paper text-mafia-gray">
                       {item.response}
                     </span>
                   </div>
@@ -287,7 +287,7 @@ const StatsSection = () => {
           </div>
 
           <div className="border-t-4 border-b-4 border-mafia-sepia py-2 aged-paper text-center">
-            <div className="text-[10px] font-body uppercase tracking-widest">
+            <div className="text-[10px] font-body uppercase tracking-widest text-mafia-gray-light">
               Данные обновляются каждую минуту • Последнее обновление: сейчас
             </div>
           </div>

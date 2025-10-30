@@ -44,11 +44,11 @@ const LoreSection = () => {
                     <div className="mt-1">От нашего корреспондента</div>
                   </div>
                 </div>
-                <div className="space-y-3 font-body text-xs md:text-sm leading-relaxed text-justify columns-1">
-                  <p className="first-letter:text-4xl md:first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none first-letter:font-headline">
+                <div className="space-y-3 font-body text-xs md:text-sm leading-relaxed text-justify columns-1 text-mafia-gray">
+                  <p className="first-letter:text-4xl md:first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none first-letter:font-headline text-mafia-gray">
                     На дворе 1919 год. Эпоха Дикого Запада уже позади, и большинство штатов постепенно отходят от прежнего образа жизни, характерного для этого времени. Вместо этого на фоне изменений начинают расти преступные синдикаты мафии, которые пользуются шансом на расширение своих влияний в новых условиях.
                   </p>
-                  <p>
+                  <p className="text-mafia-gray">
                     Промышленность в это время активно развивается, что создает новые возможности для преступных группировок. Заводы, фабрики и производственные предприятия становятся объектами интереса банд.
                   </p>
                 </div>
@@ -62,15 +62,15 @@ const LoreSection = () => {
                 </h2>
               </div>
               <div className="p-4 md:p-6">
-                <div className="border-4 border-mafia-sepia p-3 mb-4 bg-amber-50 text-center">
-                  <div className="text-xs uppercase tracking-widest font-bold font-body">Экстренное объявление</div>
-                  <div className="text-2xl font-headline mt-1">ЗАПРЕЩЕНО</div>
+                <div className="border-4 border-mafia-sepia p-3 mb-4 aged-paper text-center">
+                  <div className="text-xs uppercase tracking-widest font-bold font-body text-mafia-gray">Экстренное объявление</div>
+                  <div className="text-2xl font-headline mt-1 text-mafia-gray">ЗАПРЕЩЕНО</div>
                 </div>
-                <div className="space-y-3 font-body text-xs md:text-sm leading-relaxed text-justify columns-1">
-                  <p className="first-letter:text-4xl md:first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none first-letter:font-headline">
+                <div className="space-y-3 font-body text-xs md:text-sm leading-relaxed text-justify columns-1 text-mafia-gray">
+                  <p className="first-letter:text-4xl md:first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none first-letter:font-headline text-mafia-gray">
                     Одним из ключевых факторов, способствующих росту преступности, является действие сухого закона, введенного в США в 1919 году. Этот закон запрещает производство, продажу и транспортировку алкогольных напитков.
                   </p>
-                  <p>
+                  <p className="text-mafia-gray">
                     Банды организуют тайные заводы и контрабандные маршруты, чтобы удовлетворять растущий спрос на нелегальный алкоголь. Законодательные органы ведут активную борьбу, но часто оказываются не в силах справиться с масштабом проблемы.
                   </p>
                 </div>
@@ -89,9 +89,9 @@ const LoreSection = () => {
                   <div className="border-4 border-mafia-sepia p-4 aged-paper/80">
                     <div className="text-center mb-3 pb-2 border-b-4 border-mafia-sepia">
                       <Icon name="Skull" size={40} className="mx-auto text-mafia-red mb-2" />
-                      <h3 className="text-xl font-headline uppercase">Земля беззакония</h3>
+                      <h3 className="text-xl font-headline uppercase text-mafia-gray">Земля беззакония</h3>
                     </div>
-                    <p className="font-body text-xs leading-relaxed text-justify">
+                    <p className="font-body text-xs leading-relaxed text-justify text-mafia-gray">
                       Штат Нью-Остин, расположенный на Западе, по-прежнему застрял в реалиях Дикого Запада. Этот регион отличается от более цивилизованных частей страны своими уникальными условиями и проблемами.
                     </p>
                   </div>
@@ -99,9 +99,9 @@ const LoreSection = () => {
                   <div className="border-4 border-mafia-sepia p-4 aged-paper/80">
                     <div className="text-center mb-3 pb-2 border-b-4 border-mafia-sepia">
                       <Icon name="Users" size={40} className="mx-auto text-mafia-red mb-2" />
-                      <h3 className="text-xl font-headline uppercase">Власть банд</h3>
+                      <h3 className="text-xl font-headline uppercase text-mafia-gray">Власть банд</h3>
                     </div>
-                    <p className="font-body text-xs leading-relaxed text-justify">
+                    <p className="font-body text-xs leading-relaxed text-justify text-mafia-gray">
                       В Нью-Остине царит хаос, и правоохранительные органы избегают этих районов, потому что здесь преобладают огромные бандформирования, которые навязывают свое видение власти.
                     </p>
                   </div>
@@ -109,19 +109,19 @@ const LoreSection = () => {
                   <div className="border-4 border-mafia-sepia p-4 aged-paper/80">
                     <div className="text-center mb-3 pb-2 border-b-4 border-mafia-sepia">
                       <Icon name="Pickaxe" size={40} className="mx-auto text-mafia-red mb-2" />
-                      <h3 className="text-xl font-headline uppercase">Шахты</h3>
+                      <h3 className="text-xl font-headline uppercase text-mafia-gray">Шахты</h3>
                     </div>
-                    <p className="font-body text-xs leading-relaxed text-justify">
+                    <p className="font-body text-xs leading-relaxed text-justify text-mafia-gray">
                       Банды Нью-Остина полностью контролируют местные шахты, где добываются ценные ресурсы, важные для остальной части страны, что создает зависимость.
                     </p>
                   </div>
                 </div>
 
                 <div className="mt-6 border-t-4 border-mafia-sepia pt-6 columns-2 gap-6">
-                  <p className="font-body text-sm leading-relaxed text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none first-letter:font-headline">
+                  <p className="font-body text-sm leading-relaxed text-justify first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:leading-none first-letter:font-headline text-mafia-gray">
                     Такие банды имеют значительное влияние и контролируют большую часть региона, что делает их почти неприкасаемыми для внешнего вмешательства. Однако, несмотря на это, изредка представители правоохранительных органов с большой земли всё же предпринимают рискованные вылазки в Нью-Остин.
                   </p>
-                  <p className="font-body text-sm leading-relaxed text-justify">
+                  <p className="font-body text-sm leading-relaxed text-justify text-mafia-gray">
                     Эти операции часто имеют целью ограниченное вмешательство или попытку нарушить деятельность местных банд, но они встречают жесткое сопротивление и редко достигают значительного успеха. Местное население живет в постоянном страхе, но находит способы выживать в этих суровых условиях.
                   </p>
                 </div>

@@ -228,13 +228,13 @@ const WikiSection = () => {
                       <div 
                         key={articleIndex}
                         onClick={() => handleArticleClick(category, article, articleIndex)}
-                        className="flex items-start gap-3 text-sm border-b-2 border-mafia-sepia pb-3 last:border-0 hover:pl-2 transition-all group/item cursor-pointer hover:bg-amber-50"
+                        className="flex items-start gap-3 text-sm border-b-2 border-mafia-sepia pb-3 last:border-0 hover:pl-2 transition-all group/item cursor-pointer hover:bg-mafia-cream"
                       >
-                        <div className="w-8 h-8 border-2 border-mafia-sepia flex items-center justify-center flex-shrink-0 aged-paper mt-0.5 group-hover/item:bg-amber-100 transition-colors">
-                          <span className="font-headline font-bold text-sm">{articleIndex + 1}</span>
+                        <div className="w-8 h-8 border-2 border-mafia-sepia flex items-center justify-center flex-shrink-0 aged-paper mt-0.5 transition-colors">
+                          <span className="font-headline font-bold text-sm text-mafia-gray">{articleIndex + 1}</span>
                         </div>
                         <div className="flex-1">
-                          <span className="font-body text-base block group-hover/item:underline">{article.title}</span>
+                          <span className="font-body text-base block group-hover/item:underline text-mafia-gray">{article.title}</span>
                         </div>
                         <Icon name="ChevronRight" size={20} className={`${category.accentColor} mt-1 group-hover/item:translate-x-1 transition-transform`} />
                       </div>
@@ -246,7 +246,7 @@ const WikiSection = () => {
           </div>
 
           <div className="mt-12 border-t-4 border-b-4 border-mafia-sepia py-3 aged-paper text-center shadow-lg">
-            <div className="text-xs font-body uppercase tracking-widest">
+            <div className="text-xs font-body uppercase tracking-widest text-mafia-gray">
               Более 500 статей • Постоянно обновляется • Создано сообществом
             </div>
           </div>
@@ -284,7 +284,7 @@ const WikiSection = () => {
                   </div>
                   <Button
                     onClick={handleClose}
-                    className="bg-black text-white hover:bg-black/80 border-2 md:border-4 border-white flex-shrink-0"
+                    className="bg-mafia-gray text-mafia-cream hover:bg-mafia-gray/80 border-2 md:border-4 border-mafia-cream flex-shrink-0"
                     size="icon"
                   >
                     <Icon name="X" size={20} className="md:w-6 md:h-6" />
@@ -294,14 +294,14 @@ const WikiSection = () => {
 
               <div className="p-4 md:p-8 aged-paper">
                 <div className="border-l-2 md:border-l-4 border-mafia-sepia pl-3 md:pl-6">
-                  <p className="font-body text-sm md:text-base lg:text-lg leading-relaxed text-justify first-letter:text-4xl md:first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 md:first-letter:mr-3 first-letter:leading-none first-letter:font-headline">
+                  <p className="font-body text-sm md:text-base lg:text-lg leading-relaxed text-justify first-letter:text-4xl md:first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 md:first-letter:mr-3 first-letter:leading-none first-letter:font-headline text-mafia-gray">
                     {selectedArticle.article.content}
                   </p>
                 </div>
 
                 <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t-2 md:border-t-4 border-mafia-sepia text-center">
-                  <div className="flex items-center justify-center gap-2 text-[10px] md:text-sm uppercase tracking-widest font-body">
-                    <Icon name="BookMarked" size={16} className="md:w-5 md:h-5" />
+                  <div className="flex items-center justify-center gap-2 text-[10px] md:text-sm uppercase tracking-widest font-body text-mafia-gray">
+                    <Icon name="BookMarked" size={16} className="md:w-5 md:h-5 text-mafia-gray" />
                     <span>Энциклопедия Мафии • Том I</span>
                   </div>
                 </div>

@@ -86,12 +86,12 @@ const MonitoringSection = () => {
           <div className="border-t-8 border-b-8 border-black py-6 mb-8 aged-paper text-center shadow-xl">
             <div className="flex items-center justify-center gap-4 mb-3">
               <Icon name="Activity" size={48} className="text-[#8B0000]" />
-              <h2 className="text-6xl font-headline uppercase tracking-wider">
+              <h2 className="text-6xl font-headline uppercase tracking-wider text-mafia-gray">
                 Мониторинг
               </h2>
               <Icon name="Activity" size={48} className="text-[#8B0000]" />
             </div>
-            <div className="text-sm uppercase tracking-widest mt-2 border-t-2 border-b-2 border-black py-2 inline-block px-8">
+            <div className="text-sm uppercase tracking-widest mt-2 border-t-2 border-b-2 border-black py-2 inline-block px-8 text-mafia-gray">
               🔧 Состояние систем • Обновляется в реальном времени 🔧
             </div>
           </div>
@@ -106,8 +106,8 @@ const MonitoringSection = () => {
                   <div className="flex items-center gap-4">
                     <div className={`w-6 h-6 border-4 border-black ${getStatusColor(server.status)} shadow-lg animate-pulse`} />
                     <div>
-                      <h4 className="font-headline uppercase text-xl">{server.name}</h4>
-                      <div className="text-xs font-body flex items-center gap-3 mt-1">
+                      <h4 className="font-headline uppercase text-xl text-mafia-gray">{server.name}</h4>
+                      <div className="text-xs font-body flex items-center gap-3 mt-1 text-mafia-gray-light">
                         <span className="flex items-center gap-1">
                           <Icon name="Package" size={12} />
                           Версия {server.version}
@@ -119,7 +119,7 @@ const MonitoringSection = () => {
                       </div>
                     </div>
                   </div>
-                  <Badge className="bg-white text-black border-4 border-black font-headline uppercase text-sm px-4 py-2">
+                  <Badge className="aged-paper text-mafia-gray border-4 border-black font-headline uppercase text-sm px-4 py-2">
                     {getStatusText(server.status)}
                   </Badge>
                 </div>
@@ -127,18 +127,18 @@ const MonitoringSection = () => {
                 <div className="grid grid-cols-3 gap-4 p-5">
                   <div className="border-4 border-black aged-paper p-4 text-center shadow-lg">
                     <Icon name="Users" size={24} className="mx-auto mb-2 text-[#8B0000]" />
-                    <div className="font-body mb-1 text-xs uppercase">Игроки</div>
-                    <div className="font-headline font-bold text-xl">{server.players}</div>
+                    <div className="font-body mb-1 text-xs uppercase text-mafia-gray-light">Игроки</div>
+                    <div className="font-headline font-bold text-xl text-mafia-gray">{server.players}</div>
                   </div>
                   <div className="border-4 border-black aged-paper p-4 text-center shadow-lg">
                     <Icon name="Wifi" size={24} className="mx-auto mb-2 text-[#8B0000]" />
-                    <div className="font-body mb-1 text-xs uppercase">Пинг</div>
-                    <div className="font-headline font-bold text-xl">{server.ping}</div>
+                    <div className="font-body mb-1 text-xs uppercase text-mafia-gray-light">Пинг</div>
+                    <div className="font-headline font-bold text-xl text-mafia-gray">{server.ping}</div>
                   </div>
                   <div className="border-4 border-black aged-paper p-4 text-center shadow-lg">
                     <Icon name="TrendingUp" size={24} className="mx-auto mb-2 text-[#8B0000]" />
-                    <div className="font-body mb-1 text-xs uppercase">Аптайм</div>
-                    <div className="font-headline font-bold text-xl">{server.uptime}</div>
+                    <div className="font-body mb-1 text-xs uppercase text-mafia-gray-light">Аптайм</div>
+                    <div className="font-headline font-bold text-xl text-mafia-gray">{server.uptime}</div>
                   </div>
                 </div>
               </div>
@@ -162,13 +162,13 @@ const MonitoringSection = () => {
                   >
                     <div className="flex items-center gap-3">
                       <div className={`w-4 h-4 border-2 border-black ${getStatusColor(item.status)}`} />
-                      <span className="font-body text-sm">{item.service}</span>
+                      <span className="font-body text-sm text-mafia-gray">{item.service}</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className="font-headline text-sm border-2 border-black px-3 py-1 bg-white">
+                      <span className="font-headline text-sm border-2 border-black px-3 py-1 aged-paper text-mafia-gray">
                         {item.response}
                       </span>
-                      <Badge className="bg-white text-black border-2 border-black font-headline text-xs px-2">
+                      <Badge className="aged-paper text-mafia-gray border-2 border-black font-headline text-xs px-2">
                         {getStatusText(item.status)}
                       </Badge>
                     </div>
@@ -178,7 +178,7 @@ const MonitoringSection = () => {
             </div>
 
             <div className="border-6 border-black aged-paper shadow-xl">
-              <div className="border-b-4 border-black p-5 bg-gradient-to-r from-[#8B0000] to-red-900 text-white text-center">
+              <div className="border-b-4 border-black p-5 bg-gradient-to-r from-[#8B0000] to-red-900 text-mafia-cream text-center">
                 <Icon name="Clock" size={28} className="mx-auto mb-2" />
                 <h3 className="text-xl font-headline uppercase">
                   Последние события
@@ -192,10 +192,10 @@ const MonitoringSection = () => {
                     className="border-b-2 border-black pb-3 last:border-0"
                   >
                     <div className="flex items-start gap-3">
-                      <span className="font-headline text-sm border-2 border-black px-3 py-1 bg-white flex-shrink-0">
+                      <span className="font-headline text-sm border-2 border-black px-3 py-1 aged-paper flex-shrink-0 text-mafia-gray">
                         {event.time}
                       </span>
-                      <span className="font-body text-sm flex-1">{event.event}</span>
+                      <span className="font-body text-sm flex-1 text-mafia-gray">{event.event}</span>
                     </div>
                   </div>
                 ))}
@@ -204,7 +204,7 @@ const MonitoringSection = () => {
           </div>
 
           <div className="mt-8 border-t-4 border-b-4 border-black py-3 aged-paper text-center shadow-lg">
-            <div className="text-xs font-body uppercase tracking-widest">
+            <div className="text-xs font-body uppercase tracking-widest text-mafia-gray">
               🔄 Автоматическое обновление каждые 30 секунд • Все системы под контролем 🔄
             </div>
           </div>

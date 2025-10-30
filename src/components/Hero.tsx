@@ -59,36 +59,36 @@ const Hero = () => {
                     <div className="text-xl md:text-2xl font-headline uppercase text-mafia-gray">Империя в цифрах</div>
                   </div>
                   <div className="space-y-3">
-                    <div className="border-4 border-black bg-white p-3 flex items-center justify-between">
+                    <div className="border-4 border-mafia-sepia aged-paper p-3 flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-black flex items-center justify-center">
+                        <div className="w-10 h-10 bg-mafia-gray flex items-center justify-center">
                           <Icon name="DollarSign" size={20} className="text-mafia-cream" />
                         </div>
                         <div className="text-left">
                           <div className="text-2xl font-headline text-mafia-red">$500K+</div>
-                          <div className="text-[10px] uppercase tracking-wider font-bold text-mafia-gray-light">В обороте ежедневно</div>
+                          <div className="text-[10px] uppercase tracking-wider font-bold text-mafia-gray">В обороте ежедневно</div>
                         </div>
                       </div>
                     </div>
-                    <div className="border-4 border-black bg-white p-3 flex items-center justify-between">
+                    <div className="border-4 border-mafia-sepia aged-paper p-3 flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-black flex items-center justify-center">
+                        <div className="w-10 h-10 bg-mafia-gray flex items-center justify-center">
                           <Icon name="Users" size={20} className="text-mafia-cream" />
                         </div>
                         <div className="text-left">
                           <div className="text-2xl font-headline text-mafia-red">12</div>
-                          <div className="text-[10px] uppercase tracking-wider font-bold text-mafia-gray-light">Активных семей</div>
+                          <div className="text-[10px] uppercase tracking-wider font-bold text-mafia-gray">Активных семей</div>
                         </div>
                       </div>
                     </div>
-                    <div className="border-4 border-black bg-white p-3 flex items-center justify-between">
+                    <div className="border-4 border-mafia-sepia aged-paper p-3 flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-black flex items-center justify-center">
+                        <div className="w-10 h-10 bg-mafia-gray flex items-center justify-center">
                           <Icon name="Swords" size={20} className="text-mafia-cream" />
                         </div>
                         <div className="text-left">
                           <div className="text-2xl font-headline text-mafia-red">150+</div>
-                          <div className="text-[10px] uppercase tracking-wider font-bold text-mafia-gray-light">Разборок в месяц</div>
+                          <div className="text-[10px] uppercase tracking-wider font-bold text-mafia-gray">Разборок в месяц</div>
                         </div>
                       </div>
                     </div>
@@ -116,7 +116,7 @@ const Hero = () => {
                   <div className="text-xs uppercase tracking-widest text-mafia-cream">Активных членов семьи</div>
                 </div>
 
-                <div className="border-4 border-black aged-paper p-4">
+                <div className="border-4 border-mafia-sepia aged-paper p-4">
                   <div className="text-center font-headline uppercase text-sm mb-3 border-b-2 border-mafia-sepia pb-2 text-mafia-gray">
                     📰 Экстренный выпуск
                   </div>
@@ -238,36 +238,36 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="border-8 border-black aged-paper shadow-2xl mb-8">
-            <div className="border-b-6 border-black p-5 bg-gradient-to-r from-black via-zinc-900 to-black text-white text-center relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
-              <Icon name="FileText" size={40} className="mx-auto mb-3 text-amber-400" />
-              <h2 className="text-4xl font-headline uppercase tracking-wider text-amber-400">
+          <div className="border-8 border-mafia-sepia aged-paper shadow-2xl mb-8 torn-edge-top crumpled-paper burn-mark burn-mark-top-right">
+            <div className="border-b-6 border-mafia-sepia p-5 bg-mafia-gray text-mafia-cream text-center relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-mafia-gold to-transparent"></div>
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-mafia-gold to-transparent"></div>
+              <Icon name="FileText" size={40} className="mx-auto mb-3 text-mafia-red" />
+              <h2 className="text-4xl font-headline uppercase tracking-wider text-mafia-red">
                 О проекте
               </h2>
-              <div className="text-xs uppercase tracking-widest mt-2 text-amber-200">
+              <div className="text-xs uppercase tracking-widest mt-2 text-mafia-cream">
                 История начинается здесь
               </div>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-0">
-              <div className="lg:col-span-2 p-8 border-r-6 border-black bg-gradient-to-br from-[#F5E6D0] via-[#EDD9B7] to-[#E5D3A8]">
-                <div className="mb-6 border-l-4 border-[#8B0000] pl-4 bg-gradient-to-r from-white/40 to-transparent p-4">
-                  <p className="font-body text-sm italic leading-relaxed text-justify">
+              <div className="lg:col-span-2 p-8 border-r-6 border-mafia-sepia aged-paper">
+                <div className="mb-6 border-l-4 border-mafia-red pl-4 aged-paper p-4">
+                  <p className="font-body text-sm italic leading-relaxed text-justify text-mafia-gray">
                     «Меланхолия, эта страшная болезнь, избрала вас своей жертвой. Помимо газеты и собственных мыслей, ничто другое вас уже не интересовало. Любовь перестала быть источником радости. Девизом как будто стали слова: живи и мирись с жалким прозябанием».
                   </p>
                 </div>
 
-                <div className="columns-2 gap-6 text-justify font-body text-sm leading-relaxed">
+                <div className="columns-2 gap-6 text-justify font-body text-sm leading-relaxed text-mafia-gray">
                   <p className="mb-3">
-                    <strong className="text-[#8B0000]">Первый русскоязычный массовый ролевой сервер</strong> в Red Dead Redemption 2 на платформе RedM, где не требуется квента, а большинство рудиментарных правил перенесены на рельсы игровых механик.
+                    <strong className="text-mafia-red">Первый русскоязычный массовый ролевой сервер</strong> в Red Dead Redemption 2 на платформе RedM, где не требуется квента, а большинство рудиментарных правил перенесены на рельсы игровых механик.
                   </p>
                   <p className="mb-3">
                     Запустившись в <strong>конце 2021 года</strong>, «Меланхолия» дала старт массовому русскоязычному сегменту RedM. Для того, чтобы вы могли окунуться во вселенную сервера, мы подготавливаем подробные текста, охватывающие как культурные аспекты, так и технические.
                   </p>
                   <p className="mb-3">
-                    <strong className="text-[#8B0000]">MH1919</strong> — это атмосферный RP-проект на базе RedM, вдохновлённый эстетикой Mafia и нуарной Америки 40–50-х годов.
+                    <strong className="text-mafia-red">MH1919</strong> — это атмосферный RP-проект на базе RedM, вдохновлённый эстетикой Mafia и нуарной Америки 40–50-х годов.
                   </p>
                   <p className="mb-3">
                     Уникальные персонажи, живая экономика, криминальные разборки и детализированный город создают глубокий мир, где каждая твоя реплика и поступок могут изменить ход истории.
@@ -275,28 +275,28 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="p-6 space-y-4 bg-gradient-to-b from-[#E5D3A8] to-[#D2B48C]">
-                <div className="border-4 border-black aged-paper p-4 text-center shadow-lg">
-                  <Icon name="Calendar" size={32} className="mx-auto mb-2 text-[#8B0000]" />
-                  <div className="text-3xl font-headline mb-1">2021</div>
-                  <div className="text-xs uppercase tracking-wider font-bold border-t-2 border-black pt-2 mt-2">
+              <div className="p-6 space-y-4 aged-paper">
+                <div className="border-4 border-mafia-sepia aged-paper p-4 text-center shadow-lg">
+                  <Icon name="Calendar" size={32} className="mx-auto mb-2 text-mafia-red" />
+                  <div className="text-3xl font-headline mb-1 text-mafia-gray">2021</div>
+                  <div className="text-xs uppercase tracking-wider font-bold border-t-2 border-mafia-sepia pt-2 mt-2 text-mafia-gray">
                     Год основания
                   </div>
                 </div>
 
-                <div className="border-4 border-black bg-gradient-to-br from-black to-zinc-800 text-amber-400 p-5 text-center shadow-xl">
+                <div className="border-4 border-mafia-sepia bg-mafia-gray text-mafia-red p-5 text-center shadow-xl">
                   <Icon name="Award" size={40} className="mx-auto mb-2" />
-                  <div className="text-xs uppercase tracking-widest text-white mb-2">Достижение</div>
-                  <div className="text-base font-headline leading-tight">
+                  <div className="text-xs uppercase tracking-widest text-mafia-cream mb-2">Достижение</div>
+                  <div className="text-base font-headline leading-tight text-mafia-cream">
                     Первый массовый RU сервер RedM
                   </div>
                 </div>
 
-                <div className="border-4 border-black aged-paper p-4">
-                  <div className="text-center font-headline uppercase text-xs mb-3 border-b-2 border-black pb-2">
+                <div className="border-4 border-mafia-sepia aged-paper p-4">
+                  <div className="text-center font-headline uppercase text-xs mb-3 border-b-2 border-mafia-sepia pb-2 text-mafia-gray">
                     📍 Где узнать больше
                   </div>
-                  <div className="text-xs font-body text-center leading-relaxed">
+                  <div className="text-xs font-body text-center leading-relaxed text-mafia-gray">
                     Прочесть подробные материалы об истории и механиках можно в нашем официальном Discord-сервере
                   </div>
                 </div>
@@ -304,73 +304,73 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="border-8 border-black aged-paper shadow-2xl mb-8">
-            <div className="border-b-6 border-black p-5 bg-gradient-to-r from-[#8B0000] via-red-900 to-[#8B0000] text-white text-center">
+          <div className="border-8 border-mafia-sepia aged-paper shadow-2xl mb-8 torn-edge-bottom crumpled-paper burn-mark burn-mark-bottom-left">
+            <div className="border-b-6 border-mafia-sepia p-5 bg-mafia-red text-mafia-cream text-center">
               <Icon name="Gamepad2" size={40} className="mx-auto mb-3" />
               <h2 className="text-4xl font-headline uppercase tracking-wider">
                 Как начать играть?
               </h2>
-              <div className="text-xs uppercase tracking-widest mt-2 border-t-2 border-b-2 border-white py-2 inline-block px-8 mt-3">
+              <div className="text-xs uppercase tracking-widest mt-2 border-t-2 border-b-2 border-mafia-cream py-2 inline-block px-8 mt-3">
                 Три простых шага до старта
               </div>
             </div>
 
-            <div className="p-8 bg-gradient-to-br from-[#F5E6D0] via-[#EDD9B7] to-[#E5D3A8]">
+            <div className="p-8 aged-paper">
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="border-6 border-black aged-paper shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all">
-                  <div className="border-b-4 border-black p-5 bg-white text-center relative">
-                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-[#8B0000] to-red-900 border-4 border-black flex items-center justify-center shadow-xl">
-                      <span className="text-2xl font-headline text-white font-black">1</span>
+                <div className="border-6 border-mafia-sepia aged-paper shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+                  <div className="border-b-4 border-mafia-sepia p-5 aged-paper text-center relative">
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-mafia-red border-4 border-mafia-sepia flex items-center justify-center shadow-xl">
+                      <span className="text-2xl font-headline text-mafia-cream font-black">1</span>
                     </div>
-                    <Icon name="ShoppingCart" size={40} className="mx-auto mb-3 mt-4 text-[#8B0000]" />
-                    <h3 className="text-lg font-headline uppercase">Купи RDR2</h3>
+                    <Icon name="ShoppingCart" size={40} className="mx-auto mb-3 mt-4 text-mafia-red" />
+                    <h3 className="text-lg font-headline uppercase text-mafia-gray">Купи RDR2</h3>
                   </div>
                   <div className="p-5">
-                    <p className="font-body text-sm leading-relaxed text-justify">
+                    <p className="font-body text-sm leading-relaxed text-justify text-mafia-gray-light">
                       Чтобы начать, тебе нужен <strong>Red Dead Redemption 2</strong>. Купи игру в Steam или в магазине Rockstar Games — это твой билет в мир мафии.
                     </p>
                   </div>
                 </div>
 
-                <div className="border-6 border-black aged-paper shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all">
-                  <div className="border-b-4 border-black p-5 bg-white text-center relative">
-                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-[#8B0000] to-red-900 border-4 border-black flex items-center justify-center shadow-xl">
-                      <span className="text-2xl font-headline text-white font-black">2</span>
+                <div className="border-6 border-mafia-sepia aged-paper shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+                  <div className="border-b-4 border-mafia-sepia p-5 aged-paper text-center relative">
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-mafia-red border-4 border-mafia-sepia flex items-center justify-center shadow-xl">
+                      <span className="text-2xl font-headline text-mafia-cream font-black">2</span>
                     </div>
-                    <Icon name="Download" size={40} className="mx-auto mb-3 mt-4 text-[#8B0000]" />
-                    <h3 className="text-lg font-headline uppercase">Скачай RedM</h3>
+                    <Icon name="Download" size={40} className="mx-auto mb-3 mt-4 text-mafia-red" />
+                    <h3 className="text-lg font-headline uppercase text-mafia-gray">Скачай RedM</h3>
                   </div>
                   <div className="p-5">
-                    <p className="font-body text-sm leading-relaxed text-justify mb-4">
+                    <p className="font-body text-sm leading-relaxed text-justify mb-4 text-mafia-gray-light">
                       Установи <strong>RedM</strong> по ссылке, чтобы получить доступ к мультиплееру. Это платформа, через которую ты подключишься к нашему серверу.
                     </p>
                     <a 
                       href="https://redm.net/" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="block border-4 border-black bg-gradient-to-br from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 p-3 text-center transition-all transform hover:scale-105 shadow-lg"
+                      className="block border-4 border-mafia-sepia bg-mafia-gold hover:bg-mafia-gold/90 p-3 text-center transition-all transform hover:scale-105 shadow-lg"
                     >
-                      <Icon name="Download" size={24} className="mx-auto mb-1 text-black" />
-                      <div className="text-base font-headline uppercase text-black">Скачать RedM</div>
+                      <Icon name="Download" size={24} className="mx-auto mb-1 text-mafia-gray" />
+                      <div className="text-base font-headline uppercase text-mafia-gray">Скачать RedM</div>
                     </a>
                   </div>
                 </div>
 
-                <div className="border-6 border-black aged-paper shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all">
-                  <div className="border-b-4 border-black p-5 bg-white text-center relative">
-                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-[#8B0000] to-red-900 border-4 border-black flex items-center justify-center shadow-xl">
-                      <span className="text-2xl font-headline text-white font-black">3</span>
+                <div className="border-6 border-mafia-sepia aged-paper shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+                  <div className="border-b-4 border-mafia-sepia p-5 aged-paper text-center relative">
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-mafia-red border-4 border-mafia-sepia flex items-center justify-center shadow-xl">
+                      <span className="text-2xl font-headline text-mafia-cream font-black">3</span>
                     </div>
-                    <Icon name="LogIn" size={40} className="mx-auto mb-3 mt-4 text-[#8B0000]" />
-                    <h3 className="text-lg font-headline uppercase">Заходи на сервер</h3>
+                    <Icon name="LogIn" size={40} className="mx-auto mb-3 mt-4 text-mafia-red" />
+                    <h3 className="text-lg font-headline uppercase text-mafia-gray">Заходи на сервер</h3>
                   </div>
                   <div className="p-5">
-                    <p className="font-body text-sm leading-relaxed text-justify mb-4">
+                    <p className="font-body text-sm leading-relaxed text-justify mb-4 text-mafia-gray-light">
                       Открой лаунчер RedM, найди наш проект по названию, зайди на сервер — и наслаждайся атмосферой и глубоким ролевым взаимодействием.
                     </p>
                     <a 
                       href="redm://connect/46.174.49.200:30120"
-                      className="block border-4 border-black bg-gradient-to-br from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 p-3 text-center transition-all transform hover:scale-105 shadow-lg text-white"
+                      className="block border-4 border-mafia-sepia bg-green-700 hover:bg-green-800 p-3 text-center transition-all transform hover:scale-105 shadow-lg text-mafia-cream"
                     >
                       <Icon name="Gamepad2" size={24} className="mx-auto mb-1" />
                       <div className="text-base font-headline uppercase">Подключиться</div>
@@ -381,55 +381,55 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="border-t-8 border-b-8 border-black py-6 aged-paper shadow-lg mb-8">
+          <div className="border-t-8 border-b-8 border-mafia-sepia py-6 aged-paper shadow-lg mb-8">
             <div className="flex items-center justify-center gap-12 flex-wrap">
               <div className="text-center transform hover:scale-110 transition-transform">
-                <Icon name="Calendar" size={32} className="mx-auto mb-2 text-[#8B0000]" />
-                <div className="text-4xl font-headline text-black">1920</div>
-                <div className="text-xs uppercase tracking-wider font-bold">Эпоха запрета</div>
+                <Icon name="Calendar" size={32} className="mx-auto mb-2 text-mafia-red" />
+                <div className="text-4xl font-headline text-mafia-gray">1920</div>
+                <div className="text-xs uppercase tracking-wider font-bold text-mafia-gray-light">Эпоха запрета</div>
               </div>
-              <div className="w-1 h-16 bg-black" />
+              <div className="w-1 h-16 bg-mafia-sepia" />
               <div className="text-center transform hover:scale-110 transition-transform">
-                <Icon name="Clock" size={32} className="mx-auto mb-2 text-[#8B0000]" />
-                <div className="text-4xl font-headline text-black">24/7</div>
-                <div className="text-xs uppercase tracking-wider font-bold">Всегда онлайн</div>
+                <Icon name="Clock" size={32} className="mx-auto mb-2 text-mafia-red" />
+                <div className="text-4xl font-headline text-mafia-gray">24/7</div>
+                <div className="text-xs uppercase tracking-wider font-bold text-mafia-gray-light">Всегда онлайн</div>
               </div>
-              <div className="w-1 h-16 bg-black" />
+              <div className="w-1 h-16 bg-mafia-sepia" />
               <div className="text-center transform hover:scale-110 transition-transform">
-                <Icon name="Languages" size={32} className="mx-auto mb-2 text-[#8B0000]" />
-                <div className="text-4xl font-headline text-black">RU/EN</div>
-                <div className="text-xs uppercase tracking-wider font-bold">Два языка</div>
+                <Icon name="Languages" size={32} className="mx-auto mb-2 text-mafia-red" />
+                <div className="text-4xl font-headline text-mafia-gray">RU/EN</div>
+                <div className="text-xs uppercase tracking-wider font-bold text-mafia-gray-light">Два языка</div>
               </div>
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="border-6 border-black aged-paper shadow-xl p-6 text-center">
-              <div className="border-4 border-black inline-block p-4 bg-white mb-3">
-                <Icon name="MessageCircle" size={40} className="text-[#8B0000]" />
+            <div className="border-6 border-mafia-sepia aged-paper shadow-xl p-6 text-center">
+              <div className="border-4 border-mafia-sepia inline-block p-4 aged-paper mb-3">
+                <Icon name="MessageCircle" size={40} className="text-mafia-red" />
               </div>
-              <h3 className="text-lg font-headline uppercase mb-2">Активное сообщество</h3>
-              <p className="text-xs font-body leading-relaxed">
+              <h3 className="text-lg font-headline uppercase mb-2 text-mafia-gray">Активное сообщество</h3>
+              <p className="text-xs font-body leading-relaxed text-mafia-gray-light">
                 Присоединяйся к Discord, где 5000+ игроков обсуждают стратегии и делятся опытом
               </p>
             </div>
             
-            <div className="border-6 border-black aged-paper shadow-xl p-6 text-center">
-              <div className="border-4 border-black inline-block p-4 bg-white mb-3">
-                <Icon name="Headphones" size={40} className="text-[#8B0000]" />
+            <div className="border-6 border-mafia-sepia aged-paper shadow-xl p-6 text-center">
+              <div className="border-4 border-mafia-sepia inline-block p-4 aged-paper mb-3">
+                <Icon name="Headphones" size={40} className="text-mafia-red" />
               </div>
-              <h3 className="text-lg font-headline uppercase mb-2">Поддержка 24/7</h3>
-              <p className="text-xs font-body leading-relaxed">
+              <h3 className="text-lg font-headline uppercase mb-2 text-mafia-gray">Поддержка 24/7</h3>
+              <p className="text-xs font-body leading-relaxed text-mafia-gray-light">
                 Команда администраторов всегда на связи, чтобы помочь разобраться в любой ситуации
               </p>
             </div>
             
-            <div className="border-6 border-black aged-paper shadow-xl p-6 text-center">
-              <div className="border-4 border-black inline-block p-4 bg-white mb-3">
-                <Icon name="Zap" size={40} className="text-[#8B0000]" />
+            <div className="border-6 border-mafia-sepia aged-paper shadow-xl p-6 text-center">
+              <div className="border-4 border-mafia-sepia inline-block p-4 aged-paper mb-3">
+                <Icon name="Zap" size={40} className="text-mafia-red" />
               </div>
-              <h3 className="text-lg font-headline uppercase mb-2">Регулярные обновления</h3>
-              <p className="text-xs font-body leading-relaxed">
+              <h3 className="text-lg font-headline uppercase mb-2 text-mafia-gray">Регулярные обновления</h3>
+              <p className="text-xs font-body leading-relaxed text-mafia-gray-light">
                 Новый контент, события и улучшения каждую неделю — сервер постоянно развивается
               </p>
             </div>

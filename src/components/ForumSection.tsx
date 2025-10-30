@@ -94,12 +94,12 @@ const ForumSection = () => {
           <div className="border-t-8 border-b-8 border-black py-6 mb-8 aged-paper text-center shadow-xl">
             <div className="flex items-center justify-center gap-4 mb-3">
               <Icon name="MessagesSquare" size={48} className="text-[#8B0000]" />
-              <h2 className="text-6xl font-headline uppercase tracking-wider">
+              <h2 className="text-6xl font-headline uppercase tracking-wider text-mafia-gray">
                 Форум
               </h2>
               <Icon name="MessagesSquare" size={48} className="text-[#8B0000]" />
             </div>
-            <div className="text-sm uppercase tracking-widest mt-2 border-t-2 border-b-2 border-black py-2 inline-block px-8">
+            <div className="text-sm uppercase tracking-widest mt-2 border-t-2 border-b-2 border-black py-2 inline-block px-8 text-mafia-gray">
               📰 Место встречи всех семей • Последние обсуждения 📰
             </div>
           </div>
@@ -117,8 +117,8 @@ const ForumSection = () => {
                     </div>
                     
                     <div className="flex-1">
-                      <h4 className="text-xl font-headline uppercase mb-2 tracking-wide">{category.name}</h4>
-                      <div className="flex items-center gap-6 text-sm font-body">
+                      <h4 className="text-xl font-headline uppercase mb-2 tracking-wide text-mafia-gray">{category.name}</h4>
+                      <div className="flex items-center gap-6 text-sm font-body text-mafia-gray-light">
                         <span className="flex items-center gap-1">
                           <Icon name="FileText" size={14} />
                           {category.topics} тем
@@ -132,8 +132,8 @@ const ForumSection = () => {
                   </div>
                   
                   <div className="hidden lg:block text-right border-l-4 border-black pl-6 max-w-xs">
-                    <div className="text-sm font-headline mb-1 uppercase">{category.lastPost.title}</div>
-                    <div className="text-xs font-body border-t-2 border-black pt-1 mt-1">
+                    <div className="text-sm font-headline mb-1 uppercase text-mafia-gray">{category.lastPost.title}</div>
+                    <div className="text-xs font-body border-t-2 border-black pt-1 mt-1 text-mafia-gray-light">
                       {category.lastPost.author} • {category.lastPost.time}
                     </div>
                   </div>
@@ -159,24 +159,24 @@ const ForumSection = () => {
                 >
                   <div className="flex items-start gap-4">
                     <Avatar className="w-12 h-12 border-4 border-black flex-shrink-0 shadow-lg">
-                      <AvatarFallback className="font-headline font-bold text-lg bg-white text-black">
+                      <AvatarFallback className="font-headline font-bold text-lg aged-paper text-mafia-gray">
                         {topic.author[0]}
                       </AvatarFallback>
                     </Avatar>
                     
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start gap-2 mb-2">
-                        <h4 className="text-lg font-headline uppercase flex-1 group-hover:text-[#8B0000] transition-colors">
+                        <h4 className="text-lg font-headline uppercase flex-1 group-hover:text-[#8B0000] transition-colors text-mafia-gray">
                           {topic.title}
                         </h4>
                         {topic.hot && (
-                          <Badge className="bg-gradient-to-r from-red-600 to-red-800 text-white border-2 border-black text-xs px-3 py-1 shadow-lg">
+                          <Badge className="bg-gradient-to-r from-red-600 to-red-800 text-mafia-cream border-2 border-black text-xs px-3 py-1 shadow-lg">
                             🔥 HOT
                           </Badge>
                         )}
                       </div>
-                      <div className="flex items-center gap-4 text-xs font-body border-t-2 border-black pt-2">
-                        <span className="font-bold">{topic.author}</span>
+                      <div className="flex items-center gap-4 text-xs font-body border-t-2 border-black pt-2 text-mafia-gray-light">
+                        <span className="font-bold text-mafia-gray">{topic.author}</span>
                         <span className="border-l-2 border-black pl-2">{topic.category}</span>
                         <span className="border-l-2 border-black pl-2 flex items-center gap-1">
                           <Icon name="MessageCircle" size={12} />
@@ -196,7 +196,7 @@ const ForumSection = () => {
           </div>
 
           <div className="mt-8 border-t-4 border-b-4 border-black py-3 aged-paper text-center shadow-lg">
-            <div className="text-xs font-body uppercase tracking-widest">
+            <div className="text-xs font-body uppercase tracking-widest text-mafia-gray">
               💬 Присоединяйтесь к обсуждениям • Делитесь историями • Находите союзников 💬
             </div>
           </div>
