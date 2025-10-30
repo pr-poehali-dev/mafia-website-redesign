@@ -138,25 +138,31 @@ const Footer = ({ setActiveSection }: FooterProps) => {
                   Сообщество
                 </h4>
                 
-                <div className="grid grid-cols-3 gap-2 mb-4">
-                  <Button 
-                    size="icon" 
-                    className="bg-white hover:bg-black text-black hover:text-white border-4 border-black h-14 w-full transition-all"
+                <div className="grid grid-cols-2 gap-2 mb-4">
+                  <a 
+                    href="https://discord.gg/7dxrFrKn5E"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <Icon name="MessageCircle" size={24} />
-                  </Button>
-                  <Button 
-                    size="icon" 
-                    className="bg-white hover:bg-black text-black hover:text-white border-4 border-black h-14 w-full transition-all"
+                    <Button 
+                      size="icon" 
+                      className="bg-white hover:bg-black text-black hover:text-white border-4 border-black h-14 w-full transition-all"
+                    >
+                      <Icon name="MessageCircle" size={24} />
+                    </Button>
+                  </a>
+                  <a 
+                    href="https://t.me/Kripme4nik"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <Icon name="Users" size={24} />
-                  </Button>
-                  <Button 
-                    size="icon" 
-                    className="bg-white hover:bg-black text-black hover:text-white border-4 border-black h-14 w-full transition-all"
-                  >
-                    <Icon name="Youtube" size={24} />
-                  </Button>
+                    <Button 
+                      size="icon" 
+                      className="bg-white hover:bg-black text-black hover:text-white border-4 border-black h-14 w-full transition-all"
+                    >
+                      <Icon name="Users" size={24} />
+                    </Button>
+                  </a>
                 </div>
                 
                 <p className="text-sm text-black font-body leading-relaxed">
